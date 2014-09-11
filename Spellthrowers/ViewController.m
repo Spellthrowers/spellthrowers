@@ -9,10 +9,19 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *versus;
 
 @end
 
 @implementation ViewController
+- (IBAction)changeMode:(id)sender {
+    NSString *contents = [[self versus] text];
+    if ([contents caseInsensitiveCompare:@"Vs AI"] == NSOrderedSame) {
+        [[self versus] setText: @"Vs Human"];
+    } else {
+        [[self versus] setText: @"Vs AI"];
+    }
+}
 
 - (void)viewDidLoad
 {
