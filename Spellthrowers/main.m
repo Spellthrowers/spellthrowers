@@ -18,6 +18,7 @@ int main(int argc, char * argv[])
 {
     @autoreleasepool {
         //testing deck, player, and drawing cards
+        Engine *engine = [Engine newEngine];
         Player *player1 = [Player newPlayer];
         Deck *deck = [Deck newDeck];
         for (int i=0; i<5; i++) {
