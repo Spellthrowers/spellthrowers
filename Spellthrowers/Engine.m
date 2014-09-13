@@ -21,11 +21,11 @@
     
 }
 
-+(void)initDeck{
+-(void)initDeck{
     
 }
 
-+(void)initPlayers{
+-(void)initPlayers{
     
 }
 
@@ -33,7 +33,7 @@
     return [[NSArray alloc] init];
 }
 
--(NSArray*)activePlayers{
+-(NSArray*)currentPlayers{
     return [[NSArray alloc] init];
 }
 
