@@ -14,6 +14,7 @@
 //specify (nonatomic) for objects that are thread-safe. Improves code speed.
 @property int value;
 @property NSString *type;
+@property NSString *cardName;
 
 
 @end

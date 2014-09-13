@@ -8,8 +8,7 @@
 //
 
 #import <Foundation/Foundation.h>
-//#import "Player.h"
-@class Player;
+#import "Player.h"
 #import "Deck.h"
 
 @interface Engine : NSObject

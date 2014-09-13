@@ -24,13 +24,17 @@
     NSDictionary* config = [NSDictionary dictionaryWithContentsOfFile:path];
     
     Card *newCard = [[Card alloc] init];
+    
     //get random card TODO: use weights
     int cardIndex = arc4random_uniform(NUM_CARD_TYPES);
+    
+    //set card name
+    [newCard setCardName: config[@"cardNames"][cardIndex]];
     //set card type
     [newCard setType: config[@"cardTypes"][cardIndex]];
-    //set card value. This only matters for damage cards.
+    //set card value. This only matters for attack cards.
     [newCard setValue: cardIndex + 1];
-    NSLog(@"Drawing card of value: %d and type: %@",[newCard value], [newCard type]);
+    NSLog(@"Drawing card of name: %@, of value: %d, and of type: %@", [newCard cardName], [newCard value], [newCard type]);
     return newCard;
 }
 

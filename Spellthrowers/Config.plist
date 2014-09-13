@@ -2,6 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>cardTypes</key>
+	<array>
+		<string>Attack</string>
+		<string>Attack</string>
+		<string>Attack</string>
+		<string>Attack</string>
+	</array>
 	<key>cardWeights</key>
 	<array>
 		<integer>1</integer>
@@ -9,7 +16,7 @@
 		<integer>3</integer>
 		<integer>4</integer>
 	</array>
-	<key>cardTypes</key>
+	<key>cardNames</key>
 	<array>
 		<string>Lightning Bolt</string>
 		<string>Fireball</string>
