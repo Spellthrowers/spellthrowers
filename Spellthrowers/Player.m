@@ -10,15 +10,17 @@
 
 @implementation Player
 
-+(instancetype)newPlayer{
++(instancetype)newPlayer: (Deck*) deck{
     Player *newPlayer = [[Player alloc] init];
     [newPlayer setLife: 20];
-    [newPlayer fillHand];
+    [newPlayer fillHand: deck];
     return newPlayer;
 }
 
--(void)fillHand{
-    
+-(void)fillHand: (Deck*) deck{
+    //while ([[self hand] count] < DRAW_CAP) {
+        
+    //}
 }
 
 -(NSArray*)hand{
@@ -44,8 +46,12 @@
 -(void)takeDamage{
     
 }
+         
+-(void)addCard:(int)atIndex{
+    
+}
 
--(void)gainLife{
+-(void)gainLife: (int)amount{
     
 }
 

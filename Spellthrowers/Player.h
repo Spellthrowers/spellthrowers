@@ -7,22 +7,26 @@
 //
 
 #import <Foundation/Foundation.h>
-@class Engine;
+#import "Deck.h"
+
+#define DRAW_CAP 5
 
 @interface Player : NSObject
 
 @property int life;
 @property bool isShielded;
-@property Engine* engine;
 
-+(instancetype)newPlayer;
--(void)fillHand;
++(instancetype)newPlayer: (Deck*) deck;
+
+-(void)fillHand: (Deck*) deck;
 -(NSArray*)hand;
+-(void)addCard: (int) atIndex;
+
 -(void)play:(int)atIndex;
 -(void)removeCard;
 -(void)displayHand;
 -(void)hideHand;
 -(void)takeDamage;
--(void)gainLife;
+-(void)gainLife: (int)amount;
 
 @end
