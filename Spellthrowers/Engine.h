@@ -13,12 +13,13 @@
 @interface Engine : NSObject
 
 @property Player* activePlayer;//current player
+@property int indexOfActivePlayer;
+@property NSMutableArray* players;
+@property NSMutableArray* currentPlayers;//players that are still in the game
 
 +(instancetype)newEngine;
 -(void)initEverything;
--(void)addPlayer;
--(NSArray*)players;
--(NSArray*)currentPlayers;//players that are still in the game
+-(void)addPlayer:(Player*)newPlayer;
 -(void)startTurn:(Player*)activePlayer;
 -(void)removePlayer;
 -(void)nextPlayer;

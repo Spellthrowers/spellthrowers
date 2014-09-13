@@ -19,9 +19,24 @@ int main(int argc, char * argv[])
     @autoreleasepool {
         //testing deck, player, and drawing cards
         Engine *engine = [Engine newEngine];
-        [engine initEverything];
+        //[engine initEverything];
         Deck *deck = [Deck newDeck];
         Player *player1 = [Player newPlayer:deck];
+        Player *player2 = [Player newPlayer:deck];
+        
+        [engine addPlayer:(player1)];
+        [engine addPlayer:(player2)];
+        NSLog(@"List of players: %@", [engine players]);
+        
+        //Set activePlayer
+        engine.indexOfActivePlayer = 1;
+        engine.activePlayer = [engine.currentPlayers objectAtIndex:engine.indexOfActivePlayer];
+        NSLog(@"activePlayer: %@", [engine activePlayer]);
+        
+        NSLog(@"*TURN*");
+        [engine nextPlayer];
+        NSLog(@"activePlayer: %@", [engine activePlayer]);
+        
         
         NSLog(@"Player life: %d",[player1 life]);
         [player1 fillHand:deck];

@@ -12,41 +12,48 @@
 @implementation Engine
 
 +(instancetype)newEngine{
-    Engine *newEngine = [[Engine alloc] init];
+    Engine* newEngine = [[Engine alloc] init];
+    newEngine.players = [NSMutableArray arrayWithObjects: nil];
+    newEngine.currentPlayers = [NSMutableArray arrayWithObjects: nil];
     return newEngine;
 }
 
 -(void)initEverything{
-    //may not need
-    
+    //initialize all the players and objects needed
 }
 
--(void)addPlayer{
+-(void)addPlayer:(Player*)newPlayer{
     //add player to players and currentPlayers
-    
+    [self.players addObject:(newPlayer)];
+    [self.currentPlayers addObject:(newPlayer)];
 }
 
--(NSArray*)players{
-    //array of players
-    return [[NSArray alloc] init];
-}
-
--(NSArray*)currentPlayers{
-    //array of players left in game
-    return [[NSArray alloc] init];
-}
-
--(void)startTurn:(Player *)activePlayer{
+-(void)startTurn:(Player*)activePlayer{
     //pass the view to activePlayer, let them perform their turn
 }
 
--(void)removePlayer{
+-(void)removePlayer:(Player*)playerToRemove{
     //remove a player from currentPlayers
-    
+    [self.currentPlayers removeObject:(playerToRemove)];
 }
 
+//set activePlayer to the next player
 -(void)nextPlayer{
-    //set activePlayer to the next player
+    int i = self.indexOfActivePlayer;
+    int count = [self.currentPlayers count];
+    
+    if (i >= count-1) {
+        //use first index
+        self.activePlayer = [self.currentPlayers objectAtIndex: 0];
+        self.indexOfActivePlayer = 0;
+    }
+    else{
+        //get nextPlayer at indexOFActivePlayer + 1
+        //set nextPlayer to activePlayer
+        self.activePlayer = self.currentPlayers[i+1];
+        //advance index
+        self.indexOfActivePlayer = i+1;
+    }
     
 }
 
