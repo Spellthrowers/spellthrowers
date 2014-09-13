@@ -37,8 +37,6 @@ int main(int argc, char * argv[])
         [engine nextPlayer];
         NSLog(@"activePlayer: %@", [engine activePlayer]);
         
-        
-        NSLog(@"Player life: %d",[player1 life]);
         [player1 fillHand:deck];
         [player1 displayHand];
         

@@ -40,7 +40,7 @@
 //set activePlayer to the next player
 -(void)nextPlayer{
     int i = self.indexOfActivePlayer;
-    int count = [self.currentPlayers count];
+    int count = (int)[self.currentPlayers count];
     
     if (i >= count-1) {
         //use first index
