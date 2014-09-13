@@ -21,7 +21,7 @@
 -(void)initEverything;
 -(void)addPlayer:(Player*)newPlayer;
 -(void)startTurn:(Player*)activePlayer;
--(void)removePlayer;
+-(void)removePlayer:(Player*)player;
 -(void)nextPlayer;
 -(void)endGame;
 

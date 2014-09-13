@@ -5,48 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>81229D1F-64E9-4DFC-BDEB-556607B5078B</string>
+	<string>CF197682-CFFF-4C33-97C1-82119F9458DC</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Spellthrowers</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>3696AE69-40D2-43DD-8621-7E67653DFAC0</key>
-		<string>https://github.com/Spellthrowers/spellthrowers</string>
-		<key>D8FDEBFF-AEA0-487E-BA22-1F6EA4746ED1</key>
-		<string>https://github.com/Spellthrowers/spellthrowers</string>
+		<key>8A2E281B-6F09-4984-9831-85B13549F337</key>
+		<string>https://github.com/Spellthrowers/spellthrowers.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Spellthrowers.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>3696AE69-40D2-43DD-8621-7E67653DFAC0</key>
+		<key>8A2E281B-6F09-4984-9831-85B13549F337</key>
 		<string>../..</string>
-		<key>D8FDEBFF-AEA0-487E-BA22-1F6EA4746ED1</key>
-		<string>../../../Spellthrowers</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/Spellthrowers/spellthrowers</string>
+	<string>https://github.com/Spellthrowers/spellthrowers.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>3696AE69-40D2-43DD-8621-7E67653DFAC0</string>
+	<string>8A2E281B-6F09-4984-9831-85B13549F337</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>3696AE69-40D2-43DD-8621-7E67653DFAC0</string>
+			<string>8A2E281B-6F09-4984-9831-85B13549F337</string>
 			<key>IDESourceControlWCCName</key>
 			<string>spellthrowers</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>D8FDEBFF-AEA0-487E-BA22-1F6EA4746ED1</string>
-			<key>IDESourceControlWCCName</key>
-			<string>Spellthrowers</string>
 		</dict>
 	</array>
 </dict>
