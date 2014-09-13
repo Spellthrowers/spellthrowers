@@ -5,61 +5,46 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>AC10C677-AFB8-48E7-8B9A-518A878E8BFA</string>
+	<string>81229D1F-64E9-4DFC-BDEB-556607B5078B</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Spellthrowers</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>47E8A0ED-2FF3-434C-8E67-F3E1EA05F6DC</key>
-		<string>https://github.com/Spellthrowers/spellthrowers/trunk</string>
-		<key>BF6AE0B3-3EF6-4A3E-BA5D-27CEB9D74438</key>
-		<string>https://github.com/Spellthrowers/spellthrowers/trunk</string>
+		<key>3696AE69-40D2-43DD-8621-7E67653DFAC0</key>
+		<string>https://github.com/Spellthrowers/spellthrowers</string>
+		<key>D8FDEBFF-AEA0-487E-BA22-1F6EA4746ED1</key>
+		<string>https://github.com/Spellthrowers/spellthrowers</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Spellthrowers.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>47E8A0ED-2FF3-434C-8E67-F3E1EA05F6DC</key>
+		<key>3696AE69-40D2-43DD-8621-7E67653DFAC0</key>
 		<string>../..</string>
-		<key>BF6AE0B3-3EF6-4A3E-BA5D-27CEB9D74438</key>
+		<key>D8FDEBFF-AEA0-487E-BA22-1F6EA4746ED1</key>
 		<string>../../../Spellthrowers</string>
 	</dict>
-	<key>IDESourceControlProjectRepositoryRootDictionary</key>
-	<dict>
-		<key>47E8A0ED-2FF3-434C-8E67-F3E1EA05F6DC</key>
-		<string>https://github.com/Spellthrowers/spellthrowers</string>
-		<key>BF6AE0B3-3EF6-4A3E-BA5D-27CEB9D74438</key>
-		<string>https://github.com/Spellthrowers/spellthrowers</string>
-	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/Spellthrowers/spellthrowers/trunk/Spellthrowers.xcodeproj</string>
+	<string>https://github.com/Spellthrowers/spellthrowers</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>47E8A0ED-2FF3-434C-8E67-F3E1EA05F6DC</string>
+	<string>3696AE69-40D2-43DD-8621-7E67653DFAC0</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
-			<key>IDESourceControlRepositoryBranchesRelativeLocationKey</key>
-			<string>branches</string>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.subversion</string>
-			<key>IDESourceControlRepositoryTrunkRelativeLocationKey</key>
-			<string>trunk</string>
+			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>47E8A0ED-2FF3-434C-8E67-F3E1EA05F6DC</string>
+			<string>3696AE69-40D2-43DD-8621-7E67653DFAC0</string>
 			<key>IDESourceControlWCCName</key>
 			<string>spellthrowers</string>
 		</dict>
 		<dict>
-			<key>IDESourceControlRepositoryBranchesRelativeLocationKey</key>
-			<string>branches</string>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.subversion</string>
-			<key>IDESourceControlRepositoryTrunkRelativeLocationKey</key>
-			<string>trunk</string>
+			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>BF6AE0B3-3EF6-4A3E-BA5D-27CEB9D74438</string>
+			<string>D8FDEBFF-AEA0-487E-BA22-1F6EA4746ED1</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Spellthrowers</string>
 		</dict>

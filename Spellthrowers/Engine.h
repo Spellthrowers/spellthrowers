@@ -9,17 +9,14 @@
 
 #import <Foundation/Foundation.h>
 #import "Player.h"
-#import "Deck.h"
 
 @interface Engine : NSObject
 
 @property Player* activePlayer;//current player
-@property Deck* deck;
 
 +(instancetype)newEngine;
 -(void)initEverything;
--(void)initDeck;
--(void)initPlayers;
+-(void)addPlayer;
 -(NSArray*)players;
 -(NSArray*)currentPlayers;//players that are still in the game
 -(void)startTurn:(Player*)activePlayer;
