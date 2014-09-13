@@ -30,6 +30,12 @@
 
 -(void)startTurn:(Player*)activePlayer{
     //pass the view to activePlayer, let them perform their turn
+    //fill hand
+    //view hand
+    //play
+    //nextplayer
+    //endturn
+    
 }
 
 -(void)removePlayer:(Player*)playerToRemove{
