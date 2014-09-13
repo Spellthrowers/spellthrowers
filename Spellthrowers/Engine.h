@@ -18,10 +18,10 @@
 
 +(instancetype)newEngine;
 -(void)initEverything;
-+(void)initDeck;
-+(void)initPlayers;
+-(void)initDeck;
+-(void)initPlayers;
 -(NSArray*)players;
--(NSArray*)activePlayers;
+-(NSArray*)currentPlayers;//players that are still in the game
 -(void)startTurn:(Player*)activePlayer;
 -(void)removePlayer;
 -(void)nextPlayer;
