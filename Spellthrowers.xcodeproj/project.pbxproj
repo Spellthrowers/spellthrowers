@@ -27,6 +27,7 @@
 		2BE0E19219BB9E9B00CC89E9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BE0E17119BB9E9B00CC89E9 /* UIKit.framework */; };
 		2BE0E19A19BB9E9B00CC89E9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BE0E19819BB9E9B00CC89E9 /* InfoPlist.strings */; };
 		2BE0E19C19BB9E9B00CC89E9 /* SpellthrowersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E19B19BB9E9B00CC89E9 /* SpellthrowersTests.m */; };
+		2BFF20B319C4D7F300A4A29D /* gameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFF20B219C4D7F300A4A29D /* gameViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		2BE0E19719BB9E9B00CC89E9 /* SpellthrowersTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpellthrowersTests-Info.plist"; sourceTree = "<group>"; };
 		2BE0E19919BB9E9B00CC89E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2BE0E19B19BB9E9B00CC89E9 /* SpellthrowersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpellthrowersTests.m; sourceTree = "<group>"; };
+		2BFF20B119C4D7F300A4A29D /* gameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameViewController.h; sourceTree = "<group>"; };
+		2BFF20B219C4D7F300A4A29D /* gameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gameViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +134,8 @@
 				2BE0E17C19BB9E9B00CC89E9 /* AppDelegate.h */,
 				2BE0E17D19BB9E9B00CC89E9 /* AppDelegate.m */,
 				2BE0E17F19BB9E9B00CC89E9 /* Main_iPhone.storyboard */,
+				2BFF20B119C4D7F300A4A29D /* gameViewController.h */,
+				2BFF20B219C4D7F300A4A29D /* gameViewController.m */,
 				2B43279D19BFBE8D009601C8 /* Player.h */,
 				2B43279E19BFBE8D009601C8 /* Player.m */,
 				2B4327A019BFBE9F009601C8 /* Card.h */,
@@ -277,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BFF20B319C4D7F300A4A29D /* gameViewController.m in Sources */,
 				2B4327A819BFBEBD009601C8 /* Engine.m in Sources */,
 				2B4327A219BFBE9F009601C8 /* Card.m in Sources */,
 				2B43279F19BFBE8D009601C8 /* Player.m in Sources */,

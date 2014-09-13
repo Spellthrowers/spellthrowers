@@ -48,12 +48,12 @@
     
 }
 
--(void)takeDamage{
-    
+-(void)takeDamage:(int)amount{
+    _life-= amount;
 }
 
 -(void)gainLife: (int)amount{
-    
+    _life+= amount;
 }
 
 @end

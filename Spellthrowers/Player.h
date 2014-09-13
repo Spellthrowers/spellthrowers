@@ -26,7 +26,7 @@
 -(void)play:(int)atIndex;
 -(void)displayHand;
 -(void)hideHand;
--(void)takeDamage;
+-(void)takeDamage: (int)amount;
 -(void)gainLife: (int)amount;
 
 @end
