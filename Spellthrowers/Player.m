@@ -12,21 +12,20 @@
 
 +(instancetype)newPlayer: (Deck*) deck{
     Player *newPlayer = [[Player alloc] init];
+    newPlayer.playerHand = NSMutableArray.array;
     [newPlayer setLife: 20];
     [newPlayer fillHand: deck];
     return newPlayer;
 }
 
 -(void)fillHand: (Deck*) deck{
-    /*while ([playerHand count] < DRAW_CAP) {
-        NSLog(@"Hand size: %lu", (unsigned long)[playerHand count]);
-        playerHand[[playerHand count]] = [deck draw];
-        [self displayHand];
-    }*/
+    while ([[self playerHand] count] < DRAW_CAP) {
+        [[self playerHand] addObject:[deck draw]];
+    }
 }
 
 -(NSMutableArray*)hand{
-    return playerHand;
+    return [self playerHand];
 }
 
 -(void)play:(int)atIndex{
@@ -39,8 +38,9 @@
 
 -(void)displayHand{
     NSLog(@"Displaying hand:");
-    for (int i=0; i<[playerHand count]; i++) {
-        NSLog(@"Card %d: %@", i, [playerHand objectAtIndex:i]);
+    NSArray *theHand = [self playerHand];
+    for (int i=0; i<[[self playerHand] count]; i++) {
+        NSLog(@"Card %d: %@", i, [theHand[i] name]);
     }
 }
 
@@ -50,10 +50,6 @@
 
 -(void)takeDamage{
     
-}
-         
--(void)addCard:(Card*)card{
-    [playerHand addObject:card];
 }
 
 -(void)gainLife: (int)amount{
