@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Spellthrowers/Player.m"
-            timestampString = "432323830.604848"
+            timestampString = "432325921.699982"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "-play:"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,12 +74,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Spellthrowers/Player.m"
-            timestampString = "432323830.604848"
+            timestampString = "432325921.699982"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "-fillHand:"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "-hand"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

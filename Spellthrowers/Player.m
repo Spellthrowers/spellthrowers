@@ -18,25 +18,30 @@
 }
 
 -(void)fillHand: (Deck*) deck{
-    //while ([[self hand] count] < DRAW_CAP) {
-        
-    //}
+    /*while ([playerHand count] < DRAW_CAP) {
+        NSLog(@"Hand size: %lu", (unsigned long)[playerHand count]);
+        playerHand[[playerHand count]] = [deck draw];
+        [self displayHand];
+    }*/
 }
 
--(NSArray*)hand{
-    return [[NSArray alloc] init];
+-(NSMutableArray*)hand{
+    return playerHand;
 }
 
 -(void)play:(int)atIndex{
     
 }
 
--(void)removeCard{
-    
+-(void)removeCard:(int)atIndex{
+    [[self hand] removeObjectAtIndex:atIndex];
 }
 
 -(void)displayHand{
-    
+    NSLog(@"Displaying hand:");
+    for (int i=0; i<[playerHand count]; i++) {
+        NSLog(@"Card %d: %@", i, [playerHand objectAtIndex:i]);
+    }
 }
 
 -(void)hideHand{
@@ -47,8 +52,8 @@
     
 }
          
--(void)addCard:(int)atIndex{
-    
+-(void)addCard:(Card*)card{
+    [playerHand addObject:card];
 }
 
 -(void)gainLife: (int)amount{

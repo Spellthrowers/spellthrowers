@@ -11,7 +11,9 @@
 
 #define DRAW_CAP 5
 
-@interface Player : NSObject
+@interface Player : NSObject{
+    NSMutableArray* playerHand;
+}
 
 @property int life;
 @property bool isShielded;
@@ -19,11 +21,11 @@
 +(instancetype)newPlayer: (Deck*) deck;
 
 -(void)fillHand: (Deck*) deck;
--(NSArray*)hand;
--(void)addCard: (int) atIndex;
+-(NSMutableArray*)hand;
+-(void)addCard:(Card*)card;
+-(void)removeCard:(int)atIndex;
 
 -(void)play:(int)atIndex;
--(void)removeCard;
 -(void)displayHand;
 -(void)hideHand;
 -(void)takeDamage;

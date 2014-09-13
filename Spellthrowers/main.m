@@ -19,14 +19,13 @@ int main(int argc, char * argv[])
     @autoreleasepool {
         //testing deck, player, and drawing cards
         Engine *engine = [Engine newEngine];
+        [engine initEverything];
         Deck *deck = [Deck newDeck];
         Player *player1 = [Player newPlayer:deck];
         
-        [engine setDeck: deck];
         NSLog(@"Player life: %d",[player1 life]);
-        for (int i=0; i<5; i++) {
-            [deck draw];
-        }
+        [player1 fillHand:deck];
+        [player1 displayHand];
         
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
