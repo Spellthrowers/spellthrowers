@@ -20,9 +20,10 @@ int main(int argc, char * argv[])
         //testing deck, player, and drawing cards
         Engine *engine = [Engine newEngine];
         Player *player1 = [Player newPlayer];
+        NSLog(@"Player life: %d",[player1 life]);
         Deck *deck = [Deck newDeck];
         for (int i=0; i<5; i++) {
-            Card *card = [deck draw];
+            [deck draw];
         }
         
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
