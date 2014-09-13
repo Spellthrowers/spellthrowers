@@ -16,6 +16,7 @@
 @property (nonatomic) int life;
 @property (nonatomic) bool isShielded;
 @property (nonatomic, strong) NSMutableArray* playerHand;
+@property (nonatomic, strong) Deck *deck;
 
 +(instancetype)newPlayer: (Deck*) deck;
 

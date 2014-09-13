@@ -12,6 +12,7 @@
 
 +(instancetype)newPlayer: (Deck*) deck{
     Player *newPlayer = [[Player alloc] init];
+    [newPlayer setDeck:deck];
     newPlayer.playerHand = NSMutableArray.array;
     [newPlayer setLife: 20];
     [newPlayer fillHand: deck];
