@@ -89,6 +89,21 @@
     [[segue destinationViewController] setEngine:self.engine];
     NSLog(@"Engine player:%@", [[self.engine activePlayer] name]);
 }
+- (IBAction)card0Touched:(id)sender {
+    [self.engine setIndexOfTouchedCard:0];
+}
+- (IBAction)card1Touched:(id)sender {
+    [self.engine setIndexOfTouchedCard:1];
+}
+- (IBAction)card2Touched:(id)sender {
+    [self.engine setIndexOfTouchedCard:2];
+}
+- (IBAction)card3Touched:(id)sender {
+    [self.engine setIndexOfTouchedCard:3];
+}
+- (IBAction)card4Touched:(id)sender {
+    [self.engine setIndexOfTouchedCard:4];
+}
 
 - (void)didReceiveMemoryWarning
 {

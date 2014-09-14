@@ -16,6 +16,7 @@
 @property int indexOfActivePlayer;
 @property NSMutableArray* players;
 @property NSMutableArray* currentPlayers;//players that are still in the game
+@property (nonatomic) int indexOfTouchedCard;
 
 +(instancetype)newEngine;
 -(void)initEverything;

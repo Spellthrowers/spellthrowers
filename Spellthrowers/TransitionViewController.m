@@ -19,7 +19,7 @@
 - (void)viewDidLoad
 {
     [self.engine nextPlayer];
-    [[self transitionMessage] setText: [NSString stringWithFormat: @"%@, it is your turn!", self.engine.activePlayer.name]];
+    [[self transitionMessage] setText: [NSString stringWithFormat: @"Index hit: %d. %@, it is your turn!", self.engine.indexOfTouchedCard, self.engine.activePlayer.name]];
     [super viewDidLoad];
 }
 
