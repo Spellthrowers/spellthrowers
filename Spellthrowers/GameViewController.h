@@ -10,4 +10,6 @@
 
 @interface GameViewController : UIViewController
 
+@property (nonatomic, strong) NSString *restorationIdentifier;
+
 @end

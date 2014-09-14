@@ -24,14 +24,15 @@
 @property (weak, nonatomic) IBOutlet UILabel *cardValue3;
 @property (weak, nonatomic) IBOutlet UILabel *cardValue4;
 
-@property Engine* engine;
-@property bool thisViewHasBeenInitialized;
-@property (nonatomic, strong) NSString *restorationIdentifier;
+@property (weak, nonatomic) IBOutlet UILabel *header;
+
+@property (nonatomic, strong) Engine* engine;
 
 @end
 
 @implementation GameViewController
-- (IBAction)drawClicked:(id)sender {
+- (void)displayHand {
+    [[self header] setText: [NSString stringWithFormat:@"%@, pick a card!", self.engine.activePlayer.name]];
     Card *drawn0 = self.engine.activePlayer.hand[0];
     [[self cardName0] setText: [drawn0 name]];
     [[self cardValue0] setText: [NSString stringWithFormat:@"%d", drawn0.value]];
@@ -51,16 +52,13 @@
     Card *drawn4 = self.engine.activePlayer.hand[4];
     [[self cardName4] setText: [drawn4 name]];
     [[self cardValue4] setText: [NSString stringWithFormat:@"%d", drawn4.value]];
-    
 }
 
 //The main method for initializing gameplay
 - (void)viewDidLoad
 {
     //first time launching view: initialize game
-    NSLog(@"Zero means first time launching view: %d", [self thisViewHasBeenInitialized]);
-    if (! [self thisViewHasBeenInitialized]) {
-        [self setThisViewHasBeenInitialized:true];
+    if (! [self engine]) {
         [super viewDidLoad];
         self.engine = [Engine newEngine];
         //[engine initEverything];
@@ -70,20 +68,17 @@
         
         [self.engine addPlayer:(player1)];
         [self.engine addPlayer:(player2)];
-        NSLog(@"List of players: %@", [self.engine players]);
         
         //Set activePlayer
-        self.engine.indexOfActivePlayer = 1;
+        self.engine.indexOfActivePlayer = 0;
         self.engine.activePlayer = [self.engine.currentPlayers objectAtIndex:self.engine.indexOfActivePlayer];
-        NSLog(@"activePlayer: %@", [self.engine activePlayer]);
-        
-        NSLog(@"*TURN*");
-        [self.engine nextPlayer];
-        NSLog(@"activePlayer: %@", [self.engine activePlayer]);
         
         [player1 fillHand:deck];
-        [player1 displayHand];
-        [self drawClicked:0];
+        [player2 fillHand:deck];
+        [self displayHand];
+    }
+    else{
+        [self displayHand];
     }
 }
 

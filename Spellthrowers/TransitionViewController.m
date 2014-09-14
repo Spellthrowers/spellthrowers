@@ -9,10 +9,25 @@
 #import "TransitionViewController.h"
 
 @interface TransitionViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *transitionMessage;
 
 @end
 
 @implementation TransitionViewController
+
+//on view load, change the active player and call their turn to be taken
+- (void)viewDidLoad
+{
+    [self.engine nextPlayer];
+    [[self transitionMessage] setText: [NSString stringWithFormat: @"%@, it is your turn!", self.engine.activePlayer.name]];
+    [super viewDidLoad];
+}
+
+//use this to store info before leaving the view
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    NSLog(@"Segue sender: %@", sender);
+    [[segue destinationViewController] setEngine:self.engine];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -21,13 +36,6 @@
         // Custom initialization
     }
     return self;
-}
-
-- (void)viewDidLoad
-{
-    NSLog(@"Transition engine player:%@", [[self.engine activePlayer] name]);
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
