@@ -34,7 +34,6 @@
     [newCard setType: config[@"cardTypes"][cardIndex]];
     //set card value. This only matters for attack cards.
     [newCard setValue: cardIndex + 1];
-    NSLog(@"Drawing card of name: %@, of value: %d, and of type: %@", [newCard name], [newCard value], [newCard type]);
     return newCard;
 }
 

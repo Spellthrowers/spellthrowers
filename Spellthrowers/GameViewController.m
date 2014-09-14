@@ -26,45 +26,39 @@
 
 @property Engine* engine;
 @property bool thisViewHasBeenInitialized;
+@property (nonatomic, strong) NSString *restorationIdentifier;
 
 @end
 
 @implementation GameViewController
 - (IBAction)drawClicked:(id)sender {
-    Card *drawn0 = self.engine.activePlayer.deck.draw;
+    Card *drawn0 = self.engine.activePlayer.hand[0];
     [[self cardName0] setText: [drawn0 name]];
     [[self cardValue0] setText: [NSString stringWithFormat:@"%d", drawn0.value]];
     
-    Card *drawn1 = self.engine.activePlayer.deck.draw;
+    Card *drawn1 = self.engine.activePlayer.hand[1];
     [[self cardName1] setText: [drawn1 name]];
     [[self cardValue1] setText: [NSString stringWithFormat:@"%d", drawn1.value]];
     
-    Card *drawn2 = self.engine.activePlayer.deck.draw;
+    Card *drawn2 = self.engine.activePlayer.hand[2];
     [[self cardName2] setText: [drawn2 name]];
     [[self cardValue2] setText: [NSString stringWithFormat:@"%d", drawn2.value]];
     
-    Card *drawn3 = self.engine.activePlayer.deck.draw;
+    Card *drawn3 = self.engine.activePlayer.hand[3];
     [[self cardName3] setText: [drawn3 name]];
     [[self cardValue3] setText: [NSString stringWithFormat:@"%d", drawn3.value]];
     
-    Card *drawn4 = self.engine.activePlayer.deck.draw;
+    Card *drawn4 = self.engine.activePlayer.hand[4];
     [[self cardName4] setText: [drawn4 name]];
     [[self cardValue4] setText: [NSString stringWithFormat:@"%d", drawn4.value]];
     
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        
-    }
-    return self;
-}
-
 //The main method for initializing gameplay
 - (void)viewDidLoad
 {
+    //first time launching view: initialize game
+    NSLog(@"Zero means first time launching view: %d", [self thisViewHasBeenInitialized]);
     if (! [self thisViewHasBeenInitialized]) {
         [self setThisViewHasBeenInitialized:true];
         [super viewDidLoad];
@@ -89,13 +83,29 @@
         
         [player1 fillHand:deck];
         [player1 displayHand];
+        [self drawClicked:0];
     }
+}
+
+
+//use this to store info before leaving the view
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    NSLog(@"Segue sender: %@", sender);
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        
+    }
+    return self;
 }
 
 /*
