@@ -25,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *cardValue4;
 
 @property Engine* engine;
+@property bool thisViewHasBeenInitialized;
 
 @end
 
@@ -61,30 +62,34 @@
     return self;
 }
 
+//The main method for initializing gameplay
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    self.engine = [Engine newEngine];
-    //[engine initEverything];
-    Deck *deck = [Deck newDeck];
-    Player *player1 = [Player newPlayer:deck];
-    Player *player2 = [Player newPlayer:deck];
-    
-    [self.engine addPlayer:(player1)];
-    [self.engine addPlayer:(player2)];
-    NSLog(@"List of players: %@", [self.engine players]);
-    
-    //Set activePlayer
-    self.engine.indexOfActivePlayer = 1;
-    self.engine.activePlayer = [self.engine.currentPlayers objectAtIndex:self.engine.indexOfActivePlayer];
-    NSLog(@"activePlayer: %@", [self.engine activePlayer]);
-    
-    NSLog(@"*TURN*");
-    [self.engine nextPlayer];
-    NSLog(@"activePlayer: %@", [self.engine activePlayer]);
-    
-    [player1 fillHand:deck];
-    [player1 displayHand];
+    if (! [self thisViewHasBeenInitialized]) {
+        [self setThisViewHasBeenInitialized:true];
+        [super viewDidLoad];
+        self.engine = [Engine newEngine];
+        //[engine initEverything];
+        Deck *deck = [Deck newDeck];
+        Player *player1 = [Player newPlayer:deck:@"Player1"];
+        Player *player2 = [Player newPlayer:deck:@"Player2"];
+        
+        [self.engine addPlayer:(player1)];
+        [self.engine addPlayer:(player2)];
+        NSLog(@"List of players: %@", [self.engine players]);
+        
+        //Set activePlayer
+        self.engine.indexOfActivePlayer = 1;
+        self.engine.activePlayer = [self.engine.currentPlayers objectAtIndex:self.engine.indexOfActivePlayer];
+        NSLog(@"activePlayer: %@", [self.engine activePlayer]);
+        
+        NSLog(@"*TURN*");
+        [self.engine nextPlayer];
+        NSLog(@"activePlayer: %@", [self.engine activePlayer]);
+        
+        [player1 fillHand:deck];
+        [player1 displayHand];
+    }
 }
 
 - (void)didReceiveMemoryWarning

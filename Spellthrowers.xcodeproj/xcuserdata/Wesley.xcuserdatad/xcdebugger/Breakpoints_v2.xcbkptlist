@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Spellthrowers/Player.h"
-            timestampString = "432343805.787386"
+            timestampString = "432398364.931394"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
             landmarkName = "@interface Player"
             landmarkType = "2">
          </BreakpointContent>

@@ -10,7 +10,7 @@
 
 @implementation Player
 
-+(instancetype)newPlayer: (Deck*) deck{
++(instancetype)newPlayer: (Deck*) deck :(NSString*) name{
     Player *newPlayer = [[Player alloc] init];
     [newPlayer setDeck:deck];
     newPlayer.playerHand = NSMutableArray.array;

@@ -13,12 +13,13 @@
 
 @interface Player : NSObject
 
+@property (nonatomic, strong) NSString* name;
 @property (nonatomic) int life;
 @property (nonatomic) bool isShielded;
 @property (nonatomic, strong) NSMutableArray* playerHand;
 @property (nonatomic, strong) Deck *deck;
 
-+(instancetype)newPlayer: (Deck*) deck;
++(instancetype)newPlayer: (Deck*) deck :(NSString*) name;
 
 -(void)fillHand: (Deck*) deck;
 -(NSMutableArray*)hand;
