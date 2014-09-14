@@ -16,6 +16,7 @@
     newPlayer.playerHand = NSMutableArray.array;
     [newPlayer setLife: 20];
     [newPlayer fillHand: deck];
+    [newPlayer setName:name];
     return newPlayer;
 }
 

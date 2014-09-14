@@ -259,10 +259,10 @@
             </objects>
             <point key="canvasLocation" x="909" y="50"/>
         </scene>
-        <!--View Controller-->
+        <!--Transition View Controller - Transition-->
         <scene sceneID="l3N-T9-QA6">
             <objects>
-                <viewController id="qIm-wM-wJV" sceneMemberID="viewController">
+                <viewController title="Transition" id="qIm-wM-wJV" customClass="TransitionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xCo-MA-rEE"/>
                         <viewControllerLayoutGuide type="bottom" id="n2t-RT-Lnh"/>
@@ -306,6 +306,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="Tbl-ES-a5F"/>
-        <segue reference="R3b-RW-hhx"/>
+        <segue reference="G8u-pZ-hph"/>
     </inferredMetricsTieBreakers>
 </document>

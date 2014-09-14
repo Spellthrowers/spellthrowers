@@ -91,6 +91,8 @@
 //use this to store info before leaving the view
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     NSLog(@"Segue sender: %@", sender);
+    [[segue destinationViewController] setEngine:self.engine];
+    NSLog(@"Engine player:%@", [[self.engine activePlayer] name]);
 }
 
 - (void)didReceiveMemoryWarning

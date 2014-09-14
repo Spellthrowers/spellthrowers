@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Engine.h"
 
 @interface TransitionViewController : UIViewController
+
+@property (nonatomic, strong) Engine* engine;
 
 @end

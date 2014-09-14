@@ -25,6 +25,7 @@
 
 - (void)viewDidLoad
 {
+    NSLog(@"Transition engine player:%@", [[self.engine activePlayer] name]);
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
