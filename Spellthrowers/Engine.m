@@ -32,9 +32,6 @@
     self.indexOfActivePlayer = 0;
     [self setActivePlayer:[self.currentPlayers objectAtIndex:self.indexOfActivePlayer]];
     
-    //start of action sequence
-    [self startTurn];
-    
     for (Player *p in self.currentPlayers) {
         [p fillHand:deck];
     }
@@ -60,6 +57,8 @@
     //TODO: Discard cards
     
     //TODO: Remove card after played
+    
+    //TODO: Why does life decrease by the first card index on load..
 
     //play card on next player
     [self play: self.activePlayer :[self.activePlayer hand][_indexOfTouchedCard] : self.players[(_indexOfActivePlayer+1) % [self.players count]]];
@@ -75,6 +74,8 @@
         //pass turn to nextPlayer
         [self nextPlayer];
     }
+    
+    //TODO: End game
 }
 
 -(void)play:(Player *)fromPlayer :(Card *)card :(Player *)onPlayer{
