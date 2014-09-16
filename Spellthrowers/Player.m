@@ -38,14 +38,6 @@
     [[self hand] removeObjectAtIndex:atIndex];
 }
 
--(void)displayHand{
-    NSLog(@"Displaying hand:");
-    NSArray *theHand = [self playerHand];
-    for (int i=0; i<[[self playerHand] count]; i++) {
-        NSLog(@"Card %d: %@", i, [theHand[i] name]);
-    }
-}
-
 -(void)hideHand{
     
 }

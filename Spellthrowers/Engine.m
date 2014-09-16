@@ -47,10 +47,10 @@
 }
 
 -(void)startTurn:(Player*)activePlayer :(Deck*)deck{
-    //fill hand
-    [self.activePlayer fillHand:deck];   // WE NEED TO FILL ALL HANDS
-    //view hand
-    [self.activePlayer displayHand];
+    //fill hands
+    for (Player *p in self.currentPlayers) {
+        [p fillHand:deck];
+    }
     //need rules as to what cards to play and how to discard cards
     
     //play
@@ -61,14 +61,6 @@
     //nextplayer
     [self nextPlayer];
     //endturn
-    [self endTurn];
-    
-}
-
--(void)endTurn{
-    //TODO: does anything need to be updated before the turn ends?
-    //I wrote something here before, but I can't remember what it was right now
-    
 }
 
 -(void)removePlayer:(Player*)playerToRemove{
