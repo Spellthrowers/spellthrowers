@@ -79,7 +79,7 @@
         
         //[player1 fillHand:deck];
         //[player2 fillHand:deck];
-        //[self displayHand];
+        [self displayHand];
     }
     else{
         [self displayHand];
@@ -89,9 +89,7 @@
 
 //use this to store info before leaving the view
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    NSLog(@"Segue sender: %@", sender);
     [[segue destinationViewController] setEngine:self.engine];
-    NSLog(@"Engine player:%@", [[self.engine activePlayer] name]);
 }
 - (IBAction)card0Touched:(id)sender {
     [self.engine setIndexOfTouchedCard:0];
