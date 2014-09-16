@@ -23,6 +23,7 @@
 -(void)addPlayer:(Player*)newPlayer;
 -(void)startTurn:(Player*)activePlayer :(Deck*)deck;
 -(void)removePlayer:(Player*)playerToRemove;
+-(void)play: (Player*)fromPlayer :(Card*)card :(Player*)onPlayer;
 -(void)nextPlayer;
 -(void)endGame;
 

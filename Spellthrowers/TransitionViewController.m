@@ -18,14 +18,13 @@
 //on view load, change the active player and call their turn to be taken
 - (void)viewDidLoad
 {
-    [self.engine nextPlayer];
+    [self.engine startTurn: [self.engine activePlayer] :[self.engine.activePlayer deck]];
     [[self transitionMessage] setText: [NSString stringWithFormat: @"Index hit: %d. %@, it is your turn!", self.engine.indexOfTouchedCard, self.engine.activePlayer.name]];
     [super viewDidLoad];
 }
 
 //use this to store info before leaving the view
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    NSLog(@"Segue sender: %@", sender);
     [[segue destinationViewController] setEngine:self.engine];
 }
 

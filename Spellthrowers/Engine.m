@@ -53,14 +53,16 @@
     }
     //need rules as to what cards to play and how to discard cards
     
-    //play
-    [self.activePlayer play: _indexOfTouchedCard];
-    
-    
+    //play card on next player
+    [self play: activePlayer :[activePlayer hand][_indexOfTouchedCard] : self.players[(_indexOfActivePlayer+1) % [self.players count]]];
     
     //nextplayer
     [self nextPlayer];
     //endturn
+}
+
+-(void)play:(Player *)fromPlayer :(Card *)card :(Player *)onPlayer{
+    //NSLog(@"%@ plays %@ on %@!", [[self activePlayer] name], [[[self activePlayer] hand][_indexOfTouchedCard] name], [[self players][_indexOfActivePlayer+1 % [[self players] count]] name]);
 }
 
 -(void)removePlayer:(Player*)playerToRemove{
