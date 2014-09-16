@@ -70,12 +70,16 @@
         [self.engine addPlayer:(player2)];
         
         //Set activePlayer
+        //TODO: randomize who goes first
         self.engine.indexOfActivePlayer = 0;
         self.engine.activePlayer = [self.engine.currentPlayers objectAtIndex:self.engine.indexOfActivePlayer];
         
-        [player1 fillHand:deck];
-        [player2 fillHand:deck];
-        [self displayHand];
+        //start of action sequence
+        [self.engine startTurn:self.engine.activePlayer :deck];
+        
+        //[player1 fillHand:deck];
+        //[player2 fillHand:deck];
+        //[self displayHand];
     }
     else{
         [self displayHand];

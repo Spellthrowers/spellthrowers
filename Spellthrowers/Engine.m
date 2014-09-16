@@ -28,17 +28,33 @@
     [self.currentPlayers addObject:(newPlayer)];
 }
 
--(void)startTurn:(Player*)activePlayer{
-    //pass the view to activePlayer, let them perform their turn
+-(void)startTurn:(Player*)activePlayer :(Deck*)deck{
     //fill hand
+    [self.activePlayer fillHand:deck];
     //view hand
+    [self.activePlayer displayHand];
+    //need rules as to what cards to play and how to discard cards
+    
     //play
+    [self.activePlayer play: _indexOfTouchedCard];
+    
+    
+    
     //nextplayer
+    [self nextPlayer];
     //endturn
+    [self endTurn];
+    
+}
+
+-(void)endTurn{
+    //TODO: does anything need to be updated before the turn ends?
+    //I wrote something here before, but I can't remember what it was right now
     
 }
 
 -(void)removePlayer:(Player*)playerToRemove{
+    //TODO: Test this method
     //remove a player from currentPlayers
     [self.currentPlayers removeObject:(playerToRemove)];
 }
@@ -65,6 +81,7 @@
 
 -(void)endGame{
     //end game
+    //TODO:
     
 }
 
