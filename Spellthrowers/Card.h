@@ -13,7 +13,7 @@
 //specify "weak" for object components that can be null
 //specify (nonatomic) for objects that are thread-safe. Improves code speed.
 @property int value;
-@property NSString *type;
+@property NSString *cardType;
 @property NSString *name;
 
 

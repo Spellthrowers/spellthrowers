@@ -51,16 +51,29 @@
     for (Player *p in self.currentPlayers) {
         [p fillHand:deck];
     }
-    //need rules as to what cards to play and how to discard cards
     
-    //play
+    //take turn
+        
+    //TODO: Set rules as to what cards to play
+    //Player can play as many cards as they want until they play an attack card
+    //TODO: Discard cards
+    
+    //play a card
     [self.activePlayer play: _indexOfTouchedCard];
     
+    //TODO: Remove card after played
     
-    
-    //nextplayer
-    [self nextPlayer];
-    //endturn
+    //TODO: End turn
+    //if player uses attack
+    if([[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Attack"]){
+        //pass turn to nextPlayer
+        [self nextPlayer];
+    }
+    //if player doesn't have any cards left
+    else if([self.activePlayer.playerHand count] == 0){
+        //pass turn to nextPlayer
+        [self nextPlayer];
+    }
 }
 
 -(void)removePlayer:(Player*)playerToRemove{

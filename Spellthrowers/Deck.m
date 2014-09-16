@@ -31,7 +31,7 @@
     //set card name
     [newCard setName: config[@"cardNames"][cardIndex]];
     //set card type
-    [newCard setType: config[@"cardTypes"][cardIndex]];
+    [newCard setCardType: config[@"cardTypes"][cardIndex]];
     //set card value. This only matters for attack cards.
     [newCard setValue: cardIndex + 1];
     return newCard;
