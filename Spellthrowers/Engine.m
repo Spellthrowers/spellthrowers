@@ -52,16 +52,17 @@
         [p fillHand:deck];
     }
     
+
     //take turn
         
     //TODO: Set rules as to what cards to play
     //Player can play as many cards as they want until they play an attack card
     //TODO: Discard cards
     
-    //play a card
-    [self.activePlayer play: _indexOfTouchedCard];
-    
     //TODO: Remove card after played
+
+    //play card on next player
+    [self play: activePlayer :[activePlayer hand][_indexOfTouchedCard] : self.players[(_indexOfActivePlayer+1) % [self.players count]]];
     
     //TODO: End turn
     //if player uses attack
@@ -74,6 +75,10 @@
         //pass turn to nextPlayer
         [self nextPlayer];
     }
+}
+
+-(void)play:(Player *)fromPlayer :(Card *)card :(Player *)onPlayer{
+    //NSLog(@"%@ plays %@ on %@!", [[self activePlayer] name], [[[self activePlayer] hand][_indexOfTouchedCard] name], [[self players][_indexOfActivePlayer+1 % [[self players] count]] name]);
 }
 
 -(void)removePlayer:(Player*)playerToRemove{

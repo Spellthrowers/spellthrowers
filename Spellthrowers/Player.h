@@ -25,7 +25,6 @@
 -(NSMutableArray*)hand;
 -(void)removeCard:(int)atIndex;
 
--(void)play:(int)atIndex;
 -(void)hideHand;
 -(void)takeDamage: (int)amount;
 -(void)gainLife: (int)amount;

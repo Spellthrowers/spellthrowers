@@ -30,10 +30,6 @@
     return [self playerHand];
 }
 
--(void)play:(int)atIndex{
-    
-}
-
 -(void)removeCard:(int)atIndex{
     [[self hand] removeObjectAtIndex:atIndex];
 }
