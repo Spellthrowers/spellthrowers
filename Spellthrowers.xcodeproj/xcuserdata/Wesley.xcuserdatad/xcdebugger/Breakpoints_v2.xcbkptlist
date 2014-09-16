@@ -111,7 +111,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "68"
             endingLineNumber = "68"
-            landmarkName = "-removePlayer:"
+            landmarkName = "-startTurn"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -127,7 +127,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "57"
             endingLineNumber = "57"
-            landmarkName = "-startTurn::"
+            landmarkName = "-startTurn"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

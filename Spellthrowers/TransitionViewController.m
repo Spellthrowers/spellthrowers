@@ -10,6 +10,8 @@
 
 @interface TransitionViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *transitionMessage;
+@property (weak, nonatomic) IBOutlet UILabel *player1Life;
+@property (weak, nonatomic) IBOutlet UILabel *player2Life;
 
 @end
 
@@ -19,7 +21,11 @@
 - (void)viewDidLoad
 {
     [self.engine startTurn];
+    
+    //set text on screen
     [[self transitionMessage] setText: [NSString stringWithFormat: @"Index hit: %d. %@, it is your turn!", self.engine.indexOfTouchedCard, self.engine.activePlayer.name]];
+    [[self player1Life] setText: [NSString stringWithFormat: @"%@ Life: %d", [self.engine.activePlayer name], [self.engine.activePlayer life]]];
+    [[self player2Life] setText: [NSString stringWithFormat: @"%@ Life: %d", [self.engine.players[(self.engine.indexOfActivePlayer+1)%[self.engine.players count]] name], [self.engine.players[(self.engine.indexOfActivePlayer+1)%[self.engine.players count]] life]]];
     [super viewDidLoad];
 }
 
