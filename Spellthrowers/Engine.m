@@ -33,7 +33,7 @@
     [self setActivePlayer:[self.currentPlayers objectAtIndex:self.indexOfActivePlayer]];
     
     //start of action sequence
-    [self startTurn:self.activePlayer :deck];
+    [self startTurn];
     
     for (Player *p in self.currentPlayers) {
         [p fillHand:deck];
@@ -46,10 +46,10 @@
     [self.currentPlayers addObject:(newPlayer)];
 }
 
--(void)startTurn:(Player*)activePlayer :(Deck*)deck{
+-(void)startTurn{
     //fill hands
     for (Player *p in self.currentPlayers) {
-        [p fillHand:deck];
+        [p fillHand:p.deck];
     }
     
 
@@ -62,15 +62,15 @@
     //TODO: Remove card after played
 
     //play card on next player
-    [self play: activePlayer :[activePlayer hand][_indexOfTouchedCard] : self.players[(_indexOfActivePlayer+1) % [self.players count]]];
+    [self play: self.activePlayer :[self.activePlayer hand][_indexOfTouchedCard] : self.players[(_indexOfActivePlayer+1) % [self.players count]]];
     
-    //TODO: End turn
-    //if player uses attack
+    //End turn if:
+    //player uses attack
     if([[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Attack"]){
         //pass turn to nextPlayer
         [self nextPlayer];
     }
-    //if player doesn't have any cards left
+    //player doesn't have any cards left
     else if([self.activePlayer.playerHand count] == 0){
         //pass turn to nextPlayer
         [self nextPlayer];
@@ -79,6 +79,9 @@
 
 -(void)play:(Player *)fromPlayer :(Card *)card :(Player *)onPlayer{
     //NSLog(@"%@ plays %@ on %@!", [[self activePlayer] name], [[[self activePlayer] hand][_indexOfTouchedCard] name], [[self players][_indexOfActivePlayer+1 % [[self players] count]] name]);
+    if([[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Attack"]){
+        [onPlayer setLife: [onPlayer life] - card.value];
+    }
 }
 
 -(void)removePlayer:(Player*)playerToRemove{

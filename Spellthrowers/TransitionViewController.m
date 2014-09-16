@@ -18,7 +18,7 @@
 //on view load, change the active player and call their turn to be taken
 - (void)viewDidLoad
 {
-    [self.engine startTurn: [self.engine activePlayer] :[self.engine.activePlayer deck]];
+    [self.engine startTurn];
     [[self transitionMessage] setText: [NSString stringWithFormat: @"Index hit: %d. %@, it is your turn!", self.engine.indexOfTouchedCard, self.engine.activePlayer.name]];
     [super viewDidLoad];
 }
