@@ -20,6 +20,24 @@
 
 -(void)initEverything{
     //initialize all the players and objects needed
+    Deck *deck = [Deck newDeck];
+    Player *player1 = [Player newPlayer:deck:@"Player1"];
+    Player *player2 = [Player newPlayer:deck:@"Player2"];
+    
+    [self addPlayer:player1];
+    [self addPlayer:(player2)];
+    
+    //Set activePlayer
+    //TODO: randomize who goes first
+    self.indexOfActivePlayer = 0;
+    [self setActivePlayer:[self.currentPlayers objectAtIndex:self.indexOfActivePlayer]];
+    
+    //start of action sequence
+    [self startTurn:self.activePlayer :deck];
+    
+    for (Player *p in self.currentPlayers) {
+        [p fillHand:deck];
+    }
 }
 
 -(void)addPlayer:(Player*)newPlayer{
@@ -30,7 +48,7 @@
 
 -(void)startTurn:(Player*)activePlayer :(Deck*)deck{
     //fill hand
-    [self.activePlayer fillHand:deck];
+    [self.activePlayer fillHand:deck];   // WE NEED TO FILL ALL HANDS
     //view hand
     [self.activePlayer displayHand];
     //need rules as to what cards to play and how to discard cards

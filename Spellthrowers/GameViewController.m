@@ -33,6 +33,7 @@
 @implementation GameViewController
 - (void)displayHand {
     [[self header] setText: [NSString stringWithFormat:@"%@, pick a card!", self.engine.activePlayer.name]];
+    
     Card *drawn0 = self.engine.activePlayer.hand[0];
     [[self cardName0] setText: [drawn0 name]];
     [[self cardValue0] setText: [NSString stringWithFormat:@"%d", drawn0.value]];
@@ -61,29 +62,9 @@
     if (! [self engine]) {
         [super viewDidLoad];
         self.engine = [Engine newEngine];
-        //[engine initEverything];
-        Deck *deck = [Deck newDeck];
-        Player *player1 = [Player newPlayer:deck:@"Player1"];
-        Player *player2 = [Player newPlayer:deck:@"Player2"];
-        
-        [self.engine addPlayer:(player1)];
-        [self.engine addPlayer:(player2)];
-        
-        //Set activePlayer
-        //TODO: randomize who goes first
-        self.engine.indexOfActivePlayer = 0;
-        self.engine.activePlayer = [self.engine.currentPlayers objectAtIndex:self.engine.indexOfActivePlayer];
-        
-        //start of action sequence
-        [self.engine startTurn:self.engine.activePlayer :deck];
-        
-        //[player1 fillHand:deck];
-        //[player2 fillHand:deck];
-        [self displayHand];
+        [self.engine initEverything];
     }
-    else{
-        [self displayHand];
-    }
+    [self displayHand];
 }
 
 
