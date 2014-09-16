@@ -231,6 +231,20 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.87692436762449022" green="0.86178558107901582" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 2: Life" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBj-1s-D3Y">
+                                <rect key="frame" x="191" y="266" width="100" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1998242029" green="0.56461037199999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 1: Life" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATm-y2-WX7">
+                                <rect key="frame" x="191" y="220" width="100" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1998242029" green="0.56461037199999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.11977982077040683" green="0.22068221771292906" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.11977982077040683" green="0.22068221771292906" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -248,6 +262,8 @@
                         <outlet property="cardValue3" destination="PLo-EH-fFv" id="aTT-rX-Dnd"/>
                         <outlet property="cardValue4" destination="2wY-xn-fAd" id="Nht-3S-SwI"/>
                         <outlet property="header" destination="4H1-4Y-Oye" id="HMo-2g-Qzm"/>
+                        <outlet property="player1Life" destination="ATm-y2-WX7" id="VxA-uh-sCG"/>
+                        <outlet property="player2Life" destination="cBj-1s-D3Y" id="G9b-l3-wBJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ahl-VG-yLK" userLabel="First Responder" sceneMemberID="firstResponder"/>

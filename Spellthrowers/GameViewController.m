@@ -25,6 +25,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *cardValue4;
 
 @property (weak, nonatomic) IBOutlet UILabel *header;
+@property (weak, nonatomic) IBOutlet UILabel *player1Life;
+@property (weak, nonatomic) IBOutlet UILabel *player2Life;
 
 @property (nonatomic, strong) Engine* engine;
 
@@ -64,7 +66,11 @@
         self.engine = [Engine newEngine];
         [self.engine initEverything];
     }
+    [[self player1Life] setText: [NSString stringWithFormat: @"%@ Life: %d", [self.engine.activePlayer name], [self.engine.activePlayer life]]];
+    [[self player2Life] setText: [NSString stringWithFormat: @"%@ Life: %d", [self.engine.players[(self.engine.indexOfActivePlayer+1)%[self.engine.players count]] name], [self.engine.players[(self.engine.indexOfActivePlayer+1)%[self.engine.players count]] life]]];
+    
     [self displayHand];
+    
 }
 
 
