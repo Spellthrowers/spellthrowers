@@ -18,6 +18,10 @@
 //on view load, change the active player and call their turn to be taken
 - (void)viewDidLoad
 {
+    if(self.engine.indexOfTouchedCard > [self.engine.activePlayer.hand count]-1){
+        [[self transitionMessage] setText:@"Please pick a valid card!"];
+        return;
+    }
     [self.engine startTurn];
     [[self transitionMessage] setText: [NSString stringWithFormat: @"Index hit: %d. %@, it is your turn!", self.engine.indexOfTouchedCard, self.engine.activePlayer.name]];
     [super viewDidLoad];

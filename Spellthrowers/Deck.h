@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "Card.h"
-#define NUM_CARD_TYPES 4
 
-@interface Deck : NSObject
+@interface Deck : NSObject{
+    NSUInteger numCardTypes;
+    
+}
 
 //retuns a subclass of deck, if asked for.
 +(instancetype)newDeck;

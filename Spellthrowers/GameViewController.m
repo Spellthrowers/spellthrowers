@@ -52,9 +52,16 @@
     [[self cardName3] setText: [drawn3 name]];
     [[self cardValue3] setText: [NSString stringWithFormat:@"%d", drawn3.value]];
     
-    Card *drawn4 = self.engine.activePlayer.hand[4];
-    [[self cardName4] setText: [drawn4 name]];
-    [[self cardValue4] setText: [NSString stringWithFormat:@"%d", drawn4.value]];
+    //If a card is removed, all cards shift down and this card becomes empty
+    if([self.engine.activePlayer.hand count] > 4){
+        Card *drawn4 = self.engine.activePlayer.hand[4];
+        [[self cardName4] setText: [drawn4 name]];
+        [[self cardValue4] setText: [NSString stringWithFormat:@"%d", drawn4.value]];
+    }
+    else{
+        [[self cardName4] setText: @"No Card"];
+        [[self cardValue4] setText: [NSString stringWithFormat:@""]];
+    }
 }
 
 //The main method for initializing gameplay

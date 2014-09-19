@@ -23,10 +23,11 @@
     //build a config dictionary
     NSDictionary* config = [NSDictionary dictionaryWithContentsOfFile:path];
     
+    numCardTypes = [config[@"cardNames"] count];
     Card *newCard = [[Card alloc] init];
     
     //get random card TODO: use weights
-    int cardIndex = arc4random_uniform(NUM_CARD_TYPES);
+    int cardIndex = arc4random_uniform((int)numCardTypes);
     
     //set card name
     [newCard setName: config[@"cardNames"][cardIndex]];

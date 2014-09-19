@@ -44,11 +44,6 @@
 }
 
 -(void)startTurn{
-    //fill hands
-    for (Player *p in self.currentPlayers) {
-        [p fillHand:p.deck];
-    }
-    
 
     //take turn
         
@@ -56,13 +51,15 @@
     //Player can play as many cards as they want until they play an attack card
     //TODO: Discard cards
     
+    
     //TODO: Remove card after played
     
-    //TODO: Why does life decrease by the first card index on load..
-
-    //play card on next player
-    [self play: self.activePlayer :[self.activePlayer hand][_indexOfTouchedCard] : self.players[(_indexOfActivePlayer+1) % [self.players count]]];
     
+    //TODO: Why does life decrease by the first card index on load..
+    if([self.activePlayer hand][_indexOfTouchedCard]){
+    //play card on next player
+       [self play: self.activePlayer : [self.activePlayer hand][_indexOfTouchedCard] : self.players[(_indexOfActivePlayer+1) % [self.players count]]];
+    }
     //End turn if:
     //player uses attack
     if([[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Attack"]){
@@ -75,6 +72,13 @@
         [self nextPlayer];
     }
     
+    //fill hands
+    for (Player *p in self.currentPlayers) {
+        [p fillHand:p.deck];
+    }
+    
+    
+    //TODO: Remove players
     //TODO: End game
 }
 
@@ -83,6 +87,13 @@
     if([[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Attack"]){
         [onPlayer setLife: [onPlayer life] - card.value];
     }
+    else if([[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Heal"]){
+        [onPlayer setLife: [onPlayer life] + card.value];
+    }
+    
+    [self.activePlayer removeCard:_indexOfTouchedCard];
+    
+    
 }
 
 -(void)removePlayer:(Player*)playerToRemove{
