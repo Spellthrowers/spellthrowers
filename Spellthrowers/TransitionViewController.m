@@ -10,6 +10,10 @@
 
 @interface TransitionViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *transitionMessage;
+@property (weak, nonatomic) IBOutlet UILabel *transitionMessage2;
+
+@property (weak, nonatomic) IBOutlet UILabel *player1Life;
+@property (weak, nonatomic) IBOutlet UILabel *player2Life;
 
 @end
 
@@ -18,12 +22,25 @@
 //on view load, change the active player and call their turn to be taken
 - (void)viewDidLoad
 {
+
     if(self.engine.indexOfTouchedCard > [self.engine.activePlayer.hand count]-1){
         [[self transitionMessage] setText:@"Please pick a valid card!"];
         return;
     }
+    NSString *nextPlayerName =[self.engine.players[(self.engine.indexOfActivePlayer+1) % [self.engine.players count]] name];
+    
+    //set text on screen
+    Card *cardPlayed = self.engine.activePlayer.hand[self.engine.indexOfTouchedCard];
+    int cardValue = cardPlayed.value;
+    [[self transitionMessage] setText: [NSString stringWithFormat: @"%@ hit %@ for %d damage with the %@ card!", self.engine.activePlayer.name, nextPlayerName, cardValue, cardPlayed.name]];
+    [[self transitionMessage2] setText: [NSString stringWithFormat: @"%@, it's your turn.",nextPlayerName]];
+    
+    //run turn and set next player
     [self.engine startTurn];
-    [[self transitionMessage] setText: [NSString stringWithFormat: @"Index hit: %d. %@, it is your turn!", self.engine.indexOfTouchedCard, self.engine.activePlayer.name]];
+    
+    [[self player1Life] setText: [NSString stringWithFormat: @"%@ Life: %d", [self.engine.activePlayer name], [self.engine.activePlayer life]]];
+    [[self player2Life] setText: [NSString stringWithFormat: @"%@ Life: %d", [self.engine.players[(self.engine.indexOfActivePlayer+1)%[self.engine.players count]] name], [self.engine.players[(self.engine.indexOfActivePlayer+1)%[self.engine.players count]] life]]];
+    
     [super viewDidLoad];
 }
 
