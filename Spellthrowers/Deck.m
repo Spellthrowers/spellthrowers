@@ -33,8 +33,10 @@
     [newCard setName: config[@"cardNames"][cardIndex]];
     //set card type
     [newCard setCardType: config[@"cardTypes"][cardIndex]];
-    //set card value. This only matters for attack cards.
-    [newCard setValue: cardIndex + 1];
+    //set card value. Requires integer; we only have NSNumbers in plists.
+    NSNumber* value = config[@"cardValues"][cardIndex];
+    int value2 = [value intValue];
+    [newCard setValue: value2];
     return newCard;
 }
 

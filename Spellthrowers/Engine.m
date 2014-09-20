@@ -61,8 +61,9 @@
        [self play: self.activePlayer : [self.activePlayer hand][_indexOfTouchedCard] : self.players[(_indexOfActivePlayer+1) % [self.players count]]];
     }
     //End turn if:
-    //player uses attack
-    if([[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Attack"]){
+    //player uses attack or weapon
+    if(   [[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Attack"]
+       || [[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Weapon"]){
         //pass turn to nextPlayer
         [self nextPlayer];
     }
@@ -83,15 +84,16 @@
 }
 
 -(void)play:(Player *)fromPlayer :(Card *)card :(Player *)onPlayer{
-    //NSLog(@"%@ plays %@ on %@!", [[self activePlayer] name], [[[self activePlayer] hand][_indexOfTouchedCard] name], [[self players][_indexOfActivePlayer+1 % [[self players] count]] name]);
-    if([[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Attack"]){
+    if(   [[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Attack"]
+       || [[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Weapon"]){
         [onPlayer setLife: [onPlayer life] - card.value];
     }
     else if([[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Heal"]){
         [onPlayer setLife: [onPlayer life] + card.value];
     }
-    
-    [self.activePlayer removeCard:_indexOfTouchedCard];
+    if(![[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Weapon"]){
+        [self.activePlayer removeCard:_indexOfTouchedCard];
+    }
     
     
 }

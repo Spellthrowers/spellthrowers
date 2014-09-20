@@ -27,6 +27,8 @@
         [[self transitionMessage] setText:@"Please pick a valid card!"];
         return;
     }
+    //TODO: code logic and return for cards that don't end turn here
+    
     NSString *nextPlayerName =[self.engine.players[(self.engine.indexOfActivePlayer+1) % [self.engine.players count]] name];
     
     //set text on screen
@@ -38,10 +40,15 @@
     //run turn and set next player
     [self.engine startTurn];
     
-    [[self player1Life] setText: [NSString stringWithFormat: @"%@ Life: %d", [self.engine.activePlayer name], [self.engine.activePlayer life]]];
-    [[self player2Life] setText: [NSString stringWithFormat: @"%@ Life: %d", [self.engine.players[(self.engine.indexOfActivePlayer+1)%[self.engine.players count]] name], [self.engine.players[(self.engine.indexOfActivePlayer+1)%[self.engine.players count]] life]]];
+    //set life text after turn is taken
+    [self setLife];
     
     [super viewDidLoad];
+}
+
+-(void)setLife{
+    [[self player1Life] setText: [NSString stringWithFormat: @"%@ Life: %d", [self.engine.activePlayer name], [self.engine.activePlayer life]]];
+    [[self player2Life] setText: [NSString stringWithFormat: @"%@ Life: %d", [self.engine.players[(self.engine.indexOfActivePlayer+1)%[self.engine.players count]] name], [self.engine.players[(self.engine.indexOfActivePlayer+1)%[self.engine.players count]] life]]];
 }
 
 //use this to store info before leaving the view
