@@ -6,33 +6,21 @@
 	<array>
 		<integer>3</integer>
 		<integer>1</integer>
-		<integer>2</integer>
-		<integer>3</integer>
-		<integer>4</integer>
 	</array>
 	<key>cardTypes</key>
 	<array>
 		<string>Weapon</string>
-		<string>Attack</string>
-		<string>Attack</string>
-		<string>Attack</string>
 		<string>Attack</string>
 	</array>
 	<key>cardWeights</key>
 	<array>
 		<string>2</string>
 		<integer>1</integer>
-		<integer>2</integer>
-		<integer>3</integer>
-		<integer>4</integer>
 	</array>
 	<key>cardNames</key>
 	<array>
 		<string>Laser Pistol</string>
 		<string>Zap</string>
-		<string>Fireball</string>
-		<string>Ice Shards</string>
-		<string>Hurricane</string>
 	</array>
 </dict>
 </plist>

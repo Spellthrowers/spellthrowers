@@ -52,18 +52,17 @@
     //TODO: Discard cards
     
     
-    //TODO: Remove card after played
+    Card* playedCard = [self.activePlayer hand][_indexOfTouchedCard];
     
     
-    //TODO: Why does life decrease by the first card index on load..
     if([self.activePlayer hand][_indexOfTouchedCard]){
     //play card on next player
-       [self play: self.activePlayer : [self.activePlayer hand][_indexOfTouchedCard] : self.players[(_indexOfActivePlayer+1) % [self.players count]]];
+       [self play: self.activePlayer : playedCard : self.players[(_indexOfActivePlayer+1) % [self.players count]]];
     }
     //End turn if:
     //player uses attack or weapon
-    if(   [[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Attack"]
-       || [[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Weapon"]){
+    if(   [[playedCard cardType] isEqualToString: @"Attack"]
+       || [[playedCard cardType] isEqualToString: @"Weapon"]){
         //pass turn to nextPlayer
         [self nextPlayer];
     }
@@ -84,9 +83,16 @@
 }
 
 -(void)play:(Player *)fromPlayer :(Card *)card :(Player *)onPlayer{
-    if(   [[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Attack"]
-       || [[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Weapon"]){
+    //perform the correct action based on what was played
+    if(   [[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Attack"]){
         [onPlayer setLife: [onPlayer life] - card.value];
+    }
+    else if ([[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Weapon"]){
+        for (Card* card in self.activePlayer.hand) {
+            if([card.cardType isEqualToString:@"Weapon"]){
+                [onPlayer setLife: [onPlayer life] - card.value];
+            }
+        }
     }
     else if([[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Heal"]){
         [onPlayer setLife: [onPlayer life] + card.value];
