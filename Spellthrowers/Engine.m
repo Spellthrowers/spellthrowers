@@ -23,6 +23,7 @@
     Deck *deck = [Deck newDeck];
     Player *player1 = [Player newPlayer:deck:@"Player1"];
     Player *player2 = [Player newPlayer:deck:@"Player2"];
+    Player *winner = NULL;
     
     [self addPlayer:player1];
     [self addPlayer:(player2)];
@@ -44,42 +45,51 @@
 }
 
 -(void)startTurn{
-
-    //take turn
-        
-    //TODO: Set rules as to what cards to play
     //Player can play as many cards as they want until they play an attack card
-    //TODO: Discard cards
-    
     
     Card* playedCard = [self.activePlayer hand][_indexOfTouchedCard];
     
     
     if([self.activePlayer hand][_indexOfTouchedCard]){
-    //play card on next player
+    //Play card on next player
        [self play: self.activePlayer : playedCard : self.players[(_indexOfActivePlayer+1) % [self.players count]]];
     }
+    
     //End turn if:
-    //player uses attack or weapon
+        //Player uses attack or weapon
     if(   [[playedCard cardType] isEqualToString: @"Attack"]
        || [[playedCard cardType] isEqualToString: @"Weapon"]){
         //pass turn to nextPlayer
         [self nextPlayer];
     }
-    //player doesn't have any cards left
+        //Player doesn't have any cards left
     else if([self.activePlayer.playerHand count] == 0){
-        //pass turn to nextPlayer
+        //Pass turn to nextPlayer
         [self nextPlayer];
     }
     
-    //fill hands
+    
+    //Fill hands
     for (Player *p in self.currentPlayers) {
         [p fillHand:p.deck];
     }
     
+    //TODO: Option to discard cards
     
-    //TODO: Remove players
+    
+    //Remove players once their life is below zero
+    for (int i = 0; i < [self.currentPlayers count]; i++) {
+        if([self.currentPlayers[i] life] <= 0){
+            [self removePlayer:self.currentPlayers[i]];
+        }
+    }
+    
     //TODO: End game
+    if ([self.currentPlayers count] <= 1) {
+        //GAME OVER
+        _winner = [self endGame];
+    }
+
 }
 
 -(void)play:(Player *)fromPlayer :(Card *)card :(Player *)onPlayer{
@@ -105,7 +115,6 @@
 }
 
 -(void)removePlayer:(Player*)playerToRemove{
-    //TODO: Test this method
     //remove a player from currentPlayers
     [self.currentPlayers removeObject:(playerToRemove)];
 }
@@ -130,10 +139,9 @@
     
 }
 
--(void)endGame{
-    //end game
-    //TODO:
-    
+-(Player*)endGame{
+    Player* winner = self.currentPlayers[0];
+    return winner;
 }
 
 

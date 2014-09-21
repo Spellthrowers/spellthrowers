@@ -13,6 +13,7 @@
 @interface Engine : NSObject
 
 @property Player* activePlayer;//current player
+@property Player* winner;
 @property int indexOfActivePlayer;
 @property NSMutableArray* players;
 @property NSMutableArray* currentPlayers;//players that are still in the game
@@ -25,6 +26,6 @@
 -(void)removePlayer:(Player*)playerToRemove;
 -(void)play: (Player*)fromPlayer :(Card*)card :(Player*)onPlayer;
 -(void)nextPlayer;
--(void)endGame;
+-(Player*)endGame;
 
 @end

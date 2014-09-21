@@ -27,6 +27,8 @@
         [[self transitionMessage] setText:@"Please pick a valid card!"];
         return;
     }
+    
+    
     //TODO: code logic and return for cards that don't end turn here
     
     NSString *nextPlayerName =[self.engine.players[(self.engine.indexOfActivePlayer+1) % [self.engine.players count]] name];
@@ -38,6 +40,11 @@
     
     //run turn and set next player
     [self.engine startTurn];
+    
+    if (self.engine.winner != NULL) {
+        UIAlertView *playAlert = [[UIAlertView alloc] initWithTitle:@"Game Over" message:@"Just ended..." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [playAlert show];
+    }
     
     //set life text after turn is taken
     [self setLife];
