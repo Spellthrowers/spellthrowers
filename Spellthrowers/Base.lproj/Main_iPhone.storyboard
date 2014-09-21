@@ -279,14 +279,26 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9o0-ac-5wN">
-                                <rect key="frame" x="65" y="228" width="190" height="89"/>
+                                <rect key="frame" x="65" y="226" width="190" height="89"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <state key="normal" title="Ready!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="next:forEvent:" destination="qIm-wM-wJV" eventType="valueChanged" id="uXZ-nc-byD"/>
                                     <segue destination="SEj-FN-gUh" kind="modal" id="Tbl-ES-a5F"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYN-h2-gg3">
+                                <rect key="frame" x="77" y="287" width="167" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Return Home">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" id="DED-7D-nDF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -295,6 +307,8 @@
                     <connections>
                         <outlet property="player1Life" destination="Nz2-lv-vMj" id="Xmb-7m-KmD"/>
                         <outlet property="player2Life" destination="x1g-6G-280" id="CUm-Sq-DE0"/>
+                        <outlet property="ready" destination="9o0-ac-5wN" id="GJV-EZ-pmt"/>
+                        <outlet property="returnHome" destination="cYN-h2-gg3" id="aXE-LX-ApR"/>
                         <outlet property="transitionMessage" destination="DSj-lA-JNI" id="2uO-Qv-UVc"/>
                         <outlet property="transitionMessage2" destination="Zhy-Tp-ECB" id="Bqh-rK-nhN"/>
                     </connections>
@@ -310,7 +324,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="R3b-RW-hhx"/>
+        <segue reference="2EV-Ra-CA9"/>
         <segue reference="Tbl-ES-a5F"/>
     </inferredMetricsTieBreakers>
 </document>

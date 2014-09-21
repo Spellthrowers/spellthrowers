@@ -23,7 +23,7 @@
     Deck *deck = [Deck newDeck];
     Player *player1 = [Player newPlayer:deck:@"Player1"];
     Player *player2 = [Player newPlayer:deck:@"Player2"];
-    Player *winner = NULL;
+    Player *winner = nil;
     
     [self addPlayer:player1];
     [self addPlayer:(player2)];

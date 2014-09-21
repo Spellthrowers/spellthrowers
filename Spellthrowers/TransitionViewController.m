@@ -11,6 +11,8 @@
 @interface TransitionViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *transitionMessage;
 @property (weak, nonatomic) IBOutlet UILabel *transitionMessage2;
+@property (weak, nonatomic) IBOutlet UIButton *ready;
+@property (weak, nonatomic) IBOutlet UIButton *returnHome;
 
 @property (weak, nonatomic) IBOutlet UILabel *player1Life;
 @property (weak, nonatomic) IBOutlet UILabel *player2Life;
@@ -22,6 +24,7 @@
 //on view load, change the active player and call their turn to be taken
 - (void)viewDidLoad
 {
+    [self returnHome].hidden = YES;
 
     if(self.engine.indexOfTouchedCard > [self.engine.activePlayer.hand count]-1){
         [[self transitionMessage] setText:@"Please pick a valid card!"];
@@ -41,9 +44,18 @@
     //run turn and set next player
     [self.engine startTurn];
     
+    
+    //if the game is over
     if (self.engine.winner != NULL) {
-        UIAlertView *playAlert = [[UIAlertView alloc] initWithTitle:@"Game Over" message:@"Just ended..." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        //send alert
+        UIAlertView *playAlert = [[UIAlertView alloc] initWithTitle:@"Game Over" message: [NSString stringWithFormat:@"%@ won!", [self.engine.currentPlayers[0] name]] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [playAlert show];
+        
+        [[self transitionMessage2] setText:@"Game Over"];
+        
+        //give option to return home
+        [self ready].hidden = YES;
+        [self returnHome].hidden = NO;
     }
     
     //set life text after turn is taken
@@ -111,7 +123,10 @@
 
 //use this to store info before leaving the view
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    [[segue destinationViewController] setEngine:self.engine];
+    if (self.engine.winner == NULL) {
+        [[segue destinationViewController] setEngine:self.engine];
+    }
+    [segue destinationViewController];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
