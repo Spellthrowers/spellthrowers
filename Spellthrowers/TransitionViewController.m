@@ -79,6 +79,27 @@
     if([cardPlayed.cardType isEqualToString:@"Attack"]){
         [[self transitionMessage] setText: [NSString stringWithFormat: @"%@ hit %@ for %d damage with the %@ card!", self.engine.activePlayer.name, nextPlayerName, cardValue, cardPlayed.name]];
     }
+    else if ([cardPlayed.cardType isEqualToString:@"EMP"]){
+        //get how many weapons enemies hold
+        int numWeaponsRemoved = 0;
+        for (Player *p in self.engine.currentPlayers) {
+            if(p != self.engine.activePlayer){
+                for (Card *card in p.hand) {
+                    if([[card cardType] isEqualToString:@"Weapon"]){
+                        numWeaponsRemoved++;
+                    }
+                }
+            }
+        }
+        
+        //set text on transition screen. Singular and plural weapon removal.
+        if (numWeaponsRemoved == 1) {
+            [[self transitionMessage] setText: [NSString stringWithFormat: @"%@ used an EMP card! %i weapon was removed from enemy hands!", self.engine.activePlayer.name, numWeaponsRemoved]];
+        }
+        else{
+            [[self transitionMessage] setText: [NSString stringWithFormat: @"%@ used an EMP card! %i weapons were removed from enemy hands!", self.engine.activePlayer.name, numWeaponsRemoved]];
+        }
+    }
     else if([cardPlayed.cardType isEqualToString:@"Weapon"]){
         int damage = 0;
         int numHits = 0;

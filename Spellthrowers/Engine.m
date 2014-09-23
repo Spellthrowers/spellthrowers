@@ -23,7 +23,7 @@
     Deck *deck = [Deck newDeck];
     Player *player1 = [Player newPlayer:deck:@"Player1"];
     Player *player2 = [Player newPlayer:deck:@"Player2"];
-    Player *winner = nil;
+    //Player *winner = nil;
     
     [self addPlayer:player1];
     [self addPlayer:(player2)];
@@ -56,15 +56,12 @@
     }
     
     //End turn if:
-        //Player uses attack or weapon
+    //Player uses attack or weapon or EMP. Or if player has no cards left.
     if(   [[playedCard cardType] isEqualToString: @"Attack"]
-       || [[playedCard cardType] isEqualToString: @"Weapon"]){
+       || [[playedCard cardType] isEqualToString: @"Weapon"]
+       || [[playedCard cardType] isEqualToString: @"EMP"]
+       || [self.activePlayer.playerHand count] == 0){
         //pass turn to nextPlayer
-        [self nextPlayer];
-    }
-        //Player doesn't have any cards left
-    else if([self.activePlayer.playerHand count] == 0){
-        //Pass turn to nextPlayer
         [self nextPlayer];
     }
     
@@ -107,6 +104,20 @@
     else if([[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Heal"]){
         [onPlayer setLife: [onPlayer life] + card.value];
     }
+    else if([[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"EMP"]){
+        for (Player *p in self.currentPlayers) {
+            if(p != _activePlayer){
+                for (int i=0; i<[[p hand] count]; i++) {
+                    Card* card = p.playerHand[i];
+                    if ([[card cardType] isEqualToString:@"Weapon"]) {
+                        [p removeCard:i];
+                    }
+                }
+            }
+        }
+    }
+    
+    //Remove nonweapon played cards
     if(![[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Weapon"]){
         [self.activePlayer removeCard:_indexOfTouchedCard];
     }

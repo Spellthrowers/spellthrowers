@@ -14,7 +14,7 @@
     Player *newPlayer = [[Player alloc] init];
     [newPlayer setDeck:deck];
     newPlayer.playerHand = NSMutableArray.array;
-    [newPlayer setLife: 5];
+    [newPlayer setLife: 20];
     [newPlayer fillHand: deck];
     [newPlayer setName:name];
     return newPlayer;
@@ -32,6 +32,15 @@
 
 -(void)removeCard:(int)atIndex{
     [[self hand] removeObjectAtIndex:atIndex];
+}
+
+-(void)removeAllCardsOfType: (NSString*)type{
+    for (int i=0; i<[[self playerHand] count]; i++) {
+        Card* card = self.playerHand[i];
+        if ([[card cardType] isEqualToString:type]) {
+            [self removeCard:i];
+        }
+    }
 }
 
 -(void)hideHand{

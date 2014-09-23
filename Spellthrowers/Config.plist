@@ -4,6 +4,7 @@
 <dict>
 	<key>cardValues</key>
 	<array>
+		<string>0</string>
 		<integer>3</integer>
 		<integer>1</integer>
 		<integer>2</integer>
@@ -12,6 +13,7 @@
 	</array>
 	<key>cardTypes</key>
 	<array>
+		<string>EMP</string>
 		<string>Weapon</string>
 		<string>Attack</string>
 		<string>Attack</string>
@@ -20,7 +22,8 @@
 	</array>
 	<key>cardWeights</key>
 	<array>
-		<string>2</string>
+		<integer>2</integer>
+		<integer>2</integer>
 		<integer>1</integer>
 		<integer>2</integer>
 		<integer>3</integer>
@@ -28,6 +31,7 @@
 	</array>
 	<key>cardNames</key>
 	<array>
+		<string>EMP</string>
 		<string>Laser Pistol</string>
 		<string>Zap</string>
 		<string>Fireball</string>
