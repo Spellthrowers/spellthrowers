@@ -28,6 +28,5 @@
 -(void)nextPlayer;
 -(Player*)endGame;
 -(void)removeCard:(int)atIndex;
--(void)removeAllCardsOfType:(NSString*)type;
 
 @end

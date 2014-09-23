@@ -34,19 +34,6 @@
     [[self hand] removeObjectAtIndex:atIndex];
 }
 
--(void)removeAllCardsOfType: (NSString*)type{
-    for (int i=0; i<[[self playerHand] count]; i++) {
-        Card* card = self.playerHand[i];
-        if ([[card cardType] isEqualToString:type]) {
-            [self removeCard:i];
-        }
-    }
-}
-
--(void)hideHand{
-    
-}
-
 -(void)takeDamage:(int)amount{
     _life-= amount;
 }
