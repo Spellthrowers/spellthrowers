@@ -18,6 +18,7 @@
 @property NSMutableArray* players;
 @property NSMutableArray* currentPlayers;//players that are still in the game
 @property (nonatomic) int indexOfTouchedCard;
+@property (nonatomic) BOOL isAiGame;
 
 +(instancetype)newEngine;
 -(void)initEverything;
@@ -27,6 +28,6 @@
 -(void)play: (Player*)fromPlayer :(Card*)card :(Player*)onPlayer;
 -(void)nextPlayer;
 -(Player*)endGame;
--(void)removeCard:(int)atIndex;
+-(int)getAiRecommendedCardIndex;
 
 @end

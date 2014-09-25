@@ -18,6 +18,7 @@
 @property (nonatomic) bool isShielded;
 @property (nonatomic, strong) NSMutableArray* playerHand;
 @property (nonatomic, strong) Deck *deck;
+@property (nonatomic) BOOL isAi;
 
 +(instancetype)newPlayer: (Deck*) deck :(NSString*) name;
 
@@ -25,7 +26,6 @@
 -(NSMutableArray*)hand;
 -(void)removeCard:(int)atIndex;
 
--(void)hideHand;
 -(void)takeDamage: (int)amount;
 -(void)gainLife: (int)amount;
 

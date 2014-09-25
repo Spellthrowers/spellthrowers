@@ -17,6 +17,7 @@
     [newPlayer setLife: 20];
     [newPlayer fillHand: deck];
     [newPlayer setName:name];
+    [newPlayer setIsAi:NO];
     return newPlayer;
 }
 

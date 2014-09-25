@@ -52,6 +52,7 @@
     [[self cardName3] setText: [drawn3 name]];
     [[self cardValue3] setText: [NSString stringWithFormat:@"%d", drawn3.value]];
     
+    //TODO BUG: set up all cards drawn this way.
     //If a card is removed, all cards shift down and this card becomes empty
     if([self.engine.activePlayer.hand count] > 4){
         Card *drawn4 = self.engine.activePlayer.hand[4];
@@ -72,6 +73,10 @@
         [super viewDidLoad];
         self.engine = [Engine newEngine];
         [self.engine initEverything];
+    }
+    if ([self isAiGame]) {
+        [self.engine.players[[self.engine.players count]-1] setIsAi:YES];
+        [self.engine.players[[self.engine.players count]-1] setName: @"Wesley Bot"];
     }
     [[self player1Life] setText: [NSString stringWithFormat: @"%@ Life: %d", [self.engine.activePlayer name], [self.engine.activePlayer life]]];
     [[self player2Life] setText: [NSString stringWithFormat: @"%@ Life: %d", [self.engine.players[(self.engine.indexOfActivePlayer+1)%[self.engine.players count]] name], [self.engine.players[(self.engine.indexOfActivePlayer+1)%[self.engine.players count]] life]]];

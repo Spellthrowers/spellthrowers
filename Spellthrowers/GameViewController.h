@@ -11,5 +11,6 @@
 @interface GameViewController : UIViewController
 
 @property (nonatomic, strong) NSString *restorationIdentifier;
+@property (nonatomic) bool isAiGame;
 
 @end

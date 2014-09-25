@@ -125,6 +125,10 @@
     
 }
 
+-(int)getAiRecommendedCardIndex{
+    return 1;
+}
+
 -(void)removePlayer:(Player*)playerToRemove{
     //remove a player from currentPlayers
     [self.currentPlayers removeObject:(playerToRemove)];

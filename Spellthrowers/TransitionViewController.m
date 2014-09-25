@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *transitionMessage;
 @property (weak, nonatomic) IBOutlet UILabel *transitionMessage2;
 @property (weak, nonatomic) IBOutlet UIButton *ready;
+@property (weak, nonatomic) IBOutlet UIButton *passToAi;
 @property (weak, nonatomic) IBOutlet UIButton *returnHome;
 
 @property (weak, nonatomic) IBOutlet UILabel *player1Life;
@@ -54,8 +55,17 @@
         [[self transitionMessage2] setText:@"Game Over"];
         
         //give option to return home
+        [self passToAi].hidden = YES;
         [self ready].hidden = YES;
         [self returnHome].hidden = NO;
+    }
+    else if(self.engine.activePlayer.isAi){
+        [self passToAi].hidden = NO;
+        [self ready].hidden = YES;
+    }
+    else{
+        [self passToAi].hidden = YES;
+        [self ready].hidden = NO;
     }
     
     //set life text after turn is taken
@@ -65,8 +75,8 @@
 }
 
 -(void)setLife{
-    [[self player1Life] setText: [NSString stringWithFormat: @"%@ Life: %d", [self.engine.activePlayer name], [self.engine.activePlayer life]]];
-    [[self player2Life] setText: [NSString stringWithFormat: @"%@ Life: %d", [self.engine.players[(self.engine.indexOfActivePlayer+1)%[self.engine.players count]] name], [self.engine.players[(self.engine.indexOfActivePlayer+1)%[self.engine.players count]] life]]];
+    [[self player1Life] setText: [NSString stringWithFormat: @"%@ Life: %d", [self.engine.players[0] name], [self.engine.players[0] life]]];
+    [[self player2Life] setText: [NSString stringWithFormat: @"%@ Life: %d", [self.engine.players[1] name], [self.engine.players[1] life]]];
 }
 
 -(void)setMainText{
@@ -148,6 +158,11 @@
         [[segue destinationViewController] setEngine:self.engine];
     }
     [segue destinationViewController];
+}
+
+- (IBAction)passToAiPressed:(id)sender {
+    [self.engine setIndexOfTouchedCard: self.engine.getAiRecommendedCardIndex];
+    [self viewDidLoad];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

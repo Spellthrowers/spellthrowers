@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "GameViewController.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *versus;
@@ -20,6 +21,12 @@
         [[self versus] setText: @"Vs Human"];
     } else {
         [[self versus] setText: @"Vs AI"];
+    }
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([[[self versus] text] isEqualToString:@"Vs AI"]) {
+        [[segue destinationViewController] setIsAiGame:YES];
     }
 }
 
