@@ -126,7 +126,7 @@
 }
 
 -(int)getAiRecommendedCardIndex{
-    return 1;
+    return 0;
 }
 
 -(void)removePlayer:(Player*)playerToRemove{

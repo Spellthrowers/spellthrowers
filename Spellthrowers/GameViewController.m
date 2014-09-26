@@ -27,6 +27,20 @@
 @property (weak, nonatomic) IBOutlet UILabel *header;
 @property (weak, nonatomic) IBOutlet UILabel *player1Life;
 @property (weak, nonatomic) IBOutlet UILabel *player2Life;
+@property (weak, nonatomic) IBOutlet UIButton *discardAndDraw;
+@property (weak, nonatomic) IBOutlet UIButton *cancel;
+
+@property (weak, nonatomic) IBOutlet UIButton *playCard0;
+@property (weak, nonatomic) IBOutlet UIButton *playCard1;
+@property (weak, nonatomic) IBOutlet UIButton *playCard2;
+@property (weak, nonatomic) IBOutlet UIButton *playCard3;
+@property (weak, nonatomic) IBOutlet UIButton *playCard4;
+
+@property (weak, nonatomic) IBOutlet UIButton *discard0;
+@property (weak, nonatomic) IBOutlet UIButton *discard1;
+@property (weak, nonatomic) IBOutlet UIButton *discard2;
+@property (weak, nonatomic) IBOutlet UIButton *discard3;
+@property (weak, nonatomic) IBOutlet UIButton *discard4;
 
 @property (nonatomic, strong) Engine* engine;
 
@@ -83,6 +97,38 @@
     
     [self displayHand];
     
+}
+
+- (IBAction)discardAndDrawTouched:(id)sender {
+    [[self playCard0] setHidden:YES];
+    [[self playCard1] setHidden:YES];
+    [[self playCard2] setHidden:YES];
+    [[self playCard3] setHidden:YES];
+    [[self playCard4] setHidden:YES];
+    [[self discard0] setHidden:NO];
+    [[self discard1] setHidden:NO];
+    [[self discard2] setHidden:NO];
+    [[self discard3] setHidden:NO];
+    [[self discard4] setHidden:NO];
+    
+    [[self cancel] setHidden:NO];
+    [[self discardAndDraw] setHidden:YES];
+}
+
+- (IBAction)cancelTouched:(id)sender {
+    [[self playCard0] setHidden:NO];
+    [[self playCard1] setHidden:NO];
+    [[self playCard2] setHidden:NO];
+    [[self playCard3] setHidden:NO];
+    [[self playCard4] setHidden:NO];
+    [[self discard0] setHidden:YES];
+    [[self discard1] setHidden:YES];
+    [[self discard2] setHidden:YES];
+    [[self discard3] setHidden:YES];
+    [[self discard4] setHidden:YES];
+    
+    [[self cancel] setHidden:YES];
+    [[self discardAndDraw] setHidden:NO];
 }
 
 

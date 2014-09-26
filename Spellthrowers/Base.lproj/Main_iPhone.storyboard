@@ -71,12 +71,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick a card!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" preferredMaxLayoutWidth="262" translatesAutoresizingMaskIntoConstraints="NO" id="4H1-4Y-Oye">
-                                <rect key="frame" x="29" y="20" width="262" height="77"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dbq-Ca-e17">
                                 <rect key="frame" x="29" y="324" width="82" height="133"/>
                                 <subviews>
@@ -98,6 +92,15 @@
                                         <connections>
                                             <action selector="card0Touched:" destination="SEj-FN-gUh" eventType="touchUpInside" id="pjY-kW-gc3"/>
                                             <segue destination="qIm-wM-wJV" kind="modal" identifier="card0Clicked" modalTransitionStyle="flipHorizontal" id="2EV-Ra-CA9"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wz0-v5-6EX">
+                                        <rect key="frame" x="-3" y="0.0" width="88" height="133"/>
+                                        <state key="normal" title="Discard">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="card0Touched:" destination="SEj-FN-gUh" eventType="touchUpInside" id="8Mt-Qt-vJE"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -126,6 +129,15 @@
                                             <segue destination="qIm-wM-wJV" kind="modal" identifier="card1Clicked" modalTransitionStyle="flipHorizontal" id="tjg-hy-4SB"/>
                                         </connections>
                                     </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2d-pz-xGB">
+                                        <rect key="frame" x="-3" y="0.0" width="88" height="133"/>
+                                        <state key="normal" title="Discard">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="card0Touched:" destination="SEj-FN-gUh" eventType="touchUpInside" id="8Nv-PK-mhJ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.96518269177949179" green="1" blue="0.94413749554997306" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -144,12 +156,19 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLB-Df-OUV">
                                         <rect key="frame" x="-3" y="0.0" width="88" height="133"/>
-                                        <state key="normal" title="X">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
+                                        <state key="normal" title="X"/>
                                         <connections>
                                             <action selector="card2Touched:" destination="SEj-FN-gUh" eventType="touchUpInside" id="HfM-vS-fJi"/>
                                             <segue destination="qIm-wM-wJV" kind="modal" identifier="card2Clicked" modalTransitionStyle="flipHorizontal" id="Zsk-g0-jh9"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TkL-6m-OrR">
+                                        <rect key="frame" x="-3" y="0.0" width="88" height="133"/>
+                                        <state key="normal" title="Discard">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="card0Touched:" destination="SEj-FN-gUh" eventType="touchUpInside" id="VSF-PN-rnj"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -178,6 +197,15 @@
                                             <segue destination="qIm-wM-wJV" kind="modal" identifier="card3Clicked" modalTransitionStyle="flipHorizontal" id="G8u-pZ-hph"/>
                                         </connections>
                                     </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgA-Hv-MMN">
+                                        <rect key="frame" x="-3" y="0.0" width="88" height="133"/>
+                                        <state key="normal" title="Discard">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="card0Touched:" destination="SEj-FN-gUh" eventType="touchUpInside" id="7Zf-li-ckQ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.75477455231116897" green="0.94633381824408314" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -204,19 +232,66 @@
                                             <segue destination="qIm-wM-wJV" kind="modal" identifier="card4Clicked" modalTransitionStyle="flipHorizontal" id="R3b-RW-hhx"/>
                                         </connections>
                                     </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2l-NH-dZt">
+                                        <rect key="frame" x="-3" y="0.0" width="88" height="133"/>
+                                        <state key="normal" title="Discard">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="card0Touched:" destination="SEj-FN-gUh" eventType="touchUpInside" id="ey3-F5-sii"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.87692436762449022" green="0.86178558107901582" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 2: Life" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBj-1s-D3Y">
-                                <rect key="frame" x="169" y="266" width="122" height="41"/>
+                                <rect key="frame" x="29" y="269" width="122" height="41"/>
                                 <color key="backgroundColor" red="0.1998242029" green="0.56461037199999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 1: Life" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATm-y2-WX7">
-                                <rect key="frame" x="169" y="220" width="122" height="38"/>
+                                <rect key="frame" x="29" y="223" width="122" height="38"/>
                                 <color key="backgroundColor" red="0.1998242029" green="0.56461037199999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FUp-Xz-uf6">
+                                <rect key="frame" x="164" y="271" width="125" height="38"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Discard &amp; Draw">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="HelveticaNeue-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="discardAndDrawTouched:" destination="SEj-FN-gUh" eventType="touchUpInside" id="VnW-Rf-rY9"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2sX-nR-Rw1">
+                                <rect key="frame" x="164" y="223" width="125" height="38"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Cancel">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="HelveticaNeue-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="cancelTouched:" destination="SEj-FN-gUh" eventType="touchUpInside" id="aoP-3Y-shM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick a card!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" preferredMaxLayoutWidth="262" translatesAutoresizingMaskIntoConstraints="NO" id="4H1-4Y-Oye">
+                                <rect key="frame" x="29" y="20" width="262" height="77"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -225,6 +300,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="FVC-3P-EAy"/>
                     <connections>
+                        <outlet property="cancel" destination="2sX-nR-Rw1" id="GgE-Zn-Am5"/>
                         <outlet property="cardName0" destination="F8O-EB-C3W" id="r0n-hc-bd4"/>
                         <outlet property="cardName1" destination="kDw-I5-olD" id="e7g-gm-s3Z"/>
                         <outlet property="cardName2" destination="CXb-pG-7cq" id="bbe-Kz-LDD"/>
@@ -235,7 +311,18 @@
                         <outlet property="cardValue2" destination="x7A-FY-6mk" id="eBr-hz-kt0"/>
                         <outlet property="cardValue3" destination="PLo-EH-fFv" id="aTT-rX-Dnd"/>
                         <outlet property="cardValue4" destination="2wY-xn-fAd" id="Nht-3S-SwI"/>
+                        <outlet property="discard0" destination="Wz0-v5-6EX" id="86L-IQ-Gk0"/>
+                        <outlet property="discard1" destination="N2d-pz-xGB" id="2lH-vg-KuZ"/>
+                        <outlet property="discard2" destination="TkL-6m-OrR" id="XJA-fA-AXy"/>
+                        <outlet property="discard3" destination="hgA-Hv-MMN" id="BIW-8k-piQ"/>
+                        <outlet property="discard4" destination="T2l-NH-dZt" id="jnc-4d-Fcl"/>
+                        <outlet property="discardAndDraw" destination="FUp-Xz-uf6" id="n44-jx-Nye"/>
                         <outlet property="header" destination="4H1-4Y-Oye" id="HMo-2g-Qzm"/>
+                        <outlet property="playCard0" destination="ode-mp-j7A" id="kpd-iu-RaA"/>
+                        <outlet property="playCard1" destination="GBL-ox-Gc6" id="gPQ-me-uyC"/>
+                        <outlet property="playCard2" destination="aLB-Df-OUV" id="Wcy-1O-kBn"/>
+                        <outlet property="playCard3" destination="Y5b-fK-XkP" id="R61-E0-9Lb"/>
+                        <outlet property="playCard4" destination="wqs-di-dV4" id="4GA-qT-niO"/>
                         <outlet property="player1Life" destination="ATm-y2-WX7" id="VxA-uh-sCG"/>
                         <outlet property="player2Life" destination="cBj-1s-D3Y" id="G9b-l3-wBJ"/>
                     </connections>
@@ -334,7 +421,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="2EV-Ra-CA9"/>
         <segue reference="Tbl-ES-a5F"/>
+        <segue reference="R3b-RW-hhx"/>
     </inferredMetricsTieBreakers>
 </document>
