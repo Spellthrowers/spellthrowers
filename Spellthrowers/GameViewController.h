@@ -13,4 +13,6 @@
 @property (nonatomic, strong) NSString *restorationIdentifier;
 @property (nonatomic) bool isAiGame;
 
+-(BOOL)atLeastOneCardSetToDiscard;
+
 @end

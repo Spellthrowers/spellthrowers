@@ -29,6 +29,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *player2Life;
 @property (weak, nonatomic) IBOutlet UIButton *discardAndDraw;
 @property (weak, nonatomic) IBOutlet UIButton *cancel;
+@property (weak, nonatomic) IBOutlet UIButton *drawNewCards;
 
 @property (weak, nonatomic) IBOutlet UIButton *playCard0;
 @property (weak, nonatomic) IBOutlet UIButton *playCard1;
@@ -112,7 +113,9 @@
     [[self discard4] setHidden:NO];
     
     [[self cancel] setHidden:NO];
+    [[self drawNewCards] setHidden: !self.atLeastOneCardSetToDiscard];
     [[self discardAndDraw] setHidden:YES];
+    [[self header] setText:@"Choose cards to discard!"];
 }
 
 - (IBAction)cancelTouched:(id)sender {
@@ -128,7 +131,47 @@
     [[self discard4] setHidden:YES];
     
     [[self cancel] setHidden:YES];
+    [[self drawNewCards] setHidden:YES];
     [[self discardAndDraw] setHidden:NO];
+    [[self header] setText:@"Pick a card!"];
+    
+    //undo background changes from selecting discards
+    [[self discard0] setBackgroundColor:  [UIColor clearColor]];
+    [[self discard1] setBackgroundColor:  [UIColor clearColor]];
+    [[self discard2] setBackgroundColor:  [UIColor clearColor]];
+    [[self discard3] setBackgroundColor:  [UIColor clearColor]];
+    [[self discard4] setBackgroundColor:  [UIColor clearColor]];
+}
+
+- (IBAction)drawNewCardsTouched:(id)sender {
+    //start at end of hand because NSArrays condense.
+    self.engine.numCardsDiscarded = 0;
+    if ([[self discard4] backgroundColor] == [UIColor orangeColor]
+        && self.engine.activePlayer.hand[4]) {
+        [self.engine.activePlayer removeCard:4];
+        self.engine.numCardsDiscarded++;
+    }
+    if ([[self discard3] backgroundColor] == [UIColor orangeColor]
+        && self.engine.activePlayer.hand[3]) {
+        [self.engine.activePlayer removeCard:3];
+        self.engine.numCardsDiscarded++;
+    }
+    if ([[self discard2] backgroundColor] == [UIColor orangeColor]
+        && self.engine.activePlayer.hand[2]) {
+        [self.engine.activePlayer removeCard:2];
+        self.engine.numCardsDiscarded++;
+    }
+    if ([[self discard1] backgroundColor] == [UIColor orangeColor]
+        && self.engine.activePlayer.hand[1]) {
+        [self.engine.activePlayer removeCard:1];
+        self.engine.numCardsDiscarded++;
+    }
+    if ([[self discard0] backgroundColor] == [UIColor orangeColor]
+        && self.engine.activePlayer.hand[0]) {
+        [self.engine.activePlayer removeCard:0];
+        self.engine.numCardsDiscarded++;
+    }
+    [[self engine] setDiscardedAndDrew:YES];
 }
 
 
@@ -136,6 +179,7 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     [[segue destinationViewController] setEngine:self.engine];
 }
+
 - (IBAction)card0Touched:(id)sender {
     [self.engine setIndexOfTouchedCard:0];
 }
@@ -150,6 +194,60 @@
 }
 - (IBAction)card4Touched:(id)sender {
     [self.engine setIndexOfTouchedCard:4];
+}
+
+- (IBAction)discard0Touched:(id)sender {
+    if([[self discard0] backgroundColor] == [UIColor orangeColor]){
+        [[self discard0] setBackgroundColor:  [UIColor clearColor]];
+    }
+    else{
+        [[self discard0] setBackgroundColor:  [UIColor orangeColor]];
+    }
+    [[self drawNewCards] setHidden: !self.atLeastOneCardSetToDiscard];
+}
+- (IBAction)discard1Touched:(id)sender {
+    if([[self discard1] backgroundColor] == [UIColor orangeColor]){
+        [[self discard1] setBackgroundColor:  [UIColor clearColor]];
+    }
+    else{
+        [[self discard1] setBackgroundColor:  [UIColor orangeColor]];
+    }
+    [[self drawNewCards] setHidden: !self.atLeastOneCardSetToDiscard];
+}
+- (IBAction)discard2Touched:(id)sender {
+    if([[self discard2] backgroundColor] == [UIColor orangeColor]){
+        [[self discard2] setBackgroundColor:  [UIColor clearColor]];
+    }
+    else{
+        [[self discard2] setBackgroundColor:  [UIColor orangeColor]];
+    }
+    [[self drawNewCards] setHidden: !self.atLeastOneCardSetToDiscard];
+}
+- (IBAction)discard3Touched:(id)sender {
+    if([[self discard3] backgroundColor] == [UIColor orangeColor]){
+        [[self discard3] setBackgroundColor:  [UIColor clearColor]];
+    }
+    else{
+        [[self discard3] setBackgroundColor:  [UIColor orangeColor]];
+    }
+    [[self drawNewCards] setHidden: !self.atLeastOneCardSetToDiscard];
+}
+- (IBAction)discard4Touched:(id)sender {
+    if([[self discard4] backgroundColor] == [UIColor orangeColor]){
+        [[self discard4] setBackgroundColor:  [UIColor clearColor]];
+    }
+    else{
+        [[self discard4] setBackgroundColor:  [UIColor orangeColor]];
+    }
+    [[self drawNewCards] setHidden: !self.atLeastOneCardSetToDiscard];
+}
+
+- (BOOL)atLeastOneCardSetToDiscard{
+    return [[self discard0] backgroundColor] == [UIColor orangeColor]
+        || [[self discard1] backgroundColor] == [UIColor orangeColor]
+        || [[self discard2] backgroundColor] == [UIColor orangeColor]
+        || [[self discard3] backgroundColor] == [UIColor orangeColor]
+        || [[self discard4] backgroundColor] == [UIColor orangeColor];
 }
 
 - (void)didReceiveMemoryWarning

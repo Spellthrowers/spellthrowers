@@ -45,34 +45,37 @@
 }
 
 -(void)startTurn{
-    //Player can play as many cards as they want until they play an attack card
     
-    Card* playedCard = [self.activePlayer hand][_indexOfTouchedCard];
-    
-    
-    if([self.activePlayer hand][_indexOfTouchedCard]){
-    //Play card on next player
-       [self play: self.activePlayer : playedCard : self.players[(_indexOfActivePlayer+1) % [self.players count]]];
-    }
-    
-    //End turn if:
-    //Player uses attack or weapon or EMP. Or if player has no cards left.
-    if(   [[playedCard cardType] isEqualToString: @"Attack"]
-       || [[playedCard cardType] isEqualToString: @"Weapon"]
-       || [[playedCard cardType] isEqualToString: @"EMP"]
-       || [self.activePlayer.playerHand count] == 0){
+    if([self discardedAndDrew]){
         //pass turn to nextPlayer
         [self nextPlayer];
+    }
+    else{
+        //Player can play as many cards as they want until they play an attack card
+        Card* playedCard = [self.activePlayer hand][_indexOfTouchedCard];
+        
+        
+        if([self.activePlayer hand][_indexOfTouchedCard]){
+            //Play card on next player
+            [self play: self.activePlayer : playedCard : self.players[(_indexOfActivePlayer+1) % [self.players count]]];
+        }
+        
+        //End turn if:
+        //Player uses attack or weapon or EMP. Or if player has no cards left.
+        if(   [[playedCard cardType] isEqualToString: @"Attack"]
+           || [[playedCard cardType] isEqualToString: @"Weapon"]
+           || [[playedCard cardType] isEqualToString: @"EMP"]
+           || [self.activePlayer.playerHand count] == 0){
+            //pass turn to nextPlayer
+            [self nextPlayer];
+        }
     }
     
     
     //Fill hands
     for (Player *p in self.currentPlayers) {
         [p fillHand:p.deck];
-    }
-    
-    //TODO: Option to discard cards
-    
+    }    
     
     //Remove players once their life is below zero
     for (int i = 0; i < [self.currentPlayers count]; i++) {
@@ -86,7 +89,9 @@
         //GAME OVER
         _winner = [self endGame];
     }
-
+    
+    //reset discard check
+    self.discardedAndDrew = NO;
 }
 
 -(void)play:(Player *)fromPlayer :(Card *)card :(Player *)onPlayer{

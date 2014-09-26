@@ -27,8 +27,13 @@
 {
     [self returnHome].hidden = YES;
 
-    if(self.engine.indexOfTouchedCard > [self.engine.activePlayer.hand count]-1){
+    if (self.engine.discardedAndDrew) {
+        
+    }
+    else if(self.engine.indexOfTouchedCard > [self.engine.activePlayer.hand count]-1){
         [[self transitionMessage] setText:@"Please pick a valid card!"];
+        [self passToAi].hidden = YES;
+        [self ready].hidden = NO;
         return;
     }
     
@@ -80,6 +85,12 @@
 }
 
 -(void)setMainText{
+    
+    //first check for discard
+    if([[self engine] discardedAndDrew]){
+        [[self transitionMessage] setText: [NSString stringWithFormat: @"%@ discarded %i cards!", self.engine.activePlayer.name, self.engine.numCardsDiscarded]];
+        return;
+    }
     
     //simplification vars
     NSString *nextPlayerName =[self.engine.players[(self.engine.indexOfActivePlayer+1) % [self.engine.players count]] name];

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -71,6 +70,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick a card!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" preferredMaxLayoutWidth="262" translatesAutoresizingMaskIntoConstraints="NO" id="4H1-4Y-Oye">
+                                <rect key="frame" x="29" y="20" width="262" height="77"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dbq-Ca-e17">
                                 <rect key="frame" x="29" y="324" width="82" height="133"/>
                                 <subviews>
@@ -101,6 +106,7 @@
                                         </state>
                                         <connections>
                                             <action selector="card0Touched:" destination="SEj-FN-gUh" eventType="touchUpInside" id="8Mt-Qt-vJE"/>
+                                            <action selector="discard0Touched:" destination="SEj-FN-gUh" eventType="touchUpInside" id="sEn-yo-jKN"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -136,6 +142,7 @@
                                         </state>
                                         <connections>
                                             <action selector="card0Touched:" destination="SEj-FN-gUh" eventType="touchUpInside" id="8Nv-PK-mhJ"/>
+                                            <action selector="discard1Touched:" destination="SEj-FN-gUh" eventType="touchUpInside" id="Lyl-VH-TGX"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -169,6 +176,7 @@
                                         </state>
                                         <connections>
                                             <action selector="card0Touched:" destination="SEj-FN-gUh" eventType="touchUpInside" id="VSF-PN-rnj"/>
+                                            <action selector="discard2Touched:" destination="SEj-FN-gUh" eventType="touchUpInside" id="gPT-Ib-Pht"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -204,6 +212,7 @@
                                         </state>
                                         <connections>
                                             <action selector="card0Touched:" destination="SEj-FN-gUh" eventType="touchUpInside" id="7Zf-li-ckQ"/>
+                                            <action selector="discard3Touched:" destination="SEj-FN-gUh" eventType="touchUpInside" id="c6Z-4H-IMr"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -239,6 +248,7 @@
                                         </state>
                                         <connections>
                                             <action selector="card0Touched:" destination="SEj-FN-gUh" eventType="touchUpInside" id="ey3-F5-sii"/>
+                                            <action selector="discard4Touched:" destination="SEj-FN-gUh" eventType="touchUpInside" id="ALu-oM-cJU"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -288,12 +298,24 @@
                                     <action selector="cancelTouched:" destination="SEj-FN-gUh" eventType="touchUpInside" id="aoP-3Y-shM"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick a card!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" preferredMaxLayoutWidth="262" translatesAutoresizingMaskIntoConstraints="NO" id="4H1-4Y-Oye">
-                                <rect key="frame" x="29" y="20" width="262" height="77"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q9W-LF-j3U">
+                                <rect key="frame" x="157" y="141" width="139" height="48"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Draw new cards!">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="HelveticaNeue-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="discardAndDrawTouched:" destination="SEj-FN-gUh" eventType="touchUpInside" id="DHl-VG-9Tb"/>
+                                    <action selector="drawNewCardsTouched:" destination="SEj-FN-gUh" eventType="touchUpInside" id="ZXD-h0-bHM"/>
+                                    <segue destination="qIm-wM-wJV" kind="modal" id="2j8-h3-vr3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.11977982077040683" green="0.22068221771292906" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.11977982077040683" green="0.22068221771292906" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -317,6 +339,7 @@
                         <outlet property="discard3" destination="hgA-Hv-MMN" id="BIW-8k-piQ"/>
                         <outlet property="discard4" destination="T2l-NH-dZt" id="jnc-4d-Fcl"/>
                         <outlet property="discardAndDraw" destination="FUp-Xz-uf6" id="n44-jx-Nye"/>
+                        <outlet property="drawNewCards" destination="q9W-LF-j3U" id="hZ7-h8-RBc"/>
                         <outlet property="header" destination="4H1-4Y-Oye" id="HMo-2g-Qzm"/>
                         <outlet property="playCard0" destination="ode-mp-j7A" id="kpd-iu-RaA"/>
                         <outlet property="playCard1" destination="GBL-ox-Gc6" id="gPQ-me-uyC"/>
