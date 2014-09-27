@@ -161,6 +161,9 @@
         }
         [[self transitionMessage] setText: s];
     }
+    else if([cardPlayed.cardType isEqualToString:@"Heal"]){
+        [[self transitionMessage] setText: [NSString stringWithFormat: @"%@ gains %d health with the %@ card!", self.engine.activePlayer.name, cardValue, cardPlayed.name]];
+    }
 }
 
 //use this to store info before leaving the view

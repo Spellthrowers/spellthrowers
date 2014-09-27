@@ -107,7 +107,7 @@
         }
     }
     else if([[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Heal"]){
-        [onPlayer setLife: [onPlayer life] + card.value];
+        [_activePlayer setLife: [_activePlayer life] + card.value];
     }
     else if([[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"EMP"]){
         for (Player *p in self.currentPlayers) {
