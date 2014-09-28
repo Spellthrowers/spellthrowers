@@ -39,13 +39,18 @@
     
     
     //TODO: code logic and return for cards that don't end turn here
-    
     NSString *nextPlayerName =[self.engine.players[(self.engine.indexOfActivePlayer+1) % [self.engine.players count]] name];
     
     //set text based on card type
     [self setMainText];
     
-    [[self transitionMessage2] setText: [NSString stringWithFormat: @"%@, it's your turn.",nextPlayerName]];
+    if([[self.engine.activePlayer.hand[self.engine.indexOfTouchedCard] cardType] isEqualToString:@"Heal"]){
+        nextPlayerName = [self.engine.activePlayer  name];
+        [[self transitionMessage2] setText: [NSString stringWithFormat: @"%@, it's still your turn.",nextPlayerName]];
+    }
+    else{
+        [[self transitionMessage2] setText: [NSString stringWithFormat: @"%@, it's your turn.",nextPlayerName]];
+    }
     
     //run turn and set next player
     [self.engine startTurn];
