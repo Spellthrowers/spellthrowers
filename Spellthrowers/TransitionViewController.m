@@ -162,7 +162,16 @@
         [[self transitionMessage] setText: s];
     }
     else if([cardPlayed.cardType isEqualToString:@"Heal"]){
-        [[self transitionMessage] setText: [NSString stringWithFormat: @"%@ gains %d health with the %@ card!", self.engine.activePlayer.name, cardValue, cardPlayed.name]];
+        //When one heal is tapped, play all...
+        int tempNumHeals = 0;
+        int damage = 0;
+        for (Card* card in self.engine.activePlayer.hand) {
+            if([card.cardType isEqualToString:@"Heal"]){
+                damage+= card.value;
+                tempNumHeals++;
+            }
+        }
+        [[self transitionMessage] setText: [NSString stringWithFormat: @"%@ gains %d health with all their %@ cards!", self.engine.activePlayer.name, damage, cardPlayed.name]];
     }
 }
 
