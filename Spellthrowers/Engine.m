@@ -65,6 +65,7 @@
         if(   [[playedCard cardType] isEqualToString: @"Attack"]
            || [[playedCard cardType] isEqualToString: @"Weapon"]
            || [[playedCard cardType] isEqualToString: @"EMP"]
+           || [[playedCard cardType] isEqualToString: @"Shield"]
            || [self.activePlayer.playerHand count] == 0){
             //pass turn to nextPlayer
             [self nextPlayer];
@@ -124,6 +125,9 @@
                 }
             }
         }
+    }
+    else if([[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Shield"]){
+        _shieldActive = YES;
     }
     
     //Remove nonweapon played cards

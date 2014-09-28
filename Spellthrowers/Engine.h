@@ -19,6 +19,7 @@
 @property NSMutableArray* currentPlayers;//players that are still in the game
 @property (nonatomic) int indexOfTouchedCard;
 @property (nonatomic) BOOL isAiGame;
+@property (nonatomic) BOOL shieldActive;
 @property (nonatomic) BOOL discardedAndDrew;
 @property (nonatomic) int numCardsDiscarded;
 

@@ -37,13 +37,12 @@
         return;
     }
     
-    
-    //TODO: code logic and return for cards that don't end turn here
     NSString *nextPlayerName =[self.engine.players[(self.engine.indexOfActivePlayer+1) % [self.engine.players count]] name];
     
     //set text based on card type
     [self setMainText];
     
+    //TODO: continue to code logic and return for cards that don't end turn here
     if([[self.engine.activePlayer.hand[self.engine.indexOfTouchedCard] cardType] isEqualToString:@"Heal"]){
         nextPlayerName = [self.engine.activePlayer  name];
         [[self transitionMessage2] setText: [NSString stringWithFormat: @"%@, it's still your turn.",nextPlayerName]];
@@ -177,6 +176,9 @@
             }
         }
         [[self transitionMessage] setText: [NSString stringWithFormat: @"%@ gains %d health with all their %@ cards!", self.engine.activePlayer.name, damage, cardPlayed.name]];
+    }
+    else if([cardPlayed.cardType isEqualToString:@"Shield"]){
+        [[self transitionMessage] setText: [NSString stringWithFormat: @"%@ placed a card face down!", self.engine.activePlayer.name]];
     }
 }
 
