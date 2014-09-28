@@ -30,6 +30,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *discardAndDraw;
 @property (weak, nonatomic) IBOutlet UIButton *cancel;
 @property (weak, nonatomic) IBOutlet UIButton *drawNewCards;
+@property (weak, nonatomic) IBOutlet UILabel *faceDownActivated;
+
 
 @property (weak, nonatomic) IBOutlet UIButton *playCard0;
 @property (weak, nonatomic) IBOutlet UIButton *playCard1;
@@ -83,6 +85,7 @@
 //The main method for initializing gameplay
 - (void)viewDidLoad
 {
+    [self faceDownActivated].hidden = YES;
     //first time launching view: initialize game
     if (! [self engine]) {
         [super viewDidLoad];
@@ -92,6 +95,12 @@
     if ([self isAiGame]) {
         [self.engine.players[[self.engine.players count]-1] setIsAi:YES];
         [self.engine.players[[self.engine.players count]-1] setName: @"Wesley Bot"];
+    }
+    //if the other player has a facedown card
+    //unhide facedown card
+    
+    if([self.engine.currentPlayers[self.engine.indexOfActivePlayer+1%[self.engine.players count]] isShielded]){
+        [self faceDownActivated].hidden = NO;
     }
     [[self player1Life] setText: [NSString stringWithFormat: @"%@ Life: %d", [self.engine.activePlayer name], [self.engine.activePlayer life]]];
     [[self player2Life] setText: [NSString stringWithFormat: @"%@ Life: %d", [self.engine.players[(self.engine.indexOfActivePlayer+1)%[self.engine.players count]] name], [self.engine.players[(self.engine.indexOfActivePlayer+1)%[self.engine.players count]] life]]];

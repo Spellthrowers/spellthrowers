@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
@@ -316,6 +316,12 @@
                                     <segue destination="qIm-wM-wJV" kind="modal" id="2j8-h3-vr3"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Face Down Card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rv2-BN-zKH">
+                                <rect key="frame" x="164" y="223" width="122" height="38"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="textColor" red="0.91884239177393323" green="1" blue="0.3630036707232599" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.11977982077040683" green="0.22068221771292906" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.11977982077040683" green="0.22068221771292906" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -340,6 +346,7 @@
                         <outlet property="discard4" destination="T2l-NH-dZt" id="jnc-4d-Fcl"/>
                         <outlet property="discardAndDraw" destination="FUp-Xz-uf6" id="n44-jx-Nye"/>
                         <outlet property="drawNewCards" destination="q9W-LF-j3U" id="hZ7-h8-RBc"/>
+                        <outlet property="faceDownActivated" destination="Rv2-BN-zKH" id="gxO-ru-V0C"/>
                         <outlet property="header" destination="4H1-4Y-Oye" id="HMo-2g-Qzm"/>
                         <outlet property="playCard0" destination="ode-mp-j7A" id="kpd-iu-RaA"/>
                         <outlet property="playCard1" destination="GBL-ox-Gc6" id="gPQ-me-uyC"/>
@@ -444,7 +451,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Tbl-ES-a5F"/>
         <segue reference="R3b-RW-hhx"/>
+        <segue reference="CiA-v1-Ghf"/>
     </inferredMetricsTieBreakers>
 </document>
