@@ -61,7 +61,7 @@
         }
         
         //End turn if:
-        //Player uses attack or weapon or EMP. Or if player has no cards left.
+        //Player uses attack or weapon or EMP or Shield. Or if player has no cards left.
         if(   [[playedCard cardType] isEqualToString: @"Attack"]
            || [[playedCard cardType] isEqualToString: @"Weapon"]
            || [[playedCard cardType] isEqualToString: @"EMP"]
@@ -71,7 +71,6 @@
             [self nextPlayer];
         }
     }
-    
     
     //Fill hands
     for (Player *p in self.currentPlayers) {
@@ -85,7 +84,7 @@
         }
     }
     
-    //TODO: End game
+    //End game
     if ([self.currentPlayers count] <= 1) {
         //GAME OVER
         _winner = [self endGame];
@@ -98,12 +97,38 @@
 -(void)play:(Player *)fromPlayer :(Card *)card :(Player *)onPlayer{
     //perform the correct action based on what was played
     if(   [[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Attack"]){
-        [onPlayer setLife: [onPlayer life] - card.value];
+        //if attacking a player with an active shield
+        if( [onPlayer isShielded] == YES ){
+            //TODO: Customize Shield
+            //reflect damage on the attacker
+            [_activePlayer setLife: [_activePlayer life] - card.value];
+            //and a heal on the shielded
+            [onPlayer setLife: [onPlayer life] + 1];
+            
+            //unset shield after use
+            [onPlayer setIsShielded:NO];
+        }
+        else{
+            [onPlayer setLife: [onPlayer life] - card.value];
+        }
     }
     else if ([[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Weapon"]){
-        for (Card* card in self.activePlayer.hand) {
-            if([card.cardType isEqualToString:@"Weapon"]){
-                [onPlayer setLife: [onPlayer life] - card.value];
+        //if attacking a player with an active shield, just do one weapon
+        if( [onPlayer isShielded] == YES ){
+            //TODO: Customize Shield
+            //reflect damage on the attacker
+            [_activePlayer setLife: [_activePlayer life] - card.value];
+            //and a heal on the shielded
+            [onPlayer setLife: [onPlayer life] + 1];
+            
+            //unset shield after use
+            [onPlayer setIsShielded:NO];
+        }
+        else{
+            for (Card* card in self.activePlayer.hand) {
+                if([card.cardType isEqualToString:@"Weapon"]){
+                    [onPlayer setLife: [onPlayer life] - card.value];
+                }
             }
         }
     }
@@ -127,7 +152,7 @@
         }
     }
     else if([[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Shield"]){
-        _shieldActive = YES;
+        [_activePlayer setIsShielded:YES];
     }
     
     //Remove nonweapon played cards

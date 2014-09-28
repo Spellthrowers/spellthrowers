@@ -36,6 +36,12 @@
         [self ready].hidden = NO;
         return;
     }
+    else if(self.engine.activePlayer.isShielded == YES && [[self.engine.activePlayer.hand[self.engine.indexOfTouchedCard] cardType] isEqualToString:@"Shield"]){
+        [[self transitionMessage] setText:@"Already played a Shield, please pick a valid card!"];
+        [self passToAi].hidden = YES;
+        [self ready].hidden = NO;
+        return;
+    }
     
     NSString *nextPlayerName =[self.engine.players[(self.engine.indexOfActivePlayer+1) % [self.engine.players count]] name];
     
@@ -43,6 +49,7 @@
     [self setMainText];
     
     //TODO: continue to code logic and return for cards that don't end turn here
+    //TODO: if discarding a heal card this won't work
     if([[self.engine.activePlayer.hand[self.engine.indexOfTouchedCard] cardType] isEqualToString:@"Heal"]){
         nextPlayerName = [self.engine.activePlayer  name];
         [[self transitionMessage2] setText: [NSString stringWithFormat: @"%@, it's still your turn.",nextPlayerName]];
@@ -97,12 +104,19 @@
     }
     
     //simplification vars
+    Player *nextPlayer = self.engine.players[(self.engine.indexOfActivePlayer+1) % [self.engine.players count]];
     NSString *nextPlayerName =[self.engine.players[(self.engine.indexOfActivePlayer+1) % [self.engine.players count]] name];
     Card *cardPlayed = self.engine.activePlayer.hand[self.engine.indexOfTouchedCard];
     int cardValue = cardPlayed.value;
     
     if([cardPlayed.cardType isEqualToString:@"Attack"]){
-        [[self transitionMessage] setText: [NSString stringWithFormat: @"%@ hit %@ for %d damage with the %@ card!", self.engine.activePlayer.name, nextPlayerName, cardValue, cardPlayed.name]];
+        //if attacked a shielded player, customize message
+        if([nextPlayer isShielded]){
+            [[self transitionMessage] setText: [NSString stringWithFormat: @"%@'s shield reflects %d damage onto %@ due to the %@ card!", nextPlayerName, cardValue, self.engine.activePlayer.name, cardPlayed.name]];
+        }
+        else{
+            [[self transitionMessage] setText: [NSString stringWithFormat: @"%@ hit %@ for %d damage with the %@ card!", self.engine.activePlayer.name, nextPlayerName, cardValue, cardPlayed.name]];
+        }
     }
     else if ([cardPlayed.cardType isEqualToString:@"EMP"]){
         //get how many weapons enemies hold
@@ -126,44 +140,51 @@
         }
     }
     else if([cardPlayed.cardType isEqualToString:@"Weapon"]){
-        int damage = 0;
-        int numHits = 0;
-        NSString *s = [NSString stringWithFormat: @"%@ hit %@ for ", self.engine.activePlayer.name, nextPlayerName];
-        for (Card* card in self.engine.activePlayer.hand) {
-            if([card.cardType isEqualToString:@"Weapon"]){
-                damage+= card.value;
-                numHits++;
-            }
+        //if player is shielded, customize message
+        if([nextPlayer isShielded]){
+            [[self transitionMessage] setText: [NSString stringWithFormat: @"%@'s shield reflects %d damage onto %@ due to the %@ card!", nextPlayerName, cardValue, self.engine.activePlayer.name, cardPlayed.name]];
         }
-        s = [NSString stringWithFormat:@"%@ %d damage with the", s, damage];
-        //used for string building
-        int tempNumHits = numHits;
-        for (Card* card in self.engine.activePlayer.hand) {
-            if([card.cardType isEqualToString:@"Weapon"]){
-                if(numHits == 1){
-                    s = [NSString stringWithFormat:@"%@ %@ card!", s, card.name];
-                }
-                else if(tempNumHits == 1 && numHits == 2){
-                    s = [NSString stringWithFormat:@"%@ and %@ cards!", s, card.name];
-                }
-                else if(tempNumHits == 2 && numHits == 2){
-                    s = [NSString stringWithFormat:@"%@ %@", s, card.name];
-                    tempNumHits--;
-                }
-                else if(tempNumHits == 1){
-                    s = [NSString stringWithFormat:@"%@, and %@ cards!", s, card.name];
-                }
-                else if(tempNumHits == numHits){
-                    s = [NSString stringWithFormat:@"%@ %@", s, card.name];
-                    tempNumHits--;
-                }
-                else{
-                    s = [NSString stringWithFormat:@"%@, %@", s, card.name];
-                    tempNumHits--;
+        else{
+            
+            int damage = 0;
+            int numHits = 0;
+            NSString *s = [NSString stringWithFormat: @"%@ hit %@ for ", self.engine.activePlayer.name, nextPlayerName];
+            for (Card* card in self.engine.activePlayer.hand) {
+                if([card.cardType isEqualToString:@"Weapon"]){
+                    damage+= card.value;
+                    numHits++;
                 }
             }
+            s = [NSString stringWithFormat:@"%@ %d damage with the", s, damage];
+            //used for string building
+            int tempNumHits = numHits;
+            for (Card* card in self.engine.activePlayer.hand) {
+                if([card.cardType isEqualToString:@"Weapon"]){
+                    if(numHits == 1){
+                        s = [NSString stringWithFormat:@"%@ %@ card!", s, card.name];
+                    }
+                    else if(tempNumHits == 1 && numHits == 2){
+                        s = [NSString stringWithFormat:@"%@ and %@ cards!", s, card.name];
+                    }
+                    else if(tempNumHits == 2 && numHits == 2){
+                        s = [NSString stringWithFormat:@"%@ %@", s, card.name];
+                        tempNumHits--;
+                    }
+                    else if(tempNumHits == 1){
+                        s = [NSString stringWithFormat:@"%@, and %@ cards!", s, card.name];
+                    }
+                    else if(tempNumHits == numHits){
+                        s = [NSString stringWithFormat:@"%@ %@", s, card.name];
+                        tempNumHits--;
+                    }
+                    else{
+                        s = [NSString stringWithFormat:@"%@, %@", s, card.name];
+                        tempNumHits--;
+                    }
+                }
+            }
+            [[self transitionMessage] setText: s];
         }
-        [[self transitionMessage] setText: s];
     }
     else if([cardPlayed.cardType isEqualToString:@"Heal"]){
         //When one heal is tapped, play all...
