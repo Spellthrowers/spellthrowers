@@ -51,7 +51,6 @@
         [self nextPlayer];
     }
     else{
-        //Player can play as many cards as they want until they play an attack card
         Card* playedCard = [self.activePlayer hand][_indexOfTouchedCard];
         
         
@@ -113,22 +112,9 @@
         }
     }
     else if ([[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Weapon"]){
-        //if attacking a player with an active shield, just do one weapon
-        if( [onPlayer isShielded] == YES ){
-            //TODO: Customize Shield
-            //reflect damage on the attacker
-            [_activePlayer setLife: [_activePlayer life] - card.value];
-            //and a heal on the shielded
-            [onPlayer setLife: [onPlayer life] + 1];
-            
-            //unset shield after use
-            [onPlayer setIsShielded:NO];
-        }
-        else{
-            for (Card* card in self.activePlayer.hand) {
-                if([card.cardType isEqualToString:@"Weapon"]){
-                    [onPlayer setLife: [onPlayer life] - card.value];
-                }
+        for (Card* card in self.activePlayer.hand) {
+            if([card.cardType isEqualToString:@"Weapon"]){
+                [onPlayer setLife: [onPlayer life] - card.value];
             }
         }
     }
@@ -156,8 +142,20 @@
     }
     
     //Remove nonweapon played cards
-    if(![[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Weapon"]){
+    if(![[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Weapon"] && ![[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Heal"]){
         [self.activePlayer removeCard:_indexOfTouchedCard];
+    }
+    else if([[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Heal"]){
+        NSUInteger k = [self.activePlayer.hand count];
+        for (int i = 0; i < k; i++) {
+            Card* card = self.activePlayer.playerHand[i];
+            if([card.cardType isEqualToString:@"Heal"]){
+                [self.activePlayer.hand removeObject:card];
+                i--;
+                k--;
+            }
+            
+        }
     }
     
     
