@@ -91,15 +91,15 @@
         [super viewDidLoad];
         self.engine = [Engine newEngine];
         [self.engine initEverything];
-    }
-    if ([self isAiGame]) {
-        [self.engine.players[[self.engine.players count]-1] setIsAi:YES];
-        [self.engine.players[[self.engine.players count]-1] setName: @"Wesley Bot"];
+        if ([self isAiGame]) {
+            [self.engine.players[[self.engine.players count]-1] setIsAi:YES];
+            [self.engine.players[[self.engine.players count]-1] setName: @"Wesley Bot"];
+        }
     }
     //if the other player has a facedown card
     //unhide facedown card
     
-    if([self.engine.currentPlayers[self.engine.indexOfActivePlayer+1%[self.engine.players count]] isShielded]){
+    if([self.engine.currentPlayers[(self.engine.indexOfActivePlayer+1)%[self.engine.players count]] isShielded]){
         [self faceDownActivated].hidden = NO;
     }
     [[self player1Life] setText: [NSString stringWithFormat: @"%@ Life: %d", [self.engine.activePlayer name], [self.engine.activePlayer life]]];
