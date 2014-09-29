@@ -53,24 +53,46 @@
 - (void)displayHand {
     [[self header] setText: [NSString stringWithFormat:@"%@, pick a card!", self.engine.activePlayer.name]];
     
-    Card *drawn0 = self.engine.activePlayer.hand[0];
-    [[self cardName0] setText: [drawn0 name]];
-    [[self cardValue0] setText: [NSString stringWithFormat:@"%d", drawn0.value]];
+    if([self.engine.activePlayer.hand count] > 0){
+        Card *drawn0 = self.engine.activePlayer.hand[0];
+        [[self cardName0] setText: [drawn0 name]];
+        [[self cardValue0] setText: [NSString stringWithFormat:@"%d", drawn0.value]];
+    }
+    else{
+        [[self cardName0] setText: @"No Card"];
+        [[self cardValue0] setText: [NSString stringWithFormat:@""]];
+    }
     
-    Card *drawn1 = self.engine.activePlayer.hand[1];
-    [[self cardName1] setText: [drawn1 name]];
-    [[self cardValue1] setText: [NSString stringWithFormat:@"%d", drawn1.value]];
+    if([self.engine.activePlayer.hand count] > 1){
+        Card *drawn1 = self.engine.activePlayer.hand[1];
+        [[self cardName1] setText: [drawn1 name]];
+        [[self cardValue1] setText: [NSString stringWithFormat:@"%d", drawn1.value]];
+    }
+    else{
+        [[self cardName1] setText: @"No Card"];
+        [[self cardValue1] setText: [NSString stringWithFormat:@""]];
+    }
     
-    Card *drawn2 = self.engine.activePlayer.hand[2];
-    [[self cardName2] setText: [drawn2 name]];
-    [[self cardValue2] setText: [NSString stringWithFormat:@"%d", drawn2.value]];
+    if([self.engine.activePlayer.hand count] > 2){
+        Card *drawn2 = self.engine.activePlayer.hand[2];
+        [[self cardName2] setText: [drawn2 name]];
+        [[self cardValue2] setText: [NSString stringWithFormat:@"%d", drawn2.value]];
+    }
+    else{
+        [[self cardName2] setText: @"No Card"];
+        [[self cardValue2] setText: [NSString stringWithFormat:@""]];
+    }
     
-    Card *drawn3 = self.engine.activePlayer.hand[3];
-    [[self cardName3] setText: [drawn3 name]];
-    [[self cardValue3] setText: [NSString stringWithFormat:@"%d", drawn3.value]];
+    if([self.engine.activePlayer.hand count] > 3){
+        Card *drawn3 = self.engine.activePlayer.hand[3];
+        [[self cardName3] setText: [drawn3 name]];
+        [[self cardValue3] setText: [NSString stringWithFormat:@"%d", drawn3.value]];
+    }
+    else{
+        [[self cardName3] setText: @"No Card"];
+        [[self cardValue3] setText: [NSString stringWithFormat:@""]];
+    }
     
-    //TODO BUG: set up all cards drawn this way.
-    //If a card is removed, all cards shift down and this card becomes empty
     if([self.engine.activePlayer.hand count] > 4){
         Card *drawn4 = self.engine.activePlayer.hand[4];
         [[self cardName4] setText: [drawn4 name]];

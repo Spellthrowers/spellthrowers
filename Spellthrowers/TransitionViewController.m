@@ -35,7 +35,7 @@
         [self passToAi].hidden = YES;
         [self ready].hidden = NO;
         return;
-    }//Play one shield at a time
+    }//Play one shield at a time. Bug here with multiShield?
     else if(self.engine.activePlayer.isShielded == YES && [[self.engine.activePlayer.hand[self.engine.indexOfTouchedCard] cardType] isEqualToString:@"Shield"]){
         [[self transitionMessage] setText:@"Already played a Shield, please pick a valid card!"];
         [self passToAi].hidden = YES;
@@ -49,8 +49,8 @@
     [self setMainText];
     
     //TODO: continue to code logic and return for cards that don't end turn here
-    //TODO: if discarding a heal card this won't work
-    if([[self.engine.activePlayer.hand[self.engine.indexOfTouchedCard] cardType] isEqualToString:@"Heal"]){
+    if(   !self.engine.discardedAndDrew
+       && [[self.engine.activePlayer.hand[self.engine.indexOfTouchedCard] cardType] isEqualToString:@"Heal"]){
         nextPlayerName = [self.engine.activePlayer  name];
         [[self transitionMessage2] setText: [NSString stringWithFormat: @"%@, it's still your turn.",nextPlayerName]];
     }

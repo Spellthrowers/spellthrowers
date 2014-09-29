@@ -132,6 +132,7 @@
                     Card* card = p.playerHand[i];
                     if ([[card cardType] isEqualToString:@"Weapon"]) {
                         [p removeCard:i];
+                        i--;
                     }
                 }
             }
@@ -142,7 +143,8 @@
     }
     
     //Remove nonweapon played cards
-    if(![[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Weapon"] && ![[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Heal"]){
+    if(   ![[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Weapon"]
+       && ![[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Heal"]){
         [self.activePlayer removeCard:_indexOfTouchedCard];
     }
     else if([[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Heal"]){
