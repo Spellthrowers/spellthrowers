@@ -132,6 +132,7 @@
                     Card* card = p.playerHand[i];
                     if ([[card cardType] isEqualToString:@"Weapon"]) {
                         [p removeCard:i];
+                        [p takeDamage:2];
                         i--;
                     }
                 }

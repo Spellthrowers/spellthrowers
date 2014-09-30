@@ -133,7 +133,10 @@
         
         //set text on transition screen. Singular and plural weapon removal.
         if (numWeaponsRemoved == 1) {
-            [[self transitionMessage] setText: [NSString stringWithFormat: @"%@ used an EMP card! %i weapon was removed from enemy hands!", self.engine.activePlayer.name, numWeaponsRemoved]];
+            [[self transitionMessage] setText: [NSString stringWithFormat: @"%@ used an EMP card! %i weapon was removed from an enemy hand, dealing 2 damage as it malfunctioned!", self.engine.activePlayer.name, numWeaponsRemoved]];
+        }
+        else if (numWeaponsRemoved > 1){
+            [[self transitionMessage] setText: [NSString stringWithFormat: @"%@ used an EMP card! %i weapons were removed from enemy hands, dealing 2 damage each as they malfunctioned!", self.engine.activePlayer.name, numWeaponsRemoved]];
         }
         else{
             [[self transitionMessage] setText: [NSString stringWithFormat: @"%@ used an EMP card! %i weapons were removed from enemy hands!", self.engine.activePlayer.name, numWeaponsRemoved]];
