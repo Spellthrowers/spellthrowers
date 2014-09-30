@@ -59,7 +59,7 @@
             [self play: self.activePlayer : playedCard : self.players[(_indexOfActivePlayer+1) % [self.players count]]];
         }
         
-        //End turn if:
+        //End turn and fill hands if:
         //Player uses attack or weapon or EMP or Shield. Or if player has no cards left.
         if(   [[playedCard cardType] isEqualToString: @"Attack"]
            || [[playedCard cardType] isEqualToString: @"Weapon"]
@@ -71,10 +71,7 @@
         }
     }
     
-    //Fill hands
-    for (Player *p in self.currentPlayers) {
-        [p fillHand:p.deck];
-    }    
+    
     
     //Remove players once their life is below zero
     for (int i = 0; i < [self.currentPlayers count]; i++) {
@@ -190,7 +187,8 @@
         //advance index
         self.indexOfActivePlayer = i+1;
     }
-    
+    //Fill hand of active player for turn start
+    [self.activePlayer fillHand: self.activePlayer.deck];
 }
 
 -(Player*)endGame{
