@@ -98,8 +98,6 @@
             //TODO: Customize Shield
             //reflect damage on the attacker
             [_activePlayer setLife: [_activePlayer life] - card.value];
-            //and a heal on the shielded
-            [onPlayer setLife: [onPlayer life] + 1];
             
             //unset shield after use
             [onPlayer setIsShielded:NO];
@@ -114,6 +112,8 @@
                 [onPlayer setLife: [onPlayer life] - card.value];
             }
         }
+        //break shield on hit
+        [onPlayer setIsShielded:NO];
     }
     else if([[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Heal"]){
         for (Card* card in self.activePlayer.hand) {

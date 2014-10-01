@@ -35,13 +35,13 @@
         [self passToAi].hidden = YES;
         [self ready].hidden = NO;
         return;
-    }//Play one shield at a time. Bug here with multiShield?
-    else if(self.engine.activePlayer.isShielded == YES && [[self.engine.activePlayer.hand[self.engine.indexOfTouchedCard] cardType] isEqualToString:@"Shield"]){
+    }//Play one shield at a time. Bug here with multiShield. Let's you play for AI, breaks UI, etc.
+    /*else if(self.engine.activePlayer.isShielded == YES && [[self.engine.activePlayer.hand[self.engine.indexOfTouchedCard] cardType] isEqualToString:@"Shield"]){
         [[self transitionMessage] setText:@"Already played a Shield, please pick a valid card!"];
         [self passToAi].hidden = YES;
         [self ready].hidden = NO;
         return;
-    }
+    }*/
     
     NSString *nextPlayerName =[self.engine.players[(self.engine.indexOfActivePlayer+1) % [self.engine.players count]] name];
     
@@ -192,7 +192,7 @@
                 tempNumHeals++;
             }
         }
-        [[self transitionMessage] setText: [NSString stringWithFormat: @"%@ gains %d health with all their %@ cards!", self.engine.activePlayer.name, damage, cardPlayed.name]];
+        [[self transitionMessage] setText: [NSString stringWithFormat: @"%@ played all heal cards to gain %d health!", self.engine.activePlayer.name, damage]];
     }
     else if([cardPlayed.cardType isEqualToString:@"Shield"]){
         [[self transitionMessage] setText: [NSString stringWithFormat: @"%@ placed a card face down!", self.engine.activePlayer.name]];

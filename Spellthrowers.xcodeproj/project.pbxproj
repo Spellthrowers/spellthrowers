@@ -27,6 +27,8 @@
 		2BE0E19219BB9E9B00CC89E9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BE0E17119BB9E9B00CC89E9 /* UIKit.framework */; };
 		2BE0E19A19BB9E9B00CC89E9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BE0E19819BB9E9B00CC89E9 /* InfoPlist.strings */; };
 		2BE0E19C19BB9E9B00CC89E9 /* SpellthrowersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E19B19BB9E9B00CC89E9 /* SpellthrowersTests.m */; };
+		2BEDA8B019DCB01A00B2B4CC /* ParticleTest.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2BEDA8AE19DCB01A00B2B4CC /* ParticleTest.sks */; };
+		2BEDA8B119DCB01A00B2B4CC /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BEDA8AF19DCB01A00B2B4CC /* spark.png */; };
 		2BFF20C019C4F25F00A4A29D /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFF20BF19C4F25F00A4A29D /* GameViewController.m */; };
 		2BFF20C319C5EF2500A4A29D /* TransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFF20C219C5EF2500A4A29D /* TransitionViewController.m */; };
 /* End PBXBuildFile section */
@@ -71,6 +73,8 @@
 		2BE0E19719BB9E9B00CC89E9 /* SpellthrowersTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpellthrowersTests-Info.plist"; sourceTree = "<group>"; };
 		2BE0E19919BB9E9B00CC89E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2BE0E19B19BB9E9B00CC89E9 /* SpellthrowersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpellthrowersTests.m; sourceTree = "<group>"; };
+		2BEDA8AE19DCB01A00B2B4CC /* ParticleTest.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ParticleTest.sks; sourceTree = "<group>"; };
+		2BEDA8AF19DCB01A00B2B4CC /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		2BFF20BE19C4F25F00A4A29D /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		2BFF20BF19C4F25F00A4A29D /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		2BFF20C119C5EF2500A4A29D /* TransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionViewController.h; sourceTree = "<group>"; };
@@ -154,6 +158,8 @@
 				2BFF20C119C5EF2500A4A29D /* TransitionViewController.h */,
 				2BFF20C219C5EF2500A4A29D /* TransitionViewController.m */,
 				2BE0E18819BB9E9B00CC89E9 /* Images.xcassets */,
+				2BEDA8AE19DCB01A00B2B4CC /* ParticleTest.sks */,
+				2BEDA8AF19DCB01A00B2B4CC /* spark.png */,
 				2BE0E17419BB9E9B00CC89E9 /* Supporting Files */,
 			);
 			path = Spellthrowers;
@@ -270,6 +276,8 @@
 				2BE0E18419BB9E9B00CC89E9 /* Main_iPad.storyboard in Resources */,
 				2BE0E18919BB9E9B00CC89E9 /* Images.xcassets in Resources */,
 				2BE0E18119BB9E9B00CC89E9 /* Main_iPhone.storyboard in Resources */,
+				2BEDA8B119DCB01A00B2B4CC /* spark.png in Resources */,
+				2BEDA8B019DCB01A00B2B4CC /* ParticleTest.sks in Resources */,
 				2BDF0E4519C0BCB600B3183A /* Config.plist in Resources */,
 				2BE0E17819BB9E9B00CC89E9 /* InfoPlist.strings in Resources */,
 			);
