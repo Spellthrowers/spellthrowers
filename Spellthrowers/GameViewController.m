@@ -12,6 +12,12 @@
 #import "Engine.h"
 
 @interface GameViewController ()
+@property (weak, nonatomic) IBOutlet UIView *cardView0;
+@property (weak, nonatomic) IBOutlet UIView *cardView1;
+@property (weak, nonatomic) IBOutlet UIView *cardView2;
+@property (weak, nonatomic) IBOutlet UIView *cardView3;
+@property (weak, nonatomic) IBOutlet UIView *cardView4;
+
 @property (weak, nonatomic) IBOutlet UILabel *cardName0;
 @property (weak, nonatomic) IBOutlet UILabel *cardName1;
 @property (weak, nonatomic) IBOutlet UILabel *cardName2;
@@ -57,51 +63,55 @@
         Card *drawn0 = self.engine.activePlayer.hand[0];
         [[self cardName0] setText: [drawn0 name]];
         [[self cardValue0] setText: [NSString stringWithFormat:@"%d", drawn0.value]];
+        [[self cardView0] setHidden:NO];
     }
     else{
-        [[self cardName0] setText: @"No Card"];
-        [[self cardValue0] setText: [NSString stringWithFormat:@""]];
+        [[self cardView0] setHidden:YES];
     }
     
     if([self.engine.activePlayer.hand count] > 1){
         Card *drawn1 = self.engine.activePlayer.hand[1];
         [[self cardName1] setText: [drawn1 name]];
         [[self cardValue1] setText: [NSString stringWithFormat:@"%d", drawn1.value]];
+        [[self cardView1] setHidden:NO];
     }
     else{
-        [[self cardName1] setText: @"No Card"];
-        [[self cardValue1] setText: [NSString stringWithFormat:@""]];
+        [[self cardView1] setHidden:YES];
     }
+    
     
     if([self.engine.activePlayer.hand count] > 2){
         Card *drawn2 = self.engine.activePlayer.hand[2];
         [[self cardName2] setText: [drawn2 name]];
         [[self cardValue2] setText: [NSString stringWithFormat:@"%d", drawn2.value]];
+        [[self cardView2] setHidden:NO];
     }
     else{
-        [[self cardName2] setText: @"No Card"];
-        [[self cardValue2] setText: [NSString stringWithFormat:@""]];
+        [[self cardView2] setHidden:YES];
     }
+    
     
     if([self.engine.activePlayer.hand count] > 3){
         Card *drawn3 = self.engine.activePlayer.hand[3];
         [[self cardName3] setText: [drawn3 name]];
         [[self cardValue3] setText: [NSString stringWithFormat:@"%d", drawn3.value]];
+        [[self cardView3] setHidden:NO];
     }
     else{
-        [[self cardName3] setText: @"No Card"];
-        [[self cardValue3] setText: [NSString stringWithFormat:@""]];
+        [[self cardView3] setHidden:YES];
     }
+    
     
     if([self.engine.activePlayer.hand count] > 4){
         Card *drawn4 = self.engine.activePlayer.hand[4];
         [[self cardName4] setText: [drawn4 name]];
         [[self cardValue4] setText: [NSString stringWithFormat:@"%d", drawn4.value]];
+        [[self cardView4] setHidden:NO];
     }
     else{
-        [[self cardName4] setText: @"No Card"];
-        [[self cardValue4] setText: [NSString stringWithFormat:@""]];
+        [[self cardView4] setHidden:YES];
     }
+    
 }
 
 //The main method for initializing gameplay
