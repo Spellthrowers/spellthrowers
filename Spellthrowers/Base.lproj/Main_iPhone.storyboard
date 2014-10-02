@@ -49,6 +49,9 @@
                                 <color key="textColor" red="0.96091627038043481" green="0.0" blue="0.056570655623958278" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fireball.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fv6-uS-egX">
+                                <rect key="frame" x="118" y="176" width="85" height="68"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -451,13 +454,16 @@
             <point key="canvasLocation" x="511" y="-756"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="fireball.png" width="400" height="365"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="CiA-v1-Ghf"/>
         <segue reference="R3b-RW-hhx"/>
-        <segue reference="Tbl-ES-a5F"/>
     </inferredMetricsTieBreakers>
 </document>
