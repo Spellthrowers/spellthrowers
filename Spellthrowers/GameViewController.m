@@ -57,61 +57,40 @@
 
 @implementation GameViewController
 - (void)displayHand {
+    
+    //Get the bundle for this app
+    NSBundle* bundle = NSBundle.mainBundle;
+    //get the config path
+    NSString* path = [bundle pathForResource:@"Config" ofType:@"plist"];
+    //build a config dictionary
+    NSDictionary* config = [NSDictionary dictionaryWithContentsOfFile:path];
+    
+    //arrays for buttons
+    NSArray *cardViews = @[self.cardView0,  self.cardView1,  self.cardView2,  self.cardView3,  self.cardView4];
+    NSArray *cardNames = @[self.cardName0,  self.cardName1,  self.cardName2,  self.cardName3,  self.cardName4];
+    NSArray *cardValues =@[self.cardValue0, self.cardValue1, self.cardValue2, self.cardValue3, self.cardValue4];
+    NSArray *playCards = @[self.playCard0,  self.playCard1,  self.playCard2,  self.playCard3,  self.playCard4];
+    NSArray *discards =  @[self.discard0,   self.discard1,   self.discard2,   self.discard3,   self.discard4];
+    
     [[self header] setText: [NSString stringWithFormat:@"%@, pick a card!", self.engine.activePlayer.name]];
     
-    if([self.engine.activePlayer.hand count] > 0){
-        Card *drawn0 = self.engine.activePlayer.hand[0];
-        [[self cardName0] setText: [drawn0 name]];
-        [[self cardValue0] setText: [NSString stringWithFormat:@"%d", drawn0.value]];
-        [[self cardView0] setHidden:NO];
+    //draw screen and hide cards that don't exist
+    for (int i=0; i<[self.engine.activePlayer.hand count]; i++) {
+        Card *drawn = self.engine.activePlayer.hand[i];
+        [cardNames[i] setText: [drawn name]];
+        [cardValues[i] setText: [NSString stringWithFormat:@"%d", drawn.value]];
+        [cardViews[i] setHidden:NO];
+        //Art. For some reason it only works on the 0th card for now...
+        for (int j=0; j<[config[@"cardNames"] count]; j++) {
+            if ([drawn.name isEqualToString:config[@"cardNames"][j]] && i==0) {
+                [playCards[i] setImage:[UIImage imageNamed: config[@"cardImage"][j]] forState: UIControlStateNormal];
+                [discards[i]  setImage:[UIImage imageNamed: config[@"cardImage"][j]] forState: UIControlStateNormal];
+            }
+        }
     }
-    else{
-        [[self cardView0] setHidden:YES];
+    for (int i=[self.engine.activePlayer.hand count]; i<DRAW_CAP; i++) {
+        [cardViews[i] setHidden:YES];
     }
-    
-    if([self.engine.activePlayer.hand count] > 1){
-        Card *drawn1 = self.engine.activePlayer.hand[1];
-        [[self cardName1] setText: [drawn1 name]];
-        [[self cardValue1] setText: [NSString stringWithFormat:@"%d", drawn1.value]];
-        [[self cardView1] setHidden:NO];
-    }
-    else{
-        [[self cardView1] setHidden:YES];
-    }
-    
-    
-    if([self.engine.activePlayer.hand count] > 2){
-        Card *drawn2 = self.engine.activePlayer.hand[2];
-        [[self cardName2] setText: [drawn2 name]];
-        [[self cardValue2] setText: [NSString stringWithFormat:@"%d", drawn2.value]];
-        [[self cardView2] setHidden:NO];
-    }
-    else{
-        [[self cardView2] setHidden:YES];
-    }
-    
-    
-    if([self.engine.activePlayer.hand count] > 3){
-        Card *drawn3 = self.engine.activePlayer.hand[3];
-        [[self cardName3] setText: [drawn3 name]];
-        [[self cardValue3] setText: [NSString stringWithFormat:@"%d", drawn3.value]];
-        [[self cardView3] setHidden:NO];
-    }
-    else{
-        [[self cardView3] setHidden:YES];
-    }
-    
-    
-    if([self.engine.activePlayer.hand count] > 4){
-        Card *drawn4 = self.engine.activePlayer.hand[4];
-        [[self cardName4] setText: [drawn4 name]];
-        [[self cardValue4] setText: [NSString stringWithFormat:@"%d", drawn4.value]];
-        [[self cardView4] setHidden:NO];
-    }
-    else{
-        [[self cardView4] setHidden:YES];
-    }
-    
 }
 
 //The main method for initializing gameplay
@@ -237,6 +216,7 @@
     [self.engine setIndexOfTouchedCard:4];
 }
 
+//TODO: set image to orange.png
 - (IBAction)discard0Touched:(id)sender {
     if([[self discard0] backgroundColor] == [UIColor orangeColor]){
         [[self discard0] setBackgroundColor:  [UIColor clearColor]];
