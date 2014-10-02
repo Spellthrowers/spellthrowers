@@ -14,6 +14,5 @@
 @property (nonatomic) bool isAiGame;
 
 -(BOOL)atLeastOneCardSetToDiscard;
--(NSString*) imageForCard: (int)atIndex;
 
 @end

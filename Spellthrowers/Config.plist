@@ -4,7 +4,7 @@
 <dict>
 	<key>cardImage</key>
 	<array>
-		<string></string>
+		<string>spellShieldCard.png</string>
 		<string></string>
 		<string></string>
 		<string></string>
@@ -54,7 +54,7 @@
 		<string>Laser Pistol</string>
 		<string>Zap</string>
 		<string>Fireball</string>
-		<string>Ice Shards</string>
+		<string>Waterfall</string>
 		<string>Hurricane</string>
 	</array>
 </dict>
