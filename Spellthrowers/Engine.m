@@ -94,26 +94,63 @@
     //perform the correct action based on what was played
     if(   [[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Attack"]){
         //if attacking a player with an active shield
-        if( [onPlayer isShielded] == YES ){
-            //TODO: Customize Shield
-            //reflect damage on the attacker
-            [_activePlayer setLife: [_activePlayer life] - card.value];
-            
+        //TODO: ZAP COUNTER
+        if( [onPlayer hasFaceDown] == YES ){
+            if([[onPlayer.faceDownCard cardType] isEqualToString: @"EMP"]){
+                for (Player *p in self.currentPlayers) {
+                    if(p != onPlayer){
+                        for (int i=0; i<[[p hand] count]; i++) {
+                            Card* card = p.playerHand[i];
+                            if ([[card cardType] isEqualToString:@"Weapon"]) {
+                                [p removeCard:i];
+                                [p takeDamage:2];
+                                i--;
+                            }
+                        }
+                    }
+                }
+            }
+            else if([[onPlayer.faceDownCard cardType] isEqualToString: @"Shield"]){
+                //reflect damage on the attacker
+                [_activePlayer setLife: [_activePlayer life] - card.value];
+            }
             //unset shield after use
-            [onPlayer setIsShielded:NO];
+            [onPlayer setHasFaceDown:NO];
         }
         else{
             [onPlayer setLife: [onPlayer life] - card.value];
         }
     }
     else if ([[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Weapon"]){
-        for (Card* card in self.activePlayer.hand) {
-            if([card.cardType isEqualToString:@"Weapon"]){
-                [onPlayer setLife: [onPlayer life] - card.value];
+        if( [onPlayer hasFaceDown] == YES ){
+            if([[onPlayer.faceDownCard cardType] isEqualToString: @"EMP"]){
+                for (Player *p in self.currentPlayers) {
+                    if(p != onPlayer){
+                        for (int i=0; i<[[p hand] count]; i++) {
+                            Card* card = p.playerHand[i];
+                            if ([[card cardType] isEqualToString:@"Weapon"]) {
+                                [p removeCard:i];
+                                [p takeDamage:2];
+                                i--;
+                            }
+                        }
+                    }
+                }
+            }
+            else if([[onPlayer.faceDownCard cardType] isEqualToString: @"Shield"]){
+                //reflect damage on the attacker
+                [_activePlayer setLife: [_activePlayer life] - card.value];
+            }
+            //unset shield after use
+            [onPlayer setHasFaceDown:NO];
+        }
+        else{
+            for (Card* card in self.activePlayer.hand) {
+                if([card.cardType isEqualToString:@"Weapon"]){
+                    [onPlayer setLife: [onPlayer life] - card.value];
+                }
             }
         }
-        //break shield on hit
-        [onPlayer setIsShielded:NO];
     }
     else if([[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Heal"]){
         for (Card* card in self.activePlayer.hand) {
@@ -122,23 +159,12 @@
             }
         }
     }
-    else if([[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"EMP"]){
-        for (Player *p in self.currentPlayers) {
-            if(p != _activePlayer){
-                for (int i=0; i<[[p hand] count]; i++) {
-                    Card* card = p.playerHand[i];
-                    if ([[card cardType] isEqualToString:@"Weapon"]) {
-                        [p removeCard:i];
-                        [p takeDamage:2];
-                        i--;
-                    }
-                }
-            }
-        }
+    else if([self.activePlayer.hand[_indexOfTouchedCard] isFaceDownType] == YES){
+        [_activePlayer setHasFaceDown:YES];
+        //replaces current if a new facedown gets played
+        self.activePlayer.faceDownCard = self.activePlayer.hand[_indexOfTouchedCard];
     }
-    else if([[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Shield"]){
-        [_activePlayer setIsShielded:YES];
-    }
+    
     
     //Remove nonweapon played cards
     if(   ![[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Weapon"]

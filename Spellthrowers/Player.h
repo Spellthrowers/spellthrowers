@@ -15,7 +15,8 @@
 
 @property (nonatomic, strong) NSString* name;
 @property (nonatomic) int life;
-@property (nonatomic) bool isShielded;
+@property (nonatomic) bool hasFaceDown;
+@property (nonatomic) Card* faceDownCard;
 @property (nonatomic, strong) NSMutableArray* playerHand;
 @property (nonatomic, strong) Deck *deck;
 @property (nonatomic) BOOL isAi;

@@ -48,7 +48,7 @@
     //set text based on card type
     [self setMainText];
     
-    //TODO: continue to code logic and return for cards that don't end turn here
+    //logic for cards that don't end turn
     if(   !self.engine.discardedAndDrew
        && [[self.engine.activePlayer.hand[self.engine.indexOfTouchedCard] cardType] isEqualToString:@"Heal"]){
         nextPlayerName = [self.engine.activePlayer  name];
@@ -110,38 +110,38 @@
     int cardValue = cardPlayed.value;
     
     if([cardPlayed.cardType isEqualToString:@"Attack"]){
-        //if attacked a shielded player, customize message
-        if([nextPlayer isShielded]){
+        //TODO: Customize for EMP/SHIELD, if attacked a shielded player, customize message
+        if([nextPlayer hasFaceDown]){
             [[self transitionMessage] setText: [NSString stringWithFormat: @"%@'s shield reflects %d damage onto %@ due to the %@ card!", nextPlayerName, cardValue, self.engine.activePlayer.name, cardPlayed.name]];
         }
         else{
             [[self transitionMessage] setText: [NSString stringWithFormat: @"%@ hit %@ for %d damage with the %@ card!", self.engine.activePlayer.name, nextPlayerName, cardValue, cardPlayed.name]];
         }
     }
-    else if ([cardPlayed.cardType isEqualToString:@"EMP"]){
-        //get how many weapons enemies hold
-        int numWeaponsRemoved = 0;
-        for (Player *p in self.engine.currentPlayers) {
-            if(p != self.engine.activePlayer){
-                for (Card *card in p.hand) {
-                    if([[card cardType] isEqualToString:@"Weapon"]){
-                        numWeaponsRemoved++;
-                    }
-                }
-            }
-        }
-        
-        //set text on transition screen. Singular and plural weapon removal.
-        if (numWeaponsRemoved == 1) {
-            [[self transitionMessage] setText: [NSString stringWithFormat: @"%@ used an EMP card! %i weapon was removed from an enemy hand, dealing 2 damage as it malfunctioned!", self.engine.activePlayer.name, numWeaponsRemoved]];
-        }
-        else if (numWeaponsRemoved > 1){
-            [[self transitionMessage] setText: [NSString stringWithFormat: @"%@ used an EMP card! %i weapons were removed from enemy hands, dealing 2 damage each as they malfunctioned!", self.engine.activePlayer.name, numWeaponsRemoved]];
-        }
-        else{
-            [[self transitionMessage] setText: [NSString stringWithFormat: @"%@ used an EMP card! %i weapons were removed from enemy hands!", self.engine.activePlayer.name, numWeaponsRemoved]];
-        }
-    }
+//    else if ([cardPlayed.cardType isEqualToString:@"EMP"]){
+//        //get how many weapons enemies hold
+//        int numWeaponsRemoved = 0;
+//        for (Player *p in self.engine.currentPlayers) {
+//            if(p != self.engine.activePlayer){
+//                for (Card *card in p.hand) {
+//                    if([[card cardType] isEqualToString:@"Weapon"]){
+//                        numWeaponsRemoved++;
+//                    }
+//                }
+//            }
+//        }
+//        
+//        //set text on transition screen. Singular and plural weapon removal.
+//        if (numWeaponsRemoved == 1) {
+//            [[self transitionMessage] setText: [NSString stringWithFormat: @"%@ used an EMP card! %i weapon was removed from an enemy hand, dealing 2 damage as it malfunctioned!", self.engine.activePlayer.name, numWeaponsRemoved]];
+//        }
+//        else if (numWeaponsRemoved > 1){
+//            [[self transitionMessage] setText: [NSString stringWithFormat: @"%@ used an EMP card! %i weapons were removed from enemy hands, dealing 2 damage each as they malfunctioned!", self.engine.activePlayer.name, numWeaponsRemoved]];
+//        }
+//        else{
+//            [[self transitionMessage] setText: [NSString stringWithFormat: @"%@ used an EMP card! %i weapons were removed from enemy hands!", self.engine.activePlayer.name, numWeaponsRemoved]];
+//        }
+//    }
     else if([cardPlayed.cardType isEqualToString:@"Weapon"]){
         int damage = 0;
         int numHits = 0;
@@ -183,7 +183,7 @@
         [[self transitionMessage] setText: s];
     }
     else if([cardPlayed.cardType isEqualToString:@"Heal"]){
-        //When one heal is tapped, play all...
+        //When one heal is tapped, play all
         int tempNumHeals = 0;
         int damage = 0;
         for (Card* card in self.engine.activePlayer.hand) {
@@ -194,7 +194,8 @@
         }
         [[self transitionMessage] setText: [NSString stringWithFormat: @"%@ played all heal cards to gain %d health!", self.engine.activePlayer.name, damage]];
     }
-    else if([cardPlayed.cardType isEqualToString:@"Shield"]){
+    //If Shield or EMP
+    else if(cardPlayed.isFaceDownType == YES){
         [[self transitionMessage] setText: [NSString stringWithFormat: @"%@ placed a card face down!", self.engine.activePlayer.name]];
     }
 }

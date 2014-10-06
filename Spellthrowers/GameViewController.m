@@ -110,9 +110,10 @@
     //if the other player has a facedown card
     //unhide facedown card
     
-    if([self.engine.currentPlayers[(self.engine.indexOfActivePlayer+1)%[self.engine.players count]] isShielded]){
+    if([self.engine.currentPlayers[(self.engine.indexOfActivePlayer+1)%[self.engine.players count]] hasFaceDown]){
         [self faceDownActivated].hidden = NO;
     }
+    
     [[self player1Life] setText: [NSString stringWithFormat: @"%@ Life: %d", [self.engine.activePlayer name], [self.engine.activePlayer life]]];
     [[self player2Life] setText: [NSString stringWithFormat: @"%@ Life: %d", [self.engine.players[(self.engine.indexOfActivePlayer+1)%[self.engine.players count]] name], [self.engine.players[(self.engine.indexOfActivePlayer+1)%[self.engine.players count]] life]]];
     

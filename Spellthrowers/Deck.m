@@ -37,6 +37,8 @@
     NSNumber* value = config[@"cardValues"][cardIndex];
     int value2 = [value intValue];
     [newCard setValue: value2];
+    //set if card is Face Down Type
+    [newCard setIsFaceDownType: config[@"isFaceDownType"][cardIndex]];
     return newCard;
 }
 
