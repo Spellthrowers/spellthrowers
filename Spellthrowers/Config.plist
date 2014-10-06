@@ -2,6 +2,17 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>isFaceDownType</key>
+	<array>
+		<true/>
+		<false/>
+		<true/>
+		<false/>
+		<false/>
+		<false/>
+		<false/>
+		<false/>
+	</array>
 	<key>cardImage</key>
 	<array>
 		<string>spellShieldCard.png</string>
