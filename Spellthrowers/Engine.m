@@ -112,6 +112,7 @@
             }
             else if([[onPlayer.faceDownCard cardType] isEqualToString: @"Shield"]){
                 //reflect damage on the attacker
+                //edit
                 [_activePlayer setLife: [_activePlayer life] - card.value];
             }
             //unset shield after use
