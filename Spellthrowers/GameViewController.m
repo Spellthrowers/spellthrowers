@@ -88,7 +88,7 @@
             }
         }
     }
-    for (int i=[self.engine.activePlayer.hand count]; i<DRAW_CAP; i++) {
+    for (int i = (int)[self.engine.activePlayer.hand count]; i<DRAW_CAP; i++) {
         [cardViews[i] setHidden:YES];
     }
 }

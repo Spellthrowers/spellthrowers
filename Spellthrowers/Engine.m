@@ -95,7 +95,7 @@
     if(   [[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Attack"]){
         //if attacking a player with an active shield
         //TODO: ZAP COUNTER
-        if( [onPlayer hasFaceDown] == YES ){
+        if( [onPlayer hasFaceDown]){
             if([[onPlayer.faceDownCard cardType] isEqualToString: @"EMP"]){
                 for (Player *p in self.currentPlayers) {
                     if(p != onPlayer){
@@ -123,7 +123,7 @@
         }
     }
     else if ([[self.activePlayer.hand[_indexOfTouchedCard] cardType] isEqualToString: @"Weapon"]){
-        if( [onPlayer hasFaceDown] == YES ){
+        if( [onPlayer hasFaceDown]){
             if([[onPlayer.faceDownCard cardType] isEqualToString: @"EMP"]){
                 for (Player *p in self.currentPlayers) {
                     if(p != onPlayer){
@@ -160,7 +160,7 @@
             }
         }
     }
-    else if([self.activePlayer.hand[_indexOfTouchedCard] isFaceDownType] == YES){
+    else if([self.activePlayer.hand[_indexOfTouchedCard] isFaceDownType]){
         [_activePlayer setHasFaceDown:YES];
         //replaces current if a new facedown gets played
         self.activePlayer.faceDownCard = self.activePlayer.hand[_indexOfTouchedCard];

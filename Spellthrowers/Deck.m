@@ -27,7 +27,21 @@
     Card *newCard = [[Card alloc] init];
     
     //get random card TODO: use weights
-    int cardIndex = arc4random_uniform((int)numCardTypes);
+    int cardIndex;
+    #ifdef DEBUG
+        int random = arc4random_uniform(3);
+        if (random == 1) {
+            cardIndex = 3; //Weapon
+        }
+        else if (random == 2){
+            cardIndex = 2; //EMP
+        }
+        else{
+            cardIndex = 0; //Shield
+        }
+    #else
+        cardIndex = arc4random_uniform((int)numCardTypes);
+    #endif
     
     //set card name
     [newCard setName: config[@"cardNames"][cardIndex]];
@@ -38,7 +52,7 @@
     int value2 = [value intValue];
     [newCard setValue: value2];
     //set if card is Face Down Type
-    [newCard setIsFaceDownType: config[@"isFaceDownType"][cardIndex]];
+    [newCard setIsFaceDownType: (BOOL)config[@"isFaceDownType"][cardIndex]];
     return newCard;
 }
 
