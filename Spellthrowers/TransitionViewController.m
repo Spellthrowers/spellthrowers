@@ -110,9 +110,11 @@
     int cardValue = cardPlayed.value;
     
     if([cardPlayed.cardType isEqualToString:@"Attack"]){
-        //TODO: Customize for EMP message
         if([nextPlayer hasFaceDown]){
-            if([nextPlayer.faceDownCard.cardType isEqualToString:@"Shield"]){
+            if([cardPlayed.name isEqualToString: @"Zap"]){
+                [[self transitionMessage] setText: [NSString stringWithFormat: @"%@'s facedown card was destroyed by %@'s ZAP card! %@ suffered 1 damage.", nextPlayer.name, self.engine.activePlayer.name, nextPlayer.name]];
+            }
+            else if([nextPlayer.faceDownCard.cardType isEqualToString:@"Shield"]){
                 [[self transitionMessage] setText: [NSString stringWithFormat: @"%@'s shield reflects %d damage onto %@ due to the %@ card!", nextPlayerName, cardValue, self.engine.activePlayer.name, cardPlayed.name]];
                 
             }
@@ -130,6 +132,7 @@
                 }
                 
                 //set text on transition screen. Singular and plural weapon removal.
+                //TODO: Customize message to include the damage taken from attack card
                 if (numWeaponsRemoved == 1) {
                     [[self transitionMessage] setText: [NSString stringWithFormat: @"%@ used a face down EMP card! %i weapon was removed from your hand, dealing 2 damage as it malfunctioned!", nextPlayer.name, numWeaponsRemoved]];
                 }
@@ -141,18 +144,14 @@
                 }
 
             }
+            
         }
         else{
             [[self transitionMessage] setText: [NSString stringWithFormat: @"%@ hit %@ for %d damage with the %@ card!", self.engine.activePlayer.name, nextPlayerName, cardValue, cardPlayed.name]];
         }
     }
     else if([cardPlayed.cardType isEqualToString:@"Weapon"]){
-        if([nextPlayer hasFaceDown]){
-            if([nextPlayer.faceDownCard.cardType isEqualToString:@"Shield"]){
-                [[self transitionMessage] setText: [NSString stringWithFormat: @"%@'s shield reflects %d damage onto %@ due to the %@ card!", nextPlayerName, cardValue, self.engine.activePlayer.name, cardPlayed.name]];
-                
-            }
-            else if([nextPlayer.faceDownCard.cardType isEqualToString:@"EMP"]){
+        if([nextPlayer hasFaceDown] && [nextPlayer.faceDownCard.cardType isEqualToString:@"EMP"]){
                 //get how many weapons held
                 int numWeaponsRemoved = 0;
                 for (Player *p in self.engine.currentPlayers) {
@@ -164,7 +163,6 @@
                         }
                     }
                 }
-                
                 //set text on transition screen. Singular and plural weapon removal.
                 if (numWeaponsRemoved == 1) {
                     [[self transitionMessage] setText: [NSString stringWithFormat: @"%@ used a face down EMP card! %i weapon was removed from your hand, dealing 2 damage as it malfunctioned!", nextPlayer.name, numWeaponsRemoved]];
@@ -175,8 +173,6 @@
                 else{
                     [[self transitionMessage] setText: [NSString stringWithFormat: @"%@ used a face down EMP card! %i weapons were removed from your hand!", nextPlayer.name, numWeaponsRemoved]];
                 }
-                
-            }
         }
         else{
             int damage = 0;
