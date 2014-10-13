@@ -108,6 +108,7 @@
                             }
                         }
                     }
+                    [onPlayer setLife: [onPlayer life] - card.value];
                 }
             }
             else if([[onPlayer.faceDownCard cardType] isEqualToString: @"Shield"]){
