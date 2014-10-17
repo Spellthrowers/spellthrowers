@@ -367,7 +367,7 @@
        fx="236.91017"
        fy="960.88623"
        r="48.772938"
-       gradientTransform="matrix(1.0812668,-0.00743954,0.00772532,1.1228015,-221.77675,-81.950511)"
+       gradientTransform="matrix(1.0682094,-0.00738413,0.00763212,1.1144419,-219.10348,-73.499825)"
        gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
@@ -410,16 +410,21 @@
        id="layer4"
        inkscape:label="Layer#1">
       <rect
-         style="fill:url(#radialGradient6801);fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-opacity:1"
+         style="fill:url(#radialGradient6801);fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.99023634;stroke-opacity:1"
          id="rect6793"
-         width="82"
-         height="133"
-         x="0"
-         y="919.36218" />
+         width="81.009796"
+         height="132.00977"
+         x="-0.0048817978"
+         y="920.35712"
+         inkscape:export-filename="/Users/Wesley/Documents/gitHub/spellthrowers/Spellthrowers/g4212.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
     </g>
     <g
        id="g4212"
-       transform="matrix(5.4665078,0,0,5.9560986,-209.72597,-563.86254)">
+       transform="matrix(5.4004941,0,0,5.9117509,-207.19817,-551.82367)"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
       <g
          id="g4109"
          transform="matrix(1.232774,0,0,1.2330857,-9.8678759,-51.540042)">
@@ -428,7 +433,7 @@
       </g>
       <path
          transform="matrix(0.38555907,0,0,0.38756769,22.720945,180.9965)"
-         d="m 74.263222,208.85577 a 14.233784,12.996063 0 1 1 -0.0047,-0.33381"
+         d="m 74.263222,208.85577 c 0,7.17753 -6.372682,12.99607 -14.233784,12.99607 -7.861102,0 -14.233784,-5.81854 -14.233784,-12.99607 0,-7.17752 6.372682,-12.99606 14.233784,-12.99606 7.718684,0 14.030826,5.61708 14.229087,12.66225"
          sodipodi:ry="12.996063"
          sodipodi:rx="14.233784"
          sodipodi:cy="208.85577"

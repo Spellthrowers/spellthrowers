@@ -29,7 +29,8 @@
 -(void)removePlayer:(Player*)playerToRemove;
 -(void)play: (Player*)fromPlayer :(Card*)card :(Player*)onPlayer;
 -(void)nextPlayer;
--(void) empOthers:(Player*)EMPer;
+-(void)empOthers:(Player*)EMPer;
+-(void)removeheal: (Player*)p;
 -(Player*)endGame;
 -(int)getAiRecommendedCardIndex;
 

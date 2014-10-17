@@ -23,6 +23,10 @@
 		2BCB726119F0C09900BCC89C /* spellShieldCard.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2BCB725E19F0C09900BCC89C /* spellShieldCard.m4a */; };
 		2BCB726319F0C55F00BCC89C /* facedownCard.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2BCB726219F0C55F00BCC89C /* facedownCard.m4a */; };
 		2BCB726519F0C9C600BCC89C /* healCard.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2BCB726419F0C9C600BCC89C /* healCard.m4a */; };
+		2BCB726719F0CC5C00BCC89C /* zapCard.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2BCB726619F0CC5C00BCC89C /* zapCard.m4a */; };
+		2BCB726919F0D11A00BCC89C /* weaponCard.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2BCB726819F0D11A00BCC89C /* weaponCard.m4a */; };
+		2BCB726B19F0D29A00BCC89C /* hurricaneCard.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2BCB726A19F0D29A00BCC89C /* hurricaneCard.m4a */; };
+		2BCB726D19F0D2AF00BCC89C /* waterfallCard.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2BCB726C19F0D2AF00BCC89C /* waterfallCard.m4a */; };
 		2BDF0E4519C0BCB600B3183A /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BDF0E4419C0BCB600B3183A /* Config.plist */; };
 		2BE0E16E19BB9E9B00CC89E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BE0E16D19BB9E9B00CC89E9 /* Foundation.framework */; };
 		2BE0E17019BB9E9B00CC89E9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BE0E16F19BB9E9B00CC89E9 /* CoreGraphics.framework */; };
@@ -74,6 +78,10 @@
 		2BCB725E19F0C09900BCC89C /* spellShieldCard.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = spellShieldCard.m4a; sourceTree = "<group>"; };
 		2BCB726219F0C55F00BCC89C /* facedownCard.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = facedownCard.m4a; sourceTree = "<group>"; };
 		2BCB726419F0C9C600BCC89C /* healCard.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = healCard.m4a; sourceTree = "<group>"; };
+		2BCB726619F0CC5C00BCC89C /* zapCard.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = zapCard.m4a; sourceTree = "<group>"; };
+		2BCB726819F0D11A00BCC89C /* weaponCard.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = weaponCard.m4a; sourceTree = "<group>"; };
+		2BCB726A19F0D29A00BCC89C /* hurricaneCard.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = hurricaneCard.m4a; sourceTree = "<group>"; };
+		2BCB726C19F0D2AF00BCC89C /* waterfallCard.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = waterfallCard.m4a; sourceTree = "<group>"; };
 		2BDF0E4419C0BCB600B3183A /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		2BE0E16A19BB9E9B00CC89E9 /* Spellthrowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spellthrowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BE0E16D19BB9E9B00CC89E9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -194,6 +202,10 @@
 		2BE0E17419BB9E9B00CC89E9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2BCB726819F0D11A00BCC89C /* weaponCard.m4a */,
+				2BCB726C19F0D2AF00BCC89C /* waterfallCard.m4a */,
+				2BCB726A19F0D29A00BCC89C /* hurricaneCard.m4a */,
+				2BCB726619F0CC5C00BCC89C /* zapCard.m4a */,
 				2BCB726419F0C9C600BCC89C /* healCard.m4a */,
 				2BCB726219F0C55F00BCC89C /* facedownCard.m4a */,
 				2BCB725C19F0C09900BCC89C /* EMPCard.m4a */,
@@ -304,9 +316,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BCB726719F0CC5C00BCC89C /* zapCard.m4a in Resources */,
+				2BCB726D19F0D2AF00BCC89C /* waterfallCard.m4a in Resources */,
 				2BCB726519F0C9C600BCC89C /* healCard.m4a in Resources */,
 				2BE0E18419BB9E9B00CC89E9 /* Main_iPad.storyboard in Resources */,
 				2BE0E18919BB9E9B00CC89E9 /* Images.xcassets in Resources */,
+				2BCB726919F0D11A00BCC89C /* weaponCard.m4a in Resources */,
 				2B4ABFBF19DD173C006331D6 /* icon.png in Resources */,
 				2BE0E18119BB9E9B00CC89E9 /* Main_iPhone.storyboard in Resources */,
 				2BDF0E4519C0BCB600B3183A /* Config.plist in Resources */,
@@ -319,6 +334,7 @@
 				2BCB726019F0C09900BCC89C /* fireballCard.m4a in Resources */,
 				2BC9563219DDEA540046B39E /* spellShieldCard.png in Resources */,
 				2BE0E17819BB9E9B00CC89E9 /* InfoPlist.strings in Resources */,
+				2BCB726B19F0D29A00BCC89C /* hurricaneCard.m4a in Resources */,
 				2BCB725F19F0C09900BCC89C /* EMPCard.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

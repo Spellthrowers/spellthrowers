@@ -63,10 +63,12 @@
     if(!self.engine.discardedAndDrew){
         for (int j=0; j<[config[@"cardNames"] count]; j++) {
             if ([[self.engine.activePlayer.hand[self.engine.indexOfTouchedCard] name] isEqualToString:config[@"cardNames"][j]]) {
-                NSURL *soundURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:config[@"cardSounds"][j] ofType:@"m4a"]];
-                AudioServicesCreateSystemSoundID((__bridge CFURLRef) soundURL , &sound);
-                AudioServicesPlaySystemSound(sound);
-                
+                NSString* URLPath = [[NSBundle mainBundle] pathForResource:config[@"cardSounds"][j] ofType:@"m4a"];
+                if(URLPath != nil){
+                    NSURL *soundURL = [NSURL fileURLWithPath: URLPath];
+                    AudioServicesCreateSystemSoundID((__bridge CFURLRef) soundURL , &sound);
+                    AudioServicesPlaySystemSound(sound);
+                }
             }
         }
     }
