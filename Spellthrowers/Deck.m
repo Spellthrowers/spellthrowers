@@ -28,20 +28,20 @@
     
     //get random card TODO: use weights
     int cardIndex;
-    //#ifdef DEBUG
-        /*int random = arc4random_uniform(3);
+    #ifdef DEBUG
+        int random = arc4random_uniform(3);
         if (random == 1) {
-            cardIndex = 3; //Weapon
+            cardIndex = 5; //Fireball
         }
         else if (random == 2){
             cardIndex = 2; //EMP
         }
         else{
             cardIndex = 0; //Shield
-        }*/
-    //#else
+        }
+    #else
         cardIndex = arc4random_uniform((int)numCardTypes);
-    //#endif
+    #endif
     
     //set card name
     [newCard setName: config[@"cardNames"][cardIndex]];

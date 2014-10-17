@@ -15,10 +15,7 @@
    id="svg2"
    height="1052.3622047"
    width="744.09448819"
-   sodipodi:docname="fireballCard.svg"
-   inkscape:export-filename="/Users/Wesley/Documents/gitHub/spellthrowers/Spellthrowers/fireballCard.png"
-   inkscape:export-xdpi="90"
-   inkscape:export-ydpi="90">
+   sodipodi:docname="discardedCard.svg">
   <defs
      id="defs4">
     <linearGradient
@@ -281,7 +278,7 @@
        fx="368.53812"
        fy="321.04062"
        r="237.08385"
-       gradientTransform="matrix(0.28877061,-0.00443465,0.00205834,0.35595606,-66.00026,873.13666)"
+       gradientTransform="matrix(0.28818098,-0.00442909,0.00205414,0.35551006,-65.865129,873.36131)"
        gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
@@ -292,7 +289,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.7470009"
-     inkscape:cx="243.88968"
+     inkscape:cx="188.94337"
      inkscape:cy="27.42771"
      inkscape:document-units="px"
      inkscape:current-layer="layer3"
@@ -319,80 +316,20 @@
      id="layer3"
      inkscape:label="Layerlkn">
     <rect
-       style="fill:url(#radialGradient4265);fill-opacity:1;stroke:#000000;stroke-width:1.00165021;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
-       id="rect4232"
-       width="80.998352"
-       height="131.99835"
-       x="0.58434576"
-       y="919.77942"
+       style="fill:#ff8200;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect4176"
+       width="82"
+       height="133"
+       x="0"
+       y="919.36218"
        inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"
-       inkscape:export-filename="/Users/Wesley/Documents/gitHub/spellthrowers/Spellthrowers/g4212.png" />
-    <text
-       xml:space="preserve"
-       style="font-size:18.37643623px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="9.8304377"
-       y="890.9743"
-       id="text3370"
-       sodipodi:linespacing="125%"
-       transform="scale(0.94814005,1.0546965)"
-       inkscape:export-filename="/Users/Wesley/Documents/gitHub/spellthrowers/Spellthrowers/g4212.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
-         sodipodi:role="line"
-         id="tspan3372"
-         x="9.8304377"
-         y="890.9743">Fireball</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:19.00628662px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="10.24106"
-       y="906.39795"
-       id="text3374"
-       sodipodi:linespacing="125%"
-       transform="scale(0.93923686,1.0646942)"
-       inkscape:export-filename="/Users/Wesley/Documents/gitHub/spellthrowers/Spellthrowers/g4212.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
-         sodipodi:role="line"
-         id="tspan3376"
-         x="10.24106"
-         y="906.39795">2</tspan></text>
+       inkscape:export-ydpi="90" />
   </g>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
      style="display:inline">
-    <g
-       id="g4212"
-       transform="matrix(0.87831404,0,0,1.1371224,3.5762717,741.39382)"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90">
-      <g
-         id="g4109"
-         transform="matrix(1.232774,0,0,1.2330857,-9.8678759,-51.540042)">
-        <g
-           id="g4113">
-          <path
-             sodipodi:nodetypes="cccccccc"
-             inkscape:connector-curvature="0"
-             d="M 31.886848,226.58392 C 24.49815,238.39934 17.820092,244.68685 9.9017627,252.79485 20.558863,246.08338 25.187757,240.94349 39.175964,235.70843 c 10.642207,-3.23558 7.440399,5.89159 -1.224912,15.78006 0,0 31.861085,-25.12337 34.336526,-32.54969 2.542787,-7.8369 1.12171,-14.00613 -4.363121,-17.69061 -22.087907,-9.83137 -48.251582,25.5249 -55.334895,32.04023 17.464046,-11.35916 21.265318,-10.29054 19.297286,-6.7045 z"
-             style="fill:url(#linearGradient4218);fill-opacity:1;stroke:#000000;stroke-width:0.09950015;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-             id="path4106" />
-        </g>
-      </g>
-      <path
-         transform="matrix(0.84709397,0,0,0.92800422,13.247986,16.248476)"
-         d="m 74.263222,208.85577 c 0,7.17753 -6.372682,12.99607 -14.233784,12.99607 -7.861102,0 -14.233784,-5.81854 -14.233784,-12.99607 0,-7.17752 6.372682,-12.99606 14.233784,-12.99606 7.861102,0 14.233784,5.81854 14.233784,12.99606 z"
-         sodipodi:ry="12.996063"
-         sodipodi:rx="14.233784"
-         sodipodi:cy="208.85577"
-         sodipodi:cx="60.029438"
-         id="path4086"
-         style="fill:url(#linearGradient4220);fill-opacity:1;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         sodipodi:type="arc" />
-    </g>
     <g
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:168.99999379999999860%;letter-spacing:0px;word-spacing:0px;fill:#0000ff;fill-opacity:1;stroke:none;font-family:Sans"
        id="text3003"

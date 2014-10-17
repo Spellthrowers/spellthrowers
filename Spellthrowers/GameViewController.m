@@ -58,17 +58,12 @@
 @implementation GameViewController
 - (void)displayHand {
     
-    //Get the bundle for this app
-    NSBundle* bundle = NSBundle.mainBundle;
-    //get the config path
-    NSString* path = [bundle pathForResource:@"Config" ofType:@"plist"];
-    //build a config dictionary
-    NSDictionary* config = [NSDictionary dictionaryWithContentsOfFile:path];
+    
     
     //arrays for buttons
-    NSArray *cardViews = @[self.cardView0,  self.cardView1,  self.cardView2,  self.cardView3,  self.cardView4];
-    NSArray *cardNames = @[self.cardName0,  self.cardName1,  self.cardName2,  self.cardName3,  self.cardName4];
-    NSArray *cardValues =@[self.cardValue0, self.cardValue1, self.cardValue2, self.cardValue3, self.cardValue4];
+    self.cardViews = @[self.cardView0,  self.cardView1,  self.cardView2,  self.cardView3,  self.cardView4];
+    self.cardNames = @[self.cardName0,  self.cardName1,  self.cardName2,  self.cardName3,  self.cardName4];
+    self.cardValues =@[self.cardValue0, self.cardValue1, self.cardValue2, self.cardValue3, self.cardValue4];
     //NSArray *playCards = @[self.playCard0,  self.playCard1,  self.playCard2,  self.playCard3,  self.playCard4];
     //NSArray *discards =  @[self.discard0,   self.discard1,   self.discard2,   self.discard3,   self.discard4];
     
@@ -77,20 +72,14 @@
     //draw screen and hide cards that don't exist
     for (int i=0; i<[self.engine.activePlayer.hand count]; i++) {
         Card *drawn = self.engine.activePlayer.hand[i];
-        [cardNames[i] setText: [drawn name]];
-        [cardValues[i] setText: [NSString stringWithFormat:@"%d", drawn.value]];
-        [cardViews[i] setHidden:NO];
+        [self.cardNames[i] setText: [drawn name]];
+        [self.cardValues[i] setText: [NSString stringWithFormat:@"%d", drawn.value]];
+        [self.cardViews[i] setHidden:NO];
         //Art. For some reason it only works on the 0th card for now...
-        for (int j=0; j<[config[@"cardNames"] count]; j++) {
-            UIImage* image = [UIImage imageNamed: config[@"cardImage"][j]];
-            if ([drawn.name isEqualToString:config[@"cardNames"][j]] && image != nil) {
-                UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
-                [cardViews[i] addSubview:uiv];
-            }
-        }
+        [self setImageForCard:drawn atIndex:i];
     }
     for (int i = (int)[self.engine.activePlayer.hand count]; i<DRAW_CAP; i++) {
-        [cardViews[i] setHidden:YES];
+        [self.cardViews[i] setHidden:YES];
     }
 }
 
@@ -163,6 +152,10 @@
     [[self discard2] setBackgroundColor:  [UIColor clearColor]];
     [[self discard3] setBackgroundColor:  [UIColor clearColor]];
     [[self discard4] setBackgroundColor:  [UIColor clearColor]];
+    for(int i=0; i<[self.engine.activePlayer.hand count]; i++){
+        [self setImageForCard:self.engine.activePlayer.hand[i] atIndex:i];
+    }
+    
 }
 
 - (IBAction)drawNewCardsTouched:(id)sender {
@@ -222,45 +215,66 @@
 - (IBAction)discard0Touched:(id)sender {
     if([[self discard0] backgroundColor] == [UIColor orangeColor]){
         [[self discard0] setBackgroundColor:  [UIColor clearColor]];
+        [self setImageForCard:self.engine.activePlayer.hand[0] atIndex:0];
     }
     else{
         [[self discard0] setBackgroundColor:  [UIColor orangeColor]];
+        UIImage* image = [UIImage imageNamed: @"discardedCard.png" ];
+        UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
+        [self.cardViews[0] addSubview:uiv];
     }
     [[self drawNewCards] setHidden: !self.atLeastOneCardSetToDiscard];
 }
 - (IBAction)discard1Touched:(id)sender {
     if([[self discard1] backgroundColor] == [UIColor orangeColor]){
         [[self discard1] setBackgroundColor:  [UIColor clearColor]];
+        [self setImageForCard:self.engine.activePlayer.hand[1] atIndex:1];
     }
     else{
         [[self discard1] setBackgroundColor:  [UIColor orangeColor]];
+        UIImage* image = [UIImage imageNamed: @"discardedCard.png" ];
+        UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
+        [self.cardViews[1] addSubview:uiv];
+        
     }
     [[self drawNewCards] setHidden: !self.atLeastOneCardSetToDiscard];
 }
 - (IBAction)discard2Touched:(id)sender {
     if([[self discard2] backgroundColor] == [UIColor orangeColor]){
         [[self discard2] setBackgroundColor:  [UIColor clearColor]];
+        [self setImageForCard:self.engine.activePlayer.hand[2] atIndex:2];
     }
     else{
         [[self discard2] setBackgroundColor:  [UIColor orangeColor]];
+        UIImage* image = [UIImage imageNamed: @"discardedCard.png" ];
+        UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
+        [self.cardViews[2] addSubview:uiv];
     }
     [[self drawNewCards] setHidden: !self.atLeastOneCardSetToDiscard];
 }
 - (IBAction)discard3Touched:(id)sender {
     if([[self discard3] backgroundColor] == [UIColor orangeColor]){
         [[self discard3] setBackgroundColor:  [UIColor clearColor]];
+        [self setImageForCard:self.engine.activePlayer.hand[3] atIndex:3];
     }
     else{
         [[self discard3] setBackgroundColor:  [UIColor orangeColor]];
+        UIImage* image = [UIImage imageNamed: @"discardedCard.png" ];
+        UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
+        [self.cardViews[3] addSubview:uiv];
     }
     [[self drawNewCards] setHidden: !self.atLeastOneCardSetToDiscard];
 }
 - (IBAction)discard4Touched:(id)sender {
     if([[self discard4] backgroundColor] == [UIColor orangeColor]){
         [[self discard4] setBackgroundColor:  [UIColor clearColor]];
+        [self setImageForCard:self.engine.activePlayer.hand[4] atIndex:4];
     }
     else{
         [[self discard4] setBackgroundColor:  [UIColor orangeColor]];
+        UIImage* image = [UIImage imageNamed: @"discardedCard.png" ];
+        UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
+        [self.cardViews[4] addSubview:uiv];
     }
     [[self drawNewCards] setHidden: !self.atLeastOneCardSetToDiscard];
 }
@@ -271,6 +285,23 @@
         || [[self discard2] backgroundColor] == [UIColor orangeColor]
         || [[self discard3] backgroundColor] == [UIColor orangeColor]
         || [[self discard4] backgroundColor] == [UIColor orangeColor];
+}
+
+- (void) setImageForCard: (Card*)forCard atIndex:(int) atIndex {
+    //Get the bundle for this app
+    NSBundle* bundle = NSBundle.mainBundle;
+    //get the config path
+    NSString* path = [bundle pathForResource:@"Config" ofType:@"plist"];
+    //build a config dictionary
+    NSDictionary* config = [NSDictionary dictionaryWithContentsOfFile:path];
+    
+    for (int j=0; j<[config[@"cardNames"] count]; j++) {
+        UIImage* image = [UIImage imageNamed: config[@"cardImage"][j]];
+        if ([forCard.name isEqualToString:config[@"cardNames"][j]] && image != nil) {
+            UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
+            [self.cardViews[atIndex] addSubview:uiv];
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning
