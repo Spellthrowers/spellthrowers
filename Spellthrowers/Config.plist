@@ -2,6 +2,17 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>cardSounds</key>
+	<array>
+		<string>facedownCard</string>
+		<string>healCard</string>
+		<string>facedownCard</string>
+		<string>laserPistolCard</string>
+		<string>zapCard</string>
+		<string>fireballCard</string>
+		<string>waterfallCard</string>
+		<string>hurricaneCard</string>
+	</array>
 	<key>isFaceDownType</key>
 	<array>
 		<true/>
@@ -13,14 +24,14 @@
 		<false/>
 		<false/>
 	</array>
-	<key>cardImage</key>
+	<key>cardFileNames</key>
 	<array>
-		<string>spellShieldCard.png</string>
+		<string>spellShieldCard</string>
 		<string></string>
-		<string>EMPCard.png</string>
+		<string>EMPCard</string>
 		<string></string>
 		<string></string>
-		<string>fireballCard.png</string>
+		<string>fireballCard</string>
 		<string></string>
 		<string></string>
 	</array>

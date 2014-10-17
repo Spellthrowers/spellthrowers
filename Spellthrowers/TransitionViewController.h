@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AudioToolbox/AudioToolbox.h>
 #import "Engine.h"
 
-@interface TransitionViewController : UIViewController
+@interface TransitionViewController : UIViewController{
+    SystemSoundID sound;
+}
 
 @property (nonatomic, strong) Engine* engine;
 

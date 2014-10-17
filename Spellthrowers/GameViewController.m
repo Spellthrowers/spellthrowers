@@ -296,7 +296,7 @@
     NSDictionary* config = [NSDictionary dictionaryWithContentsOfFile:path];
     
     for (int j=0; j<[config[@"cardNames"] count]; j++) {
-        UIImage* image = [UIImage imageNamed: config[@"cardImage"][j]];
+        UIImage* image = [UIImage imageNamed: [NSString stringWithFormat: @"%@.png", config[@"cardFileNames"][j]]];
         if ([forCard.name isEqualToString:config[@"cardNames"][j]] && image != nil) {
             UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
             [self.cardViews[atIndex] addSubview:uiv];

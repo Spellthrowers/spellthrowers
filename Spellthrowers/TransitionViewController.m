@@ -25,6 +25,13 @@
 //on view load, change the active player and call their turn to be taken
 - (void)viewDidLoad
 {
+    //Get the bundle for this app
+    NSBundle* bundle = NSBundle.mainBundle;
+    //get the config path
+    NSString* path = [bundle pathForResource:@"Config" ofType:@"plist"];
+    //build a config dictionary
+    NSDictionary* config = [NSDictionary dictionaryWithContentsOfFile:path];
+    
     [self returnHome].hidden = YES;
 
     if (self.engine.discardedAndDrew) {
@@ -35,13 +42,7 @@
         [self passToAi].hidden = YES;
         [self ready].hidden = NO;
         return;
-    }//Play one shield at a time. Bug here with multiShield. Let's you play for AI, breaks UI, etc.
-    /*else if(self.engine.activePlayer.isShielded && [[self.engine.activePlayer.hand[self.engine.indexOfTouchedCard] cardType] isEqualToString:@"Shield"]){
-        [[self transitionMessage] setText:@"Already played a Shield, please pick a valid card!"];
-        [self passToAi].hidden = YES;
-        [self ready].hidden = NO;
-        return;
-    }*/
+    }
     
     NSString *nextPlayerName =[self.engine.players[(self.engine.indexOfActivePlayer+1) % [self.engine.players count]] name];
     
@@ -56,6 +57,18 @@
     }
     else{
         [[self transitionMessage2] setText: [NSString stringWithFormat: @"%@, it's your turn.",nextPlayerName]];
+    }
+    
+    //set sound to play
+    if(!self.engine.discardedAndDrew){
+        for (int j=0; j<[config[@"cardNames"] count]; j++) {
+            if ([[self.engine.activePlayer.hand[self.engine.indexOfTouchedCard] name] isEqualToString:config[@"cardNames"][j]]) {
+                NSURL *soundURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:config[@"cardSounds"][j] ofType:@"m4a"]];
+                AudioServicesCreateSystemSoundID((__bridge CFURLRef) soundURL , &sound);
+                AudioServicesPlaySystemSound(sound);
+                
+            }
+        }
     }
     
     //run turn and set next player
@@ -239,6 +252,7 @@
         [[segue destinationViewController] setEngine:self.engine];
     }
     [segue destinationViewController];
+    AudioServicesDisposeSystemSoundID(sound);
 }
 
 - (IBAction)passToAiPressed:(id)sender {
