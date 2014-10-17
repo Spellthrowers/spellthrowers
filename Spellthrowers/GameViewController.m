@@ -69,8 +69,8 @@
     NSArray *cardViews = @[self.cardView0,  self.cardView1,  self.cardView2,  self.cardView3,  self.cardView4];
     NSArray *cardNames = @[self.cardName0,  self.cardName1,  self.cardName2,  self.cardName3,  self.cardName4];
     NSArray *cardValues =@[self.cardValue0, self.cardValue1, self.cardValue2, self.cardValue3, self.cardValue4];
-    NSArray *playCards = @[self.playCard0,  self.playCard1,  self.playCard2,  self.playCard3,  self.playCard4];
-    NSArray *discards =  @[self.discard0,   self.discard1,   self.discard2,   self.discard3,   self.discard4];
+    //NSArray *playCards = @[self.playCard0,  self.playCard1,  self.playCard2,  self.playCard3,  self.playCard4];
+    //NSArray *discards =  @[self.discard0,   self.discard1,   self.discard2,   self.discard3,   self.discard4];
     
     [[self header] setText: [NSString stringWithFormat:@"%@, pick a card!", self.engine.activePlayer.name]];
     
@@ -82,9 +82,10 @@
         [cardViews[i] setHidden:NO];
         //Art. For some reason it only works on the 0th card for now...
         for (int j=0; j<[config[@"cardNames"] count]; j++) {
-            if ([drawn.name isEqualToString:config[@"cardNames"][j]] && i==0) {
-                [playCards[i] setImage:[UIImage imageNamed: config[@"cardImage"][j]] forState: UIControlStateNormal];
-                [discards[i]  setImage:[UIImage imageNamed: config[@"cardImage"][j]] forState: UIControlStateNormal];
+            UIImage* image = [UIImage imageNamed: config[@"cardImage"][j]];
+            if ([drawn.name isEqualToString:config[@"cardNames"][j]] && image != nil) {
+                UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
+                [cardViews[i] addSubview:uiv];
             }
         }
     }
