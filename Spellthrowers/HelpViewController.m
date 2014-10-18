@@ -15,6 +15,15 @@
 
 @implementation HelpViewController
 
+//use this to store info before leaving the view
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if (self.engine.winner == NULL) {
+        [[segue destinationViewController] setEngine:self.engine];
+    }
+    [segue destinationViewController];
+    AudioServicesDisposeSystemSoundID(sound);
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
