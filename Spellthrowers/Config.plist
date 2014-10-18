@@ -27,7 +27,7 @@
 	<key>cardFileNames</key>
 	<array>
 		<string>spellShieldCard</string>
-		<string></string>
+		<string>healCard</string>
 		<string>EMPCard</string>
 		<string></string>
 		<string></string>

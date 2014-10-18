@@ -45,6 +45,7 @@
 		2BE0E19C19BB9E9B00CC89E9 /* SpellthrowersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E19B19BB9E9B00CC89E9 /* SpellthrowersTests.m */; };
 		2BFF20C019C4F25F00A4A29D /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFF20BF19C4F25F00A4A29D /* GameViewController.m */; };
 		2BFF20C319C5EF2500A4A29D /* TransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFF20C219C5EF2500A4A29D /* TransitionViewController.m */; };
+		C2794DB519F2146C002DAEA9 /* healCard.png in Resources */ = {isa = PBXBuildFile; fileRef = C2794DB419F2146C002DAEA9 /* healCard.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		2BFF20BF19C4F25F00A4A29D /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		2BFF20C119C5EF2500A4A29D /* TransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionViewController.h; sourceTree = "<group>"; };
 		2BFF20C219C5EF2500A4A29D /* TransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionViewController.m; sourceTree = "<group>"; };
+		C2794DB419F2146C002DAEA9 /* healCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = healCard.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 				2B4ABFBE19DD173C006331D6 /* icon.png */,
 				2B4ABFC019DD17FD006331D6 /* fireball.png */,
 				2B4ABFC219DD1DF7006331D6 /* fireballCard.png */,
+				C2794DB419F2146C002DAEA9 /* healCard.png */,
 				2BC9563119DDEA540046B39E /* spellShieldCard.png */,
 				2BCB724D19F0ACA000BCC89C /* discardedCard.png */,
 				2BCB724F19F0B40700BCC89C /* EMPCard.png */,
@@ -285,7 +288,7 @@
 				ORGANIZATIONNAME = Spellthrowers;
 				TargetAttributes = {
 					2BE0E16919BB9E9B00CC89E9 = {
-						DevelopmentTeam = K539BTLAP3;
+						DevelopmentTeam = X84Y2D2K96;
 					};
 					2BE0E18D19BB9E9B00CC89E9 = {
 						TestTargetID = 2BE0E16919BB9E9B00CC89E9;
@@ -332,6 +335,7 @@
 				2BCB726319F0C55F00BCC89C /* facedownCard.m4a in Resources */,
 				2B4ABFC319DD1DF7006331D6 /* fireballCard.png in Resources */,
 				2BCB726019F0C09900BCC89C /* fireballCard.m4a in Resources */,
+				C2794DB519F2146C002DAEA9 /* healCard.png in Resources */,
 				2BC9563219DDEA540046B39E /* spellShieldCard.png in Resources */,
 				2BE0E17819BB9E9B00CC89E9 /* InfoPlist.strings in Resources */,
 				2BCB726B19F0D29A00BCC89C /* hurricaneCard.m4a in Resources */,
