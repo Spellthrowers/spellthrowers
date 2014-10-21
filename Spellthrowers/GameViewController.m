@@ -75,7 +75,6 @@
         [self.cardNames[i] setText: [drawn name]];
         [self.cardValues[i] setText: [NSString stringWithFormat:@"%d", drawn.value]];
         [self.cardViews[i] setHidden:NO];
-        //Art. For some reason it only works on the 0th card for now...
         [self setImageForCard:drawn atIndex:i];
     }
     for (int i = (int)[self.engine.activePlayer.hand count]; i<DRAW_CAP; i++) {
