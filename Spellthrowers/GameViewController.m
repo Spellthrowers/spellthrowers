@@ -36,7 +36,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *discardAndDraw;
 @property (weak, nonatomic) IBOutlet UIButton *cancel;
 @property (weak, nonatomic) IBOutlet UIButton *drawNewCards;
-@property (weak, nonatomic) IBOutlet UILabel *faceDownActivated;
+@property (weak, nonatomic) IBOutlet UIImageView *faceDownActivated;
+@property (weak, nonatomic) IBOutlet UIImageView *faceDownActivated2;
 
 
 @property (weak, nonatomic) IBOutlet UIButton *playCard0;
@@ -86,6 +87,7 @@
 - (void)viewDidLoad
 {
     [self faceDownActivated].hidden = YES;
+    [self faceDownActivated2].hidden = YES;
     //first time launching view: initialize game
     if (! [self engine]) {
         [super viewDidLoad];
@@ -99,8 +101,11 @@
     //if the other player has a facedown card
     //unhide facedown card
     
-    if([self.engine.currentPlayers[(self.engine.indexOfActivePlayer+1)%[self.engine.players count]] hasFaceDown]){
+    if([self.engine.activePlayer hasFaceDown]){
         [self faceDownActivated].hidden = NO;
+    }
+    if([self.engine.currentPlayers[(self.engine.indexOfActivePlayer+1)%[self.engine.players count]] hasFaceDown]){
+        [self faceDownActivated2].hidden = NO;
     }
     
     [[self player1Life] setText: [NSString stringWithFormat: @"%@ Life: %d", [self.engine.activePlayer name], [self.engine.activePlayer life]]];

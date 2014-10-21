@@ -45,6 +45,7 @@
 		2BE0E19C19BB9E9B00CC89E9 /* SpellthrowersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E19B19BB9E9B00CC89E9 /* SpellthrowersTests.m */; };
 		2BF1955A19F6FCFB0000353E /* waterfallCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF1955919F6FCFB0000353E /* waterfallCard.png */; };
 		2BF1955C19F6FFF50000353E /* helpIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF1955B19F6FFF50000353E /* helpIcon.png */; };
+		2BF1955E19F710E30000353E /* hasFacedown.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF1955D19F710E30000353E /* hasFacedown.png */; };
 		2BFF20C019C4F25F00A4A29D /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFF20BF19C4F25F00A4A29D /* GameViewController.m */; };
 		2BFF20C319C5EF2500A4A29D /* TransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFF20C219C5EF2500A4A29D /* TransitionViewController.m */; };
 		C2794DB519F2146C002DAEA9 /* healCard.png in Resources */ = {isa = PBXBuildFile; fileRef = C2794DB419F2146C002DAEA9 /* healCard.png */; };
@@ -109,6 +110,7 @@
 		2BE0E19B19BB9E9B00CC89E9 /* SpellthrowersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpellthrowersTests.m; sourceTree = "<group>"; };
 		2BF1955919F6FCFB0000353E /* waterfallCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waterfallCard.png; sourceTree = "<group>"; };
 		2BF1955B19F6FFF50000353E /* helpIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helpIcon.png; sourceTree = "<group>"; };
+		2BF1955D19F710E30000353E /* hasFacedown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hasFacedown.png; sourceTree = "<group>"; };
 		2BFF20BE19C4F25F00A4A29D /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		2BFF20BF19C4F25F00A4A29D /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		2BFF20C119C5EF2500A4A29D /* TransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionViewController.h; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				2BE0E18819BB9E9B00CC89E9 /* Images.xcassets */,
 				2B4ABFBE19DD173C006331D6 /* icon.png */,
 				2BF1955B19F6FFF50000353E /* helpIcon.png */,
+				2BF1955D19F710E30000353E /* hasFacedown.png */,
 				2B4ABFC019DD17FD006331D6 /* fireball.png */,
 				2BF1955919F6FCFB0000353E /* waterfallCard.png */,
 				2B4ABFC219DD1DF7006331D6 /* fireballCard.png */,
@@ -343,6 +346,7 @@
 				2BDF0E4519C0BCB600B3183A /* Config.plist in Resources */,
 				2BCB724E19F0ACA000BCC89C /* discardedCard.png in Resources */,
 				2BCB726119F0C09900BCC89C /* spellShieldCard.m4a in Resources */,
+				2BF1955E19F710E30000353E /* hasFacedown.png in Resources */,
 				2BCB725019F0B40700BCC89C /* EMPCard.png in Resources */,
 				2B4ABFC119DD17FD006331D6 /* fireball.png in Resources */,
 				2BCB726319F0C55F00BCC89C /* facedownCard.m4a in Resources */,

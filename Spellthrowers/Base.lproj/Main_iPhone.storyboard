@@ -75,7 +75,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick a card!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" preferredMaxLayoutWidth="262" translatesAutoresizingMaskIntoConstraints="NO" id="4H1-4Y-Oye">
-                                <rect key="frame" x="29" y="20" width="262" height="77"/>
+                                <rect key="frame" x="34" y="56" width="262" height="77"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -270,7 +270,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FUp-Xz-uf6">
-                                <rect key="frame" x="164" y="271" width="125" height="38"/>
+                                <rect key="frame" x="171" y="269" width="125" height="38"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Discard &amp; Draw">
@@ -286,7 +286,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2sX-nR-Rw1">
-                                <rect key="frame" x="164" y="223" width="125" height="38"/>
+                                <rect key="frame" x="166" y="223" width="125" height="38"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Cancel">
@@ -301,8 +301,23 @@
                                     <action selector="cancelTouched:" destination="SEj-FN-gUh" eventType="touchUpInside" id="aoP-3Y-shM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hEx-FQ-N3r">
+                                <rect key="frame" x="249" y="20" width="71" height="70"/>
+                                <state key="normal" image="helpIcon.png">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <segue destination="wFD-yu-d9x" kind="modal" id="xE3-ok-4cL"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hasFacedown.png" translatesAutoresizingMaskIntoConstraints="NO" id="GsZ-Os-ri5">
+                                <rect key="frame" x="153" y="232" width="15" height="19"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hasFacedown.png" translatesAutoresizingMaskIntoConstraints="NO" id="CaV-7h-46x">
+                                <rect key="frame" x="153" y="280" width="15" height="19"/>
+                            </imageView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q9W-LF-j3U">
-                                <rect key="frame" x="157" y="141" width="139" height="48"/>
+                                <rect key="frame" x="164" y="141" width="139" height="48"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Draw new cards!">
@@ -317,28 +332,6 @@
                                     <action selector="discardAndDrawTouched:" destination="SEj-FN-gUh" eventType="touchUpInside" id="DHl-VG-9Tb"/>
                                     <action selector="drawNewCardsTouched:" destination="SEj-FN-gUh" eventType="touchUpInside" id="ZXD-h0-bHM"/>
                                     <segue destination="qIm-wM-wJV" kind="modal" id="2j8-h3-vr3"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Face Down Card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rv2-BN-zKH">
-                                <rect key="frame" x="29" y="189" width="122" height="38"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                <color key="textColor" red="0.91884239177393323" green="1" blue="0.3630036707232599" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hEx-FQ-N3r">
-                                <rect key="frame" x="247" y="20" width="49" height="30"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Help">
-                                            <attributes>
-                                                <color key="NSColor" red="1" green="0.94657157873263076" blue="0.44970602384954517" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <segue destination="wFD-yu-d9x" kind="modal" id="xE3-ok-4cL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -370,7 +363,8 @@
                         <outlet property="discard4" destination="T2l-NH-dZt" id="jnc-4d-Fcl"/>
                         <outlet property="discardAndDraw" destination="FUp-Xz-uf6" id="n44-jx-Nye"/>
                         <outlet property="drawNewCards" destination="q9W-LF-j3U" id="hZ7-h8-RBc"/>
-                        <outlet property="faceDownActivated" destination="Rv2-BN-zKH" id="gxO-ru-V0C"/>
+                        <outlet property="faceDownActivated" destination="GsZ-Os-ri5" id="C1R-0l-Quc"/>
+                        <outlet property="faceDownActivated2" destination="CaV-7h-46x" id="rQe-Bx-GOw"/>
                         <outlet property="header" destination="4H1-4Y-Oye" id="HMo-2g-Qzm"/>
                         <outlet property="playCard0" destination="ode-mp-j7A" id="kpd-iu-RaA"/>
                         <outlet property="playCard1" destination="GBL-ox-Gc6" id="gPQ-me-uyC"/>
@@ -514,6 +508,8 @@
     </scenes>
     <resources>
         <image name="fireball.png" width="400" height="365"/>
+        <image name="hasFacedown.png" width="50" height="60"/>
+        <image name="helpIcon.png" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -521,7 +517,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="3cd-ur-waY"/>
         <segue reference="Zsk-g0-jh9"/>
+        <segue reference="CiA-v1-Ghf"/>
     </inferredMetricsTieBreakers>
 </document>
