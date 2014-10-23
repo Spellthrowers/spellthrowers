@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -411,7 +411,32 @@
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHS-Bz-EuU">
                                 <rect key="frame" x="16" y="57" width="288" height="446.5"/>
-                                <mutableString key="text">Objective: Be the last player standing!Basic Rules:The game starts with an option to play against the AI or against friends using the pass-and-play style. At the beginning of the game, a hand of five cards is dealt to each player. The game randomly decides who goes first. The last player has the option to discard a card and draw a new one to keep it fair.During your turn, you can choose to either discard cards or play a card. When choosing to discard cards, you can discard up to five cards and your turn will end. If you choose to play a card, you can generally only play one card per turn. Cards may be one of five card types, each of which has a special function. At the beginning of your turn, draw back to five cards.Card Types:•	Basic Attack Cards – do damage in correspondence to the value on the card and are discarded after play.o	Fireball – 2 damage (add image)o	Waterfall – 3 damage (add image)o	Hurricane – 4 damage (add image)•	Heal Cards – increase life by 2 points each; all heal cards in hand are played at once and are discarded after use. After healing, you may choose to play another card or discard cards. (add image)•	Weapon Cards – all weapon cards in hand are played at once, summing up the damage dealt. The weapon cards return to your hand once played.o	Laser Pistols – 2 damage each (add image)•	Facedown Cards – played facedown on the field and indicated by a small shield icon (add image) next to player name. If a facedown is played when you already have one on the field, the new card replaces the one played prior. Facedown cards are discarded after activation.o	Spell Shield – activated when an opponent plays an attack card, reflects the attack damage.  (add image) o	EMP – triggered when an opponent plays either an attack or weapon card; removes all weapons and deals two times the number of weapons as damage. If an attack card was used to activate EMP, the attack damage is still dealt normally. (add image)•	Special Attack Cards – have special abilities, discarded after use.o	Zap – special attack cards that counter facedown cards. When a Zap is played, one damage is dealt to the opponent and their facedown card is destroyed. If the opponent does not have any facedown cards, one damage is dealt normally. (add image)o	Scrum – if a player has three of a kind, they can choose to play all three to steal three life points from the opponent. All three cards are discarded after play. (add image)How to win:The game continues until there is only one player with more than zero life points. In the event of a tie, the player with less negative life wins. </mutableString>
+                                <string key="text">Objective: 
+Be the last player standing!
+
+Basic Rules:
+The game starts with an option to play against the AI or against friends using the pass-and-play style. At the beginning of the game, a hand of five cards is dealt to each player. The game randomly decides who goes first. The last player has the option to discard a card and draw a new one to keep it fair.
+
+During your turn, you can choose to either discard cards or play a card. When choosing to discard cards, you can discard up to five cards and your turn will end. If you choose to play a card, you can generally only play one card per turn. Cards may be one of five card types, each of which has a special function. At the beginning of your turn, draw back to five cards.
+
+Card Types:
+•	Basic Attack Cards – do damage in correspondence to the value on the card and are discarded after play.
+o	Fireball – 2 damage (add image)
+o	Waterfall – 3 damage (add image)
+o	Hurricane – 4 damage (add image)
+•	Heal Cards – increase life by 2 points each; all heal cards in hand are played at once and are discarded after use. After healing, you may choose to play another card or discard cards. (add image)
+•	Weapon Cards – all weapon cards in hand are played at once, summing up the damage dealt. The weapon cards return to your hand once played.
+o	Laser Pistols – 2 damage each (add image)
+•	Facedown Cards – played facedown on the field and indicated by a small shield icon (add image) next to player name. If a facedown is played when you already have one on the field, the new card replaces the one played prior. Facedown cards are discarded after activation.
+o	Spell Shield – activated when an opponent plays an attack card, reflects the attack damage.  (add image) 
+o	EMP – triggered when an opponent plays either an attack or weapon card; removes all weapons and deals two times the number of weapons as damage. If an attack card was used to activate EMP, the attack damage is still dealt normally. (add image)
+•	Special Attack Cards – have special abilities, discarded after use.
+o	Zap – special attack cards that counter facedown cards. When a Zap is played, one damage is dealt to the opponent and their facedown card is destroyed. If the opponent does not have any facedown cards, one damage is dealt normally. (add image)
+o	Scrum – if a player has three of a kind, they can choose to play all three to steal three life points from the opponent. All three cards are discarded after play. (add image)
+
+How to win:
+The game continues until there is only one player with more than zero life points. In the event of a tie, the player with less negative life wins. 
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
