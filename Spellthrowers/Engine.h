@@ -32,6 +32,7 @@
 -(void)empOthers:(Player*)EMPer;
 -(Player*)endGame;
 -(int)getAiRecommendedCardIndex;
--(int)healIndex;
+-(int)indexOfCardType: (NSString*) type;
+-(int)weaponCount;
 
 @end

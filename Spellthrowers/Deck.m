@@ -34,7 +34,7 @@
             cardIndex = 5; //Fireball
         }
         else if (random == 2){
-            cardIndex = 2; //EMP
+            cardIndex = 3; //weapon
         }
         else if (random == 3){
             cardIndex = 1; //heal

@@ -201,21 +201,35 @@
 
 -(int)getAiRecommendedCardIndex{
     [self.activePlayer printHand];
-    int indexOfHeal = self.healIndex;
+    int indexOfHeal = [self indexOfCardType:@"Heal"];
     if (indexOfHeal >= 0 && indexOfHeal < [self.activePlayer.hand count]) {
         NSLog(@"Playing card at index %d", indexOfHeal);
         return indexOfHeal;
     }
+    if([self weaponCount] > 1){
+        NSLog(@"Playing card at index %d", [self indexOfCardType:@"Weapon"]);
+        return [self indexOfCardType:@"Weapon"];
+    }
     return 0;
 }
 
--(int)healIndex{
+-(int)indexOfCardType: (NSString*) type{
     for (Card *card in self.activePlayer.hand) {
-        if ([card.name isEqualToString: @"Heal"]) {
+        if ([card.cardType isEqualToString: type]) {
             return (int)[self.activePlayer.hand indexOfObject:card];
         }
     }
     return -1;
+}
+
+-(int)weaponCount{
+    int count=0;
+    for (Card *card in self.activePlayer.hand) {
+        if ([card.cardType isEqualToString: @"Weapon"]) {
+            count++;
+        }
+    }
+    return count;
 }
 
 @end
