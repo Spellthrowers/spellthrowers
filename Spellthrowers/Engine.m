@@ -47,6 +47,10 @@
 -(void)startTurn{
     
     if([self discardedAndDrew]){
+        //if the player discards to one or fewer cards, he or she cannot be said to have multiple weapons.
+        if([[[self activePlayer] hand] count] < 2){
+            [[self activePlayer] setHasPlayedMultipleWeapons:NO];
+        }
         //pass turn to nextPlayer
         [self nextPlayer];
     }
@@ -120,10 +124,15 @@
             [self empOthers:onPlayer];
         }
         else{
+            int numWeapons = 0;
             for (Card* card in self.activePlayer.hand) {
                 if([card.cardType isEqualToString:@"Weapon"]){
+                    numWeapons++;
                     [onPlayer setLife: [onPlayer life] - card.value];
                 }
+            }
+            if(numWeapons > 1){
+                [fromPlayer setHasPlayedMultipleWeapons:YES];
             }
         }
         //unset facedowns after hit
@@ -180,6 +189,8 @@
 -(void) empOthers: (Player*) EMPer{
     for (Player *p in self.currentPlayers) {
         if(p != EMPer){
+            //remove AI flag checker for weapons
+            [p setHasPlayedMultipleWeapons:NO];
             NSMutableArray* toRemove = NSMutableArray.array;
             for (Card* card in [p hand]) {
                 if ([[card cardType] isEqualToString:@"Weapon"]) {
@@ -202,10 +213,20 @@
 -(int)getAiRecommendedCardIndex{
     [self.activePlayer printHand];
     int indexOfHeal = [self indexOfCardType:@"Heal"];
+    //play all heals first.
     if (indexOfHeal >= 0 && indexOfHeal < [self.activePlayer.hand count]) {
         NSLog(@"Playing card at index %d", indexOfHeal);
         return indexOfHeal;
     }
+    //if AI has no facedown card and an enemy has played multiple weapons, play EMP.
+    if (!self.activePlayer.hasFaceDown) {
+        for (Player *p in self.currentPlayers) {
+            if(![p isEqual:self.activePlayer] && p.hasPlayedMultipleWeapons && [self indexOfCardType:@"EMP"] >= 0){
+                return [self indexOfCardType:@"EMP"];
+            }
+        }
+    }
+    //if AI has multiple weapons, play them.
     if([self weaponCount] > 1){
         NSLog(@"Playing card at index %d", [self indexOfCardType:@"Weapon"]);
         return [self indexOfCardType:@"Weapon"];

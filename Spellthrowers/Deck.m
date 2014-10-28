@@ -40,7 +40,7 @@
             cardIndex = 1; //heal
         }
         else{
-            cardIndex = 0; //Shield
+            cardIndex = 2; //EMP
         }
     #else
         cardIndex = arc4random_uniform((int)numCardTypes);

@@ -18,6 +18,7 @@
     [newPlayer fillHand: deck];
     [newPlayer setName:name];
     [newPlayer setIsAi:NO];
+    [newPlayer setHasPlayedMultipleWeapons:NO];
     return newPlayer;
 }
 

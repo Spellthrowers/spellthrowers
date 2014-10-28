@@ -20,6 +20,7 @@
 @property (nonatomic, strong) NSMutableArray* playerHand;
 @property (nonatomic, strong) Deck *deck;
 @property (nonatomic) BOOL isAi;
+@property (nonatomic) BOOL hasPlayedMultipleWeapons;
 
 +(instancetype)newPlayer: (Deck*) deck :(NSString*) name;
 
