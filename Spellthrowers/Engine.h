@@ -34,5 +34,8 @@
 -(int)getAiRecommendedCardIndex;
 -(int)indexOfCardType: (NSString*) type;
 -(int)weaponCount;
+-(int)maxAttackValue;
+-(int)indexOfBiggestSpellOrWeapon;
+-(int)indexOfCardName: (NSString*) name;
 
 @end

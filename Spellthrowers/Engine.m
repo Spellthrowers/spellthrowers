@@ -212,11 +212,16 @@
 
 -(int)getAiRecommendedCardIndex{
     [self.activePlayer printHand];
+    //get target player. In this case, always next player.
+    Player *targetPlayer = self.players[(self.indexOfActivePlayer+1) % [self.currentPlayers count]];
     int indexOfHeal = [self indexOfCardType:@"Heal"];
     //play all heals first.
     if (indexOfHeal >= 0 && indexOfHeal < [self.activePlayer.hand count]) {
-        NSLog(@"Playing card at index %d", indexOfHeal);
         return indexOfHeal;
+    }
+    //if can kill, do it
+    if ([self indexOfCardType:@"Attack"] >= 0 && [self maxAttackValue] >= targetPlayer.life && [self indexOfBiggestSpellOrWeapon] >= 0) {
+        return [self indexOfBiggestSpellOrWeapon];
     }
     //if AI has no facedown card and an enemy has played multiple weapons, play EMP.
     if (!self.activePlayer.hasFaceDown) {
@@ -226,10 +231,27 @@
             }
         }
     }
+    //if enemy has facedown card, zap.
+    if(targetPlayer.hasFaceDown && [self indexOfCardName:@"Zap"] >= 0){
+        return [self indexOfCardName:@"Zap"];
+    }
     //if AI has multiple weapons, play them.
     if([self weaponCount] > 1){
-        NSLog(@"Playing card at index %d", [self indexOfCardType:@"Weapon"]);
         return [self indexOfCardType:@"Weapon"];
+    }
+    //play big spells
+    if ([self indexOfCardType:@"Attack"] >= 0 && [self maxAttackValue] > 2 && [self indexOfBiggestSpellOrWeapon] >= 0) {
+        return [self indexOfBiggestSpellOrWeapon];
+    }
+    //play shields
+    if(!self.activePlayer.hasFaceDown){
+        if ([self indexOfCardType:@"Shield"] >= 0) {
+            return [self indexOfCardType:@"Shield"];
+        }
+    }
+    //play small spells
+    if ([self indexOfCardType:@"Attack"] >= 0 && [self maxAttackValue] > 1 && [self indexOfBiggestSpellOrWeapon] >= 0) {
+        return [self indexOfBiggestSpellOrWeapon];
     }
     return 0;
 }
@@ -251,6 +273,37 @@
         }
     }
     return count;
+}
+
+-(int)maxAttackValue{
+    int maxValue = 0;
+    for (Card *card in self.activePlayer.hand) {
+        if(([card.cardType isEqualToString:@"Attack"] || [card.cardType isEqualToString:@"Weapon"]) && card.value > maxValue){
+            maxValue = card.value;
+        }
+    }
+    return maxValue;
+}
+
+-(int)indexOfBiggestSpellOrWeapon{
+    int maxValue = 0;
+    int index = -1;
+    for (Card *card in self.activePlayer.hand) {
+        if(([card.cardType isEqualToString:@"Attack"] || [card.cardType isEqualToString:@"Weapon"]) && card.value > maxValue){
+            maxValue = card.value;
+            index = (int)[self.activePlayer.hand indexOfObject:card];
+        }
+    }
+    return index;
+}
+
+-(int)indexOfCardName:(NSString *)name{
+    for (Card *card in self.activePlayer.hand) {
+        if ([card.name isEqualToString: name]) {
+            return (int)[self.activePlayer.hand indexOfObject:card];
+        }
+    }
+    return -1;
 }
 
 @end
