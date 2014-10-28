@@ -43,4 +43,11 @@
     _life+= amount;
 }
 
+-(void)printHand{
+    NSLog(@"Hand of %@: ", [self name]);
+    for (Card *card in self.hand) {
+        NSLog(@"%@", [card name]);
+    }
+}
+
 @end

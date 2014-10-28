@@ -14,7 +14,7 @@
 		<string>https://github.com/Spellthrowers/spellthrowers.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Spellthrowers.xcodeproj/project.xcworkspace</string>
+	<string>Spellthrowers.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>168AED22AFFD0B0F1AB2C044D3111A133A2DDACB</key>

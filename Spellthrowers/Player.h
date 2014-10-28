@@ -29,5 +29,6 @@
 
 -(void)takeDamage: (int)amount;
 -(void)gainLife: (int)amount;
+-(void)printHand;
 
 @end

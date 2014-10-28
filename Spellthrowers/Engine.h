@@ -32,5 +32,6 @@
 -(void)empOthers:(Player*)EMPer;
 -(Player*)endGame;
 -(int)getAiRecommendedCardIndex;
+-(int)healIndex;
 
 @end

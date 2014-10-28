@@ -164,10 +164,6 @@
     
 }
 
--(int)getAiRecommendedCardIndex{
-    return 0;
-}
-
 -(void)removePlayer:(Player*)playerToRemove{
     //remove a player from currentPlayers
     [self.currentPlayers removeObject:(playerToRemove)];
@@ -175,21 +171,8 @@
 
 //set activePlayer to the next player
 -(void)nextPlayer{
-    int i = self.indexOfActivePlayer;
-    int count = (int)[self.currentPlayers count];
-    
-    if (i >= count-1) {
-        //use first index
-        self.activePlayer = [self.currentPlayers objectAtIndex: 0];
-        self.indexOfActivePlayer = 0;
-    }
-    else{
-        //get nextPlayer at indexOFActivePlayer + 1
-        //set nextPlayer to activePlayer
-        self.activePlayer = self.currentPlayers[i+1];
-        //advance index
-        self.indexOfActivePlayer = i+1;
-    }
+    self.indexOfActivePlayer = (self.indexOfActivePlayer + 1) % [self.currentPlayers count];
+    self.activePlayer = self.currentPlayers[self.indexOfActivePlayer];
     //Fill hand of active player for turn start
     [self.activePlayer fillHand: self.activePlayer.deck];
 }
@@ -214,5 +197,25 @@
     return winner;
 }
 
+//AI methods
+
+-(int)getAiRecommendedCardIndex{
+    [self.activePlayer printHand];
+    int indexOfHeal = self.healIndex;
+    if (indexOfHeal >= 0 && indexOfHeal < [self.activePlayer.hand count]) {
+        NSLog(@"Playing card at index %d", indexOfHeal);
+        return indexOfHeal;
+    }
+    return 0;
+}
+
+-(int)healIndex{
+    for (Card *card in self.activePlayer.hand) {
+        if ([card.name isEqualToString: @"Heal"]) {
+            return (int)[self.activePlayer.hand indexOfObject:card];
+        }
+    }
+    return -1;
+}
 
 @end
