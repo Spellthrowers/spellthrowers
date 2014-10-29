@@ -30,7 +30,7 @@
 		<string>healCard</string>
 		<string>EMPCard</string>
 		<string></string>
-		<string></string>
+		<string>zapCard</string>
 		<string>fireballCard</string>
 		<string>waterfallCard</string>
 		<string></string>
@@ -63,7 +63,7 @@
 		<integer>2</integer>
 		<integer>2</integer>
 		<integer>2</integer>
-		<integer>1</integer>
+		<integer>2</integer>
 		<integer>2</integer>
 		<integer>3</integer>
 		<integer>4</integer>

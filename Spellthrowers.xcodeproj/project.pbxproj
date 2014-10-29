@@ -49,6 +49,7 @@
 		2BFF20C019C4F25F00A4A29D /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFF20BF19C4F25F00A4A29D /* GameViewController.m */; };
 		2BFF20C319C5EF2500A4A29D /* TransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFF20C219C5EF2500A4A29D /* TransitionViewController.m */; };
 		C2794DB519F2146C002DAEA9 /* healCard.png in Resources */ = {isa = PBXBuildFile; fileRef = C2794DB419F2146C002DAEA9 /* healCard.png */; };
+		C2A541751A0179D500C065A8 /* zapCard.png in Resources */ = {isa = PBXBuildFile; fileRef = C2A541741A0179D500C065A8 /* zapCard.png */; };
 		C2F74DAD19F2E48800295896 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F74DAC19F2E48800295896 /* HelpViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +117,7 @@
 		2BFF20C119C5EF2500A4A29D /* TransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionViewController.h; sourceTree = "<group>"; };
 		2BFF20C219C5EF2500A4A29D /* TransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionViewController.m; sourceTree = "<group>"; };
 		C2794DB419F2146C002DAEA9 /* healCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = healCard.png; sourceTree = "<group>"; };
+		C2A541741A0179D500C065A8 /* zapCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zapCard.png; sourceTree = "<group>"; };
 		C2F74DAB19F2E46800295896 /* HelpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
 		C2F74DAC19F2E48800295896 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -205,6 +207,7 @@
 				2BF1955B19F6FFF50000353E /* helpIcon.png */,
 				2BF1955D19F710E30000353E /* hasFacedown.png */,
 				2B4ABFC019DD17FD006331D6 /* fireball.png */,
+				C2A541741A0179D500C065A8 /* zapCard.png */,
 				2BF1955919F6FCFB0000353E /* waterfallCard.png */,
 				2B4ABFC219DD1DF7006331D6 /* fireballCard.png */,
 				C2794DB419F2146C002DAEA9 /* healCard.png */,
@@ -338,6 +341,7 @@
 				2BCB726D19F0D2AF00BCC89C /* waterfallCard.m4a in Resources */,
 				2BCB726519F0C9C600BCC89C /* healCard.m4a in Resources */,
 				2BE0E18419BB9E9B00CC89E9 /* Main_iPad.storyboard in Resources */,
+				C2A541751A0179D500C065A8 /* zapCard.png in Resources */,
 				2BE0E18919BB9E9B00CC89E9 /* Images.xcassets in Resources */,
 				2BF1955C19F6FFF50000353E /* helpIcon.png in Resources */,
 				2BCB726919F0D11A00BCC89C /* weaponCard.m4a in Resources */,
