@@ -43,6 +43,9 @@
 		2BE0E19219BB9E9B00CC89E9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BE0E17119BB9E9B00CC89E9 /* UIKit.framework */; };
 		2BE0E19A19BB9E9B00CC89E9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BE0E19819BB9E9B00CC89E9 /* InfoPlist.strings */; };
 		2BE0E19C19BB9E9B00CC89E9 /* SpellthrowersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E19B19BB9E9B00CC89E9 /* SpellthrowersTests.m */; };
+		2BE3BCC51A02860D00F9AF15 /* fireballMini.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE3BCC41A02860D00F9AF15 /* fireballMini.png */; };
+		2BE3BCC71A02876100F9AF15 /* EMPMini.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE3BCC61A02876100F9AF15 /* EMPMini.png */; };
+		2BE3BCCA1A028EDC00F9AF15 /* GameTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE3BCC91A028EDC00F9AF15 /* GameTabBarViewController.m */; };
 		2BF1955A19F6FCFB0000353E /* waterfallCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF1955919F6FCFB0000353E /* waterfallCard.png */; };
 		2BF1955C19F6FFF50000353E /* helpIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF1955B19F6FFF50000353E /* helpIcon.png */; };
 		2BF1955E19F710E30000353E /* hasFacedown.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF1955D19F710E30000353E /* hasFacedown.png */; };
@@ -111,6 +114,10 @@
 		2BE0E19719BB9E9B00CC89E9 /* SpellthrowersTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpellthrowersTests-Info.plist"; sourceTree = "<group>"; };
 		2BE0E19919BB9E9B00CC89E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2BE0E19B19BB9E9B00CC89E9 /* SpellthrowersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpellthrowersTests.m; sourceTree = "<group>"; };
+		2BE3BCC41A02860D00F9AF15 /* fireballMini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fireballMini.png; sourceTree = "<group>"; };
+		2BE3BCC61A02876100F9AF15 /* EMPMini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EMPMini.png; sourceTree = "<group>"; };
+		2BE3BCC81A028EDC00F9AF15 /* GameTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameTabBarViewController.h; sourceTree = "<group>"; };
+		2BE3BCC91A028EDC00F9AF15 /* GameTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameTabBarViewController.m; sourceTree = "<group>"; };
 		2BF1955919F6FCFB0000353E /* waterfallCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waterfallCard.png; sourceTree = "<group>"; };
 		2BF1955B19F6FFF50000353E /* helpIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helpIcon.png; sourceTree = "<group>"; };
 		2BF1955D19F710E30000353E /* hasFacedown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hasFacedown.png; sourceTree = "<group>"; };
@@ -189,6 +196,8 @@
 				2BE0E17D19BB9E9B00CC89E9 /* AppDelegate.m */,
 				2BE0E17F19BB9E9B00CC89E9 /* Main_iPhone.storyboard */,
 				2B43279D19BFBE8D009601C8 /* Player.h */,
+				2BE3BCC81A028EDC00F9AF15 /* GameTabBarViewController.h */,
+				2BE3BCC91A028EDC00F9AF15 /* GameTabBarViewController.m */,
 				2B43279E19BFBE8D009601C8 /* Player.m */,
 				2B4327A019BFBE9F009601C8 /* Card.h */,
 				2B4327A119BFBE9F009601C8 /* Card.m */,
@@ -213,12 +222,14 @@
 				C2A541781A0180B500C065A8 /* healCard.png */,
 				C2CAF9491A01C56600237E79 /* waterfallCard1.png */,
 				2B4ABFC019DD17FD006331D6 /* fireball.png */,
+				2BE3BCC41A02860D00F9AF15 /* fireballMini.png */,
 				C2A541741A0179D500C065A8 /* zapCard.png */,
 				C2CAF9471A01BDBD00237E79 /* hurricaneCard.png */,
 				2BF1955919F6FCFB0000353E /* waterfallCard.png */,
 				2B4ABFC219DD1DF7006331D6 /* fireballCard.png */,
 				2BC9563119DDEA540046B39E /* spellShieldCard.png */,
 				2BCB724D19F0ACA000BCC89C /* discardedCard.png */,
+				2BE3BCC61A02876100F9AF15 /* EMPMini.png */,
 				2BCB724F19F0B40700BCC89C /* EMPCard.png */,
 				2BE0E17419BB9E9B00CC89E9 /* Supporting Files */,
 			);
@@ -355,12 +366,14 @@
 				2BCB726919F0D11A00BCC89C /* weaponCard.m4a in Resources */,
 				2B4ABFBF19DD173C006331D6 /* icon.png in Resources */,
 				2BE0E18119BB9E9B00CC89E9 /* Main_iPhone.storyboard in Resources */,
+				2BE3BCC51A02860D00F9AF15 /* fireballMini.png in Resources */,
 				2BDF0E4519C0BCB600B3183A /* Config.plist in Resources */,
 				2BCB724E19F0ACA000BCC89C /* discardedCard.png in Resources */,
 				2BCB726119F0C09900BCC89C /* spellShieldCard.m4a in Resources */,
 				2BF1955E19F710E30000353E /* hasFacedown.png in Resources */,
 				2BCB725019F0B40700BCC89C /* EMPCard.png in Resources */,
 				C2CAF9481A01BDBD00237E79 /* hurricaneCard.png in Resources */,
+				2BE3BCC71A02876100F9AF15 /* EMPMini.png in Resources */,
 				2B4ABFC119DD17FD006331D6 /* fireball.png in Resources */,
 				2BCB726319F0C55F00BCC89C /* facedownCard.m4a in Resources */,
 				2B4ABFC319DD1DF7006331D6 /* fireballCard.png in Resources */,
@@ -390,6 +403,7 @@
 				2BFF20C019C4F25F00A4A29D /* GameViewController.m in Sources */,
 				2B4327A819BFBEBD009601C8 /* Engine.m in Sources */,
 				2B4327A219BFBE9F009601C8 /* Card.m in Sources */,
+				2BE3BCCA1A028EDC00F9AF15 /* GameTabBarViewController.m in Sources */,
 				2B43279F19BFBE8D009601C8 /* Player.m in Sources */,
 				2BFF20C319C5EF2500A4A29D /* TransitionViewController.m in Sources */,
 				C2F74DAD19F2E48800295896 /* HelpViewController.m in Sources */,

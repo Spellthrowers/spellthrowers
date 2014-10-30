@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "Card.h"
+#import "Engine.h"
+#import "Deck.h"
 
 @interface GameViewController : UIViewController
 
+@property (nonatomic, strong) Engine* engine;
 @property (nonatomic, strong) NSString *restorationIdentifier;
 @property (nonatomic) bool isAiGame;
 @property (nonatomic) NSArray* cardViews;

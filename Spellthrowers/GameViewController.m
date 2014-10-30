@@ -7,9 +7,6 @@
 //
 
 #import "GameViewController.h"
-#import "Deck.h"
-#import "Card.h"
-#import "Engine.h"
 
 @interface GameViewController ()
 @property (weak, nonatomic) IBOutlet UIView *cardView0;
@@ -52,7 +49,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *discard3;
 @property (weak, nonatomic) IBOutlet UIButton *discard4;
 
-@property (nonatomic, strong) Engine* engine;
 
 @end
 
