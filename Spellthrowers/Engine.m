@@ -76,6 +76,10 @@
     }
     
     
+    if([self.currentPlayers count] == 2 && [self.currentPlayers[0] life] <= 0 && [self.currentPlayers[1] life] <= 0){
+        _winner = [self endGame];
+        return;
+    }
     
     //Remove players once their life is below zero
     for (int i = 0; i < [self.currentPlayers count]; i++) {
