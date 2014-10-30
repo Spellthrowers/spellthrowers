@@ -46,6 +46,7 @@
 		2BE3BCC51A02860D00F9AF15 /* fireballMini.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE3BCC41A02860D00F9AF15 /* fireballMini.png */; };
 		2BE3BCC71A02876100F9AF15 /* EMPMini.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE3BCC61A02876100F9AF15 /* EMPMini.png */; };
 		2BE3BCCA1A028EDC00F9AF15 /* GameTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE3BCC91A028EDC00F9AF15 /* GameTabBarViewController.m */; };
+		2BE3BCCE1A029CC000F9AF15 /* laserPistolCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE3BCCD1A029CC000F9AF15 /* laserPistolCard.png */; };
 		2BF1955A19F6FCFB0000353E /* waterfallCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF1955919F6FCFB0000353E /* waterfallCard.png */; };
 		2BF1955C19F6FFF50000353E /* helpIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF1955B19F6FFF50000353E /* helpIcon.png */; };
 		2BF1955E19F710E30000353E /* hasFacedown.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF1955D19F710E30000353E /* hasFacedown.png */; };
@@ -118,6 +119,7 @@
 		2BE3BCC61A02876100F9AF15 /* EMPMini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EMPMini.png; sourceTree = "<group>"; };
 		2BE3BCC81A028EDC00F9AF15 /* GameTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameTabBarViewController.h; sourceTree = "<group>"; };
 		2BE3BCC91A028EDC00F9AF15 /* GameTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameTabBarViewController.m; sourceTree = "<group>"; };
+		2BE3BCCD1A029CC000F9AF15 /* laserPistolCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laserPistolCard.png; sourceTree = "<group>"; };
 		2BF1955919F6FCFB0000353E /* waterfallCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waterfallCard.png; sourceTree = "<group>"; };
 		2BF1955B19F6FFF50000353E /* helpIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helpIcon.png; sourceTree = "<group>"; };
 		2BF1955D19F710E30000353E /* hasFacedown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hasFacedown.png; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				2B4ABFC219DD1DF7006331D6 /* fireballCard.png */,
 				2BC9563119DDEA540046B39E /* spellShieldCard.png */,
 				2BCB724D19F0ACA000BCC89C /* discardedCard.png */,
+				2BE3BCCD1A029CC000F9AF15 /* laserPistolCard.png */,
 				2BE3BCC61A02876100F9AF15 /* EMPMini.png */,
 				2BCB724F19F0B40700BCC89C /* EMPCard.png */,
 				2BE0E17419BB9E9B00CC89E9 /* Supporting Files */,
@@ -371,6 +374,7 @@
 				2BCB724E19F0ACA000BCC89C /* discardedCard.png in Resources */,
 				2BCB726119F0C09900BCC89C /* spellShieldCard.m4a in Resources */,
 				2BF1955E19F710E30000353E /* hasFacedown.png in Resources */,
+				2BE3BCCE1A029CC000F9AF15 /* laserPistolCard.png in Resources */,
 				2BCB725019F0B40700BCC89C /* EMPCard.png in Resources */,
 				C2CAF9481A01BDBD00237E79 /* hurricaneCard.png in Resources */,
 				2BE3BCC71A02876100F9AF15 /* EMPMini.png in Resources */,
