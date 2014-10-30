@@ -47,6 +47,7 @@
 		2BE3BCC71A02876100F9AF15 /* EMPMini.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE3BCC61A02876100F9AF15 /* EMPMini.png */; };
 		2BE3BCCA1A028EDC00F9AF15 /* GameTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE3BCC91A028EDC00F9AF15 /* GameTabBarViewController.m */; };
 		2BE3BCCE1A029CC000F9AF15 /* laserPistolCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE3BCCD1A029CC000F9AF15 /* laserPistolCard.png */; };
+		2BE3BCD01A02A12B00F9AF15 /* scrumCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE3BCCF1A02A12B00F9AF15 /* scrumCard.png */; };
 		2BF1955A19F6FCFB0000353E /* waterfallCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF1955919F6FCFB0000353E /* waterfallCard.png */; };
 		2BF1955C19F6FFF50000353E /* helpIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF1955B19F6FFF50000353E /* helpIcon.png */; };
 		2BF1955E19F710E30000353E /* hasFacedown.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF1955D19F710E30000353E /* hasFacedown.png */; };
@@ -120,6 +121,7 @@
 		2BE3BCC81A028EDC00F9AF15 /* GameTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameTabBarViewController.h; sourceTree = "<group>"; };
 		2BE3BCC91A028EDC00F9AF15 /* GameTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameTabBarViewController.m; sourceTree = "<group>"; };
 		2BE3BCCD1A029CC000F9AF15 /* laserPistolCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laserPistolCard.png; sourceTree = "<group>"; };
+		2BE3BCCF1A02A12B00F9AF15 /* scrumCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scrumCard.png; sourceTree = "<group>"; };
 		2BF1955919F6FCFB0000353E /* waterfallCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waterfallCard.png; sourceTree = "<group>"; };
 		2BF1955B19F6FFF50000353E /* helpIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helpIcon.png; sourceTree = "<group>"; };
 		2BF1955D19F710E30000353E /* hasFacedown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hasFacedown.png; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 				2BE3BCCD1A029CC000F9AF15 /* laserPistolCard.png */,
 				2BE3BCC61A02876100F9AF15 /* EMPMini.png */,
 				2BCB724F19F0B40700BCC89C /* EMPCard.png */,
+				2BE3BCCF1A02A12B00F9AF15 /* scrumCard.png */,
 				2BE0E17419BB9E9B00CC89E9 /* Supporting Files */,
 			);
 			path = Spellthrowers;
@@ -363,6 +366,7 @@
 				2BCB726D19F0D2AF00BCC89C /* waterfallCard.m4a in Resources */,
 				2BCB726519F0C9C600BCC89C /* healCard.m4a in Resources */,
 				2BE0E18419BB9E9B00CC89E9 /* Main_iPad.storyboard in Resources */,
+				2BE3BCD01A02A12B00F9AF15 /* scrumCard.png in Resources */,
 				C2A541751A0179D500C065A8 /* zapCard.png in Resources */,
 				2BE0E18919BB9E9B00CC89E9 /* Images.xcassets in Resources */,
 				2BF1955C19F6FFF50000353E /* helpIcon.png in Resources */,
