@@ -14,7 +14,7 @@
     Player *newPlayer = [[Player alloc] init];
     [newPlayer setDeck:deck];
     newPlayer.playerHand = NSMutableArray.array;
-    [newPlayer setLife: 1];
+    [newPlayer setLife: 20];
     [newPlayer fillHand: deck];
     [newPlayer setName:name];
     [newPlayer setIsAi:NO];
