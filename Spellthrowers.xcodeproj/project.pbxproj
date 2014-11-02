@@ -57,6 +57,7 @@
 		C2A541791A0180B500C065A8 /* healCard.png in Resources */ = {isa = PBXBuildFile; fileRef = C2A541781A0180B500C065A8 /* healCard.png */; };
 		C2CAF9481A01BDBD00237E79 /* hurricaneCard.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CAF9471A01BDBD00237E79 /* hurricaneCard.png */; };
 		C2CAF94A1A01C56600237E79 /* waterfallCard1.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CAF9491A01C56600237E79 /* waterfallCard1.png */; };
+		C2EC74FF1A06AE460045C8B5 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = C2EC74FE1A06AE460045C8B5 /* background.png */; };
 		C2F74DAD19F2E48800295896 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F74DAC19F2E48800295896 /* HelpViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -133,6 +134,7 @@
 		C2A541781A0180B500C065A8 /* healCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = healCard.png; sourceTree = "<group>"; };
 		C2CAF9471A01BDBD00237E79 /* hurricaneCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hurricaneCard.png; sourceTree = "<group>"; };
 		C2CAF9491A01C56600237E79 /* waterfallCard1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waterfallCard1.png; sourceTree = "<group>"; };
+		C2EC74FE1A06AE460045C8B5 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		C2F74DAB19F2E46800295896 /* HelpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
 		C2F74DAC19F2E48800295896 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -224,6 +226,7 @@
 				2BF1955B19F6FFF50000353E /* helpIcon.png */,
 				2BF1955D19F710E30000353E /* hasFacedown.png */,
 				C2A541781A0180B500C065A8 /* healCard.png */,
+				C2EC74FE1A06AE460045C8B5 /* background.png */,
 				C2CAF9491A01C56600237E79 /* waterfallCard1.png */,
 				2B4ABFC019DD17FD006331D6 /* fireball.png */,
 				2BE3BCC41A02860D00F9AF15 /* fireballMini.png */,
@@ -360,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BF1955A19F6FCFB0000353E /* waterfallCard.png in Resources */,
+				C2EC74FF1A06AE460045C8B5 /* background.png in Resources */,
 				C2CAF94A1A01C56600237E79 /* waterfallCard1.png in Resources */,
 				C2A541791A0180B500C065A8 /* healCard.png in Resources */,
 				2BCB726719F0CC5C00BCC89C /* zapCard.m4a in Resources */,

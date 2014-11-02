@@ -304,6 +304,18 @@
     }
 }
 
+- (void) setImageForBackground {
+    //Get the bundle for this app
+    NSBundle* bundle = NSBundle.mainBundle;
+    //get the config path
+    NSString* path = [bundle pathForResource:@"Config" ofType:@"plist"];
+    //build a config dictionary
+    NSDictionary* config = [NSDictionary dictionaryWithContentsOfFile:path];
+    
+}
+
+
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
