@@ -307,15 +307,6 @@
                                     <action selector="cancelTouched:" destination="SEj-FN-gUh" eventType="touchUpInside" id="aoP-3Y-shM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hEx-FQ-N3r">
-                                <rect key="frame" x="249" y="20" width="71" height="70"/>
-                                <state key="normal" image="helpIcon.png">
-                                    <attributedString key="attributedTitle"/>
-                                </state>
-                                <connections>
-                                    <segue destination="aYW-sH-mPD" kind="custom" identifier="helpMe" id="Dpi-BP-UIo"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hasFacedown.png" translatesAutoresizingMaskIntoConstraints="NO" id="GsZ-Os-ri5">
                                 <rect key="frame" x="153" y="232" width="15" height="19"/>
                             </imageView>
@@ -346,6 +337,13 @@
                                 <state key="normal" title="Button" image="scrumCard.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hEx-FQ-N3r">
+                                <rect key="frame" x="249" y="20" width="71" height="73"/>
+                                <state key="normal" image="helpIcon.png"/>
+                                <connections>
+                                    <segue destination="aYW-sH-mPD" kind="custom" id="Vqs-rg-jIN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.11977982077040683" green="0.22068221771292906" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -404,184 +402,135 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eHS-Bz-EuU">
-                                <rect key="frame" x="16" y="67" width="288" height="412"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Objective">
-                                        <attributes>
-                                            <font key="NSFont" size="18" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">
-Drop all enemies to 0 hp!
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O4a-eJ-kva">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Objective" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ScO-0m-HJt">
+                                        <rect key="frame" x="117" y="68" width="86" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqg-m9-Y3o">
+                                        <rect key="frame" x="81" y="97" width="160" height="21"/>
+                                        <string key="text">Drop all enemies to 0 hp!
 </string>
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Taking a ">
-                                        <attributes>
-                                            <font key="NSFont" size="18" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Turn">
-                                        <attributes>
-                                            <font key="NSFont" size="18" name="HelveticaNeue-Bold"/>
-                                            <font key="NSOriginalFont" size="18" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="1) ">
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">  Draw up to 5 cards.
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="2) ">
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
-                                            <font key="NSOriginalFont" size="14" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">  Play a card or discard unwanted cards.
-
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Card Types">
-                                        <attributes>
-                                            <font key="NSFont" size="18" name="HelveticaNeue-Bold"/>
-                                            <font key="NSOriginalFont" size="18" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Spell Cards">
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
-                                            <font key="NSOriginalFont" size="14" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content"> – do damage.
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Heal Cards">
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content"> – heal you. These cards do not end your turn.
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Weapon Cards">
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content"> – do damage with all weapons in your hand. Return to hand after use.
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Facedown Cards">
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content"> – played on the board facedown. A player with a facedown card has a [shield icon]. Replaces any other facedown cards you have played. Triggers when you are hit by a weapon or spell. Facedown cards are EMPs and Spell Shields.
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbO-mC-7eB">
-                                <rect key="frame" x="16" y="28" width="288" height="31"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="How to Play">
-                                        <attributes>
-                                            <color key="NSColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="22" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Take a Turn" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O09-OJ-9FI">
+                                        <rect key="frame" x="109" y="126" width="102" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dmh-FG-dAL">
+                                        <rect key="frame" x="46" y="142" width="180" height="28"/>
+                                        <string key="text">Draw up to 5 cards.
+2)   Play a card or discard unwanted cards.</string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Card Types" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2L-ds-H35">
+                                        <rect key="frame" x="110" y="198" width="101" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Spell Cards - do damage." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UhN-EP-a9D">
+                                        <rect key="frame" x="29" y="219" width="197" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fireballCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="DN0-UZ-qWm">
+                                        <rect key="frame" x="92" y="248" width="41" height="60"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="waterfallCard1.png" translatesAutoresizingMaskIntoConstraints="NO" id="JWB-XJ-8xi">
+                                        <rect key="frame" x="138" y="248" width="41" height="60"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hurricaneCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="rXC-B6-lte">
+                                        <rect key="frame" x="187" y="248" width="41" height="60"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drA-Nr-rYT">
+                                        <rect key="frame" x="29" y="164" width="14" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9U-wd-f99">
+                                        <rect key="frame" x="29" y="145" width="14" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Play a card or discard unwanted cards." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ld5-Cz-3ON">
+                                        <rect key="frame" x="46" y="164" width="300" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ejH-o9-s2Q">
+                                        <rect key="frame" x="29" y="316" width="196" height="73"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Heal Cards">
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" - heal you. These cards do not end your turn.">
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t10-65-RU7">
+                                        <rect key="frame" x="81" y="381" width="217" height="75"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Weapon Cards">
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                                    <font key="NSOriginalFont" size="14" name="HelveticaNeue-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" – do damage with all weapons in your hand. Return to hand after use.">
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="laserPistolCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qkw-ua-QDv">
+                                        <rect key="frame" x="29" y="389" width="41" height="60"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="healCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="vxv-Re-B5n">
+                                        <rect key="frame" x="257" y="323" width="41" height="60"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbO-mC-7eB">
+                                        <rect key="frame" x="17" y="29" width="288" height="31"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="How to Play">
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="22" name="HelveticaNeue-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </label>
+                                </subviews>
+                            </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nB-73-2Y0">
                                 <rect key="frame" x="111" y="481" width="98" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -596,14 +545,7 @@ Cg
                         </subviews>
                         <color key="backgroundColor" red="0.1998242029" green="0.56461037199999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="eHS-Bz-EuU" firstAttribute="trailing" secondItem="3Kp-Tu-WlZ" secondAttribute="trailingMargin" id="KfA-wa-Q5E"/>
-                            <constraint firstItem="PbO-mC-7eB" firstAttribute="top" secondItem="qsk-ny-ytA" secondAttribute="bottom" constant="8" id="KwU-oi-34m"/>
-                            <constraint firstAttribute="centerX" secondItem="eHS-Bz-EuU" secondAttribute="centerX" id="LWD-wi-CaF"/>
                             <constraint firstItem="mv5-rY-iVh" firstAttribute="top" secondItem="2nB-73-2Y0" secondAttribute="bottom" constant="8" id="dKq-OJ-Js2"/>
-                            <constraint firstItem="2nB-73-2Y0" firstAttribute="top" secondItem="eHS-Bz-EuU" secondAttribute="bottom" constant="8" id="fCu-qY-ToY"/>
-                            <constraint firstItem="PbO-mC-7eB" firstAttribute="leading" secondItem="3Kp-Tu-WlZ" secondAttribute="leadingMargin" id="fmH-xb-zlU"/>
-                            <constraint firstItem="PbO-mC-7eB" firstAttribute="trailing" secondItem="3Kp-Tu-WlZ" secondAttribute="trailingMargin" id="kBv-3Q-bzS"/>
-                            <constraint firstItem="eHS-Bz-EuU" firstAttribute="leading" secondItem="3Kp-Tu-WlZ" secondAttribute="leadingMargin" id="lAH-6F-CIt"/>
                             <constraint firstAttribute="centerX" secondItem="2nB-73-2Y0" secondAttribute="centerX" id="oGZ-RT-Nz4"/>
                         </constraints>
                     </view>
@@ -717,11 +659,11 @@ Cg
                             <constraint firstAttribute="centerX" secondItem="FU4-Xz-Whn" secondAttribute="centerX" id="3VH-Hf-BUY"/>
                             <constraint firstAttribute="centerX" secondItem="TNq-7X-egT" secondAttribute="centerX" id="6XV-PR-Cmt"/>
                             <constraint firstItem="6eu-TV-BJ2" firstAttribute="trailing" secondItem="YJy-cI-kHF" secondAttribute="trailingMargin" id="9aw-h4-k4t"/>
-                            <constraint firstItem="6eu-TV-BJ2" firstAttribute="top" secondItem="fZI-Di-VL4" secondAttribute="bottom" constant="8" id="bBY-hO-FXd"/>
+                            <constraint firstItem="6eu-TV-BJ2" firstAttribute="top" secondItem="fZI-Di-VL4" secondAttribute="bottom" constant="8" id="OFC-Tj-zP6"/>
                             <constraint firstItem="FU4-Xz-Whn" firstAttribute="leading" secondItem="YJy-cI-kHF" secondAttribute="leadingMargin" id="ddo-dy-CWl"/>
+                            <constraint firstItem="SCW-LS-ta3" firstAttribute="top" secondItem="TNq-7X-egT" secondAttribute="bottom" constant="8" id="fY2-Ra-GRV"/>
                             <constraint firstItem="FU4-Xz-Whn" firstAttribute="trailing" secondItem="YJy-cI-kHF" secondAttribute="trailingMargin" id="qGk-Um-UmO"/>
                             <constraint firstItem="6eu-TV-BJ2" firstAttribute="leading" secondItem="YJy-cI-kHF" secondAttribute="leadingMargin" id="qwu-W2-BCf"/>
-                            <constraint firstItem="SCW-LS-ta3" firstAttribute="top" secondItem="TNq-7X-egT" secondAttribute="bottom" constant="8" id="ww8-hT-DCo"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Special Cards" image="EMPMini.png" id="I67-PO-Cyp"/>
@@ -749,7 +691,7 @@ Cg
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cYZ-fI-VXQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1493" y="-42"/>
+            <point key="canvasLocation" x="1981" y="-827"/>
         </scene>
         <!--Transition-->
         <scene sceneID="l3N-T9-QA6">
@@ -842,10 +784,15 @@ Cg
         <image name="EMPMini.png" width="50" height="50"/>
         <image name="background.png" width="1024" height="1280"/>
         <image name="fireball.png" width="400" height="365"/>
+        <image name="fireballCard.png" width="82" height="133"/>
         <image name="fireballMini.png" width="30" height="27"/>
         <image name="hasFacedown.png" width="50" height="60"/>
+        <image name="healCard.png" width="82" height="133"/>
         <image name="helpIcon.png" width="30" height="30"/>
+        <image name="hurricaneCard.png" width="82" height="133"/>
+        <image name="laserPistolCard.png" width="82" height="133"/>
         <image name="scrumCard.png" width="82" height="133"/>
+        <image name="waterfallCard1.png" width="82" height="133"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -853,8 +800,8 @@ Cg
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Tbl-ES-a5F"/>
         <segue reference="2EV-Ra-CA9"/>
+        <segue reference="3cd-ur-waY"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
