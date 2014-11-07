@@ -17,6 +17,9 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *player1Life;
 @property (weak, nonatomic) IBOutlet UILabel *player2Life;
+@property (weak, nonatomic) IBOutlet UILabel *transition_attackingPlayer;
+@property (weak, nonatomic) IBOutlet UILabel *transition_defendingPlayer;
+@property (weak, nonatomic) IBOutlet UIImageView *transition_currentCard;
 
 @end
 

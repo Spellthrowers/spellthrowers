@@ -953,7 +953,7 @@ Cg
                                 <rect key="frame" x="140" y="448" width="41" height="64"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Defending Player" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chl-AS-w7b">
-                                <rect key="frame" x="189" y="471" width="115" height="15.5"/>
+                                <rect key="frame" x="193" y="465" width="111" height="28.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -969,6 +969,9 @@ Cg
                         <outlet property="returnHome" destination="cYN-h2-gg3" id="aXE-LX-ApR"/>
                         <outlet property="transitionMessage" destination="DSj-lA-JNI" id="2uO-Qv-UVc"/>
                         <outlet property="transitionMessage2" destination="Zhy-Tp-ECB" id="Bqh-rK-nhN"/>
+                        <outlet property="transition_attackingPlayer" destination="8vd-ib-EnU" id="cwf-Nh-lm1"/>
+                        <outlet property="transition_currentCard" destination="Dtl-99-mvK" id="b66-De-m5A"/>
+                        <outlet property="transition_defendingPlayer" destination="Chl-AS-w7b" id="QpV-8B-App"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fTV-Zi-VV2" userLabel="First Responder" sceneMemberID="firstResponder"/>
