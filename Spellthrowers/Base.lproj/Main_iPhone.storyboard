@@ -405,20 +405,6 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O4a-eJ-kva">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbO-mC-7eB">
-                                        <rect key="frame" x="17" y="29" width="288" height="26"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="How to Play">
-                                                <attributes>
-                                                    <color key="NSColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="22" name="HelveticaNeue-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Objective" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ScO-0m-HJt">
                                         <rect key="frame" x="117" y="68" width="86" height="21"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
@@ -523,8 +509,22 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="healCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="vxv-Re-B5n">
                                         <rect key="frame" x="250" y="340" width="41" height="60"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBY-zy-Y4b">
+                                        <rect key="frame" x="8" y="23" width="288" height="32"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="How to Play">
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="22" name="HelveticaNeue-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UhN-EP-a9D">
-                                        <rect key="frame" x="29" y="223" width="197" height="21"/>
+                                        <rect key="frame" x="29" y="228" width="197" height="21"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Spell Cards">
                                                 <attributes>
@@ -608,9 +608,6 @@
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="spellShieldCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="P39-3U-c4M">
                                 <rect key="frame" x="14" y="203" width="41" height="60"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EMPCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="8lf-z8-QST">
-                                <rect key="frame" x="261" y="284" width="41" height="60"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hasFacedown.png" translatesAutoresizingMaskIntoConstraints="NO" id="6Qp-OG-mmI">
                                 <rect key="frame" x="24" y="168" width="24" height="12"/>
@@ -710,7 +707,7 @@ Cg
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v09-mt-S6i">
-                                <rect key="frame" x="14" y="279" width="239" height="109"/>
+                                <rect key="frame" x="14" y="271" width="239" height="109"/>
                                 <attributedString key="attributedText">
                                     <fragment content="EMP">
                                         <attributes>
@@ -719,7 +716,7 @@ Cg
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content=" nullifies weapon damage and removes all opponent's weapon cards. Does 2 damage for each weapon removed.">
+                                    <fragment content=" nullifies weapon damage and removes all opponents' weapon cards. Does 2 damage for each weapon removed.">
                                         <attributes>
                                             <font key="NSFont" size="14" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
@@ -728,6 +725,9 @@ Cg
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EMPCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="8lf-z8-QST">
+                                <rect key="frame" x="261" y="276" width="41" height="60"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.1998242029" green="0.56461037199999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -799,20 +799,6 @@ Cg
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuV-DI-6ZG">
-                                <rect key="frame" x="16" y="28" width="288" height="32"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="How to Play">
-                                        <attributes>
-                                            <color key="NSColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="22" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlP-8D-gwJ">
                                 <rect key="frame" x="111" y="481" width="98" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -852,7 +838,7 @@ Cg
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content=" discards three of a kind to unleash the special attack: steals 3 life and destroys facedown cards.">
+                                    <fragment content=" steals 3 life and destroys the target's facedown card. This spell can only be used by discarding 3 of a kind.">
                                         <attributes>
                                             <font key="NSFont" size="14" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
@@ -867,14 +853,25 @@ Cg
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="scrumCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="4it-nA-uoc">
                                 <rect key="frame" x="255" y="234" width="41" height="60"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zaq-nV-zvV">
+                                <rect key="frame" x="16" y="28" width="288" height="32"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="How to Play">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="22" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1998242029" green="0.56461037199999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="kuV-DI-6ZG" firstAttribute="trailing" secondItem="xhb-aq-64s" secondAttribute="trailingMargin" id="CnE-t3-rmT"/>
                             <constraint firstItem="LXu-uK-qjZ" firstAttribute="top" secondItem="dlP-8D-gwJ" secondAttribute="bottom" constant="8" id="TU6-zb-t6h"/>
-                            <constraint firstItem="kuV-DI-6ZG" firstAttribute="top" secondItem="rNY-oe-oZi" secondAttribute="bottom" constant="8" id="eEk-8X-Jk5"/>
                             <constraint firstAttribute="centerX" secondItem="dlP-8D-gwJ" secondAttribute="centerX" id="eS1-5G-uAQ"/>
-                            <constraint firstItem="kuV-DI-6ZG" firstAttribute="leading" secondItem="xhb-aq-64s" secondAttribute="leadingMargin" id="eoK-9j-nEN"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Special Cards" image="scrumMini.png" id="vb1-fb-hXT"/>
@@ -1034,7 +1031,7 @@ Cg
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="k5E-gQ-ofK"/>
+        <segue reference="3cd-ur-waY"/>
         <segue reference="2EV-Ra-CA9"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

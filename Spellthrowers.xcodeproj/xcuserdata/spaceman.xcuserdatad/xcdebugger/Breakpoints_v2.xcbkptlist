@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Spellthrowers/TransitionViewController.m"
-            timestampString = "434924695.474682"
+            timestampString = "437173788.517314"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "224"
-            endingLineNumber = "224"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
             landmarkName = "-setMainText"
             landmarkType = "5">
          </BreakpointContent>
