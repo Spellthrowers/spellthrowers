@@ -7,9 +7,13 @@
 //
 
 #import "HelpViewController.h"
+#import "GameViewController.h"
 
 
 @interface HelpViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *backToGame1;
+@property (weak, nonatomic) IBOutlet UIButton *backToGame2;
+@property (weak, nonatomic) IBOutlet UIButton *backToGame3;
 
 @end
 
@@ -17,7 +21,7 @@
 
 //use this to store info before leaving the view
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if (self.engine.winner == NULL) {
+    if (self.engine.winner == NULL && [[segue destinationViewController] class] == [GameViewController class]) {
         [[segue destinationViewController] setEngine:self.engine];
     }
     [segue destinationViewController];
@@ -27,7 +31,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    if ([self isMainMenu]) {
+        [[self backToGame1] setHidden:YES];
+        [[self backToGame2] setHidden:YES];
+        [[self backToGame3] setHidden:YES];
+    }
 }
 
 - (void)didReceiveMemoryWarning

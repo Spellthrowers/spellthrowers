@@ -20,6 +20,7 @@
     // Do any additional setup after loading the view.
     for (HelpViewController *child in self.childViewControllers) {
         child.engine = self.engine;
+        child.isMainMenu = self.isMainMenu;
     }
 }
 

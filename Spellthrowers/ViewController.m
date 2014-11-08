@@ -28,6 +28,7 @@
     if ([[[self versus] text] isEqualToString:@"Vs AI"]) {
         [[segue destinationViewController] setIsAiGame:YES];
     }
+    [[segue destinationViewController] setIsMainMenu:YES];
 }
 
 - (void)viewDidLoad

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -54,7 +54,8 @@
                                 <rect key="frame" x="118" y="176" width="85" height="68"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0MU-c4-VpL">
-                                <rect key="frame" x="128" y="466" width="65" height="30"/>
+                                <rect key="frame" x="114" y="464" width="93" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Tutorial">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -572,6 +573,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Rules" image="fireballMini.png" id="zhw-jY-Il7"/>
                     <navigationItem key="navigationItem" id="9dU-DF-1yQ"/>
+                    <connections>
+                        <outlet property="backToGame1" destination="2nB-73-2Y0" id="ozI-6p-K4B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ia9-Zg-CuS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -589,7 +593,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNq-7X-egT">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNq-7X-egT">
                                 <rect key="frame" x="111" y="481" width="98" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Back to Game">
@@ -736,6 +740,9 @@ Cg
                     </view>
                     <tabBarItem key="tabBarItem" title="Facedown Cards" image="EMPMini.png" id="I67-PO-Cyp"/>
                     <navigationItem key="navigationItem" id="2qH-Oi-Brg"/>
+                    <connections>
+                        <outlet property="backToGame2" destination="TNq-7X-egT" id="1oc-1a-iuz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WHY-ea-H7Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -863,6 +870,17 @@ Cg
                                 </attributedString>
                                 <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXk-dk-T4f">
+                                <rect key="frame" x="93" y="401" width="134" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Back to Main Menu">
+                                    <color key="titleColor" red="1" green="0.94657157869999997" blue="0.44970602380000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" id="VsJ-hp-DUX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1998242029" green="0.56461037199999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -872,6 +890,9 @@ Cg
                     </view>
                     <tabBarItem key="tabBarItem" title="Special Cards" image="scrumMini.png" id="vb1-fb-hXT"/>
                     <navigationItem key="navigationItem" id="a9h-Sw-gIx"/>
+                    <connections>
+                        <outlet property="backToGame3" destination="dlP-8D-gwJ" id="XLH-LB-nm7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xWu-8k-gvM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1027,9 +1048,10 @@ Cg
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="2EV-Ra-CA9"/>
-        <segue reference="CiA-v1-Ghf"/>
+        <segue reference="kIH-MZ-ytB"/>
         <segue reference="zd2-bA-y6D"/>
+        <segue reference="VsJ-hp-DUX"/>
+        <segue reference="2EV-Ra-CA9"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

@@ -16,6 +16,7 @@
 }
 
 @property (nonatomic, strong) Engine* engine;
+@property (nonatomic) bool isMainMenu;
 
 
 @end

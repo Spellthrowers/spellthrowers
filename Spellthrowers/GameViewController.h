@@ -16,6 +16,7 @@
 @property (nonatomic, strong) Engine* engine;
 @property (nonatomic, strong) NSString *restorationIdentifier;
 @property (nonatomic) bool isAiGame;
+@property (nonatomic) bool isMainMenu;
 @property (nonatomic) NSArray* cardViews;
 @property (nonatomic) NSArray* cardNames;
 @property (nonatomic) NSArray* cardValues;

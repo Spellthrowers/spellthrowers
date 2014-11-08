@@ -334,7 +334,7 @@
 				ORGANIZATIONNAME = Spellthrowers;
 				TargetAttributes = {
 					2BE0E16919BB9E9B00CC89E9 = {
-						DevelopmentTeam = X84Y2D2K96;
+						DevelopmentTeam = K539BTLAP3;
 					};
 					2BE0E18D19BB9E9B00CC89E9 = {
 						TestTargetID = 2BE0E16919BB9E9B00CC89E9;
