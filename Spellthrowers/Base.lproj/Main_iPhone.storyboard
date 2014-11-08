@@ -625,7 +625,7 @@
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content=" – reflects spell damage if a spell is played.">
+                                    <fragment content=" reflects spell damage if a spell is played.">
                                         <attributes>
                                             <font key="NSFont" size="14" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
@@ -645,7 +645,7 @@
                                             </paragraphStyle>
                                         </attributes>
                                     </fragment>
-                                    <fragment content=" – ">
+                                    <fragment content=" ">
                                         <attributes>
                                             <font key="NSFont" size="13" name="Helvetica"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
@@ -653,7 +653,7 @@
                                             </paragraphStyle>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="Replaces any other facedown cards you have played. Triggers when you are hit by a weapon or spell.  ">
+                                    <fragment content="replace any other facedown cards you have played. Triggered when you are hit by a weapon or spell.  ">
                                         <attributes>
                                             <font key="NSFont" size="14" name="Helvetica"/>
                                             <font key="NSOriginalFont" size="14" name="Helvetica"/>
@@ -694,7 +694,7 @@ Cg
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content=" – nullifies weapon damage and removes all opponent's weapon cards. Does 2 damage for each weapon removed.">
+                                    <fragment content=" nullifies weapon damage and removes all opponent's weapon cards. Does 2 damage for each weapon removed.">
                                         <attributes>
                                             <font key="NSFont" size="14" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
@@ -733,7 +733,7 @@ Cg
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GH7-7P-Bmq">
-                                <rect key="frame" x="16" y="92" width="288" height="50"/>
+                                <rect key="frame" x="16" y="92" width="288" height="65.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Special Spell Cards">
                                         <attributes>
@@ -743,7 +743,7 @@ Cg
                                             </paragraphStyle>
                                         </attributes>
                                     </fragment>
-                                    <fragment content=" – ">
+                                    <fragment content=" ">
                                         <attributes>
                                             <font key="NSFont" size="13" name="Helvetica"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
@@ -808,7 +808,7 @@ Cg
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content=" – Spell card that destroys enemy facedown cards.    ">
+                                    <fragment content=" destroys enemy facedown cards.    ">
                                         <attributes>
                                             <font key="NSFont" size="14" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
@@ -827,7 +827,7 @@ Cg
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content=" – Discard three of a kind to unleash the special attack: steals 3 life and destroys facedown cards.">
+                                    <fragment content=" discards three of a kind to unleash the special attack: steals 3 life and destroys facedown cards.">
                                         <attributes>
                                             <font key="NSFont" size="14" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
@@ -1009,7 +1009,7 @@ Cg
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="k5E-gQ-ofK"/>
+        <segue reference="kIH-MZ-ytB"/>
         <segue reference="2EV-Ra-CA9"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
