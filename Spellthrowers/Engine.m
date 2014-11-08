@@ -247,6 +247,15 @@
     if ([self indexOfCardType:@"Attack"] >= 0 && [self maxAttackValue] > 2 && [self indexOfBiggestSpellOrWeapon] >= 0) {
         return [self indexOfBiggestSpellOrWeapon];
     }
+    //play random facedown
+    if(!self.activePlayer.hasFaceDown){
+        if ([self indexOfCardType:@"Shield"] >= 0 && [self indexOfCardType:@"EMP"] >= 0) {
+            if (arc4random_uniform(2) == 1) {
+                return [self indexOfCardType:@"EMP"];
+            }
+            return [self indexOfCardType:@"Shield"];
+        }
+    }
     //play shields
     if(!self.activePlayer.hasFaceDown){
         if ([self indexOfCardType:@"Shield"] >= 0) {
