@@ -14,6 +14,7 @@
 		2B4ABFBF19DD173C006331D6 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B4ABFBE19DD173C006331D6 /* icon.png */; };
 		2B4ABFC119DD17FD006331D6 /* fireball.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B4ABFC019DD17FD006331D6 /* fireball.png */; };
 		2B4ABFC319DD1DF7006331D6 /* fireballCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B4ABFC219DD1DF7006331D6 /* fireballCard.png */; };
+		2BC354B61A0EB4E200C97BE1 /* scrumMini.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC354B51A0EB4E200C97BE1 /* scrumMini.png */; };
 		2BC9563219DDEA540046B39E /* spellShieldCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC9563119DDEA540046B39E /* spellShieldCard.png */; };
 		2BCB724E19F0ACA000BCC89C /* discardedCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BCB724D19F0ACA000BCC89C /* discardedCard.png */; };
 		2BCB725019F0B40700BCC89C /* EMPCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BCB724F19F0B40700BCC89C /* EMPCard.png */; };
@@ -83,6 +84,7 @@
 		2B4ABFBE19DD173C006331D6 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		2B4ABFC019DD17FD006331D6 /* fireball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fireball.png; sourceTree = "<group>"; };
 		2B4ABFC219DD1DF7006331D6 /* fireballCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fireballCard.png; sourceTree = "<group>"; };
+		2BC354B51A0EB4E200C97BE1 /* scrumMini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scrumMini.png; sourceTree = "<group>"; };
 		2BC9563119DDEA540046B39E /* spellShieldCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spellShieldCard.png; sourceTree = "<group>"; };
 		2BCB724D19F0ACA000BCC89C /* discardedCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = discardedCard.png; sourceTree = "<group>"; };
 		2BCB724F19F0B40700BCC89C /* EMPCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EMPCard.png; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 				2BE3BCCD1A029CC000F9AF15 /* laserPistolCard.png */,
 				2BE3BCC61A02876100F9AF15 /* EMPMini.png */,
 				2BCB724F19F0B40700BCC89C /* EMPCard.png */,
+				2BC354B51A0EB4E200C97BE1 /* scrumMini.png */,
 				2BE3BCCF1A02A12B00F9AF15 /* scrumCard.png */,
 				2BE0E17419BB9E9B00CC89E9 /* Supporting Files */,
 			);
@@ -378,6 +381,7 @@
 				2B4ABFBF19DD173C006331D6 /* icon.png in Resources */,
 				2BE0E18119BB9E9B00CC89E9 /* Main_iPhone.storyboard in Resources */,
 				2BE3BCC51A02860D00F9AF15 /* fireballMini.png in Resources */,
+				2BC354B61A0EB4E200C97BE1 /* scrumMini.png in Resources */,
 				2BDF0E4519C0BCB600B3183A /* Config.plist in Resources */,
 				2BCB724E19F0ACA000BCC89C /* discardedCard.png in Resources */,
 				2BCB726119F0C09900BCC89C /* spellShieldCard.m4a in Resources */,

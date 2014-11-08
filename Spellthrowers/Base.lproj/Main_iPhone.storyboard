@@ -724,7 +724,7 @@ Cg
                             <constraint firstItem="6eu-TV-BJ2" firstAttribute="leading" secondItem="YJy-cI-kHF" secondAttribute="leadingMargin" id="qwu-W2-BCf"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Special Cards" image="EMPMini.png" id="I67-PO-Cyp"/>
+                    <tabBarItem key="tabBarItem" title="Facedown Cards" image="EMPMini.png" id="I67-PO-Cyp"/>
                     <navigationItem key="navigationItem" id="2qH-Oi-Brg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WHY-ea-H7Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -863,7 +863,7 @@ Cg
                             <constraint firstItem="kuV-DI-6ZG" firstAttribute="leading" secondItem="xhb-aq-64s" secondAttribute="leadingMargin" id="eoK-9j-nEN"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Special Cards" image="EMPMini.png" id="vb1-fb-hXT"/>
+                    <tabBarItem key="tabBarItem" title="Special Cards" image="scrumMini.png" id="vb1-fb-hXT"/>
                     <navigationItem key="navigationItem" id="a9h-Sw-gIx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xWu-8k-gvM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1009,6 +1009,7 @@ Cg
         <image name="hurricaneCard.png" width="82" height="133"/>
         <image name="laserPistolCard.png" width="82" height="133"/>
         <image name="scrumCard.png" width="82" height="133"/>
+        <image name="scrumMini.png" width="20" height="30"/>
         <image name="spellShieldCard.png" width="83" height="134"/>
         <image name="waterfallCard1.png" width="82" height="133"/>
         <image name="zapCard.png" width="82" height="133"/>
@@ -1019,7 +1020,7 @@ Cg
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="k5E-gQ-ofK"/>
+        <segue reference="kIH-MZ-ytB"/>
         <segue reference="2EV-Ra-CA9"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
