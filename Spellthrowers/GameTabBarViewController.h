@@ -11,4 +11,5 @@
 
 @interface GameTabBarViewController : UITabBarController
 @property Engine *engine;
+@property (nonatomic) bool isAiGame;
 @end
