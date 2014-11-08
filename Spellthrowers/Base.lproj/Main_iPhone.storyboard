@@ -436,7 +436,7 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dmh-FG-dAL">
                                         <rect key="frame" x="44" y="148" width="247" height="28"/>
-                                        <string key="text">Draw up to 5 cards.
+                                        <string key="text">Draw until you have 5 cards.
 2)   Play a card or discard unwanted cards.</string>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1048,10 +1048,10 @@ Cg
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="kIH-MZ-ytB"/>
+        <segue reference="2EV-Ra-CA9"/>
+        <segue reference="3cd-ur-waY"/>
         <segue reference="zd2-bA-y6D"/>
         <segue reference="VsJ-hp-DUX"/>
-        <segue reference="2EV-Ra-CA9"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
