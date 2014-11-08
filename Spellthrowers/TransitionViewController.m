@@ -118,14 +118,30 @@
     //first check for discard
     if([[self engine] discardedAndDrew]){
         [[self transitionMessage] setText: [NSString stringWithFormat: @"%@ discarded %i cards!", self.engine.activePlayer.name, self.engine.numCardsDiscarded]];
+        //hide new transition message elements
+        //show discard text
         return;
     }
+    //else hide discard text
+
     
     //simplification vars
     Player *nextPlayer = self.engine.players[(self.engine.indexOfActivePlayer+1) % [self.engine.players count]];
     NSString *nextPlayerName =[self.engine.players[(self.engine.indexOfActivePlayer+1) % [self.engine.players count]] name];
     Card *cardPlayed = self.engine.activePlayer.hand[self.engine.indexOfTouchedCard];
     int cardValue = cardPlayed.value;
+    
+    
+    //set attacking player
+    [[self transition_attackingPlayer] setText: [NSString stringWithFormat: @"%@", self.engine.activePlayer]];
+    
+    //set defending player
+    [[self transition_defendingPlayer] setText: [NSString stringWithFormat: @"%@", nextPlayer]];
+    
+    //set card image based on card played
+    
+    
+    //handle facedowns and counters
     
     if([cardPlayed.cardType isEqualToString:@"Attack"]){
         if([nextPlayer hasFaceDown]){
