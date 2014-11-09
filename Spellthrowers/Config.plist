@@ -32,7 +32,7 @@
 		<string>laserPistolCard</string>
 		<string>zapCard</string>
 		<string>fireballCard</string>
-		<string>waterfallCard1</string>
+		<string>waterfallCard</string>
 		<string>hurricaneCard</string>
 	</array>
 	<key>cardValues</key>

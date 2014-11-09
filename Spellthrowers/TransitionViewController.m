@@ -119,11 +119,18 @@
     if([[self engine] discardedAndDrew]){
         [[self transitionMessage] setText: [NSString stringWithFormat: @"%@ discarded %i cards!", self.engine.activePlayer.name, self.engine.numCardsDiscarded]];
         //hide new transition message elements
+        [self transition_attackingPlayer].hidden = YES;
+        [self transition_defendingPlayer].hidden = YES;
+        [self transition_currentCard].hidden = YES;
         //show discard text
+        [self transitionMessage].hidden = NO;
         return;
     }
     //else hide discard text
-
+    [self transitionMessage].hidden = YES;
+    [self transition_attackingPlayer].hidden = NO;
+    [self transition_defendingPlayer].hidden = NO;
+    [self transition_currentCard].hidden = NO;
     
     //simplification vars
     Player *nextPlayer = self.engine.players[(self.engine.indexOfActivePlayer+1) % [self.engine.players count]];
@@ -131,17 +138,36 @@
     Card *cardPlayed = self.engine.activePlayer.hand[self.engine.indexOfTouchedCard];
     int cardValue = cardPlayed.value;
     
-    
     //set attacking player
-    [[self transition_attackingPlayer] setText: [NSString stringWithFormat: @"%@", self.engine.activePlayer]];
+    [[self transition_attackingPlayer] setText: [NSString stringWithFormat: @"%@", self.engine.activePlayer.name]];
     
     //set defending player
-    [[self transition_defendingPlayer] setText: [NSString stringWithFormat: @"%@", nextPlayer]];
+    [[self transition_defendingPlayer] setText: [NSString stringWithFormat: @"%@", nextPlayer.name]];
     
     //set card image based on card played
+    //Get the bundle for this app
+    NSBundle* bundle = NSBundle.mainBundle;
+    //get the config path
+    NSString* path = [bundle pathForResource:@"Config" ofType:@"plist"];
+    //build a config dictionary
+    NSDictionary* config = [NSDictionary dictionaryWithContentsOfFile:path];
     
+    for (int j=0; j<[config[@"cardNames"] count]; j++) {
+        UIImage* image = [UIImage imageNamed: [NSString stringWithFormat: @"%@_transition.png", config[@"cardFileNames"][j]]];
+        if ([cardPlayed.name isEqualToString:config[@"cardNames"][j]] && image != nil) {
+            UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
+            [self.transition_currentCard addSubview:uiv];
+        }
+    }
     
-    //handle facedowns and counters
+    //handle basic attack and scrum
+    
+    //handle facedown placements
+    
+    //handle heal/weapon multiplier
+    
+    //handle facedowns counters and attacking on facedown(ZAP, weapon/attacks)
+    
     
     if([cardPlayed.cardType isEqualToString:@"Attack"]){
         if([nextPlayer hasFaceDown]){
