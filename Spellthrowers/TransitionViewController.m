@@ -17,10 +17,10 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *player1Life;
 @property (weak, nonatomic) IBOutlet UILabel *player2Life;
-@property (weak, nonatomic) IBOutlet UILabel *transition_attackingPlayer;
-@property (weak, nonatomic) IBOutlet UILabel *transition_attackingPlayer2;
-@property (weak, nonatomic) IBOutlet UILabel *transition_defendingPlayer;
-@property (weak, nonatomic) IBOutlet UILabel *transition_defendingPlayer2;
+@property (weak, nonatomic) IBOutlet UITextView *transition_attackingPlayer;
+@property (weak, nonatomic) IBOutlet UITextView *transition_attackingPlayer2;
+@property (weak, nonatomic) IBOutlet UITextView *transition_defendingPlayer;
+@property (weak, nonatomic) IBOutlet UITextView *transition_defendingPlayer2;
 @property (weak, nonatomic) IBOutlet UIImageView *transition_currentCard;
 @property (weak, nonatomic) IBOutlet UIImageView *transition_currentCard2;
 @property (weak, nonatomic) IBOutlet UILabel *transition_multiplier;
@@ -153,12 +153,6 @@
     Card *cardPlayed = self.engine.activePlayer.hand[self.engine.indexOfTouchedCard];
     int cardValue = cardPlayed.value;
     
-    //set attacking player
-    [[self transition_attackingPlayer] setText: [NSString stringWithFormat: @"%@ plays", self.engine.activePlayer.name]];
-    
-    //set defending player
-    [[self transition_defendingPlayer] setText: [NSString stringWithFormat: @"against %@", nextPlayer.name]];
-    
     //set card image based on card played
     //Get the bundle for this app
     NSBundle* bundle = NSBundle.mainBundle;
@@ -177,6 +171,10 @@
             //handle zap counter
             if([cardPlayed.name isEqualToString: @"Zap"]){
                 //destroys any facedowns
+                
+                [[self transition_attackingPlayer] setText: [NSString stringWithFormat: @"%@ plays a", self.engine.activePlayer.name]];
+                [[self transition_defendingPlayer] setText: [NSString stringWithFormat: @"against %@", nextPlayer.name]];
+                
                 UIImage* image = [UIImage imageNamed: @"ZapCard_transition.png"];
                 UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
                 [self.transition_currentCard addSubview:uiv];
@@ -185,14 +183,13 @@
                 [self transition_defendingPlayer2].hidden = YES;
                 [self transition_currentCard2].hidden = NO;
                 
-                
                 if([nextPlayer.faceDownCard.cardType isEqualToString:@"Shield"]){
                     //show triggered shield
                     UIImage* image = [UIImage imageNamed: @"spellShieldCard_transition.png"];
                     UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
                     [self.transition_currentCard2 addSubview:uiv];
                     
-                    [[self transition_attackingPlayer2] setText: [NSString stringWithFormat: @"%@ destroys a", self.engine.activePlayer.name]];
+                    [[self transition_attackingPlayer2] setText: [NSString stringWithFormat: @"%@ destroys", self.engine.activePlayer.name]];
                 }
                 else if([nextPlayer.faceDownCard.cardType isEqualToString:@"EMP"]){
                     //show triggered shield
@@ -200,7 +197,7 @@
                     UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
                     [self.transition_currentCard2 addSubview:uiv];
                     
-                    [[self transition_attackingPlayer2] setText: [NSString stringWithFormat: @"%@ destroys an", self.engine.activePlayer.name]];
+                    [[self transition_attackingPlayer2] setText: [NSString stringWithFormat: @"%@ destroys", self.engine.activePlayer.name]];
                 }
                 
             }
@@ -215,13 +212,16 @@
                     }
                 }
                 
+                [[self transition_attackingPlayer] setText: [NSString stringWithFormat: @"%@ plays a", self.engine.activePlayer.name]];
+                [[self transition_defendingPlayer] setText: [NSString stringWithFormat: @"against %@", nextPlayer.name]];
+                
                 [self transition_attackingPlayer2].hidden = NO;
                 [self transition_defendingPlayer2].hidden = NO;
                 [self transition_currentCard2].hidden = NO;
                 
                 //switch attacking and defending players
-                [[self transition_defendingPlayer2] setText: [NSString stringWithFormat: @"against %@", self.engine.activePlayer.name]];
                 [[self transition_attackingPlayer2] setText: [NSString stringWithFormat: @"%@ activates", nextPlayer.name]];
+                [[self transition_defendingPlayer2] setText: [NSString stringWithFormat: @"against %@", self.engine.activePlayer.name]];
                 
                 //show triggered shield
                 UIImage* image = [UIImage imageNamed: @"spellShieldCard_transition.png"];
@@ -239,18 +239,12 @@
                     }
                 }
                 
+                [[self transition_attackingPlayer] setText: [NSString stringWithFormat: @"%@ plays a", self.engine.activePlayer.name]];
+                [[self transition_defendingPlayer] setText: [NSString stringWithFormat: @"against %@", nextPlayer.name]];
+                
                 [self transition_attackingPlayer2].hidden = NO;
                 [self transition_defendingPlayer2].hidden = NO;
                 [self transition_currentCard2].hidden = NO;
-                
-                //switch attacking and defending players
-                [[self transition_defendingPlayer2] setText: [NSString stringWithFormat: @"against %@", self.engine.activePlayer.name]];
-                [[self transition_attackingPlayer2] setText: [NSString stringWithFormat: @"%@ activates", nextPlayer.name]];
-                
-                //show triggered EMP
-                UIImage* image = [UIImage imageNamed: @"EMPCard_transition.png"];
-                UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
-                [self.transition_currentCard2 addSubview:uiv];
                 
                 //show number of weapons removed
                 int numWeapons = 0;
@@ -259,12 +253,22 @@
                         numWeapons++;
                     }
                 }
-                [self transition_multiplier2].hidden = NO; //show multiplier
-                [[self transition_multiplier2] setText:[NSString stringWithFormat: @"%d", numWeapons]]; //set multiplier
+                
+                //switch attacking and defending players
+                [[self transition_attackingPlayer2] setText: [NSString stringWithFormat: @"%@ activates", nextPlayer.name]];
+                [[self transition_defendingPlayer2] setText: [NSString stringWithFormat: @"removing %d of %@'s weapons", numWeapons, self.engine.activePlayer.name]];
+
+                //show triggered EMP
+                UIImage* image = [UIImage imageNamed: @"EMPCard_transition.png"];
+                UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
+                [self.transition_currentCard2 addSubview:uiv];
             }
         }
         //if no facedown card, handle attack
         else{
+            [[self transition_attackingPlayer] setText: [NSString stringWithFormat: @"%@ plays a", self.engine.activePlayer.name]];
+            [[self transition_defendingPlayer] setText: [NSString stringWithFormat: @"against %@", nextPlayer.name]];
+            
             for (int j=0; j<[config[@"cardNames"] count]; j++) {
                 UIImage* image = [UIImage imageNamed: [NSString stringWithFormat: @"%@_transition.png", config[@"cardFileNames"][j]]];
                 if ([cardPlayed.name isEqualToString:config[@"cardNames"][j]] && image != nil) {
@@ -284,8 +288,12 @@
                     count++;
                 }
             }
-            [self transition_multiplier].hidden = NO; //show multiplier
-            [[self transition_multiplier] setText:[NSString stringWithFormat: @"%d", count]]; //set multiplier
+            
+            //set attacking player
+            [[self transition_attackingPlayer] setText: [NSString stringWithFormat: @"%@ plays %d", self.engine.activePlayer.name, count]];
+            //set defending player
+            [[self transition_defendingPlayer] setText: [NSString stringWithFormat: @"against %@", nextPlayer.name]];
+            
             UIImage* image = [UIImage imageNamed: @"laserPistolCard_transition.png"]; //set image of card played
             UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
             [self.transition_currentCard addSubview:uiv];
@@ -300,12 +308,8 @@
             [self.transition_currentCard2 addSubview:uiv2];
             
             //switch attacking and defending players
-            [[self transition_defendingPlayer2] setText: [NSString stringWithFormat: @"against %@", self.engine.activePlayer.name]];
             [[self transition_attackingPlayer2] setText: [NSString stringWithFormat: @"%@ activates", nextPlayer.name]];
-            
-            //[self transition_multiplier2].hidden = NO; //show multiplier
-            //[[self transition_multiplier2] setText:[NSString stringWithFormat: @"x%d", count]]; //set multiplier
-            
+            [[self transition_defendingPlayer2] setText: [NSString stringWithFormat: @"removing %d of %@'s weapons", count, self.engine.activePlayer.name]];
         }
         //Handle Weapon multiplier
         else{
@@ -315,6 +319,13 @@
                     count++;
                 }
             }
+            
+            //set attacking player
+            [[self transition_attackingPlayer] setText: [NSString stringWithFormat: @"%@ plays %d", self.engine.activePlayer.name, count]];
+            
+            //set defending player
+            [[self transition_defendingPlayer] setText: [NSString stringWithFormat: @"against %@", nextPlayer.name]];
+            
             [self transition_multiplier].hidden = NO; //show multiplier
             [[self transition_multiplier] setText:[NSString stringWithFormat: @"%d", count]]; //set multiplier
             UIImage* image = [UIImage imageNamed: @"laserPistolCard_transition.png"]; //set image of card played
@@ -323,12 +334,13 @@
             
             //show if shield removed
             if([nextPlayer.faceDownCard.cardType isEqualToString:@"Shield"]){
+                
                 //show triggered shield
                 UIImage* image = [UIImage imageNamed: @"spellShieldCard_transition.png"];
                 UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
                 [self.transition_currentCard2 addSubview:uiv];
                 
-                [[self transition_attackingPlayer2] setText: [NSString stringWithFormat: @"%@ destroys a", self.engine.activePlayer.name]];
+                [[self transition_attackingPlayer2] setText: [NSString stringWithFormat: @"%@ destroys", self.engine.activePlayer.name]];
                 [self transition_attackingPlayer2].hidden = NO;
                 [self transition_currentCard2].hidden = NO;
             }
@@ -342,18 +354,24 @@
                 count++;
             }
         }
+        
+        //set attacking player
+        [[self transition_attackingPlayer] setText: [NSString stringWithFormat: @"%@ plays %d", self.engine.activePlayer.name, count]];
+        
         [self transition_defendingPlayer].hidden = YES;
-        [self transition_multiplier].hidden = NO; //show multiplier
-        [[self transition_multiplier] setText:[NSString stringWithFormat: @"%d", count]]; //set multiplier
         UIImage* image = [UIImage imageNamed: @"healCard_transition.png"]; //set image of card played
         UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
         [self.transition_currentCard addSubview:uiv];
     }
     else if(cardPlayed.isFaceDownType){
         //Handles placing facedowns
-        //TODO: Get better facedown image
+        
+        //set attacking player
+        [[self transition_attackingPlayer] setText: [NSString stringWithFormat: @"%@ plays a", self.engine.activePlayer.name]];
+        
         //set defending player
         [[self transition_defendingPlayer] setText: @"facedown"];
+        
         UIImage* image = [UIImage imageNamed: @"discardedCard_transition.png"];
         UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
         [self.transition_currentCard addSubview:uiv];
