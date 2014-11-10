@@ -161,12 +161,50 @@
     
     if([cardPlayed.cardType isEqualToString:@"Attack"]){
         if([nextPlayer hasFaceDown]){
-            //TODO: Handle Facedown triggers/counters
+            //Handle Facedown triggers/counters
             //handle zap counter
+            if([cardPlayed.name isEqualToString: @"Zap"]){
+                //destroys any facedowns
+                UIImage* image = [UIImage imageNamed: @"ZapCard_transition.png"];
+                UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
+                [self.transition_currentCard addSubview:uiv];
+            }
             //handle if shield
+            else if([nextPlayer.faceDownCard.cardType isEqualToString:@"Shield"]){
+                //switch attacking and defending players
+                [[self transition_defendingPlayer] setText: [NSString stringWithFormat: @"%@", self.engine.activePlayer.name]];
+                [[self transition_attackingPlayer] setText: [NSString stringWithFormat: @"%@", nextPlayer.name]];
+                
+                //show triggered shield
+                UIImage* image = [UIImage imageNamed: @"spellShieldCard_transition.png"];
+                UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
+                [self.transition_currentCard addSubview:uiv];
+            }
             //handle if EMP
+            else if([nextPlayer.faceDownCard.cardType isEqualToString:@"EMP"]){
+                //switch attacking and defending players
+                [[self transition_defendingPlayer] setText: [NSString stringWithFormat: @"%@", self.engine.activePlayer.name]];
+                [[self transition_attackingPlayer] setText: [NSString stringWithFormat: @"%@", nextPlayer.name]];
+                
+                //show triggered EMP
+                UIImage* image = [UIImage imageNamed: @"EMPCard_transition.png"];
+                UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
+                [self.transition_currentCard addSubview:uiv];
+                
+                //show number of weapons removed
+                int numWeapons = 0;
+                for (Card* card in self.engine.activePlayer.hand) {
+                    if([card.cardType isEqualToString:@"Weapon"]){
+                        numWeapons++;
+                    }
+                }
+                [self transition_multiplier].hidden = NO; //show multiplier
+                [[self transition_multiplier] setText:[NSString stringWithFormat: @"x%d", numWeapons]]; //set multiplier
+
+                //TODO: Customize message to include the damage taken from attack card
+            }
         }
-        //if no facedown card
+        //if no facedown card, handle attack
         else{
             for (int j=0; j<[config[@"cardNames"] count]; j++) {
                 UIImage* image = [UIImage imageNamed: [NSString stringWithFormat: @"%@_transition.png", config[@"cardFileNames"][j]]];
@@ -178,9 +216,26 @@
         }
     }
     else if([cardPlayed.cardType isEqualToString:@"Weapon"]){
-        //TODO: Handle Facedown triggers
-        //Handle EMP
+        //Handle EMP trigger, shield not triggered by weapon
         if([nextPlayer hasFaceDown] && [nextPlayer.faceDownCard.cardType isEqualToString:@"EMP"]){
+            //show facedown triggered
+            UIImage* image = [UIImage imageNamed: @"EMPCard_transition.png"];
+            UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
+            [self.transition_currentCard addSubview:uiv];
+            
+            //switch attacking and defending players
+            [[self transition_defendingPlayer] setText: [NSString stringWithFormat: @"%@", self.engine.activePlayer.name]];
+            [[self transition_attackingPlayer] setText: [NSString stringWithFormat: @"%@", nextPlayer.name]];
+            
+            //show number of weapons removed
+            int count = 0;
+            for (Card* card in self.engine.activePlayer.hand) {
+                if([card.cardType isEqualToString:@"Weapon"]){
+                    count++;
+                }
+            }
+            [self transition_multiplier].hidden = NO; //show multiplier
+            [[self transition_multiplier] setText:[NSString stringWithFormat: @"x%d", count]]; //set multiplier
         }
         //Handle Weapon multiplier
         else{
