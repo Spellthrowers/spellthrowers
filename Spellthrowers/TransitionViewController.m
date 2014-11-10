@@ -152,21 +152,46 @@
     //build a config dictionary
     NSDictionary* config = [NSDictionary dictionaryWithContentsOfFile:path];
     
-    for (int j=0; j<[config[@"cardNames"] count]; j++) {
-        UIImage* image = [UIImage imageNamed: [NSString stringWithFormat: @"%@_transition.png", config[@"cardFileNames"][j]]];
-        if ([cardPlayed.name isEqualToString:config[@"cardNames"][j]] && image != nil) {
-            UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
-            [self.transition_currentCard addSubview:uiv];
+    
+    
+    //cases to determine which transition message to show
+    
+    if([cardPlayed.cardType isEqualToString:@"Attack"]){
+        if([nextPlayer hasFaceDown]){
+            //TODO: Handle Facedown triggers/counters
+            //handle zap counter
+            //handle if shield
+            //handle if EMP
+        }
+        //if no facedown card
+        else{
+            for (int j=0; j<[config[@"cardNames"] count]; j++) {
+                UIImage* image = [UIImage imageNamed: [NSString stringWithFormat: @"%@_transition.png", config[@"cardFileNames"][j]]];
+                if ([cardPlayed.name isEqualToString:config[@"cardNames"][j]] && image != nil) {
+                    UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
+                    [self.transition_currentCard addSubview:uiv];
+                }
+            }
         }
     }
+    else if([cardPlayed.cardType isEqualToString:@"Weapon"]){
+        //TODO: Handle Facedown triggers
+        //Handle EMP
+        //ELSE Handle Weapon multiplier
+    }
+    else if([cardPlayed.cardType isEqualToString:@"Heal"]){
+        //TODO: Handle Heals multiplier
+    }
+    else if(cardPlayed.isFaceDownType){
+        //Handles placing facedowns
+        //TODO: Get Facedown Image
+        UIImage* image = [UIImage imageNamed: @"discardedCard_transition.png"];
+        UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
+        [self.transition_currentCard addSubview:uiv];
+        
+    }
+    //TODO: Handle Scrum
     
-    //handle basic attack and scrum
-    
-    //handle facedown placements
-    
-    //handle heal/weapon multiplier
-    
-    //handle facedowns counters and attacking on facedown(ZAP, weapon/attacks)
     
     
     if([cardPlayed.cardType isEqualToString:@"Attack"]){

@@ -69,6 +69,7 @@
 		C2FE731F1A10328F00BAC89B /* hurricaneCard_transition.png in Resources */ = {isa = PBXBuildFile; fileRef = C2FE731A1A10328F00BAC89B /* hurricaneCard_transition.png */; };
 		C2FE73201A10328F00BAC89B /* laserPistolCard_transition.png in Resources */ = {isa = PBXBuildFile; fileRef = C2FE731B1A10328F00BAC89B /* laserPistolCard_transition.png */; };
 		C2FE73211A10328F00BAC89B /* scrumCard_transition.png in Resources */ = {isa = PBXBuildFile; fileRef = C2FE731C1A10328F00BAC89B /* scrumCard_transition.png */; };
+		C2FE73231A103C0500BAC89B /* discardedCard_transition.png in Resources */ = {isa = PBXBuildFile; fileRef = C2FE73221A103C0500BAC89B /* discardedCard_transition.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +158,7 @@
 		C2FE731A1A10328F00BAC89B /* hurricaneCard_transition.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hurricaneCard_transition.png; sourceTree = "<group>"; };
 		C2FE731B1A10328F00BAC89B /* laserPistolCard_transition.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laserPistolCard_transition.png; sourceTree = "<group>"; };
 		C2FE731C1A10328F00BAC89B /* scrumCard_transition.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scrumCard_transition.png; sourceTree = "<group>"; };
+		C2FE73221A103C0500BAC89B /* discardedCard_transition.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = discardedCard_transition.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +259,7 @@
 				C2FE731B1A10328F00BAC89B /* laserPistolCard_transition.png */,
 				C2FE731C1A10328F00BAC89B /* scrumCard_transition.png */,
 				C2FE73101A1030A900BAC89B /* waterfallCard_transition.png */,
+				C2FE73221A103C0500BAC89B /* discardedCard_transition.png */,
 				2BE3BCC41A02860D00F9AF15 /* fireballMini.png */,
 				C2A541741A0179D500C065A8 /* zapCard.png */,
 				C2FE73121A10315B00BAC89B /* zapCard_transition.png */,
@@ -361,7 +364,7 @@
 				ORGANIZATIONNAME = Spellthrowers;
 				TargetAttributes = {
 					2BE0E16919BB9E9B00CC89E9 = {
-						DevelopmentTeam = K539BTLAP3;
+						DevelopmentTeam = X84Y2D2K96;
 					};
 					2BE0E18D19BB9E9B00CC89E9 = {
 						TestTargetID = 2BE0E16919BB9E9B00CC89E9;
@@ -416,6 +419,7 @@
 				2BE3BCC51A02860D00F9AF15 /* fireballMini.png in Resources */,
 				C2FE73131A10315B00BAC89B /* zapCard_transition.png in Resources */,
 				2BC354B61A0EB4E200C97BE1 /* scrumMini.png in Resources */,
+				C2FE73231A103C0500BAC89B /* discardedCard_transition.png in Resources */,
 				2BDF0E4519C0BCB600B3183A /* Config.plist in Resources */,
 				2BCB724E19F0ACA000BCC89C /* discardedCard.png in Resources */,
 				2BCB726119F0C09900BCC89C /* spellShieldCard.m4a in Resources */,
