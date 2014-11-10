@@ -175,7 +175,7 @@
                 [[self transition_attackingPlayer] setText: [NSString stringWithFormat: @"%@ plays a", self.engine.activePlayer.name]];
                 [[self transition_defendingPlayer] setText: [NSString stringWithFormat: @"against %@", nextPlayer.name]];
                 
-                UIImage* image = [UIImage imageNamed: @"ZapCard_transition.png"];
+                UIImage* image = [UIImage imageNamed: @"zapCard_transition.png"];
                 UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
                 [self.transition_currentCard addSubview:uiv];
                 
