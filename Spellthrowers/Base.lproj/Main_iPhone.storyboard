@@ -1000,8 +1000,14 @@ Cg
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="x3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b47-Rv-tJy">
+                                <rect key="frame" x="182" y="469" width="19" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="zapCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dtl-99-mvK">
-                                <rect key="frame" x="140" y="448" width="41" height="64"/>
+                                <rect key="frame" x="133" y="448" width="41" height="64"/>
                                 <color key="backgroundColor" red="0.1998242029" green="0.56461037199999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
@@ -1021,6 +1027,7 @@ Cg
                         <outlet property="transition_attackingPlayer" destination="8vd-ib-EnU" id="cwf-Nh-lm1"/>
                         <outlet property="transition_currentCard" destination="Dtl-99-mvK" id="b66-De-m5A"/>
                         <outlet property="transition_defendingPlayer" destination="Chl-AS-w7b" id="QpV-8B-App"/>
+                        <outlet property="transition_multiplier" destination="b47-Rv-tJy" id="E91-DB-kTp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fTV-Zi-VV2" userLabel="First Responder" sceneMemberID="firstResponder"/>

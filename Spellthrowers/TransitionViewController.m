@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *transition_attackingPlayer;
 @property (weak, nonatomic) IBOutlet UILabel *transition_defendingPlayer;
 @property (weak, nonatomic) IBOutlet UIImageView *transition_currentCard;
+@property (weak, nonatomic) IBOutlet UILabel *transition_multiplier;
 
 @end
 
@@ -122,6 +123,7 @@
         [self transition_attackingPlayer].hidden = YES;
         [self transition_defendingPlayer].hidden = YES;
         [self transition_currentCard].hidden = YES;
+        [self transition_multiplier].hidden = YES;
         //show discard text
         [self transitionMessage].hidden = NO;
         return;
@@ -131,6 +133,7 @@
     [self transition_attackingPlayer].hidden = NO;
     [self transition_defendingPlayer].hidden = NO;
     [self transition_currentCard].hidden = NO;
+    [self transition_multiplier].hidden = YES;
     
     //simplification vars
     Player *nextPlayer = self.engine.players[(self.engine.indexOfActivePlayer+1) % [self.engine.players count]];
@@ -177,18 +180,44 @@
     else if([cardPlayed.cardType isEqualToString:@"Weapon"]){
         //TODO: Handle Facedown triggers
         //Handle EMP
-        //ELSE Handle Weapon multiplier
+        if([nextPlayer hasFaceDown] && [nextPlayer.faceDownCard.cardType isEqualToString:@"EMP"]){
+        }
+        //Handle Weapon multiplier
+        else{
+            int count = 0;
+            for (Card* card in self.engine.activePlayer.hand) {
+                if([card.cardType isEqualToString:@"Weapon"]){
+                    count++;
+                }
+            }
+            [self transition_multiplier].hidden = NO; //show multiplier
+            [[self transition_multiplier] setText:[NSString stringWithFormat: @"x%d", count]]; //set multiplier
+            UIImage* image = [UIImage imageNamed: @"laserPistolCard_transition.png"]; //set image of card played
+            UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
+            [self.transition_currentCard addSubview:uiv];
+        }
     }
     else if([cardPlayed.cardType isEqualToString:@"Heal"]){
-        //TODO: Handle Heals multiplier
+        //Handle Heal multiplier
+        int count = 0;//get count of heals
+        for (Card* card in self.engine.activePlayer.hand) {
+            if([card.cardType isEqualToString:@"Heal"]){
+                count++;
+            }
+        }
+        [self transition_defendingPlayer].hidden = YES;
+        [self transition_multiplier].hidden = NO; //show multiplier
+        [[self transition_multiplier] setText:[NSString stringWithFormat: @"x%d", count]]; //set multiplier
+        UIImage* image = [UIImage imageNamed: @"healCard_transition.png"]; //set image of card played
+        UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
+        [self.transition_currentCard addSubview:uiv];
     }
     else if(cardPlayed.isFaceDownType){
         //Handles placing facedowns
-        //TODO: Get Facedown Image
+        //TODO: Get better facedown image
         UIImage* image = [UIImage imageNamed: @"discardedCard_transition.png"];
         UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
         [self.transition_currentCard addSubview:uiv];
-        
     }
     //TODO: Handle Scrum
     
