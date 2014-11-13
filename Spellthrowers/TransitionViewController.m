@@ -372,7 +372,7 @@
         //set defending player
         [[self transition_defendingPlayer] setText: @"facedown"];
         
-        UIImage* image = [UIImage imageNamed: @"discardedCard_transition.png"];
+        UIImage* image = [UIImage imageNamed: @"facedownCard_transition.png"];
         UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
         [self.transition_currentCard addSubview:uiv];
         
