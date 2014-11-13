@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B06F15E1A145E32009849E5 /* facedownCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B06F15D1A145E32009849E5 /* facedownCard.png */; };
 		2B43279F19BFBE8D009601C8 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B43279E19BFBE8D009601C8 /* Player.m */; };
 		2B4327A219BFBE9F009601C8 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4327A119BFBE9F009601C8 /* Card.m */; };
 		2B4327A519BFBEAE009601C8 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4327A419BFBEAE009601C8 /* Deck.m */; };
@@ -83,6 +84,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B06F15D1A145E32009849E5 /* facedownCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facedownCard.png; sourceTree = "<group>"; };
 		2B43279D19BFBE8D009601C8 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		2B43279E19BFBE8D009601C8 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		2B4327A019BFBE9F009601C8 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				2B4ABFBE19DD173C006331D6 /* icon.png */,
 				2BF1955B19F6FFF50000353E /* helpIcon.png */,
 				2BF1955D19F710E30000353E /* hasFacedown.png */,
+				2B06F15D1A145E32009849E5 /* facedownCard.png */,
 				C2A541781A0180B500C065A8 /* healCard.png */,
 				C2FE73141A10316300BAC89B /* spellShieldCard_transition.png */,
 				C2FE730E1A10300700BAC89B /* waterfallCard.png */,
@@ -419,6 +422,7 @@
 				2BE3BCC51A02860D00F9AF15 /* fireballMini.png in Resources */,
 				C2FE73131A10315B00BAC89B /* zapCard_transition.png in Resources */,
 				2BC354B61A0EB4E200C97BE1 /* scrumMini.png in Resources */,
+				2B06F15E1A145E32009849E5 /* facedownCard.png in Resources */,
 				C2FE73231A103C0500BAC89B /* discardedCard_transition.png in Resources */,
 				2BDF0E4519C0BCB600B3183A /* Config.plist in Resources */,
 				2BCB724E19F0ACA000BCC89C /* discardedCard.png in Resources */,
