@@ -68,6 +68,10 @@
                                     <segue destination="SEj-FN-gUh" kind="modal" id="Vzr-Zg-bMq"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Ud-DU-uhl">
+                                <rect key="frame" x="-32" y="-24" width="399" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
