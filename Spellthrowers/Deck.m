@@ -37,7 +37,7 @@
             cardIndex = 3; //weapon
         }
         else if (random == 3){
-            cardIndex = 2; //heal
+            cardIndex = 1; //heal
         }
         else{
             cardIndex = 2; //EMP

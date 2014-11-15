@@ -57,9 +57,16 @@
     //set text based on card type
     [self setMainText];
     
+    int healCount = 0;
+    for (Card* card in self.engine.activePlayer.hand) {
+        if([card.cardType isEqualToString:@"Heal"]){
+            healCount++;
+        }
+    }
+    
     //logic for cards that don't end turn
     if(   !self.engine.discardedAndDrew
-       && [[self.engine.activePlayer.hand[self.engine.indexOfTouchedCard] cardType] isEqualToString:@"Heal"]){
+       && [[self.engine.activePlayer.hand[self.engine.indexOfTouchedCard] cardType] isEqualToString:@"Heal"] && healCount != 5){
         nextPlayerName = [self.engine.activePlayer  name];
         [[self transitionMessage2] setText: [NSString stringWithFormat: @"%@, it's still your turn.",nextPlayerName]];
     }

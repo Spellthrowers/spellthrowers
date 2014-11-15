@@ -366,7 +366,7 @@
 				ORGANIZATIONNAME = Spellthrowers;
 				TargetAttributes = {
 					2BE0E16919BB9E9B00CC89E9 = {
-						DevelopmentTeam = K539BTLAP3;
+						DevelopmentTeam = X84Y2D2K96;
 					};
 					2BE0E18D19BB9E9B00CC89E9 = {
 						TestTargetID = 2BE0E16919BB9E9B00CC89E9;
@@ -609,7 +609,7 @@
 				GCC_PREFIX_HEADER = "Spellthrowers/Spellthrowers-Prefix.pch";
 				INFOPLIST_FILE = "Spellthrowers/Spellthrowers-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "71822b96-9df1-4dfd-8e15-c672ebe73289";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -625,7 +625,7 @@
 				GCC_PREFIX_HEADER = "Spellthrowers/Spellthrowers-Prefix.pch";
 				INFOPLIST_FILE = "Spellthrowers/Spellthrowers-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "71822b96-9df1-4dfd-8e15-c672ebe73289";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
