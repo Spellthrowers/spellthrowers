@@ -64,6 +64,10 @@
                                     <action selector="changeMode:" destination="0Kt-ui-3tc" eventType="touchUpInside" id="rkO-20-IRU"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KQJ-T1-9ml">
+                                <rect key="frame" x="-11" y="-5" width="800" height="25"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -90,7 +94,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="S3G-GJ-ncC">
                                 <rect key="frame" x="-22" y="-10" width="796" height="1044"/>
                             </imageView>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OM3-f1-e1n">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OM3-f1-e1n">
                                 <rect key="frame" x="234" y="742" width="82" height="133"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Card" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4QN-RO-e8c">
@@ -126,7 +130,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.96518269180000005" green="1" blue="0.94413749550000003" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YA9-od-UYZ">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YA9-od-UYZ">
                                 <rect key="frame" x="343" y="742" width="82" height="133"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Card" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EbH-IF-vQ8">
@@ -320,7 +324,7 @@
                                 <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cvT-T5-bJZ">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cvT-T5-bJZ">
                                 <rect key="frame" x="119" y="742" width="82" height="133"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Card" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dmF-Ez-war">
@@ -362,10 +366,6 @@
                         </subviews>
                         <color key="backgroundColor" red="0.11977982080000001" green="0.22068221769999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.11977982080000001" green="0.22068221769999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="OM3-f1-e1n" firstAttribute="leading" secondItem="cvT-T5-bJZ" secondAttribute="trailing" constant="30" id="rZb-sQ-oFa"/>
-                            <constraint firstItem="YA9-od-UYZ" firstAttribute="leading" secondItem="OM3-f1-e1n" secondAttribute="trailing" constant="30" id="umG-UD-PQZ"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="98A-Sm-n87"/>
                     <connections>
@@ -944,9 +944,9 @@ Cg
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="iav-jC-4sW"/>
-        <segue reference="qxs-qb-Ymr"/>
+        <segue reference="5PC-JW-bBR"/>
         <segue reference="M0g-BX-ccp"/>
-        <segue reference="xtH-0g-WeU"/>
+        <segue reference="qxs-qb-Ymr"/>
+        <segue reference="335-cR-x5V"/>
     </inferredMetricsTieBreakers>
 </document>
