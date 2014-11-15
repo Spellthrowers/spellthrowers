@@ -224,19 +224,26 @@
         return indexOfHeal;
     }
     //if can kill, do it
-    if ([self indexOfCardType:@"Attack"] >= 0 && [self maxAttackValue] >= targetPlayer.life && [self indexOfBiggestSpellOrWeapon] >= 0) {
+    if ([self indexOfCardType:@"Attack"] >= 0
+        && [self indexOfCardType:@"Attack"] <= self.activePlayer.hand.count
+        && [self maxAttackValue] >= targetPlayer.life && [self indexOfBiggestSpellOrWeapon] >= 0) {
         return [self indexOfBiggestSpellOrWeapon];
     }
     //if AI has no facedown card and an enemy has played multiple weapons, play EMP.
     if (!self.activePlayer.hasFaceDown) {
         for (Player *p in self.currentPlayers) {
-            if(![p isEqual:self.activePlayer] && p.hasPlayedMultipleWeapons && [self indexOfCardType:@"EMP"] >= 0){
+            if(![p isEqual:self.activePlayer]
+               && p.hasPlayedMultipleWeapons
+               && [self indexOfCardType:@"EMP"] >= 0
+               && [self indexOfCardType:@"EMP"] <= self.activePlayer.hand.count){
                 return [self indexOfCardType:@"EMP"];
             }
         }
     }
     //if enemy has facedown card, zap.
-    if(targetPlayer.hasFaceDown && [self indexOfCardName:@"Zap"] >= 0){
+    if(targetPlayer.hasFaceDown
+       && [self indexOfCardName:@"Zap"] >= 0
+       && [self indexOfCardName:@"Zap"] <= self.activePlayer.hand.count){
         return [self indexOfCardName:@"Zap"];
     }
     //if AI has multiple weapons, play them.
@@ -244,12 +251,18 @@
         return [self indexOfCardType:@"Weapon"];
     }
     //play big spells
-    if ([self indexOfCardType:@"Attack"] >= 0 && [self maxAttackValue] > 2 && [self indexOfBiggestSpellOrWeapon] >= 0) {
+    if ([self indexOfCardType:@"Attack"] >= 0
+        && [self maxAttackValue] > 2
+        && [self indexOfBiggestSpellOrWeapon] >= 0
+        && [self indexOfBiggestSpellOrWeapon] <= self.activePlayer.hand.count) {
         return [self indexOfBiggestSpellOrWeapon];
     }
     //play random facedown
     if(!self.activePlayer.hasFaceDown){
-        if ([self indexOfCardType:@"Shield"] >= 0 && [self indexOfCardType:@"EMP"] >= 0) {
+        if ([self indexOfCardType:@"Shield"] >= 0
+            && [self indexOfCardType:@"EMP"] >= 0
+            && [self indexOfCardType:@"Shield"] <= self.activePlayer.hand.count
+            && [self indexOfCardType:@"EMP"] <= self.activePlayer.hand.count) {
             if (arc4random_uniform(2) == 1) {
                 return [self indexOfCardType:@"EMP"];
             }
@@ -258,12 +271,16 @@
     }
     //play shields
     if(!self.activePlayer.hasFaceDown){
-        if ([self indexOfCardType:@"Shield"] >= 0) {
+        if ([self indexOfCardType:@"Shield"] >= 0
+            && [self indexOfCardType:@"Shield"] <= self.activePlayer.hand.count) {
             return [self indexOfCardType:@"Shield"];
         }
     }
     //play small spells
-    if ([self indexOfCardType:@"Attack"] >= 0 && [self maxAttackValue] > 1 && [self indexOfBiggestSpellOrWeapon] >= 0) {
+    if ([self indexOfCardType:@"Attack"] >= 0
+        && [self maxAttackValue] > 1
+        && [self indexOfBiggestSpellOrWeapon] >= 0
+        && [self indexOfBiggestSpellOrWeapon] <= self.activePlayer.hand.count) {
         return [self indexOfBiggestSpellOrWeapon];
     }
     return 0;

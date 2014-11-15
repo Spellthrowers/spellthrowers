@@ -29,15 +29,12 @@
     //get random card TODO: use weights
     int cardIndex;
     #ifdef DEBUG
-        int random = arc4random_uniform(4);
+        int random = arc4random_uniform(3);
         if (random == 1) {
-            cardIndex = 5; //Fireball
+            cardIndex = 1; //heal
         }
         else if (random == 2){
-            cardIndex = 3; //weapon
-        }
-        else if (random == 3){
-            cardIndex = 2; //heal
+            cardIndex = 7; //weapon
         }
         else{
             cardIndex = 2; //EMP
