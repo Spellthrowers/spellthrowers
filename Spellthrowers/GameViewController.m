@@ -91,7 +91,25 @@
         [self.engine initEverything];
         if ([self isAiGame]) {
             [self.engine.players[[self.engine.players count]-1] setIsAi:YES];
-            [self.engine.players[[self.engine.players count]-1] setName: @"Wesley Bot"];
+            int random = arc4random_uniform(5);
+            if (random == 0) {
+                [self.engine.players[[self.engine.players count]-1] setName: @"Wesley Bot"];
+            }
+            else if (random == 1){
+                [self.engine.players[[self.engine.players count]-1] setName: @"Michelle Bot"];
+            }
+            else if (random == 2){
+                [self.engine.players[[self.engine.players count]-1] setName: @"Andrea Bot"];
+            }
+            else if (random == 3){
+                [self.engine.players[[self.engine.players count]-1] setName: @"Ray Bot"];
+            }
+            else if (random == 4){
+                [self.engine.players[[self.engine.players count]-1] setName: @"Warner Bot"];
+            }
+            else {
+                [self.engine.players[[self.engine.players count]-1] setName: @"Alex Bot"];
+            }
         }
     }
     //if the other player has a facedown card
