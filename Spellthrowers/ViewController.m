@@ -11,22 +11,13 @@
 #import "HelpViewController.h"
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *versus;
-
+@property (atomic) BOOL isAiGame;
 @end
 
 @implementation ViewController
-- (IBAction)changeMode:(id)sender {
-    NSString *contents = [[self versus] text];
-    if ([contents caseInsensitiveCompare:@"Vs AI"] == NSOrderedSame) {
-        [[self versus] setText: @"Vs Human"];
-    } else {
-        [[self versus] setText: @"Vs AI"];
-    }
-}
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([[[self versus] text] isEqualToString:@"Vs AI"] && [[segue destinationViewController] class] != [HelpViewController class]) {
+    if ([[sender currentTitle] isEqualToString:@"Play Vs AI!"] && [[segue destinationViewController] class] != [HelpViewController class]) {
         [[segue destinationViewController] setIsAiGame:YES];
     }
     [[segue destinationViewController] setIsMainMenu:YES];
