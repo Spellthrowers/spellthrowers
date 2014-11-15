@@ -1,459 +1,956 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="yey-xP-d1S">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="0Kt-ui-3tc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--Main Menu-->
-        <scene sceneID="B3W-d5-xc6">
+        <scene sceneID="21M-Is-0ku">
             <objects>
-                <viewController title="Main Menu" id="yey-xP-d1S" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="Main Menu" id="0Kt-ui-3tc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="nGL-zf-d6M"/>
-                        <viewControllerLayoutGuide type="bottom" id="4JG-Wn-NaP"/>
+                        <viewControllerLayoutGuide type="top" id="SvS-6S-TeG"/>
+                        <viewControllerLayoutGuide type="bottom" id="TXH-WY-3KM"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="FVC-Rh-xW2">
+                    <view key="view" contentMode="scaleToFill" id="zul-VA-pfd">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Spellthrowers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGG-fA-764">
-                                <rect key="frame" x="299" y="346" width="171" height="105"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Spellthrowers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D88-yZ-zMv">
+                                <rect key="frame" x="181" y="76" width="407" height="173"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="46"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yod-iI-Qcn">
-                                <rect key="frame" x="343" y="503" width="83" height="73"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iq6-9G-mVq">
+                                <rect key="frame" x="303" y="365" width="163" height="115"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                 <state key="normal" title="Play!">
                                     <color key="titleColor" red="0.052426310990000002" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="F0O-Bf-kW5" kind="modal" id="9AZ-cz-WYP"/>
+                                    <segue destination="r6j-5H-LJu" kind="modal" id="5PC-JW-bBR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5iY-FT-lcr">
-                                <rect key="frame" x="324" y="624" width="121" height="53"/>
-                                <state key="normal" title="Change mode">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="changeMode:" destination="yey-xP-d1S" eventType="touchUpInside" id="5vw-He-Fwg"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vs AI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EdP-Uh-hh1">
-                                <rect key="frame" x="338" y="595" width="92" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vs AI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYJ-sp-iAv">
+                                <rect key="frame" x="338" y="559" width="92" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" red="0.96091627040000005" green="0.0" blue="0.05657065562" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fireball.png" translatesAutoresizingMaskIntoConstraints="NO" id="ONs-u8-IgX">
+                                <rect key="frame" x="326" y="237" width="117" height="107"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DrZ-3g-dqD">
+                                <rect key="frame" x="272" y="740" width="225" height="115"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <state key="normal" title="Tutorial">
+                                    <color key="titleColor" red="1" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="REr-PG-r7D" kind="modal" id="xtH-0g-WeU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Je6-oK-MZy">
+                                <rect key="frame" x="308" y="579" width="153" height="83"/>
+                                <state key="normal" title="Change mode">
+                                    <color key="titleColor" red="0.1998242029" green="0.56461037199999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeMode:" destination="0Kt-ui-3tc" eventType="touchUpInside" id="rkO-20-IRU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
-                        <outlet property="versus" destination="EdP-Uh-hh1" id="eI0-Bj-JWe"/>
+                        <outlet property="versus" destination="NYJ-sp-iAv" id="bjt-6J-7E1"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="d3i-al-dJT" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KIk-eg-ETX" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="903" y="39"/>
+            <point key="canvasLocation" x="-25" y="250"/>
         </scene>
         <!--Game Board-->
-        <scene sceneID="HO0-eg-jso">
+        <scene sceneID="fb4-qC-ulj">
             <objects>
-                <viewController title="Game Board" id="F0O-Bf-kW5" customClass="GameViewController" sceneMemberID="viewController">
+                <viewController title="Game Board" id="r6j-5H-LJu" customClass="GameViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="32K-0A-dF4"/>
-                        <viewControllerLayoutGuide type="bottom" id="eQd-0S-JuV"/>
+                        <viewControllerLayoutGuide type="top" id="3cn-yV-fLR"/>
+                        <viewControllerLayoutGuide type="bottom" id="GCa-SG-WBn"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="YQ5-fd-PuT">
+                    <view key="view" contentMode="scaleToFill" id="WlU-Ll-Ck3">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick a card!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" preferredMaxLayoutWidth="262" translatesAutoresizingMaskIntoConstraints="NO" id="ewU-k8-eWi">
-                                <rect key="frame" x="273" y="210" width="262" height="77"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="muA-gi-Twi">
-                                <rect key="frame" x="273" y="514" width="82" height="133"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="S3G-GJ-ncC">
+                                <rect key="frame" x="-22" y="-10" width="796" height="1044"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OM3-f1-e1n">
+                                <rect key="frame" x="234" y="742" width="82" height="133"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Card" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oFy-p9-8i5">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Card" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4QN-RO-e8c">
                                         <rect key="frame" x="0.0" y="0.0" width="82" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="13O-cP-TRx">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AlI-Sb-RsV">
                                         <rect key="frame" x="0.0" y="20" width="82" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sd0-FH-O76">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PvU-Vd-9sg">
                                         <rect key="frame" x="-3" y="0.0" width="88" height="133"/>
-                                        <state key="normal" title="X">
+                                        <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="card0Touched:" destination="F0O-Bf-kW5" eventType="touchUpInside" id="uBk-4s-z6u"/>
-                                            <segue destination="GC0-dA-Tec" kind="modal" identifier="card0Clicked" modalTransitionStyle="flipHorizontal" id="PMi-9J-n78"/>
+                                            <action selector="card1Touched:" destination="r6j-5H-LJu" eventType="touchUpInside" id="T0q-UZ-E9O"/>
+                                            <segue destination="9SE-7I-gvs" kind="modal" identifier="card1Clicked" modalTransitionStyle="flipHorizontal" id="8Zi-FB-EsU"/>
                                         </connections>
                                     </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bv7-tj-iNt">
-                                        <rect key="frame" x="-3" y="0.0" width="88" height="133"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trB-ev-Wak">
+                                        <rect key="frame" x="0.0" y="0.0" width="82" height="133"/>
                                         <state key="normal" title="Discard">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="card0Touched:" destination="F0O-Bf-kW5" eventType="touchUpInside" id="3mQ-8f-3fj"/>
-                                            <action selector="discard0Touched:" destination="F0O-Bf-kW5" eventType="touchUpInside" id="vtI-p1-lN0"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="0.76542393509999995" blue="0.77738319170000003" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cAR-w9-Tb7">
-                                <rect key="frame" x="363" y="514" width="82" height="133"/>
-                                <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Card" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q6s-XJ-g0r">
-                                        <rect key="frame" x="0.0" y="0.0" width="82" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C6R-7I-RSJ">
-                                        <rect key="frame" x="0.0" y="20" width="82" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWU-72-amD">
-                                        <rect key="frame" x="-3" y="0.0" width="88" height="133"/>
-                                        <state key="normal" title="X">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="card1Touched:" destination="F0O-Bf-kW5" eventType="touchUpInside" id="6kw-24-7aS"/>
-                                            <segue destination="GC0-dA-Tec" kind="modal" identifier="card1Clicked" modalTransitionStyle="flipHorizontal" id="QH3-Uv-UgY"/>
-                                        </connections>
-                                    </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CH8-LZ-poy">
-                                        <rect key="frame" x="-3" y="0.0" width="88" height="133"/>
-                                        <state key="normal" title="Discard">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="card0Touched:" destination="F0O-Bf-kW5" eventType="touchUpInside" id="0Pk-Mq-Idy"/>
-                                            <action selector="discard1Touched:" destination="F0O-Bf-kW5" eventType="touchUpInside" id="v9O-4W-PGh"/>
+                                            <action selector="card0Touched:" destination="r6j-5H-LJu" eventType="touchUpInside" id="Bht-7d-Gcf"/>
+                                            <action selector="discard1Touched:" destination="r6j-5H-LJu" eventType="touchUpInside" id="HKX-hc-Upf"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.96518269180000005" green="1" blue="0.94413749550000003" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ESh-Rl-eWi">
-                                <rect key="frame" x="453" y="514" width="82" height="133"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YA9-od-UYZ">
+                                <rect key="frame" x="343" y="742" width="82" height="133"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Card" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AY3-tC-Maz">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Card" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EbH-IF-vQ8">
                                         <rect key="frame" x="0.0" y="0.0" width="82" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S2t-T9-mSM">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UNk-9e-kyx">
                                         <rect key="frame" x="0.0" y="20" width="82" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3c8-lT-F6P">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRb-ag-dx4">
                                         <rect key="frame" x="-3" y="0.0" width="88" height="133"/>
-                                        <state key="normal" title="X"/>
                                         <connections>
-                                            <action selector="card2Touched:" destination="F0O-Bf-kW5" eventType="touchUpInside" id="Uhf-uV-5ia"/>
-                                            <segue destination="GC0-dA-Tec" kind="modal" identifier="card2Clicked" modalTransitionStyle="flipHorizontal" id="jCx-Kq-y3R"/>
+                                            <action selector="card2Touched:" destination="r6j-5H-LJu" eventType="touchUpInside" id="JF2-Mw-eHv"/>
+                                            <segue destination="9SE-7I-gvs" kind="modal" identifier="card2Clicked" modalTransitionStyle="flipHorizontal" id="aVf-XP-Oby"/>
                                         </connections>
                                     </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOH-zr-EfP">
-                                        <rect key="frame" x="-3" y="0.0" width="88" height="133"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zA7-5C-n6a">
+                                        <rect key="frame" x="0.0" y="0.0" width="82" height="133"/>
                                         <state key="normal" title="Discard">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="card0Touched:" destination="F0O-Bf-kW5" eventType="touchUpInside" id="P3d-mx-KxO"/>
-                                            <action selector="discard2Touched:" destination="F0O-Bf-kW5" eventType="touchUpInside" id="j7L-Wc-nQY"/>
+                                            <action selector="card0Touched:" destination="r6j-5H-LJu" eventType="touchUpInside" id="bJY-kE-UXs"/>
+                                            <action selector="discard2Touched:" destination="r6j-5H-LJu" eventType="touchUpInside" id="bj9-5y-MdR"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.80261580190000004" green="0.77120264959999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6wu-In-cTw">
-                                <rect key="frame" x="318" y="610" width="82" height="133"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WXu-hb-U0z">
+                                <rect key="frame" x="452" y="742" width="82" height="133"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Card" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hkF-OY-jJK">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Card" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aR2-Au-DoD">
                                         <rect key="frame" x="0.0" y="0.0" width="82" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y1D-Aq-9dK">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8xS-DF-9hj">
                                         <rect key="frame" x="0.0" y="20" width="82" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3u7-9d-q7V">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUX-tP-s58">
                                         <rect key="frame" x="-3" y="0.0" width="88" height="133"/>
-                                        <state key="normal" title="X">
+                                        <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="card3Touched:" destination="F0O-Bf-kW5" eventType="touchUpInside" id="6wW-GX-x2q"/>
-                                            <segue destination="GC0-dA-Tec" kind="modal" identifier="card3Clicked" modalTransitionStyle="flipHorizontal" id="KK2-2c-ZPK"/>
+                                            <action selector="card3Touched:" destination="r6j-5H-LJu" eventType="touchUpInside" id="M0a-oe-Ude"/>
+                                            <segue destination="9SE-7I-gvs" kind="modal" identifier="card3Clicked" modalTransitionStyle="flipHorizontal" id="jVq-sN-pil"/>
                                         </connections>
                                     </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CeW-5H-MSR">
-                                        <rect key="frame" x="-3" y="0.0" width="88" height="133"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFm-pe-a64">
+                                        <rect key="frame" x="0.0" y="0.0" width="82" height="133"/>
                                         <state key="normal" title="Discard">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="card0Touched:" destination="F0O-Bf-kW5" eventType="touchUpInside" id="BHm-ov-BQq"/>
-                                            <action selector="discard3Touched:" destination="F0O-Bf-kW5" eventType="touchUpInside" id="UJX-e5-jqJ"/>
+                                            <action selector="card0Touched:" destination="r6j-5H-LJu" eventType="touchUpInside" id="LRR-9n-r70"/>
+                                            <action selector="discard3Touched:" destination="r6j-5H-LJu" eventType="touchUpInside" id="rOo-Rg-IlR"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.75477455230000001" green="0.94633381819999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VWa-9y-NbK">
-                                <rect key="frame" x="408" y="610" width="82" height="133"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rcK-ap-Ho7">
+                                <rect key="frame" x="563" y="742" width="82" height="133"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Card" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lJH-yL-OIq">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Card" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="88C-if-e2A">
                                         <rect key="frame" x="0.0" y="0.0" width="82" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kFT-5d-BXz">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FZ3-RJ-5pt">
                                         <rect key="frame" x="0.0" y="20" width="82" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVx-dN-Wdh">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osq-4l-5ZJ">
                                         <rect key="frame" x="-3" y="0.0" width="88" height="133"/>
-                                        <state key="normal" title="X">
+                                        <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="card4Touched:" destination="F0O-Bf-kW5" eventType="touchUpInside" id="h0V-P2-8vf"/>
-                                            <segue destination="GC0-dA-Tec" kind="modal" identifier="card4Clicked" modalTransitionStyle="flipHorizontal" id="NdI-Px-gEi"/>
+                                            <action selector="card4Touched:" destination="r6j-5H-LJu" eventType="touchUpInside" id="Z3w-rh-BuZ"/>
+                                            <segue destination="9SE-7I-gvs" kind="modal" identifier="card4Clicked" modalTransitionStyle="flipHorizontal" id="kwA-ED-xve"/>
                                         </connections>
                                     </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OlF-lK-1Gu">
-                                        <rect key="frame" x="-3" y="0.0" width="88" height="133"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LaX-1v-PWZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="82" height="133"/>
                                         <state key="normal" title="Discard">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="card0Touched:" destination="F0O-Bf-kW5" eventType="touchUpInside" id="tmC-mb-ZEr"/>
-                                            <action selector="discard4Touched:" destination="F0O-Bf-kW5" eventType="touchUpInside" id="xIf-tJ-agf"/>
+                                            <action selector="card0Touched:" destination="r6j-5H-LJu" eventType="touchUpInside" id="vuq-09-fLj"/>
+                                            <action selector="discard4Touched:" destination="r6j-5H-LJu" eventType="touchUpInside" id="6mZ-Pf-8a9"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.87692436760000003" green="0.86178558110000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 2: Life" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nag-da-gyq">
-                                <rect key="frame" x="273" y="459" width="122" height="41"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 2: Life" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMf-vU-ybE">
+                                <rect key="frame" x="42" y="550" width="244" height="41"/>
                                 <color key="backgroundColor" red="0.1998242029" green="0.56461037199999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 1: Life" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctg-VK-vC0">
-                                <rect key="frame" x="273" y="413" width="122" height="38"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 1: Life" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIs-K5-umq">
+                                <rect key="frame" x="42" y="484" width="244" height="41"/>
                                 <color key="backgroundColor" red="0.1998242029" green="0.56461037199999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NVZ-c3-dts">
-                                <rect key="frame" x="408" y="461" width="125" height="38"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yhh-Jc-WC0">
+                                <rect key="frame" x="452" y="511" width="205" height="80"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Discard &amp; Draw">
                                             <attributes>
                                                 <color key="NSColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="15" name="HelveticaNeue-Bold"/>
+                                                <font key="NSFont" size="24" name="HelveticaNeue-Bold"/>
+                                                <font key="NSOriginalFont" size="24" name="HelveticaNeue-Bold"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <action selector="discardAndDrawTouched:" destination="F0O-Bf-kW5" eventType="touchUpInside" id="NOx-oE-BsT"/>
+                                    <action selector="discardAndDrawTouched:" destination="r6j-5H-LJu" eventType="touchUpInside" id="79k-GE-Vcv"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YBU-yM-rUc">
-                                <rect key="frame" x="408" y="413" width="125" height="38"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tqu-Je-QQM">
+                                <rect key="frame" x="452" y="404" width="205" height="99"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Cancel">
                                             <attributes>
                                                 <color key="NSColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="15" name="HelveticaNeue-Bold"/>
+                                                <font key="NSFont" size="24" name="HelveticaNeue-Bold"/>
+                                                <font key="NSOriginalFont" size="24" name="HelveticaNeue-Bold"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <action selector="cancelTouched:" destination="F0O-Bf-kW5" eventType="touchUpInside" id="5C8-wQ-8fZ"/>
+                                    <action selector="cancelTouched:" destination="r6j-5H-LJu" eventType="touchUpInside" id="mdH-wo-VBu"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WCE-di-HIA">
-                                <rect key="frame" x="401" y="331" width="139" height="48"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hasFacedown.png" translatesAutoresizingMaskIntoConstraints="NO" id="4Uw-eE-RqL">
+                                <rect key="frame" x="294" y="555" width="23" height="31"/>
+                            </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vu2-zd-4Fv">
+                                <rect key="frame" x="452" y="289" width="205" height="82"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Draw new cards!">
                                             <attributes>
                                                 <color key="NSColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="15" name="HelveticaNeue-Bold"/>
+                                                <font key="NSFont" size="24" name="HelveticaNeue-Bold"/>
+                                                <font key="NSOriginalFont" size="24" name="HelveticaNeue-Bold"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <action selector="discardAndDrawTouched:" destination="F0O-Bf-kW5" eventType="touchUpInside" id="3hA-GH-JJ8"/>
-                                    <action selector="drawNewCardsTouched:" destination="F0O-Bf-kW5" eventType="touchUpInside" id="QBL-Ol-Cec"/>
-                                    <segue destination="GC0-dA-Tec" kind="modal" id="zL4-H7-jnd"/>
+                                    <action selector="discardAndDrawTouched:" destination="r6j-5H-LJu" eventType="touchUpInside" id="bCB-SX-8Vk"/>
+                                    <action selector="drawNewCardsTouched:" destination="r6j-5H-LJu" eventType="touchUpInside" id="aEi-qY-N1a"/>
+                                    <segue destination="9SE-7I-gvs" kind="modal" id="qxs-qb-Ymr"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Face Down Card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FpD-4g-E8H">
-                                <rect key="frame" x="408" y="413" width="122" height="38"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                <color key="textColor" red="0.91884239180000005" green="1" blue="0.3630036707" alpha="1" colorSpace="calibratedRGB"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqE-oQ-Rif">
+                                <rect key="frame" x="119" y="299" width="82" height="133"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button" image="scrumCard.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fHk-D5-wsC">
+                                <rect key="frame" x="640" y="28" width="112" height="109"/>
+                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                <state key="normal" image="helpIcon.png"/>
+                                <connections>
+                                    <segue destination="REr-PG-r7D" kind="modal" id="335-cR-x5V"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Pick a card!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" preferredMaxLayoutWidth="262" translatesAutoresizingMaskIntoConstraints="NO" id="P8b-Jd-emv">
+                                <rect key="frame" x="245" y="132" width="262" height="77"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cvT-T5-bJZ">
+                                <rect key="frame" x="119" y="742" width="82" height="133"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Card" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dmF-Ez-war">
+                                        <rect key="frame" x="0.0" y="0.0" width="82" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gcN-7n-tFg">
+                                        <rect key="frame" x="0.0" y="20" width="82" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RT0-Ms-rkK">
+                                        <rect key="frame" x="0.0" y="0.0" width="82" height="133"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="card0Touched:" destination="r6j-5H-LJu" eventType="touchUpInside" id="1e6-N6-oTT"/>
+                                            <segue destination="9SE-7I-gvs" kind="modal" identifier="card0Clicked" modalTransitionStyle="flipHorizontal" id="3Pu-EC-poc"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wkc-pk-vFn">
+                                        <rect key="frame" x="0.0" y="0.0" width="82" height="133"/>
+                                        <state key="normal" title="Discard">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="card0Touched:" destination="r6j-5H-LJu" eventType="touchUpInside" id="nxk-Cv-DXC"/>
+                                            <action selector="discard0Touched:" destination="r6j-5H-LJu" eventType="touchUpInside" id="ge4-bT-A39"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.76542393509999995" blue="0.77738319170000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hasFacedown.png" translatesAutoresizingMaskIntoConstraints="NO" id="HDU-gM-1z4">
+                                <rect key="frame" x="294" y="490" width="23" height="30"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.11977982080000001" green="0.22068221769999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.11977982080000001" green="0.22068221769999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="P8b-Jd-emv" secondAttribute="centerX" id="11t-zd-NZw"/>
+                            <constraint firstAttribute="centerX" secondItem="YA9-od-UYZ" secondAttribute="centerX" id="7Wp-mA-IiM"/>
+                            <constraint firstItem="YA9-od-UYZ" firstAttribute="leading" secondItem="OM3-f1-e1n" secondAttribute="trailing" constant="30" id="TJM-ip-xlm"/>
+                            <constraint firstItem="OM3-f1-e1n" firstAttribute="leading" secondItem="cvT-T5-bJZ" secondAttribute="trailing" constant="30" id="WLg-vZ-7L5"/>
+                            <constraint firstItem="rcK-ap-Ho7" firstAttribute="leading" secondItem="WXu-hb-U0z" secondAttribute="trailing" constant="30" id="lxv-Cy-Qlz"/>
+                            <constraint firstItem="WXu-hb-U0z" firstAttribute="leading" secondItem="YA9-od-UYZ" secondAttribute="trailing" constant="30" id="v7n-T0-OJh"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="NY1-Oy-kUA"/>
+                    <navigationItem key="navigationItem" title="Title" id="98A-Sm-n87"/>
                     <connections>
-                        <outlet property="cancel" destination="YBU-yM-rUc" id="c7M-GM-NdJ"/>
-                        <outlet property="cardName0" destination="oFy-p9-8i5" id="m3n-fw-Gd2"/>
-                        <outlet property="cardName1" destination="Q6s-XJ-g0r" id="64F-kc-EAc"/>
-                        <outlet property="cardName2" destination="AY3-tC-Maz" id="8fk-aR-PGG"/>
-                        <outlet property="cardName3" destination="hkF-OY-jJK" id="8fW-G6-bj7"/>
-                        <outlet property="cardName4" destination="lJH-yL-OIq" id="oRc-j4-ZwQ"/>
-                        <outlet property="cardValue0" destination="13O-cP-TRx" id="beI-fj-N26"/>
-                        <outlet property="cardValue1" destination="C6R-7I-RSJ" id="7Bm-Eh-vZF"/>
-                        <outlet property="cardValue2" destination="S2t-T9-mSM" id="rQI-jB-vUS"/>
-                        <outlet property="cardValue3" destination="Y1D-Aq-9dK" id="PVY-SO-lmF"/>
-                        <outlet property="cardValue4" destination="kFT-5d-BXz" id="m2h-gp-83d"/>
-                        <outlet property="discard0" destination="Bv7-tj-iNt" id="Xgo-Wf-CvP"/>
-                        <outlet property="discard1" destination="CH8-LZ-poy" id="Lsg-DQ-jbk"/>
-                        <outlet property="discard2" destination="xOH-zr-EfP" id="eVy-x3-9ub"/>
-                        <outlet property="discard3" destination="CeW-5H-MSR" id="a4S-hs-IfO"/>
-                        <outlet property="discard4" destination="OlF-lK-1Gu" id="dpc-Ou-RSb"/>
-                        <outlet property="discardAndDraw" destination="NVZ-c3-dts" id="sXc-Hv-GH1"/>
-                        <outlet property="drawNewCards" destination="WCE-di-HIA" id="6NK-LF-Z6C"/>
-                        <outlet property="faceDownActivated" destination="FpD-4g-E8H" id="qKD-Nu-sup"/>
-                        <outlet property="header" destination="ewU-k8-eWi" id="Wgf-4V-Qrm"/>
-                        <outlet property="playCard0" destination="sd0-FH-O76" id="08R-FG-UBB"/>
-                        <outlet property="playCard1" destination="EWU-72-amD" id="GZk-gD-00X"/>
-                        <outlet property="playCard2" destination="3c8-lT-F6P" id="OrK-gN-PZh"/>
-                        <outlet property="playCard3" destination="3u7-9d-q7V" id="EU3-8Z-nSG"/>
-                        <outlet property="playCard4" destination="ZVx-dN-Wdh" id="PCA-YX-3jc"/>
-                        <outlet property="player1Life" destination="ctg-VK-vC0" id="PDd-vA-7pe"/>
-                        <outlet property="player2Life" destination="nag-da-gyq" id="yPz-2q-p3K"/>
+                        <outlet property="cancel" destination="Tqu-Je-QQM" id="83h-ii-KwI"/>
+                        <outlet property="cardName0" destination="dmF-Ez-war" id="BTv-WC-IxD"/>
+                        <outlet property="cardName1" destination="4QN-RO-e8c" id="Wou-QA-pQG"/>
+                        <outlet property="cardName2" destination="EbH-IF-vQ8" id="Br0-ev-LnC"/>
+                        <outlet property="cardName3" destination="aR2-Au-DoD" id="efe-Tl-cOi"/>
+                        <outlet property="cardName4" destination="88C-if-e2A" id="NTq-un-fg6"/>
+                        <outlet property="cardValue0" destination="gcN-7n-tFg" id="geH-kA-hLe"/>
+                        <outlet property="cardValue1" destination="AlI-Sb-RsV" id="62s-k9-Ajn"/>
+                        <outlet property="cardValue2" destination="UNk-9e-kyx" id="Itr-lq-c7r"/>
+                        <outlet property="cardValue3" destination="8xS-DF-9hj" id="dCg-2Z-1sj"/>
+                        <outlet property="cardValue4" destination="FZ3-RJ-5pt" id="TZQ-Ta-8te"/>
+                        <outlet property="cardView0" destination="cvT-T5-bJZ" id="KKf-x0-nJF"/>
+                        <outlet property="cardView1" destination="OM3-f1-e1n" id="v2e-iU-hXZ"/>
+                        <outlet property="cardView2" destination="YA9-od-UYZ" id="OEs-qU-RdH"/>
+                        <outlet property="cardView3" destination="WXu-hb-U0z" id="4v3-kD-9PT"/>
+                        <outlet property="cardView4" destination="rcK-ap-Ho7" id="ypC-md-lwB"/>
+                        <outlet property="discard0" destination="Wkc-pk-vFn" id="os3-zm-Vam"/>
+                        <outlet property="discard1" destination="trB-ev-Wak" id="AMQ-IT-11v"/>
+                        <outlet property="discard2" destination="zA7-5C-n6a" id="7Tx-Mj-vC0"/>
+                        <outlet property="discard3" destination="SFm-pe-a64" id="1mp-fd-gGq"/>
+                        <outlet property="discard4" destination="LaX-1v-PWZ" id="LH1-h0-w0J"/>
+                        <outlet property="discardAndDraw" destination="Yhh-Jc-WC0" id="5Qa-7U-Nah"/>
+                        <outlet property="drawNewCards" destination="vu2-zd-4Fv" id="2cU-N9-utF"/>
+                        <outlet property="faceDownActivated" destination="HDU-gM-1z4" id="JAU-B2-86O"/>
+                        <outlet property="faceDownActivated2" destination="4Uw-eE-RqL" id="QPN-gW-0oz"/>
+                        <outlet property="header" destination="P8b-Jd-emv" id="Gge-2k-nPh"/>
+                        <outlet property="playCard0" destination="RT0-Ms-rkK" id="3RB-Ku-M1F"/>
+                        <outlet property="playCard1" destination="PvU-Vd-9sg" id="8cZ-A3-3Jt"/>
+                        <outlet property="playCard2" destination="eRb-ag-dx4" id="LPX-U0-OEe"/>
+                        <outlet property="playCard3" destination="wUX-tP-s58" id="uyN-Ks-6Ns"/>
+                        <outlet property="playCard4" destination="osq-4l-5ZJ" id="FAw-lq-WyM"/>
+                        <outlet property="player1Life" destination="TIs-K5-umq" id="II5-HE-foE"/>
+                        <outlet property="player2Life" destination="dMf-vU-ybE" id="SN1-TD-BjS"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pqC-eO-tdG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DtF-1z-CQt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1993" y="266"/>
+            <point key="canvasLocation" x="928" y="274"/>
+        </scene>
+        <!--Help-->
+        <scene sceneID="i20-9V-gLF">
+            <objects>
+                <viewController title="Help" id="REr-PG-r7D" customClass="HelpViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9tI-04-hyQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="SHI-I2-XBj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TdF-l8-0Dr">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FeU-h2-oLs">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZA2-vk-d2L">
+                                        <rect key="frame" x="181" y="901" width="159" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="Back to Main Menu" backgroundImage="background.png">
+                                            <color key="titleColor" red="1" green="0.94657157869999997" blue="0.44970602380000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="0Kt-ui-3tc" kind="modal" id="Cb9-uf-PYS"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Objective" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0IK-re-p1y">
+                                        <rect key="frame" x="117" y="68" width="86" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJ1-wg-teq">
+                                        <rect key="frame" x="80" y="90" width="160" height="21"/>
+                                        <string key="text">Drop all enemies to 0 hp!
+</string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Take a Turn" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWb-rP-uED">
+                                        <rect key="frame" x="109" y="126" width="102" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJ5-3H-eNW">
+                                        <rect key="frame" x="44" y="148" width="247" height="28"/>
+                                        <string key="text">Draw until you have 5 cards.
+2)   Play a card or discard unwanted cards.</string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Card Types" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWT-YH-Y3v">
+                                        <rect key="frame" x="110" y="199" width="101" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="waterfallCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Ne-GX-BSB">
+                                        <rect key="frame" x="138" y="257" width="41" height="60"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hurricaneCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="0Ng-Gs-NFK">
+                                        <rect key="frame" x="187" y="257" width="41" height="60"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69Q-A3-Nv8">
+                                        <rect key="frame" x="29" y="170" width="14" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="liB-fa-Rim">
+                                        <rect key="frame" x="29" y="151" width="14" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Play a card or discard unwanted cards." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3g-OI-oZc">
+                                        <rect key="frame" x="44" y="170" width="247" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="94P-ue-anV">
+                                        <rect key="frame" x="29" y="340" width="196" height="73"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Heal Cards">
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" heal you. These cards do not end your turn.">
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mrl-h5-5J6">
+                                        <rect key="frame" x="76" y="408" width="217" height="75"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Weapon Cards">
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                                    <font key="NSOriginalFont" size="14" name="HelveticaNeue-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" do damage with all weapons in your hand and are not discarded when played.">
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="laserPistolCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="9am-pA-Tr8">
+                                        <rect key="frame" x="29" y="416" width="41" height="60"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="healCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dr5-lR-cBi">
+                                        <rect key="frame" x="252" y="340" width="41" height="60"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1O-3Q-uOd">
+                                        <rect key="frame" x="29" y="228" width="197" height="21"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Spell Cards">
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" do damage.">
+                                                <attributes>
+                                                    <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dsv-3f-K0a">
+                                        <rect key="frame" x="16" y="28" width="288" height="26"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="How to Play">
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="22" name="HelveticaNeue-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fireballCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="p0e-v3-7Cs">
+                                        <rect key="frame" x="89" y="257" width="41" height="60"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fmt-Fa-vex">
+                                        <rect key="frame" x="371" y="627" width="288" height="65.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Special Spell Cards">
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" ">
+                                                <attributes>
+                                                    <font key="NSFont" size="13" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="have special effects in addition to doing damage.">
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="Helvetica"/>
+                                                    <font key="NSOriginalFont" size="14" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8VC-AG-kbC">
+                                        <rect key="frame" x="420" y="684.5" width="239" height="60"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Zap Card">
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" destroys enemy facedown cards.    ">
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jb5-HN-DCr">
+                                        <rect key="frame" x="371" y="752.5" width="224" height="92"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Scrum Spell">
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue-Medium"/>
+                                                    <font key="NSOriginalFont" size="14" name="HelveticaNeue-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" steals 3 life and destroys the target's facedown card. This spell can only be used by discarding 3 of a kind.">
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="zapCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZLb-om-0Nh">
+                                        <rect key="frame" x="371" y="684.5" width="41" height="60"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="scrumCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="IHa-Ci-kzT">
+                                        <rect key="frame" x="610" y="768.5" width="41" height="60"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="spellShieldCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="vAc-3x-b8o">
+                                        <rect key="frame" x="394" y="228" width="41" height="60"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EMPCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="SKc-Tq-WrM">
+                                        <rect key="frame" x="641" y="309" width="41" height="60"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hasFacedown.png" translatesAutoresizingMaskIntoConstraints="NO" id="qyf-TS-F9U">
+                                        <rect key="frame" x="404" y="193" width="24" height="12"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6q8-bU-81e">
+                                        <rect key="frame" x="443" y="228" width="241" height="60"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Spell Shield">
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue-Medium"/>
+                                                    <font key="NSOriginalFont" size="14" name="HelveticaNeue-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" reflects spell damage if a spell is played.">
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jWz-Sz-dNV">
+                                        <rect key="frame" x="394" y="304" width="239" height="109"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="EMP">
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue-Medium"/>
+                                                    <font key="NSOriginalFont" size="14" name="HelveticaNeue-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" nullifies weapon damage and removes all opponents' weapon cards. Does 2 damage for each weapon removed.">
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="omx-el-fZ0">
+                                        <rect key="frame" x="396" y="99" width="288" height="129"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Facedown Cards">
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" ">
+                                                <attributes>
+                                                    <font key="NSFont" size="13" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="are ">
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name=".LucidaGrandeUI"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="triggered when you are hit by a weapon or spell. ">
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name=".LucidaGrandeUI"/>
+                                                    <font key="NSOriginalFont" size="14" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="If you have a facedown card, it is replaced upon playing a new one.">
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name=".LucidaGrandeUI"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="         indicates player has a facedown card.">
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPa-n3-pog">
+                                        <rect key="frame" x="420" y="901" width="159" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="Back to Game" backgroundImage="background.png">
+                                            <color key="titleColor" red="1" green="0.94657157869999997" blue="0.44970602380000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="r6j-5H-LJu" kind="modal" id="4Hu-9s-myn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1998242029" green="0.56461037199999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Rules" image="fireballMini.png" id="HL5-lR-srm"/>
+                    <navigationItem key="navigationItem" id="W98-ge-XDn"/>
+                    <connections>
+                        <outlet property="backToGame1" destination="bPa-n3-pog" id="OZ7-Mn-bdb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="meR-CP-ila" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1094" y="-1052"/>
         </scene>
         <!--Transition-->
-        <scene sceneID="aXd-eZ-JKo">
+        <scene sceneID="7cG-Bm-GEZ">
             <objects>
-                <viewController title="Transition" id="GC0-dA-Tec" customClass="TransitionViewController" sceneMemberID="viewController">
+                <viewController title="Transition" id="9SE-7I-gvs" customClass="TransitionViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jmI-Vt-0nk"/>
-                        <viewControllerLayoutGuide type="bottom" id="e2g-xS-eu0"/>
+                        <viewControllerLayoutGuide type="top" id="fpx-TN-G8U"/>
+                        <viewControllerLayoutGuide type="bottom" id="twV-co-SqE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ePd-jl-LAP">
+                    <view key="view" contentMode="scaleToFill" id="8wG-RO-x0k">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 1 Life: X" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fO-Vl-nhu">
-                                <rect key="frame" x="244" y="628" width="280" height="39"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 1 Life: X" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rM7-fT-Axv">
+                                <rect key="frame" x="131" y="752" width="352" height="85"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 2 Life: X" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kli-SG-IZs">
-                                <rect key="frame" x="244" y="675" width="280" height="39"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 2 Life: X" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8b-U6-ie4">
+                                <rect key="frame" x="131" y="845" width="352" height="87"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Next turn!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="i1Y-iT-79K">
-                                <rect key="frame" x="244" y="469" width="280" height="68"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Next turn!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="DiD-Ua-ky7">
+                                <rect key="frame" x="239" y="470" width="291" height="87"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Next turn!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" minimumFontSize="12" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="kBD-8v-7xO">
-                                <rect key="frame" x="244" y="310" width="280" height="151"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Next turn!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="8" baselineAdjustment="alignBaselines" minimumFontSize="12" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="fhE-ho-lto">
+                                <rect key="frame" x="244" y="234" width="280" height="151"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3aY-mZ-SOE">
-                                <rect key="frame" x="289" y="516" width="190" height="89"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4G-5o-JaE">
+                                <rect key="frame" x="289" y="598" width="214" height="95.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <state key="normal" title="Ready!">
+                                    <color key="titleColor" red="0.1998242029" green="0.56461037199999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="next:forEvent:" destination="GC0-dA-Tec" eventType="valueChanged" id="px4-jK-OdB"/>
-                                    <segue destination="F0O-Bf-kW5" kind="modal" id="rzb-UL-m8b"/>
+                                    <action selector="next:forEvent:" destination="9SE-7I-gvs" eventType="valueChanged" id="Ftk-UH-Axl"/>
+                                    <segue destination="r6j-5H-LJu" kind="modal" id="iav-jC-4sW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8w-FD-qPm">
-                                <rect key="frame" x="299" y="534" width="171" height="53"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yA-A2-4en">
+                                <rect key="frame" x="247" y="598" width="266" height="94"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <state key="normal" title="Pass to AI!">
+                                    <color key="titleColor" red="0.1998242029" green="0.56461037199999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="passToAiPressed:" destination="GC0-dA-Tec" eventType="touchUpInside" id="6dd-7H-E7N"/>
+                                    <action selector="passToAiPressed:" destination="9SE-7I-gvs" eventType="touchUpInside" id="xIP-4L-45t"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8J-aw-WAP">
-                                <rect key="frame" x="301" y="542" width="167" height="38"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htc-GO-gyU">
+                                <rect key="frame" x="252" y="592" width="265" height="100"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <state key="normal" title="Return Home">
+                                    <color key="titleColor" red="0.1998242029" green="0.56461037199999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="yey-xP-d1S" kind="modal" id="Iz3-DX-sZb"/>
+                                    <segue destination="0Kt-ui-3tc" kind="modal" id="M0g-BX-ccp"/>
                                 </connections>
                             </button>
+                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="zapCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ucw-lS-EQp">
+                                <rect key="frame" x="343" y="168" width="82" height="133"/>
+                                <color key="backgroundColor" red="0.1998242029" green="0.56461037199999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
+                                </accessibility>
+                            </imageView>
+                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="zapCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="u3A-Nh-Ky0">
+                                <rect key="frame" x="343" y="309" width="82" height="133"/>
+                                <color key="backgroundColor" red="0.1998242029" green="0.56461037199999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
+                                </accessibility>
+                            </imageView>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" text="against Defending Player" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6Fk-cE-AvB">
+                                <rect key="frame" x="433" y="210" width="283" height="80"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" text="against Defending Player" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IK6-1v-wO4">
+                                <rect key="frame" x="433" y="349" width="283" height="95"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" text="Attacking Player plays a" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mDi-Ai-7kM">
+                                <rect key="frame" x="61" y="349" width="274" height="83"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" text="Attacking Player plays a" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RRz-LT-kgL">
+                                <rect key="frame" x="59" y="210" width="278" height="77"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.53456668129999996" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
-                        <outlet property="passToAi" destination="o8w-FD-qPm" id="4yZ-e8-1Wj"/>
-                        <outlet property="player1Life" destination="7fO-Vl-nhu" id="hsQ-Kt-80J"/>
-                        <outlet property="player2Life" destination="kli-SG-IZs" id="isJ-39-J2x"/>
-                        <outlet property="ready" destination="3aY-mZ-SOE" id="5C3-YH-gYT"/>
-                        <outlet property="returnHome" destination="E8J-aw-WAP" id="9Va-Sh-wpT"/>
-                        <outlet property="transitionMessage" destination="kBD-8v-7xO" id="L1t-bX-jAI"/>
-                        <outlet property="transitionMessage2" destination="i1Y-iT-79K" id="ckc-md-gWg"/>
+                        <outlet property="passToAi" destination="2yA-A2-4en" id="23Z-Sv-eio"/>
+                        <outlet property="player1Life" destination="rM7-fT-Axv" id="tIr-6o-J08"/>
+                        <outlet property="player2Life" destination="u8b-U6-ie4" id="fa0-06-tnD"/>
+                        <outlet property="ready" destination="o4G-5o-JaE" id="rTg-BF-Ctw"/>
+                        <outlet property="returnHome" destination="htc-GO-gyU" id="rkl-di-8pF"/>
+                        <outlet property="transitionMessage" destination="fhE-ho-lto" id="9iG-JE-goE"/>
+                        <outlet property="transitionMessage2" destination="DiD-Ua-ky7" id="GF8-da-m70"/>
+                        <outlet property="transition_attackingPlayer" destination="RRz-LT-kgL" id="E6S-ov-th5"/>
+                        <outlet property="transition_attackingPlayer2" destination="mDi-Ai-7kM" id="FgT-GR-uYf"/>
+                        <outlet property="transition_currentCard" destination="Ucw-lS-EQp" id="XtR-f2-B0I"/>
+                        <outlet property="transition_currentCard2" destination="u3A-Nh-Ky0" id="1L4-RA-5Hb"/>
+                        <outlet property="transition_defendingPlayer" destination="6Fk-cE-AvB" id="1KQ-Vj-pXW"/>
+                        <outlet property="transition_defendingPlayer2" destination="IK6-1v-wO4" id="gIb-X8-LN7"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gKm-gl-UDv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W7i-rh-DP1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2395" y="-1284"/>
+            <point key="canvasLocation" x="93" y="-1060"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="EMPCard.png" width="82" height="133"/>
+        <image name="background.png" width="1024" height="1280"/>
+        <image name="fireball.png" width="400" height="365"/>
+        <image name="fireballCard.png" width="82" height="133"/>
+        <image name="fireballMini.png" width="30" height="27"/>
+        <image name="hasFacedown.png" width="50" height="60"/>
+        <image name="healCard.png" width="82" height="133"/>
+        <image name="helpIcon.png" width="30" height="30"/>
+        <image name="hurricaneCard.png" width="82" height="133"/>
+        <image name="laserPistolCard.png" width="82" height="133"/>
+        <image name="scrumCard.png" width="82" height="133"/>
+        <image name="spellShieldCard.png" width="83" height="134"/>
+        <image name="waterfallCard.png" width="82" height="133"/>
+        <image name="zapCard.png" width="82" height="133"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="rzb-UL-m8b"/>
-        <segue reference="zL4-H7-jnd"/>
+        <segue reference="iav-jC-4sW"/>
+        <segue reference="qxs-qb-Ymr"/>
+        <segue reference="M0g-BX-ccp"/>
+        <segue reference="xtH-0g-WeU"/>
     </inferredMetricsTieBreakers>
 </document>

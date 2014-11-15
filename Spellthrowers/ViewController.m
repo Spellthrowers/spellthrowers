@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "GameViewController.h"
+#import "HelpViewController.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *versus;
@@ -25,7 +26,7 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([[[self versus] text] isEqualToString:@"Vs AI"]) {
+    if ([[[self versus] text] isEqualToString:@"Vs AI"] && [[segue destinationViewController] class] != [HelpViewController class]) {
         [[segue destinationViewController] setIsAiGame:YES];
     }
     [[segue destinationViewController] setIsMainMenu:YES];

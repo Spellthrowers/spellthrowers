@@ -175,7 +175,13 @@
                 [[self transition_attackingPlayer] setText: [NSString stringWithFormat: @"%@ plays a", self.engine.activePlayer.name]];
                 [[self transition_defendingPlayer] setText: [NSString stringWithFormat: @"against %@", nextPlayer.name]];
                 
-                UIImage* image = [UIImage imageNamed: @"zapCard_transition.png"];
+                UIImage* image;
+                if([[[UIDevice currentDevice] model] containsString:@"iPad"]){
+                    image = [UIImage imageNamed: @"zapCard.png"];
+                }
+                else{
+                    image = [UIImage imageNamed: @"zapCard_transition.png"];
+                }
                 UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
                 [self.transition_currentCard addSubview:uiv];
                 
@@ -185,7 +191,13 @@
                 
                 if([nextPlayer.faceDownCard.cardType isEqualToString:@"Shield"]){
                     //show triggered shield
-                    UIImage* image = [UIImage imageNamed: @"spellShieldCard_transition.png"];
+                    UIImage* image;
+                    if([[[UIDevice currentDevice] model] containsString:@"iPad"]){
+                        image = [UIImage imageNamed: @"spellShieldCard.png"];
+                    }
+                    else{
+                        image = [UIImage imageNamed: @"spellShieldCard_transition.png"];
+                    }
                     UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
                     [self.transition_currentCard2 addSubview:uiv];
                     
@@ -193,7 +205,13 @@
                 }
                 else if([nextPlayer.faceDownCard.cardType isEqualToString:@"EMP"]){
                     //show triggered shield
-                    UIImage* image = [UIImage imageNamed: @"EMPCard_transition.png"];
+                    UIImage* image;
+                    if([[[UIDevice currentDevice] model] containsString:@"iPad"]){
+                        image = [UIImage imageNamed: @"EMPCard.png"];
+                    }
+                    else{
+                        image = [UIImage imageNamed: @"EMPCard_transition.png"];
+                    }
                     UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
                     [self.transition_currentCard2 addSubview:uiv];
                     
@@ -205,7 +223,11 @@
             else if([nextPlayer.faceDownCard.cardType isEqualToString:@"Shield"]){
                 //show attacking card
                 for (int j=0; j<[config[@"cardNames"] count]; j++) {
-                    UIImage* image = [UIImage imageNamed: [NSString stringWithFormat: @"%@_transition.png", config[@"cardFileNames"][j]]];
+                    //if iPad, show larger image
+                    UIImage* image = [UIImage imageNamed:
+                                      ([[[UIDevice currentDevice] model] containsString:@"iPad"]?
+                                       [NSString stringWithFormat: @"%@.png", config[@"cardFileNames"][j]]
+                                       : [NSString stringWithFormat: @"%@_transition.png", config[@"cardFileNames"][j]])];
                     if ([cardPlayed.name isEqualToString:config[@"cardNames"][j]] && image != nil) {
                         UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
                         [self.transition_currentCard addSubview:uiv];
@@ -224,7 +246,13 @@
                 [[self transition_defendingPlayer2] setText: [NSString stringWithFormat: @"against %@", self.engine.activePlayer.name]];
                 
                 //show triggered shield
-                UIImage* image = [UIImage imageNamed: @"spellShieldCard_transition.png"];
+                UIImage* image;
+                if([[[UIDevice currentDevice] model] containsString:@"iPad"]){
+                    image = [UIImage imageNamed: @"spellShieldCard.png"];
+                }
+                else{
+                    image = [UIImage imageNamed: @"spellShieldCard_transition.png"];
+                }
                 UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
                 [self.transition_currentCard2 addSubview:uiv];
             }
@@ -232,7 +260,10 @@
             else if([nextPlayer.faceDownCard.cardType isEqualToString:@"EMP"]){
                 //show attacking card
                 for (int j=0; j<[config[@"cardNames"] count]; j++) {
-                    UIImage* image = [UIImage imageNamed: [NSString stringWithFormat: @"%@_transition.png", config[@"cardFileNames"][j]]];
+                    UIImage* image = [UIImage imageNamed:
+                                      ([[[UIDevice currentDevice] model] containsString:@"iPad"]?
+                                       [NSString stringWithFormat: @"%@.png", config[@"cardFileNames"][j]]
+                                       : [NSString stringWithFormat: @"%@_transition.png", config[@"cardFileNames"][j]])];
                     if ([cardPlayed.name isEqualToString:config[@"cardNames"][j]] && image != nil) {
                         UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
                         [self.transition_currentCard addSubview:uiv];
@@ -259,7 +290,13 @@
                 [[self transition_defendingPlayer2] setText: [NSString stringWithFormat: @"removing %d of %@'s weapons", numWeapons, self.engine.activePlayer.name]];
 
                 //show triggered EMP
-                UIImage* image = [UIImage imageNamed: @"EMPCard_transition.png"];
+                UIImage* image;
+                if([[[UIDevice currentDevice] model] containsString:@"iPad"]){
+                    image = [UIImage imageNamed: @"EMPCard.png"];
+                }
+                else{
+                    image = [UIImage imageNamed: @"EMPCard_transition.png"];
+                }
                 UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
                 [self.transition_currentCard2 addSubview:uiv];
             }
@@ -270,7 +307,10 @@
             [[self transition_defendingPlayer] setText: [NSString stringWithFormat: @"against %@", nextPlayer.name]];
             
             for (int j=0; j<[config[@"cardNames"] count]; j++) {
-                UIImage* image = [UIImage imageNamed: [NSString stringWithFormat: @"%@_transition.png", config[@"cardFileNames"][j]]];
+                UIImage* image = [UIImage imageNamed:
+                                  ([[[UIDevice currentDevice] model] containsString:@"iPad"]?
+                                   [NSString stringWithFormat: @"%@.png", config[@"cardFileNames"][j]]
+                                   : [NSString stringWithFormat: @"%@_transition.png", config[@"cardFileNames"][j]])];
                 if ([cardPlayed.name isEqualToString:config[@"cardNames"][j]] && image != nil) {
                     UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
                     [self.transition_currentCard addSubview:uiv];
@@ -294,7 +334,13 @@
             //set defending player
             [[self transition_defendingPlayer] setText: [NSString stringWithFormat: @"against %@", nextPlayer.name]];
             
-            UIImage* image = [UIImage imageNamed: @"laserPistolCard_transition.png"]; //set image of card played
+            UIImage* image;
+            if([[[UIDevice currentDevice] model] containsString:@"iPad"]){
+                image = [UIImage imageNamed: @"laserPistolCard.png"];
+            }
+            else{
+                image = [UIImage imageNamed: @"laserPistolCard_transition.png"]; //set image of card played
+            }
             UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
             [self.transition_currentCard addSubview:uiv];
             
@@ -303,7 +349,13 @@
             [self transition_currentCard2].hidden = NO;
             
             //show facedown triggered
-            UIImage* image2 = [UIImage imageNamed: @"EMPCard_transition.png"];
+            UIImage* image2;
+            if([[[UIDevice currentDevice] model] containsString:@"iPad"]){
+                image2 = [UIImage imageNamed: @"EMPCard.png"];
+            }
+            else{
+                image2 = [UIImage imageNamed: @"EMPCard_transition.png"];
+            }
             UIImageView* uiv2 = [[UIImageView alloc] initWithImage:image2];
             [self.transition_currentCard2 addSubview:uiv2];
             
@@ -328,7 +380,13 @@
             
             [self transition_multiplier].hidden = NO; //show multiplier
             [[self transition_multiplier] setText:[NSString stringWithFormat: @"%d", count]]; //set multiplier
-            UIImage* image = [UIImage imageNamed: @"laserPistolCard_transition.png"]; //set image of card played
+            UIImage* image;
+            if([[[UIDevice currentDevice] model] containsString:@"iPad"]){
+                image = [UIImage imageNamed: @"laserPistolCard.png"];
+            }
+            else{
+                image = [UIImage imageNamed: @"laserPistolCard_transition.png"]; //set image of card played
+            }
             UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
             [self.transition_currentCard addSubview:uiv];
             
@@ -336,7 +394,13 @@
             if([nextPlayer.faceDownCard.cardType isEqualToString:@"Shield"]){
                 
                 //show triggered shield
-                UIImage* image = [UIImage imageNamed: @"spellShieldCard_transition.png"];
+                UIImage* image;
+                if([[[UIDevice currentDevice] model] containsString:@"iPad"]){
+                    image = [UIImage imageNamed: @"spellShieldCard.png"];
+                }
+                else{
+                    image = [UIImage imageNamed: @"spellShieldCard_transition.png"];
+                }
                 UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
                 [self.transition_currentCard2 addSubview:uiv];
                 
@@ -359,7 +423,13 @@
         [[self transition_attackingPlayer] setText: [NSString stringWithFormat: @"%@ plays %d", self.engine.activePlayer.name, count]];
         
         [self transition_defendingPlayer].hidden = YES;
-        UIImage* image = [UIImage imageNamed: @"healCard_transition.png"]; //set image of card played
+        UIImage* image;
+        if([[[UIDevice currentDevice] model] containsString:@"iPad"]){
+            image = [UIImage imageNamed: @"healCard.png"];
+        }
+        else{
+            image = [UIImage imageNamed: @"healCard_transition.png"]; //set image of card played
+        }
         UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
         [self.transition_currentCard addSubview:uiv];
     }
@@ -372,7 +442,13 @@
         //set defending player
         [[self transition_defendingPlayer] setText: @"facedown"];
         
-        UIImage* image = [UIImage imageNamed: @"facedownCard_transition.png"];
+        UIImage* image;
+        if([[[UIDevice currentDevice] model] containsString:@"iPad"]){
+            image = [UIImage imageNamed: @"facedownCard.png"];
+        }
+        else{
+            image = [UIImage imageNamed: @"facedownCard_transition.png"];
+        }
         UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
         [self.transition_currentCard addSubview:uiv];
         
