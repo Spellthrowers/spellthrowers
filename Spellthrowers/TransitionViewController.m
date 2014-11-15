@@ -172,7 +172,7 @@
             if([cardPlayed.name isEqualToString: @"Zap"]){
                 //destroys any facedowns
                 
-                [[self transition_attackingPlayer] setText: [NSString stringWithFormat: @"%@ plays a", self.engine.activePlayer.name]];
+                [[self transition_attackingPlayer] setText: [NSString stringWithFormat: @"%@ plays", self.engine.activePlayer.name]];
                 [[self transition_defendingPlayer] setText: [NSString stringWithFormat: @"against %@", nextPlayer.name]];
                 
                 UIImage* image;
@@ -234,7 +234,7 @@
                     }
                 }
                 
-                [[self transition_attackingPlayer] setText: [NSString stringWithFormat: @"%@ plays a", self.engine.activePlayer.name]];
+                [[self transition_attackingPlayer] setText: [NSString stringWithFormat: @"%@ plays", self.engine.activePlayer.name]];
                 [[self transition_defendingPlayer] setText: [NSString stringWithFormat: @"against %@", nextPlayer.name]];
                 
                 [self transition_attackingPlayer2].hidden = NO;
@@ -270,7 +270,7 @@
                     }
                 }
                 
-                [[self transition_attackingPlayer] setText: [NSString stringWithFormat: @"%@ plays a", self.engine.activePlayer.name]];
+                [[self transition_attackingPlayer] setText: [NSString stringWithFormat: @"%@ plays", self.engine.activePlayer.name]];
                 [[self transition_defendingPlayer] setText: [NSString stringWithFormat: @"against %@", nextPlayer.name]];
                 
                 [self transition_attackingPlayer2].hidden = NO;
@@ -303,7 +303,7 @@
         }
         //if no facedown card, handle attack
         else{
-            [[self transition_attackingPlayer] setText: [NSString stringWithFormat: @"%@ plays a", self.engine.activePlayer.name]];
+            [[self transition_attackingPlayer] setText: [NSString stringWithFormat: @"%@ plays", self.engine.activePlayer.name]];
             [[self transition_defendingPlayer] setText: [NSString stringWithFormat: @"against %@", nextPlayer.name]];
             
             for (int j=0; j<[config[@"cardNames"] count]; j++) {

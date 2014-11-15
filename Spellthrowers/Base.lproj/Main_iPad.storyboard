@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="0Kt-ui-3tc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="0Kt-ui-3tc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -91,7 +91,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="S3G-GJ-ncC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="S3G-GJ-ncC">
                                 <rect key="frame" x="-22" y="-10" width="796" height="1044"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OM3-f1-e1n">
@@ -366,6 +366,12 @@
                         </subviews>
                         <color key="backgroundColor" red="0.11977982080000001" green="0.22068221769999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.11977982080000001" green="0.22068221769999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="S3G-GJ-ncC" secondAttribute="bottom" id="5bd-cw-Nlr"/>
+                            <constraint firstAttribute="trailing" secondItem="S3G-GJ-ncC" secondAttribute="trailing" id="kK6-qa-xX8"/>
+                            <constraint firstItem="S3G-GJ-ncC" firstAttribute="leading" secondItem="WlU-Ll-Ck3" secondAttribute="leading" id="mfi-hm-iOZ"/>
+                            <constraint firstItem="S3G-GJ-ncC" firstAttribute="top" secondItem="WlU-Ll-Ck3" secondAttribute="top" id="oeE-QB-5xP"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="98A-Sm-n87"/>
                     <connections>
