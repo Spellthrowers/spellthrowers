@@ -63,6 +63,10 @@
                                     <segue destination="aYW-sH-mPD" kind="modal" id="zd2-bA-y6D"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p2x-n3-FBh">
+                                <rect key="frame" x="-25" y="-12" width="374" height="32"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -1072,7 +1076,7 @@ Cg
     <inferredMetricsTieBreakers>
         <segue reference="DED-7D-nDF"/>
         <segue reference="tjg-hy-4SB"/>
-        <segue reference="Tbl-ES-a5F"/>
+        <segue reference="CiA-v1-Ghf"/>
         <segue reference="zd2-bA-y6D"/>
     </inferredMetricsTieBreakers>
 </document>
