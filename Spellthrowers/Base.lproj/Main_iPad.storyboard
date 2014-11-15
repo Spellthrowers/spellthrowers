@@ -159,7 +159,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.80261580190000004" green="0.77120264959999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WXu-hb-U0z">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WXu-hb-U0z">
                                 <rect key="frame" x="452" y="742" width="82" height="133"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Card" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aR2-Au-DoD">
@@ -195,7 +195,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.75477455230000001" green="0.94633381819999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rcK-ap-Ho7">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rcK-ap-Ho7">
                                 <rect key="frame" x="563" y="742" width="82" height="133"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Card" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="88C-if-e2A">
@@ -314,7 +314,7 @@
                                     <segue destination="REr-PG-r7D" kind="modal" id="335-cR-x5V"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Pick a card!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" preferredMaxLayoutWidth="262" translatesAutoresizingMaskIntoConstraints="NO" id="P8b-Jd-emv">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick a card!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" preferredMaxLayoutWidth="262" translatesAutoresizingMaskIntoConstraints="NO" id="P8b-Jd-emv">
                                 <rect key="frame" x="245" y="132" width="262" height="77"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -363,12 +363,8 @@
                         <color key="backgroundColor" red="0.11977982080000001" green="0.22068221769999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.11977982080000001" green="0.22068221769999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="P8b-Jd-emv" secondAttribute="centerX" id="11t-zd-NZw"/>
-                            <constraint firstAttribute="centerX" secondItem="YA9-od-UYZ" secondAttribute="centerX" id="7Wp-mA-IiM"/>
-                            <constraint firstItem="YA9-od-UYZ" firstAttribute="leading" secondItem="OM3-f1-e1n" secondAttribute="trailing" constant="30" id="TJM-ip-xlm"/>
-                            <constraint firstItem="OM3-f1-e1n" firstAttribute="leading" secondItem="cvT-T5-bJZ" secondAttribute="trailing" constant="30" id="WLg-vZ-7L5"/>
-                            <constraint firstItem="rcK-ap-Ho7" firstAttribute="leading" secondItem="WXu-hb-U0z" secondAttribute="trailing" constant="30" id="lxv-Cy-Qlz"/>
-                            <constraint firstItem="WXu-hb-U0z" firstAttribute="leading" secondItem="YA9-od-UYZ" secondAttribute="trailing" constant="30" id="v7n-T0-OJh"/>
+                            <constraint firstItem="OM3-f1-e1n" firstAttribute="leading" secondItem="cvT-T5-bJZ" secondAttribute="trailing" constant="30" id="rZb-sQ-oFa"/>
+                            <constraint firstItem="YA9-od-UYZ" firstAttribute="leading" secondItem="OM3-f1-e1n" secondAttribute="trailing" constant="30" id="umG-UD-PQZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="98A-Sm-n87"/>

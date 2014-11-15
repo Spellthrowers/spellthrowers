@@ -1002,23 +1002,23 @@ Cg
                                     <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
                                 </accessibility>
                             </imageView>
-                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" text="against Defending Player" translatesAutoresizingMaskIntoConstraints="NO" id="QZR-XY-wha">
-                                <rect key="frame" x="189" y="80" width="118" height="77"/>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" text="against Defending Player" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QZR-XY-wha">
+                                <rect key="frame" x="189" y="87" width="118" height="77"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" text="against Defending Player" translatesAutoresizingMaskIntoConstraints="NO" id="nTP-hP-tKq">
-                                <rect key="frame" x="189" y="160" width="118" height="78"/>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" text="against Defending Player" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nTP-hP-tKq">
+                                <rect key="frame" x="189" y="163" width="118" height="78"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" text="Attacking Player plays a" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="q6D-NU-ufE">
+                                <rect key="frame" x="18" y="87" width="114" height="71"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" text="Attacking Player plays a" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7Ps-AT-09c">
                                 <rect key="frame" x="13" y="163" width="124" height="72"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" text="Attacking Player plays a" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="q6D-NU-ufE">
-                                <rect key="frame" x="18" y="83" width="114" height="71"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -1070,9 +1070,9 @@ Cg
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="zd2-bA-y6D"/>
-        <segue reference="VsJ-hp-DUX"/>
-        <segue reference="kIH-MZ-ytB"/>
+        <segue reference="DED-7D-nDF"/>
         <segue reference="tjg-hy-4SB"/>
+        <segue reference="Tbl-ES-a5F"/>
+        <segue reference="zd2-bA-y6D"/>
     </inferredMetricsTieBreakers>
 </document>

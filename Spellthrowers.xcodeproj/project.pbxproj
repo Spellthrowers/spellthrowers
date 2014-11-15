@@ -50,7 +50,6 @@
 		2BE3BCCA1A028EDC00F9AF15 /* GameTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE3BCC91A028EDC00F9AF15 /* GameTabBarViewController.m */; };
 		2BE3BCCE1A029CC000F9AF15 /* laserPistolCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE3BCCD1A029CC000F9AF15 /* laserPistolCard.png */; };
 		2BE3BCD01A02A12B00F9AF15 /* scrumCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE3BCCF1A02A12B00F9AF15 /* scrumCard.png */; };
-		2BF1955A19F6FCFB0000353E /* waterfallCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF1955919F6FCFB0000353E /* waterfallCard.png */; };
 		2BF1955C19F6FFF50000353E /* helpIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF1955B19F6FFF50000353E /* helpIcon.png */; };
 		2BF1955E19F710E30000353E /* hasFacedown.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF1955D19F710E30000353E /* hasFacedown.png */; };
 		2BFF20C019C4F25F00A4A29D /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFF20BF19C4F25F00A4A29D /* GameViewController.m */; };
@@ -363,11 +362,11 @@
 		2BE0E16219BB9E9B00CC89E9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Spellthrowers;
 				TargetAttributes = {
 					2BE0E16919BB9E9B00CC89E9 = {
-						DevelopmentTeam = X84Y2D2K96;
+						DevelopmentTeam = K539BTLAP3;
 					};
 					2BE0E18D19BB9E9B00CC89E9 = {
 						TestTargetID = 2BE0E16919BB9E9B00CC89E9;
@@ -399,7 +398,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2FE730F1A10300700BAC89B /* waterfallCard.png in Resources */,
-				2BF1955A19F6FCFB0000353E /* waterfallCard.png in Resources */,
 				C2EC74FF1A06AE460045C8B5 /* background.png in Resources */,
 				C2A541791A0180B500C065A8 /* healCard.png in Resources */,
 				C2FE73171A1031FE00BAC89B /* healCard_transition.png in Resources */,
@@ -611,7 +609,7 @@
 				GCC_PREFIX_HEADER = "Spellthrowers/Spellthrowers-Prefix.pch";
 				INFOPLIST_FILE = "Spellthrowers/Spellthrowers-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "71822b96-9df1-4dfd-8e15-c672ebe73289";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -627,7 +625,7 @@
 				GCC_PREFIX_HEADER = "Spellthrowers/Spellthrowers-Prefix.pch";
 				INFOPLIST_FILE = "Spellthrowers/Spellthrowers-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "71822b96-9df1-4dfd-8e15-c672ebe73289";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
