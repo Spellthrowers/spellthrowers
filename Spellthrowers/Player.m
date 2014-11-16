@@ -33,7 +33,9 @@
 }
 
 -(void)removeCard:(int)atIndex{
-    [[self hand] removeObjectAtIndex:atIndex];
+    if (atIndex >= 0 && atIndex < [[self hand] count]){
+        [[self hand] removeObjectAtIndex:atIndex];
+    }
 }
 
 -(void)takeDamage:(int)amount{
