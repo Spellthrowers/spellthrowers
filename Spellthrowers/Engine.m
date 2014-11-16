@@ -215,7 +215,9 @@
 //AI methods
 
 -(int)getAiRecommendedCardIndex{
+#ifdef DEBUG
     [self.activePlayer printHand];
+#endif
     //get target player. In this case, always next player.
     Player *targetPlayer = self.players[(self.indexOfActivePlayer+1) % [self.currentPlayers count]];
     int indexOfHeal = [self indexOfCardType:@"Heal"];

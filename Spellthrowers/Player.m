@@ -36,6 +36,10 @@
     if (atIndex >= 0 && atIndex < [[self hand] count]){
         [[self hand] removeObjectAtIndex:atIndex];
     }
+    else{
+        NSLog(@"WARNING! CRASH WOULD HAVE HAPPENED HERE - tried to remove %i index. Player has %lu cards. Printing hand: ", atIndex, (unsigned long)self.hand.count);
+        [self printHand];
+    }
 }
 
 -(void)takeDamage:(int)amount{
