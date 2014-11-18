@@ -21,8 +21,8 @@
 -(void)initEverything{
     //initialize all the players and objects needed
     Deck *deck = [Deck newDeck];
-    Player *player1 = [Player newPlayer:deck:@"Player1"];
-    Player *player2 = [Player newPlayer:deck:@"Player2"];
+    Player *player1 = [Player newPlayer:deck:@"P1"];
+    Player *player2 = [Player newPlayer:deck:@"P2"];
     //Player *winner = nil;
     
     [self addPlayer:player1];
