@@ -110,7 +110,7 @@
 		2BCB726A19F0D29A00BCC89C /* hurricaneCard.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = hurricaneCard.m4a; sourceTree = "<group>"; };
 		2BCB726C19F0D2AF00BCC89C /* waterfallCard.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = waterfallCard.m4a; sourceTree = "<group>"; };
 		2BDF0E4419C0BCB600B3183A /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
-		2BE0E16A19BB9E9B00CC89E9 /* Spellthrowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spellthrowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BE0E16A19BB9E9B00CC89E9 /*                                           .app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "                                          .app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BE0E16D19BB9E9B00CC89E9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2BE0E16F19BB9E9B00CC89E9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2BE0E17119BB9E9B00CC89E9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -200,7 +200,7 @@
 		2BE0E16B19BB9E9B00CC89E9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2BE0E16A19BB9E9B00CC89E9 /* Spellthrowers.app */,
+				2BE0E16A19BB9E9B00CC89E9 /*                                           .app */,
 				2BE0E18E19BB9E9B00CC89E9 /* SpellthrowersTests.xctest */,
 			);
 			name = Products;
@@ -321,9 +321,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2BE0E16919BB9E9B00CC89E9 /* Spellthrowers */ = {
+		2BE0E16919BB9E9B00CC89E9 /*                                            */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2BE0E19F19BB9E9B00CC89E9 /* Build configuration list for PBXNativeTarget "Spellthrowers" */;
+			buildConfigurationList = 2BE0E19F19BB9E9B00CC89E9 /* Build configuration list for PBXNativeTarget "                                          " */;
 			buildPhases = (
 				2BE0E16619BB9E9B00CC89E9 /* Sources */,
 				2BE0E16719BB9E9B00CC89E9 /* Frameworks */,
@@ -333,9 +333,9 @@
 			);
 			dependencies = (
 			);
-			name = Spellthrowers;
+			name = "                                          ";
 			productName = Spellthrowers;
-			productReference = 2BE0E16A19BB9E9B00CC89E9 /* Spellthrowers.app */;
+			productReference = 2BE0E16A19BB9E9B00CC89E9 /*                                           .app */;
 			productType = "com.apple.product-type.application";
 		};
 		2BE0E18D19BB9E9B00CC89E9 /* SpellthrowersTests */ = {
@@ -386,7 +386,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2BE0E16919BB9E9B00CC89E9 /* Spellthrowers */,
+				2BE0E16919BB9E9B00CC89E9 /*                                            */,
 				2BE0E18D19BB9E9B00CC89E9 /* SpellthrowersTests */,
 			);
 		};
@@ -485,7 +485,7 @@
 /* Begin PBXTargetDependency section */
 		2BE0E19419BB9E9B00CC89E9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2BE0E16919BB9E9B00CC89E9 /* Spellthrowers */;
+			target = 2BE0E16919BB9E9B00CC89E9 /*                                            */;
 			targetProxy = 2BE0E19319BB9E9B00CC89E9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -682,7 +682,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2BE0E19F19BB9E9B00CC89E9 /* Build configuration list for PBXNativeTarget "Spellthrowers" */ = {
+		2BE0E19F19BB9E9B00CC89E9 /* Build configuration list for PBXNativeTarget "                                          " */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2BE0E1A019BB9E9B00CC89E9 /* Debug */,

@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2BE0E16919BB9E9B00CC89E9"
-               BuildableName = "Spellthrowers.app"
-               BlueprintName = "Spellthrowers"
+               BuildableName = "                                          .app"
+               BlueprintName = "                                          "
                ReferencedContainer = "container:Spellthrowers.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2BE0E16919BB9E9B00CC89E9"
-            BuildableName = "Spellthrowers.app"
-            BlueprintName = "Spellthrowers"
+            BuildableName = "                                          .app"
+            BlueprintName = "                                          "
             ReferencedContainer = "container:Spellthrowers.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -52,8 +52,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2BE0E16919BB9E9B00CC89E9"
-            BuildableName = "Spellthrowers.app"
-            BlueprintName = "Spellthrowers"
+            BuildableName = "                                          .app"
+            BlueprintName = "                                          "
             ReferencedContainer = "container:Spellthrowers.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -70,8 +70,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2BE0E16919BB9E9B00CC89E9"
-            BuildableName = "Spellthrowers.app"
-            BlueprintName = "Spellthrowers"
+            BuildableName = "                                          .app"
+            BlueprintName = "                                          "
             ReferencedContainer = "container:Spellthrowers.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
