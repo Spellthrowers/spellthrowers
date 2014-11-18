@@ -321,9 +321,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2BE0E16919BB9E9B00CC89E9 /*                                            */ = {
+		2BE0E16919BB9E9B00CC89E9 /* Spellthrowers */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2BE0E19F19BB9E9B00CC89E9 /* Build configuration list for PBXNativeTarget "                                          " */;
+			buildConfigurationList = 2BE0E19F19BB9E9B00CC89E9 /* Build configuration list for PBXNativeTarget "Spellthrowers" */;
 			buildPhases = (
 				2BE0E16619BB9E9B00CC89E9 /* Sources */,
 				2BE0E16719BB9E9B00CC89E9 /* Frameworks */,
@@ -333,7 +333,7 @@
 			);
 			dependencies = (
 			);
-			name = "                                          ";
+			name = Spellthrowers;
 			productName = Spellthrowers;
 			productReference = 2BE0E16A19BB9E9B00CC89E9 /*                                           .app */;
 			productType = "com.apple.product-type.application";
@@ -386,7 +386,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2BE0E16919BB9E9B00CC89E9 /*                                            */,
+				2BE0E16919BB9E9B00CC89E9 /* Spellthrowers */,
 				2BE0E18D19BB9E9B00CC89E9 /* SpellthrowersTests */,
 			);
 		};
@@ -485,7 +485,7 @@
 /* Begin PBXTargetDependency section */
 		2BE0E19419BB9E9B00CC89E9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2BE0E16919BB9E9B00CC89E9 /*                                            */;
+			target = 2BE0E16919BB9E9B00CC89E9 /* Spellthrowers */;
 			targetProxy = 2BE0E19319BB9E9B00CC89E9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -682,7 +682,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2BE0E19F19BB9E9B00CC89E9 /* Build configuration list for PBXNativeTarget "                                          " */ = {
+		2BE0E19F19BB9E9B00CC89E9 /* Build configuration list for PBXNativeTarget "Spellthrowers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2BE0E1A019BB9E9B00CC89E9 /* Debug */,
