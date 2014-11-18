@@ -91,6 +91,7 @@
         [self.engine initEverything];
         if ([self isAiGame]) {
             [self.engine.players[[self.engine.players count]-1] setIsAi:YES];
+            [self.engine.players[[self.engine.players count]-1] setNickName:@"AI"];
             int random = arc4random_uniform(5);
             if (random == 0) {
                 [self.engine.players[[self.engine.players count]-1] setName: @"Wesley Bot"];
@@ -122,8 +123,8 @@
         [self faceDownActivated2].hidden = NO;
     }
     
-    [[self player1Life] setText: [NSString stringWithFormat: @"%@ Life: %d", [self.engine.activePlayer name], [self.engine.activePlayer life]]];
-    [[self player2Life] setText: [NSString stringWithFormat: @"%@ Life: %d", [self.engine.players[(self.engine.indexOfActivePlayer+1)%[self.engine.players count]] name], [self.engine.players[(self.engine.indexOfActivePlayer+1)%[self.engine.players count]] life]]];
+    [[self player1Life] setText: [NSString stringWithFormat: @"%@: %d", [self.engine.activePlayer nickName], [self.engine.activePlayer life]]];
+    [[self player2Life] setText: [NSString stringWithFormat: @"%@: %d", [self.engine.players[(self.engine.indexOfActivePlayer+1)%[self.engine.players count]] nickName], [self.engine.players[(self.engine.indexOfActivePlayer+1)%[self.engine.players count]] life]]];
     
     [self displayHand];
     

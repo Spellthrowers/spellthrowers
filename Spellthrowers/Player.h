@@ -14,6 +14,7 @@
 @interface Player : NSObject
 
 @property (nonatomic, strong) NSString* name;
+@property (nonatomic, strong) NSString* nickName;
 @property (nonatomic) int life;
 @property (nonatomic) bool hasFaceDown;
 @property (nonatomic) Card* faceDownCard;
@@ -22,7 +23,7 @@
 @property (nonatomic) BOOL isAi;
 @property (nonatomic) BOOL hasPlayedMultipleWeapons;
 
-+(instancetype)newPlayer: (Deck*) deck :(NSString*) name;
++(instancetype)newPlayer: (Deck*) deck :(NSString*) name :(NSString*) nickName;
 
 -(void)fillHand: (Deck*) deck;
 -(NSMutableArray*)hand;

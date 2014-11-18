@@ -21,12 +21,10 @@
 -(void)initEverything{
     //initialize all the players and objects needed
     Deck *deck = [Deck newDeck];
-    Player *player1 = [Player newPlayer:deck:@"P1"];
-    Player *player2 = [Player newPlayer:deck:@"P2"];
-    //Player *winner = nil;
-    
+    Player *player1 = [Player newPlayer:deck:@"Player 1":@"P1"];
     [self addPlayer:player1];
-    [self addPlayer:(player2)];
+    Player *player2 = [Player newPlayer:deck:@"Player 2":@"P2"];
+    [self addPlayer:player2];
     
     //Set activePlayer
     //TODO: randomize who goes first
