@@ -21,8 +21,9 @@
 @property (nonatomic) BOOL isAiGame;
 @property (nonatomic) BOOL discardedAndDrew;
 @property (nonatomic) int numCardsDiscarded;
+@property (nonatomic) int initNumPlayers;
 
-+(instancetype)newEngine;
++(instancetype)newEngine:(int) numPlayers;
 -(void)initEverything;
 -(void)addPlayer:(Player*)newPlayer;
 -(void)startTurn;

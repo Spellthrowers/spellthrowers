@@ -15,11 +15,14 @@
 
 @property (nonatomic, strong) Engine* engine;
 @property (nonatomic, strong) NSString *restorationIdentifier;
+@property (nonatomic) int numPlayers;
 @property (nonatomic) bool isAiGame;
 @property (nonatomic) bool isMainMenu;
 @property (nonatomic) NSArray* cardViews;
 @property (nonatomic) NSArray* cardNames;
 @property (nonatomic) NSArray* cardValues;
+@property (nonatomic) NSArray* playerLives;
+@property (nonatomic) NSArray* faceDownActivateds;
 
 -(BOOL)atLeastOneCardSetToDiscard;
 -(void)setImageForCard: (Card*)forCard atIndex: (int)atIndex;

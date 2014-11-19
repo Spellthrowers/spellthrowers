@@ -30,11 +30,15 @@
 @property (weak, nonatomic) IBOutlet UILabel *header;
 @property (weak, nonatomic) IBOutlet UILabel *player1Life;
 @property (weak, nonatomic) IBOutlet UILabel *player2Life;
+@property (weak, nonatomic) IBOutlet UILabel *player3Life;
+@property (weak, nonatomic) IBOutlet UILabel *player4Life;
 @property (weak, nonatomic) IBOutlet UIButton *discardAndDraw;
 @property (weak, nonatomic) IBOutlet UIButton *cancel;
 @property (weak, nonatomic) IBOutlet UIButton *drawNewCards;
 @property (weak, nonatomic) IBOutlet UIImageView *faceDownActivated;
 @property (weak, nonatomic) IBOutlet UIImageView *faceDownActivated2;
+@property (weak, nonatomic) IBOutlet UIImageView *faceDownActivated3;
+@property (weak, nonatomic) IBOutlet UIImageView *faceDownActivated4;
 
 
 @property (weak, nonatomic) IBOutlet UIButton *playCard0;
@@ -54,13 +58,6 @@
 
 @implementation GameViewController
 - (void)displayHand {
-    
-    
-    
-    //arrays for buttons
-    self.cardViews = @[self.cardView0,  self.cardView1,  self.cardView2,  self.cardView3,  self.cardView4];
-    self.cardNames = @[self.cardName0,  self.cardName1,  self.cardName2,  self.cardName3,  self.cardName4];
-    self.cardValues =@[self.cardValue0, self.cardValue1, self.cardValue2, self.cardValue3, self.cardValue4];
     //NSArray *playCards = @[self.playCard0,  self.playCard1,  self.playCard2,  self.playCard3,  self.playCard4];
     //NSArray *discards =  @[self.discard0,   self.discard1,   self.discard2,   self.discard3,   self.discard4];
     
@@ -82,12 +79,21 @@
 //The main method for initializing gameplay
 - (void)viewDidLoad
 {
-    [self faceDownActivated].hidden = YES;
-    [self faceDownActivated2].hidden = YES;
+    //arrays for buttons
+    self.cardViews =  @[self.cardView0,  self.cardView1,  self.cardView2,  self.cardView3,  self.cardView4];
+    self.cardNames =  @[self.cardName0,  self.cardName1,  self.cardName2,  self.cardName3,  self.cardName4];
+    self.cardValues = @[self.cardValue0, self.cardValue1, self.cardValue2, self.cardValue3, self.cardValue4];
+    self.playerLives = @[self.player1Life, self.player2Life, self.player3Life, self.player4Life];
+    self.faceDownActivateds = @[self.faceDownActivated, self.faceDownActivated2, self.faceDownActivated3, self.faceDownActivated4];
+    for (UIImageView* faceDown in [self faceDownActivateds]) {
+        faceDown.hidden = YES;
+    }
+    self.player3Life.hidden = YES;
+    self.player4Life.hidden = YES;
     //first time launching view: initialize game
     if (! [self engine]) {
         [super viewDidLoad];
-        self.engine = [Engine newEngine];
+        self.engine = [Engine newEngine: self.numPlayers];
         [self.engine initEverything];
         if ([self isAiGame]) {
             [self.engine.players[[self.engine.players count]-1] setIsAi:YES];
@@ -113,19 +119,21 @@
             }
         }
     }
-    //if the other player has a facedown card
-    //unhide facedown card
-    
-    if([self.engine.activePlayer hasFaceDown]){
-        [self faceDownActivated].hidden = NO;
+    //set UI elements for each player
+    for (int i = 0; i < self.playerLives.count ; i++) {
+        [[self faceDownActivateds][i] setHidden: YES];
+        [[self playerLives][i] setHidden: YES];
     }
-    if([self.engine.currentPlayers[(self.engine.indexOfActivePlayer+1)%[self.engine.players count]] hasFaceDown]){
-        [self faceDownActivated2].hidden = NO;
+    for (int i = 0; i < self.engine.currentPlayers.count ; i++) {
+        //set hasFaceDown for each player
+        if([self.engine.currentPlayers[(self.engine.indexOfActivePlayer+i)%[self.engine.currentPlayers count]] hasFaceDown]){
+            [[self faceDownActivateds][i] setHidden: NO];
+        }
+        //set life for each player
+        [[self playerLives][i] setText: [NSString stringWithFormat: @"%@: %d", [self.engine.currentPlayers[(self.engine.indexOfActivePlayer+i)%[self.engine.currentPlayers count]] nickName], [self.engine.currentPlayers[(self.engine.indexOfActivePlayer+i)%[self.engine.currentPlayers count]] life]]];
+        //set life to not be hidden
+        [(UIImageView*)self.playerLives[i] setHidden:NO];
     }
-    
-    [[self player1Life] setText: [NSString stringWithFormat: @"%@: %d", [self.engine.activePlayer nickName], [self.engine.activePlayer life]]];
-    [[self player2Life] setText: [NSString stringWithFormat: @"%@: %d", [self.engine.players[(self.engine.indexOfActivePlayer+1)%[self.engine.players count]] nickName], [self.engine.players[(self.engine.indexOfActivePlayer+1)%[self.engine.players count]] life]]];
-    
     [self displayHand];
     
 }

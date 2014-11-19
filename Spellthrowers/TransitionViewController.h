@@ -15,5 +15,6 @@
 }
 
 @property (nonatomic, strong) Engine* engine;
+@property (nonatomic) NSArray* playerLives;
 
 @end

@@ -11,20 +11,21 @@
 
 @implementation Engine
 
-+(instancetype)newEngine{
++(instancetype)newEngine: (int) numPlayers{
     Engine* newEngine = [[Engine alloc] init];
     newEngine.players = [NSMutableArray arrayWithObjects: nil];
     newEngine.currentPlayers = [NSMutableArray arrayWithObjects: nil];
+    newEngine.initNumPlayers = numPlayers;
     return newEngine;
 }
 
 -(void)initEverything{
     //initialize all the players and objects needed
     Deck *deck = [Deck newDeck];
-    Player *player1 = [Player newPlayer:deck:@"Player 1":@"P1"];
-    [self addPlayer:player1];
-    Player *player2 = [Player newPlayer:deck:@"Player 2":@"P2"];
-    [self addPlayer:player2];
+    for (int i = 0; i<[self initNumPlayers]; i++) {
+        Player *newPlayer = [Player newPlayer:deck:[NSString stringWithFormat: @"Player %i", i+1 ]:[NSString stringWithFormat: @"P%i", i+1 ]];
+        [self addPlayer:newPlayer];
+    }
     
     //Set activePlayer
     //TODO: randomize who goes first
@@ -51,17 +52,38 @@
         }
         //pass turn to nextPlayer
         [self nextPlayer];
+        
+        //reset discard check
+        self.discardedAndDrew = NO;
     }
     else{
         Card* playedCard = [self.activePlayer hand][_indexOfTouchedCard];
         
         
-        if([self.activePlayer hand][_indexOfTouchedCard]){
-            //Play card on next player
-            [self play: self.activePlayer : playedCard : self.players[(_indexOfActivePlayer+1) % [self.players count]]];
+        //Play card on next player
+        [self play: self.activePlayer : playedCard : self.currentPlayers[(_indexOfActivePlayer+1) % [self.currentPlayers count]]];
+        
+        //check for winner
+        if([self.currentPlayers count] == 2 && [self.currentPlayers[0] life] <= 0 && [self.currentPlayers[1] life] <= 0){
+            _winner = [self endGame];
+            return;
         }
         
-        //End turn and fill hands if:
+        //Remove players once their life is below zero
+        for (int i = 0; i < [self.currentPlayers count]; i++) {
+            if([self.currentPlayers[i] life] <= 0){
+                [self removePlayer:self.currentPlayers[i]];
+                i--;
+            }
+        }
+        
+        //End game
+        if ([self.currentPlayers count] <= 1) {
+            //GAME OVER
+            _winner = [self endGame];
+        }
+        
+        //End turn if:
         //Player uses attack or weapon or EMP or Shield. Or if player has no cards left.
         if(   [[playedCard cardType] isEqualToString: @"Attack"]
            || [[playedCard cardType] isEqualToString: @"Weapon"]
@@ -72,28 +94,6 @@
             [self nextPlayer];
         }
     }
-    
-    
-    if([self.currentPlayers count] == 2 && [self.currentPlayers[0] life] <= 0 && [self.currentPlayers[1] life] <= 0){
-        _winner = [self endGame];
-        return;
-    }
-    
-    //Remove players once their life is below zero
-    for (int i = 0; i < [self.currentPlayers count]; i++) {
-        if([self.currentPlayers[i] life] <= 0){
-            [self removePlayer:self.currentPlayers[i]];
-        }
-    }
-    
-    //End game
-    if ([self.currentPlayers count] <= 1) {
-        //GAME OVER
-        _winner = [self endGame];
-    }
-    
-    //reset discard check
-    self.discardedAndDrew = NO;
 }
 
 -(void)play:(Player *)fromPlayer :(Card *)card :(Player *)onPlayer{
@@ -217,7 +217,7 @@
     [self.activePlayer printHand];
 #endif
     //get target player. In this case, always next player.
-    Player *targetPlayer = self.players[(self.indexOfActivePlayer+1) % [self.currentPlayers count]];
+    Player *targetPlayer = self.currentPlayers[(self.indexOfActivePlayer+1) % [self.currentPlayers count]];
     int indexOfHeal = [self indexOfCardType:@"Heal"];
     //play all heals first.
     if (indexOfHeal >= 0 && indexOfHeal < [self.activePlayer.hand count]) {

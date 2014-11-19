@@ -17,6 +17,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *player1Life;
 @property (weak, nonatomic) IBOutlet UILabel *player2Life;
+@property (weak, nonatomic) IBOutlet UILabel *player3Life;
+@property (weak, nonatomic) IBOutlet UILabel *player4Life;
 @property (weak, nonatomic) IBOutlet UITextView *transition_attackingPlayer;
 @property (weak, nonatomic) IBOutlet UITextView *transition_attackingPlayer2;
 @property (weak, nonatomic) IBOutlet UITextView *transition_defendingPlayer;
@@ -33,6 +35,9 @@
 //on view load, change the active player and call their turn to be taken
 - (void)viewDidLoad
 {
+    //set playerLives to hold the labels
+    self.playerLives = @[self.player1Life, self.player2Life, self.player3Life, self.player4Life];
+    
     //Get the bundle for this app
     NSBundle* bundle = NSBundle.mainBundle;
     //get the config path
@@ -52,7 +57,7 @@
         return;
     }
     
-    NSString *nextPlayerName =[self.engine.players[(self.engine.indexOfActivePlayer+1) % [self.engine.players count]] name];
+    NSString *nextPlayerName =[self.engine.currentPlayers[(self.engine.indexOfActivePlayer+1) % [self.engine.currentPlayers count]] name];
     
     //set text based on card type
     [self setMainText];
@@ -65,13 +70,14 @@
     }
     
     //logic for cards that don't end turn
+    BOOL nextPlayerTurn = NO;
     if(   !self.engine.discardedAndDrew
        && [[self.engine.activePlayer.hand[self.engine.indexOfTouchedCard] cardType] isEqualToString:@"Heal"] && healCount != 5){
         nextPlayerName = [self.engine.activePlayer  name];
         [[self transitionMessage2] setText: [NSString stringWithFormat: @"%@, it's still your turn.",nextPlayerName]];
     }
     else{
-        [[self transitionMessage2] setText: [NSString stringWithFormat: @"%@, it's your turn.",nextPlayerName]];
+        nextPlayerTurn = YES;
     }
     
     //set sound to play
@@ -90,6 +96,18 @@
     
     //run turn and set next player
     [self.engine startTurn];
+    
+    if (nextPlayerTurn) {
+        [[self transitionMessage2] setText: [NSString stringWithFormat: @"%@, it's your turn.",self.engine.activePlayer.name]];
+    }
+    
+    //set life visibility
+    for (NSUInteger i = 0; i < self.playerLives.count; i++) {
+        ((UILabel*)self.playerLives[i]).hidden=YES;
+    }
+    for (NSUInteger i = 0; i < self.engine.currentPlayers.count; i++) {
+        ((UILabel*)self.playerLives[i]).hidden=NO;
+    }
     
     
     //if the game is over
@@ -121,8 +139,9 @@
 }
 
 -(void)setLife{
-    [[self player1Life] setText: [NSString stringWithFormat: @"%@ Life: %d", [self.engine.players[0] name], [self.engine.players[0] life]]];
-    [[self player2Life] setText: [NSString stringWithFormat: @"%@ Life: %d", [self.engine.players[1] name], [self.engine.players[1] life]]];
+    for (int i=0; i<self.engine.currentPlayers.count; i++) {
+        [[self playerLives][i] setText: [NSString stringWithFormat: @"%@ Life: %d", [self.engine.currentPlayers[i] name], [self.engine.currentPlayers[i] life]]];
+    }
 }
 
 -(void)setMainText{
@@ -155,8 +174,8 @@
     [self transition_multiplier2].hidden = YES;
     
     //simplification vars
-    Player *nextPlayer = self.engine.players[(self.engine.indexOfActivePlayer+1) % [self.engine.players count]];
-    NSString *nextPlayerName =[self.engine.players[(self.engine.indexOfActivePlayer+1) % [self.engine.players count]] name];
+    Player *nextPlayer = self.engine.currentPlayers[(self.engine.indexOfActivePlayer+1) % [self.engine.currentPlayers count]];
+    NSString *nextPlayerName =[self.engine.currentPlayers[(self.engine.indexOfActivePlayer+1) % [self.engine.currentPlayers count]] name];
     Card *cardPlayed = self.engine.activePlayer.hand[self.engine.indexOfTouchedCard];
     int cardValue = cardPlayed.value;
     
