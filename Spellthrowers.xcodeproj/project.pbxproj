@@ -59,6 +59,7 @@
 		C2830AD41A1C070700B12839 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C2830AD31A1C070700B12839 /* libsqlite3.dylib */; };
 		C2830ADA1A1C08BB00B12839 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C2830AD91A1C08BB00B12839 /* DBManager.m */; };
 		C2830ADD1A1C08CC00B12839 /* GCHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C2830ADC1A1C08CC00B12839 /* GCHelper.m */; };
+		C2830AE01A1C119400B12839 /* DBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2830ADF1A1C119400B12839 /* DBViewController.m */; };
 		C2A541751A0179D500C065A8 /* zapCard.png in Resources */ = {isa = PBXBuildFile; fileRef = C2A541741A0179D500C065A8 /* zapCard.png */; };
 		C2A541791A0180B500C065A8 /* healCard.png in Resources */ = {isa = PBXBuildFile; fileRef = C2A541781A0180B500C065A8 /* healCard.png */; };
 		C2CAF9481A01BDBD00237E79 /* hurricaneCard.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CAF9471A01BDBD00237E79 /* hurricaneCard.png */; };
@@ -154,6 +155,8 @@
 		C2830AD91A1C08BB00B12839 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
 		C2830ADB1A1C08CC00B12839 /* GCHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCHelper.h; sourceTree = "<group>"; };
 		C2830ADC1A1C08CC00B12839 /* GCHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCHelper.m; sourceTree = "<group>"; };
+		C2830ADE1A1C119400B12839 /* DBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBViewController.h; sourceTree = "<group>"; };
+		C2830ADF1A1C119400B12839 /* DBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBViewController.m; sourceTree = "<group>"; };
 		C2A541741A0179D500C065A8 /* zapCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zapCard.png; sourceTree = "<group>"; };
 		C2A541781A0180B500C065A8 /* healCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = healCard.png; sourceTree = "<group>"; };
 		C2CAF9471A01BDBD00237E79 /* hurricaneCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hurricaneCard.png; sourceTree = "<group>"; };
@@ -260,6 +263,8 @@
 				C2F74DAC19F2E48800295896 /* HelpViewController.m */,
 				C2830AD81A1C08BB00B12839 /* DBManager.h */,
 				C2830AD91A1C08BB00B12839 /* DBManager.m */,
+				C2830ADE1A1C119400B12839 /* DBViewController.h */,
+				C2830ADF1A1C119400B12839 /* DBViewController.m */,
 				C2830ADB1A1C08CC00B12839 /* GCHelper.h */,
 				C2830ADC1A1C08CC00B12839 /* GCHelper.m */,
 				2BE0E18819BB9E9B00CC89E9 /* Images.xcassets */,
@@ -483,6 +488,7 @@
 			files = (
 				2BFF20C019C4F25F00A4A29D /* GameViewController.m in Sources */,
 				2B4327A819BFBEBD009601C8 /* Engine.m in Sources */,
+				C2830AE01A1C119400B12839 /* DBViewController.m in Sources */,
 				2B4327A219BFBE9F009601C8 /* Card.m in Sources */,
 				C2830ADA1A1C08BB00B12839 /* DBManager.m in Sources */,
 				C2830ADD1A1C08CC00B12839 /* GCHelper.m in Sources */,
