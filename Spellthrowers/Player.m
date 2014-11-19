@@ -22,6 +22,15 @@
     [newPlayer setHasPlayedMultipleWeapons:NO];
     return newPlayer;
 }
++(instancetype)newPlayer: (NSString*) name{
+    Player *newPlayer = [[Player alloc] init];
+    newPlayer.playerHand = NSMutableArray.array;
+    [newPlayer setLife: 5];
+    [newPlayer setName:name];
+    [newPlayer setIsAi:NO];
+    [newPlayer setHasPlayedMultipleWeapons:NO];
+    return newPlayer;
+}
 
 -(void)fillHand: (Deck*) deck{
     while ([[self playerHand] count] < DRAW_CAP) {
