@@ -206,7 +206,22 @@
 }
 
 -(Player*)endGame{
+    
     Player* winner = self.currentPlayers[0];
+    NSLog(@"$$$$$$$$$$$$$$$$$$$$$$");
+    NSLog(winner.name);
+    if([winner.name  isEqual: @"Player 1"]){
+        //updates currentWins {UPDATE AFTER GAME ENDS}
+        
+        NSUserDefaults *defaults;
+        NSInteger currentWins = [defaults integerForKey:@"Wins"];
+        
+        currentWins+=1;
+        
+        defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setInteger:currentWins forKey:@"Wins"];
+        [defaults synchronize];
+    }
     return winner;
 }
 
