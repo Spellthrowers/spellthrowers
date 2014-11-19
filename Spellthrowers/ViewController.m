@@ -18,7 +18,7 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([[sender currentTitle] isEqualToString:@"Play Vs AI!"]
-        && [[segue destinationViewController] class] != [HelpViewController class]) {
+        && [[segue destinationViewController] class] == [GameViewController class]) {
         [[segue destinationViewController] setIsAiGame:YES];
         [[segue destinationViewController] setNumPlayers: 2];
     }
@@ -26,7 +26,9 @@
               && [[segue destinationViewController] class] != [HelpViewController class]){
         [[segue destinationViewController] setNumPlayers: [[[sender currentTitle] substringToIndex: 1] intValue]];
     }
-    [[segue destinationViewController] setIsMainMenu:YES];
+    else if ([[segue destinationViewController] class] == [HelpViewController class]) {
+        [[segue destinationViewController] setIsMainMenu:YES];
+    }
 }
 
 - (void)viewDidLoad
