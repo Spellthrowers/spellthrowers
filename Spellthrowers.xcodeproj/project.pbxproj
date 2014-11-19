@@ -56,10 +56,10 @@
 		2BFF20C319C5EF2500A4A29D /* TransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFF20C219C5EF2500A4A29D /* TransitionViewController.m */; };
 		C254E8A91A15439D00861C79 /* facedownCard_transition.png in Resources */ = {isa = PBXBuildFile; fileRef = C254E8A81A15439D00861C79 /* facedownCard_transition.png */; };
 		C2830AD41A1C070700B12839 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C2830AD31A1C070700B12839 /* libsqlite3.dylib */; };
-		C2830ADD1A1C08CC00B12839 /* GCHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C2830ADC1A1C08CC00B12839 /* GCHelper.m */; };
 		C2830AE51A1C534A00B12839 /* scores.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2830AE41A1C534A00B12839 /* scores.plist */; };
 		C2A541751A0179D500C065A8 /* zapCard.png in Resources */ = {isa = PBXBuildFile; fileRef = C2A541741A0179D500C065A8 /* zapCard.png */; };
 		C2A541791A0180B500C065A8 /* healCard.png in Resources */ = {isa = PBXBuildFile; fileRef = C2A541781A0180B500C065A8 /* healCard.png */; };
+		C2C8F5AF1A1C98D7001B3C97 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2C8F5AE1A1C98D7001B3C97 /* GameKit.framework */; };
 		C2CAF9481A01BDBD00237E79 /* hurricaneCard.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CAF9471A01BDBD00237E79 /* hurricaneCard.png */; };
 		C2EC74FF1A06AE460045C8B5 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = C2EC74FE1A06AE460045C8B5 /* background.png */; };
 		C2F74DAD19F2E48800295896 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F74DAC19F2E48800295896 /* HelpViewController.m */; };
@@ -148,11 +148,10 @@
 		2BFF20C219C5EF2500A4A29D /* TransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionViewController.m; sourceTree = "<group>"; };
 		C254E8A81A15439D00861C79 /* facedownCard_transition.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facedownCard_transition.png; sourceTree = "<group>"; };
 		C2830AD31A1C070700B12839 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		C2830ADB1A1C08CC00B12839 /* GCHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCHelper.h; sourceTree = "<group>"; };
-		C2830ADC1A1C08CC00B12839 /* GCHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCHelper.m; sourceTree = "<group>"; };
 		C2830AE41A1C534A00B12839 /* scores.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = scores.plist; sourceTree = "<group>"; };
 		C2A541741A0179D500C065A8 /* zapCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zapCard.png; sourceTree = "<group>"; };
 		C2A541781A0180B500C065A8 /* healCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = healCard.png; sourceTree = "<group>"; };
+		C2C8F5AE1A1C98D7001B3C97 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		C2CAF9471A01BDBD00237E79 /* hurricaneCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hurricaneCard.png; sourceTree = "<group>"; };
 		C2EC74FE1A06AE460045C8B5 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		C2F74DAB19F2E46800295896 /* HelpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
@@ -177,6 +176,7 @@
 				C2830AD41A1C070700B12839 /* libsqlite3.dylib in Frameworks */,
 				2BCB725219F0BA2D00BCC89C /* AudioToolbox.framework in Frameworks */,
 				2BE0E17019BB9E9B00CC89E9 /* CoreGraphics.framework in Frameworks */,
+				C2C8F5AF1A1C98D7001B3C97 /* GameKit.framework in Frameworks */,
 				2BE0E17219BB9E9B00CC89E9 /* UIKit.framework in Frameworks */,
 				2BE0E16E19BB9E9B00CC89E9 /* Foundation.framework in Frameworks */,
 			);
@@ -217,6 +217,7 @@
 		2BE0E16C19BB9E9B00CC89E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C2C8F5AE1A1C98D7001B3C97 /* GameKit.framework */,
 				C2830AD31A1C070700B12839 /* libsqlite3.dylib */,
 				2BCB725119F0BA2D00BCC89C /* AudioToolbox.framework */,
 				2BE0E16D19BB9E9B00CC89E9 /* Foundation.framework */,
@@ -339,8 +340,6 @@
 		C2830AE81A1C540600B12839 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C2830ADB1A1C08CC00B12839 /* GCHelper.h */,
-				C2830ADC1A1C08CC00B12839 /* GCHelper.m */,
 				2B43279D19BFBE8D009601C8 /* Player.h */,
 				2B43279E19BFBE8D009601C8 /* Player.m */,
 				2B4327A019BFBE9F009601C8 /* Card.h */,
@@ -413,7 +412,7 @@
 						DevelopmentTeam = X84Y2D2K96;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -511,7 +510,6 @@
 				2BFF20C019C4F25F00A4A29D /* GameViewController.m in Sources */,
 				2B4327A819BFBEBD009601C8 /* Engine.m in Sources */,
 				2B4327A219BFBE9F009601C8 /* Card.m in Sources */,
-				C2830ADD1A1C08CC00B12839 /* GCHelper.m in Sources */,
 				2BE3BCCA1A028EDC00F9AF15 /* GameTabBarViewController.m in Sources */,
 				2B43279F19BFBE8D009601C8 /* Player.m in Sources */,
 				2BFF20C319C5EF2500A4A29D /* TransitionViewController.m in Sources */,

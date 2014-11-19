@@ -65,7 +65,7 @@
         
         //check for winner
         if([self.currentPlayers count] == 2 && [self.currentPlayers[0] life] <= 0 && [self.currentPlayers[1] life] <= 0){
-            _winner = [self endGame];
+            _winner = [NSString stringWithFormat: @"%@",[self endGame]];
             return;
         }
         
@@ -80,7 +80,7 @@
         //End game
         if ([self.currentPlayers count] <= 1) {
             //GAME OVER
-            _winner = [self endGame];
+            _winner = [NSString stringWithFormat: @"%@",[self endGame]];
         }
         
         //End turn if:
@@ -206,7 +206,7 @@
 }
 
 -(NSString*)endGame{
-    NSString *winner = [self.currentPlayers[0] name];
+    NSString *winner = [NSString stringWithFormat:@"%@", [self.currentPlayers[0] name]];
     
     if([winner  isEqual: @"Player 1"]){
         //updates currentWins {UPDATE AFTER GAME ENDS}
@@ -220,7 +220,7 @@
         [defaults synchronize];
         return winner;
     }
-    else if(![_winner.name isEqual: @"Player 1"]){
+    else if(![winner isEqual: @"Player 1"]){
         //updates currentLoses {UPDATE AFTER GAME ENDS}
         NSUserDefaults *defaults;
         defaults = [NSUserDefaults standardUserDefaults];

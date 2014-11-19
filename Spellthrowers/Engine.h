@@ -13,7 +13,7 @@
 @interface Engine : NSObject
 
 @property Player* activePlayer;//current player
-@property Player* winner;
+@property NSString* winner;
 @property int indexOfActivePlayer;
 @property NSMutableArray* players;
 @property NSMutableArray* currentPlayers;//players that are still in the game

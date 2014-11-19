@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "GameViewController.h"
 #import "HelpViewController.h"
+@import GameKit;
 
 @interface ViewController ()
 @property (atomic) BOOL isAiGame;
@@ -49,7 +50,7 @@
     currentWins = [defaults integerForKey:@"Wins"];
     [[self winsLabel] setText: [NSString stringWithFormat: @"Wins: %ld", (long)currentWins]];
     
-    //updates currentWins {UPDATE AFTER GAME ENDS}
+    //updates currentWins {UPDATE AFTER GAME ENDS//Now in Engine}
     //currentWins+=1;
     //[defaults setInteger:currentWins forKey:@"Wins"];
     //[defaults synchronize];
@@ -74,9 +75,6 @@
     currentLosses = [defaults integerForKey:@"Losses"];
     [[self lossesLabel] setText: [NSString stringWithFormat: @"Losses: %ld", (long)currentLosses]];
     
-    
-    
-    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -86,5 +84,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 @end

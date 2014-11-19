@@ -11,6 +11,7 @@
 @interface ViewController : UIViewController{
     NSUserDefaults *defaults;
 }
+
 @property (weak, nonatomic) IBOutlet UILabel *winsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *lossesLabel;
 @end
