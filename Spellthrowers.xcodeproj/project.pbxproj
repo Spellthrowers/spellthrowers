@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B0151B91A1BFC1A006318FE /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0151B81A1BFC1A006318FE /* GameKit.framework */; };
 		2B06F15E1A145E32009849E5 /* facedownCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B06F15D1A145E32009849E5 /* facedownCard.png */; };
 		2B43279F19BFBE8D009601C8 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B43279E19BFBE8D009601C8 /* Player.m */; };
 		2B4327A219BFBE9F009601C8 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4327A119BFBE9F009601C8 /* Card.m */; };
@@ -57,9 +56,8 @@
 		2BFF20C319C5EF2500A4A29D /* TransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFF20C219C5EF2500A4A29D /* TransitionViewController.m */; };
 		C254E8A91A15439D00861C79 /* facedownCard_transition.png in Resources */ = {isa = PBXBuildFile; fileRef = C254E8A81A15439D00861C79 /* facedownCard_transition.png */; };
 		C2830AD41A1C070700B12839 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C2830AD31A1C070700B12839 /* libsqlite3.dylib */; };
-		C2830ADA1A1C08BB00B12839 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C2830AD91A1C08BB00B12839 /* DBManager.m */; };
 		C2830ADD1A1C08CC00B12839 /* GCHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C2830ADC1A1C08CC00B12839 /* GCHelper.m */; };
-		C2830AE01A1C119400B12839 /* DBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2830ADF1A1C119400B12839 /* DBViewController.m */; };
+		C2830AE51A1C534A00B12839 /* scores.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2830AE41A1C534A00B12839 /* scores.plist */; };
 		C2A541751A0179D500C065A8 /* zapCard.png in Resources */ = {isa = PBXBuildFile; fileRef = C2A541741A0179D500C065A8 /* zapCard.png */; };
 		C2A541791A0180B500C065A8 /* healCard.png in Resources */ = {isa = PBXBuildFile; fileRef = C2A541781A0180B500C065A8 /* healCard.png */; };
 		C2CAF9481A01BDBD00237E79 /* hurricaneCard.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CAF9471A01BDBD00237E79 /* hurricaneCard.png */; };
@@ -88,7 +86,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2B0151B81A1BFC1A006318FE /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		2B06F15D1A145E32009849E5 /* facedownCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facedownCard.png; sourceTree = "<group>"; };
 		2B43279D19BFBE8D009601C8 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		2B43279E19BFBE8D009601C8 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
@@ -151,12 +148,9 @@
 		2BFF20C219C5EF2500A4A29D /* TransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionViewController.m; sourceTree = "<group>"; };
 		C254E8A81A15439D00861C79 /* facedownCard_transition.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facedownCard_transition.png; sourceTree = "<group>"; };
 		C2830AD31A1C070700B12839 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		C2830AD81A1C08BB00B12839 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
-		C2830AD91A1C08BB00B12839 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
 		C2830ADB1A1C08CC00B12839 /* GCHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCHelper.h; sourceTree = "<group>"; };
 		C2830ADC1A1C08CC00B12839 /* GCHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCHelper.m; sourceTree = "<group>"; };
-		C2830ADE1A1C119400B12839 /* DBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBViewController.h; sourceTree = "<group>"; };
-		C2830ADF1A1C119400B12839 /* DBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBViewController.m; sourceTree = "<group>"; };
+		C2830AE41A1C534A00B12839 /* scores.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = scores.plist; sourceTree = "<group>"; };
 		C2A541741A0179D500C065A8 /* zapCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zapCard.png; sourceTree = "<group>"; };
 		C2A541781A0180B500C065A8 /* healCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = healCard.png; sourceTree = "<group>"; };
 		C2CAF9471A01BDBD00237E79 /* hurricaneCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hurricaneCard.png; sourceTree = "<group>"; };
@@ -185,7 +179,6 @@
 				2BE0E17019BB9E9B00CC89E9 /* CoreGraphics.framework in Frameworks */,
 				2BE0E17219BB9E9B00CC89E9 /* UIKit.framework in Frameworks */,
 				2BE0E16E19BB9E9B00CC89E9 /* Foundation.framework in Frameworks */,
-				2B0151B91A1BFC1A006318FE /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,7 +218,6 @@
 			isa = PBXGroup;
 			children = (
 				C2830AD31A1C070700B12839 /* libsqlite3.dylib */,
-				2B0151B81A1BFC1A006318FE /* GameKit.framework */,
 				2BCB725119F0BA2D00BCC89C /* AudioToolbox.framework */,
 				2BE0E16D19BB9E9B00CC89E9 /* Foundation.framework */,
 				2BE0E16F19BB9E9B00CC89E9 /* CoreGraphics.framework */,
@@ -238,66 +230,15 @@
 		2BE0E17319BB9E9B00CC89E9 /* Spellthrowers */ = {
 			isa = PBXGroup;
 			children = (
+				C2830AE81A1C540600B12839 /* Model */,
+				C2830AE91A1C547200B12839 /* View */,
+				C2830AE71A1C53E600B12839 /* Controller */,
+				C2830AE61A1C535600B12839 /* Image Assets */,
 				2BE0E17C19BB9E9B00CC89E9 /* AppDelegate.h */,
 				2BE0E17D19BB9E9B00CC89E9 /* AppDelegate.m */,
-				2BE0E17F19BB9E9B00CC89E9 /* Main_iPhone.storyboard */,
-				2BE3BCC81A028EDC00F9AF15 /* GameTabBarViewController.h */,
-				2BE3BCC91A028EDC00F9AF15 /* GameTabBarViewController.m */,
-				2B43279D19BFBE8D009601C8 /* Player.h */,
-				2B43279E19BFBE8D009601C8 /* Player.m */,
-				2B4327A019BFBE9F009601C8 /* Card.h */,
-				2B4327A119BFBE9F009601C8 /* Card.m */,
-				2B4327A319BFBEAE009601C8 /* Deck.h */,
-				2B4327A419BFBEAE009601C8 /* Deck.m */,
 				2BDF0E4419C0BCB600B3183A /* Config.plist */,
-				2B4327A619BFBEBD009601C8 /* Engine.h */,
-				2B4327A719BFBEBD009601C8 /* Engine.m */,
-				2BE0E18219BB9E9B00CC89E9 /* Main_iPad.storyboard */,
-				2BE0E18519BB9E9B00CC89E9 /* ViewController.h */,
-				2BE0E18619BB9E9B00CC89E9 /* ViewController.m */,
-				2BFF20BE19C4F25F00A4A29D /* GameViewController.h */,
-				2BFF20BF19C4F25F00A4A29D /* GameViewController.m */,
-				2BFF20C119C5EF2500A4A29D /* TransitionViewController.h */,
-				2BFF20C219C5EF2500A4A29D /* TransitionViewController.m */,
-				C2F74DAB19F2E46800295896 /* HelpViewController.h */,
-				C2F74DAC19F2E48800295896 /* HelpViewController.m */,
-				C2830AD81A1C08BB00B12839 /* DBManager.h */,
-				C2830AD91A1C08BB00B12839 /* DBManager.m */,
-				C2830ADE1A1C119400B12839 /* DBViewController.h */,
-				C2830ADF1A1C119400B12839 /* DBViewController.m */,
-				C2830ADB1A1C08CC00B12839 /* GCHelper.h */,
-				C2830ADC1A1C08CC00B12839 /* GCHelper.m */,
+				C2830AE41A1C534A00B12839 /* scores.plist */,
 				2BE0E18819BB9E9B00CC89E9 /* Images.xcassets */,
-				2B4ABFBE19DD173C006331D6 /* icon.png */,
-				2BF1955B19F6FFF50000353E /* helpIcon.png */,
-				2BF1955D19F710E30000353E /* hasFacedown.png */,
-				2B06F15D1A145E32009849E5 /* facedownCard.png */,
-				C2A541781A0180B500C065A8 /* healCard.png */,
-				C2FE73141A10316300BAC89B /* spellShieldCard_transition.png */,
-				C2FE730E1A10300700BAC89B /* waterfallCard.png */,
-				C2EC74FE1A06AE460045C8B5 /* background.png */,
-				C2FE73161A1031FE00BAC89B /* healCard_transition.png */,
-				2B4ABFC019DD17FD006331D6 /* fireball.png */,
-				C2FE73181A10328F00BAC89B /* EMPCard_transition.png */,
-				C2FE73191A10328F00BAC89B /* fireballCard_transition.png */,
-				C2FE731A1A10328F00BAC89B /* hurricaneCard_transition.png */,
-				C2FE731B1A10328F00BAC89B /* laserPistolCard_transition.png */,
-				C2FE731C1A10328F00BAC89B /* scrumCard_transition.png */,
-				C2FE73101A1030A900BAC89B /* waterfallCard_transition.png */,
-				2BE3BCC41A02860D00F9AF15 /* fireballMini.png */,
-				C2A541741A0179D500C065A8 /* zapCard.png */,
-				C2FE73121A10315B00BAC89B /* zapCard_transition.png */,
-				C2CAF9471A01BDBD00237E79 /* hurricaneCard.png */,
-				C254E8A81A15439D00861C79 /* facedownCard_transition.png */,
-				2BF1955919F6FCFB0000353E /* waterfallCard.png */,
-				2B4ABFC219DD1DF7006331D6 /* fireballCard.png */,
-				2BC9563119DDEA540046B39E /* spellShieldCard.png */,
-				2BCB724D19F0ACA000BCC89C /* discardedCard.png */,
-				2BE3BCCD1A029CC000F9AF15 /* laserPistolCard.png */,
-				2BE3BCC61A02876100F9AF15 /* EMPMini.png */,
-				2BCB724F19F0B40700BCC89C /* EMPCard.png */,
-				2BC354B51A0EB4E200C97BE1 /* scrumMini.png */,
-				2BE3BCCF1A02A12B00F9AF15 /* scrumCard.png */,
 				2BE0E17419BB9E9B00CC89E9 /* Supporting Files */,
 			);
 			path = Spellthrowers;
@@ -339,6 +280,86 @@
 				2BE0E19819BB9E9B00CC89E9 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C2830AE61A1C535600B12839 /* Image Assets */ = {
+			isa = PBXGroup;
+			children = (
+				2B4ABFBE19DD173C006331D6 /* icon.png */,
+				2BF1955B19F6FFF50000353E /* helpIcon.png */,
+				2BF1955D19F710E30000353E /* hasFacedown.png */,
+				2B06F15D1A145E32009849E5 /* facedownCard.png */,
+				C2A541781A0180B500C065A8 /* healCard.png */,
+				C2FE73141A10316300BAC89B /* spellShieldCard_transition.png */,
+				C2FE730E1A10300700BAC89B /* waterfallCard.png */,
+				C2EC74FE1A06AE460045C8B5 /* background.png */,
+				C2FE73161A1031FE00BAC89B /* healCard_transition.png */,
+				2B4ABFC019DD17FD006331D6 /* fireball.png */,
+				C2FE73181A10328F00BAC89B /* EMPCard_transition.png */,
+				C2FE73191A10328F00BAC89B /* fireballCard_transition.png */,
+				C2FE731A1A10328F00BAC89B /* hurricaneCard_transition.png */,
+				C2FE731B1A10328F00BAC89B /* laserPistolCard_transition.png */,
+				C2FE731C1A10328F00BAC89B /* scrumCard_transition.png */,
+				C2FE73101A1030A900BAC89B /* waterfallCard_transition.png */,
+				2BE3BCC41A02860D00F9AF15 /* fireballMini.png */,
+				C2A541741A0179D500C065A8 /* zapCard.png */,
+				C2FE73121A10315B00BAC89B /* zapCard_transition.png */,
+				C2CAF9471A01BDBD00237E79 /* hurricaneCard.png */,
+				C254E8A81A15439D00861C79 /* facedownCard_transition.png */,
+				2BF1955919F6FCFB0000353E /* waterfallCard.png */,
+				2B4ABFC219DD1DF7006331D6 /* fireballCard.png */,
+				2BC9563119DDEA540046B39E /* spellShieldCard.png */,
+				2BCB724D19F0ACA000BCC89C /* discardedCard.png */,
+				2BE3BCCD1A029CC000F9AF15 /* laserPistolCard.png */,
+				2BE3BCC61A02876100F9AF15 /* EMPMini.png */,
+				2BCB724F19F0B40700BCC89C /* EMPCard.png */,
+				2BC354B51A0EB4E200C97BE1 /* scrumMini.png */,
+				2BE3BCCF1A02A12B00F9AF15 /* scrumCard.png */,
+			);
+			name = "Image Assets";
+			sourceTree = "<group>";
+		};
+		C2830AE71A1C53E600B12839 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2BE3BCC81A028EDC00F9AF15 /* GameTabBarViewController.h */,
+				2BE3BCC91A028EDC00F9AF15 /* GameTabBarViewController.m */,
+				2BE0E18519BB9E9B00CC89E9 /* ViewController.h */,
+				2BE0E18619BB9E9B00CC89E9 /* ViewController.m */,
+				2BFF20BE19C4F25F00A4A29D /* GameViewController.h */,
+				2BFF20BF19C4F25F00A4A29D /* GameViewController.m */,
+				2BFF20C119C5EF2500A4A29D /* TransitionViewController.h */,
+				2BFF20C219C5EF2500A4A29D /* TransitionViewController.m */,
+				C2F74DAB19F2E46800295896 /* HelpViewController.h */,
+				C2F74DAC19F2E48800295896 /* HelpViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C2830AE81A1C540600B12839 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C2830ADB1A1C08CC00B12839 /* GCHelper.h */,
+				C2830ADC1A1C08CC00B12839 /* GCHelper.m */,
+				2B43279D19BFBE8D009601C8 /* Player.h */,
+				2B43279E19BFBE8D009601C8 /* Player.m */,
+				2B4327A019BFBE9F009601C8 /* Card.h */,
+				2B4327A119BFBE9F009601C8 /* Card.m */,
+				2B4327A319BFBEAE009601C8 /* Deck.h */,
+				2B4327A419BFBEAE009601C8 /* Deck.m */,
+				2B4327A619BFBEBD009601C8 /* Engine.h */,
+				2B4327A719BFBEBD009601C8 /* Engine.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C2830AE91A1C547200B12839 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2BE0E17F19BB9E9B00CC89E9 /* Main_iPhone.storyboard */,
+				2BE0E18219BB9E9B00CC89E9 /* Main_iPad.storyboard */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,10 +410,10 @@
 				ORGANIZATIONNAME = Spellthrowers;
 				TargetAttributes = {
 					2BE0E16919BB9E9B00CC89E9 = {
-						DevelopmentTeam = K539BTLAP3;
+						DevelopmentTeam = X84Y2D2K96;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -458,6 +479,7 @@
 				2BCB725019F0B40700BCC89C /* EMPCard.png in Resources */,
 				C2CAF9481A01BDBD00237E79 /* hurricaneCard.png in Resources */,
 				2BE3BCC71A02876100F9AF15 /* EMPMini.png in Resources */,
+				C2830AE51A1C534A00B12839 /* scores.plist in Resources */,
 				2B4ABFC119DD17FD006331D6 /* fireball.png in Resources */,
 				2BCB726319F0C55F00BCC89C /* facedownCard.m4a in Resources */,
 				2B4ABFC319DD1DF7006331D6 /* fireballCard.png in Resources */,
@@ -488,9 +510,7 @@
 			files = (
 				2BFF20C019C4F25F00A4A29D /* GameViewController.m in Sources */,
 				2B4327A819BFBEBD009601C8 /* Engine.m in Sources */,
-				C2830AE01A1C119400B12839 /* DBViewController.m in Sources */,
 				2B4327A219BFBE9F009601C8 /* Card.m in Sources */,
-				C2830ADA1A1C08BB00B12839 /* DBManager.m in Sources */,
 				C2830ADD1A1C08CC00B12839 /* GCHelper.m in Sources */,
 				2BE3BCCA1A028EDC00F9AF15 /* GameTabBarViewController.m in Sources */,
 				2B43279F19BFBE8D009601C8 /* Player.m in Sources */,

@@ -33,6 +33,50 @@
 
 - (void)viewDidLoad
 {
+    
+    
+    //WINS
+    defaults = [NSUserDefaults standardUserDefaults];
+    NSInteger currentWins = [defaults integerForKey:@"Wins"];
+    
+    if (currentWins == (long)Nil){
+        [defaults setInteger:0 forKey:@"Wins"];
+        [defaults synchronize];
+    }
+    
+    //gets currentWins {DISPLAY ON HOME}
+    defaults = [NSUserDefaults standardUserDefaults];
+    currentWins = [defaults integerForKey:@"Wins"];
+    [[self winsLabel] setText: [NSString stringWithFormat: @"Wins: %ld", (long)currentWins]];
+    
+    //updates currentWins {UPDATE AFTER GAME ENDS}
+    //currentWins+=1;
+    //[defaults setInteger:currentWins forKey:@"Wins"];
+    //[defaults synchronize];
+    
+    //gets new currentWins {FOR DEBUG PURPOSES}
+    //defaults = [NSUserDefaults standardUserDefaults];
+    //currentWins = [defaults integerForKey:@"Wins"];
+    //NSLog(@"%ld", (long)currentWins);
+    
+    
+    //LOSSES
+    defaults = [NSUserDefaults standardUserDefaults];
+    NSInteger currentLosses = [defaults integerForKey:@"Losses"];
+    
+    if (currentLosses == (long)Nil){
+        [defaults setInteger:0 forKey:@"Losses"];
+        [defaults synchronize];
+    }
+    
+    //gets currentLosses {DISPLAY ON HOME}
+    defaults = [NSUserDefaults standardUserDefaults];
+    currentLosses = [defaults integerForKey:@"Losses"];
+    [[self lossesLabel] setText: [NSString stringWithFormat: @"Losses: %ld", (long)currentLosses]];
+    
+    
+    
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }

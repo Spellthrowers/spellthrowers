@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ViewController : UIViewController{
+    NSUserDefaults *defaults;
+}
+@property (weak, nonatomic) IBOutlet UILabel *winsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *lossesLabel;
 @end
