@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "GameViewController.h"
 #import "HelpViewController.h"
-@import GameKit;
+#import "GameTabBarViewController.h"
 
 @interface ViewController ()
 @property (atomic) BOOL isAiGame;
@@ -24,10 +24,10 @@
         [[segue destinationViewController] setNumPlayers: 2];
     }
     else if ([[sender currentTitle] containsString:@"Player!"]
-              && [[segue destinationViewController] class] != [HelpViewController class]){
+              && [[segue destinationViewController] class] == [GameViewController class]){
         [[segue destinationViewController] setNumPlayers: [[[sender currentTitle] substringToIndex: 1] intValue]];
     }
-    else if ([[segue destinationViewController] class] == [HelpViewController class]) {
+    else if ([[segue destinationViewController] class] == [GameTabBarViewController class]) {
         [[segue destinationViewController] setIsMainMenu:YES];
     }
 }
