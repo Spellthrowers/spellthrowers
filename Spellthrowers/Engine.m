@@ -228,7 +228,6 @@
         
         currentLosses+=1;
         
-        
         [defaults setInteger:currentLosses forKey:@"Losses"];
         [defaults synchronize];
     }
