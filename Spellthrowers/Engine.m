@@ -208,7 +208,7 @@
 -(NSString*)endGame{
     NSString *winner = [NSString stringWithFormat:@"%@", [self.currentPlayers[0] name]];
     
-    if([winner  isEqual: @"Player 1"]){
+    if([winner  isEqual: @"Player 1"] && _isAiGame){
         //updates currentWins {UPDATE AFTER GAME ENDS}
         NSUserDefaults *defaults;
         defaults = [NSUserDefaults standardUserDefaults];
@@ -220,7 +220,7 @@
         [defaults synchronize];
         return winner;
     }
-    else if(![winner isEqual: @"Player 1"]){
+    else if(![winner isEqual: @"Player 1"] && _isAiGame){
         //updates currentLoses {UPDATE AFTER GAME ENDS}
         NSUserDefaults *defaults;
         defaults = [NSUserDefaults standardUserDefaults];

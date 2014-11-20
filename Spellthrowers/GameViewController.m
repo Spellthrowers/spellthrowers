@@ -96,6 +96,7 @@
         self.engine = [Engine newEngine: self.numPlayers];
         [self.engine initEverything];
         if ([self isAiGame]) {
+            [self.engine setIsAiGame:YES];
             [self.engine.players[[self.engine.players count]-1] setIsAi:YES];
             [self.engine.players[[self.engine.players count]-1] setNickName:@"AI"];
             int random = arc4random_uniform(5);
