@@ -147,7 +147,7 @@
             }
         }
     }
-    else if([card isFaceDownType]){
+    else if([[card cardType] isEqualToString:@"EMP"] || [[card cardType] isEqualToString:@"Shield"]){
         [_activePlayer setHasFaceDown:YES];
         //replaces current if a new facedown gets played
         self.activePlayer.faceDownCard = self.activePlayer.hand[_indexOfTouchedCard];
