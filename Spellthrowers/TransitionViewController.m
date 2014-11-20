@@ -105,7 +105,8 @@
     for (NSUInteger i = 0; i < self.playerLives.count; i++) {
         ((UILabel*)self.playerLives[i]).hidden=YES;
     }
-    for (NSUInteger i = 0; i < self.engine.currentPlayers.count; i++) {
+    NSUInteger numPlayersToShow = self.engine.winner == NULL ? self.engine.currentPlayers.count : self.engine.players.count;
+    for (NSUInteger i = 0; i < numPlayersToShow; i++) {
         ((UILabel*)self.playerLives[i]).hidden=NO;
     }
     
@@ -139,6 +140,13 @@
 }
 
 -(void)setLife{
+    //if winner, show all lives
+    if(self.engine.winner != NULL){
+        for (int i=0; i<self.engine.players.count; i++) {
+            [[self playerLives][i] setText: [NSString stringWithFormat: @"%@ Life: %d", [self.engine.players[i] name], [self.engine.players[i] life]]];
+        }
+        return;
+    }
     for (int i=0; i<self.engine.currentPlayers.count; i++) {
         [[self playerLives][i] setText: [NSString stringWithFormat: @"%@ Life: %d", [self.engine.currentPlayers[i] name], [self.engine.currentPlayers[i] life]]];
     }
@@ -175,9 +183,7 @@
     
     //simplification vars
     Player *nextPlayer = self.engine.currentPlayers[(self.engine.indexOfActivePlayer+1) % [self.engine.currentPlayers count]];
-    NSString *nextPlayerName =[self.engine.currentPlayers[(self.engine.indexOfActivePlayer+1) % [self.engine.currentPlayers count]] name];
     Card *cardPlayed = self.engine.activePlayer.hand[self.engine.indexOfTouchedCard];
-    int cardValue = cardPlayed.value;
     
     //set card image based on card played
     //Get the bundle for this app
@@ -637,16 +643,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
