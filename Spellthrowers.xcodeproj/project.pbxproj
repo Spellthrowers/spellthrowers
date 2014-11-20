@@ -409,7 +409,7 @@
 				ORGANIZATIONNAME = Spellthrowers;
 				TargetAttributes = {
 					2BE0E16919BB9E9B00CC89E9 = {
-						DevelopmentTeam = X84Y2D2K96;
+						DevelopmentTeam = K539BTLAP3;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 1;
