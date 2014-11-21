@@ -11,6 +11,8 @@
 #import "Engine.h"
 #import "Deck.h"
 
+#define isIpad [[[UIDevice currentDevice] model] containsString:@"iPad"]
+
 @interface GameViewController : UIViewController
 
 @property (nonatomic, strong) Engine* engine;

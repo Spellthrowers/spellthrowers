@@ -247,7 +247,7 @@
     }
     else{
         [[self discard0] setBackgroundColor:  [UIColor orangeColor]];
-        UIImage* image = [UIImage imageNamed: @"discardedCard.png" ];
+        UIImage* image = [UIImage imageNamed: isIpad? @"discardedCardBig.png" : @"discardedCard.png" ];
         UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
         [self.cardViews[0] addSubview:uiv];
     }
@@ -260,7 +260,7 @@
     }
     else{
         [[self discard1] setBackgroundColor:  [UIColor orangeColor]];
-        UIImage* image = [UIImage imageNamed: @"discardedCard.png" ];
+        UIImage* image = [UIImage imageNamed: isIpad? @"discardedCardBig.png" : @"discardedCard.png" ];
         UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
         [self.cardViews[1] addSubview:uiv];
         
@@ -274,7 +274,7 @@
     }
     else{
         [[self discard2] setBackgroundColor:  [UIColor orangeColor]];
-        UIImage* image = [UIImage imageNamed: @"discardedCard.png" ];
+        UIImage* image = [UIImage imageNamed: isIpad? @"discardedCardBig.png" : @"discardedCard.png" ];
         UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
         [self.cardViews[2] addSubview:uiv];
     }
@@ -287,7 +287,7 @@
     }
     else{
         [[self discard3] setBackgroundColor:  [UIColor orangeColor]];
-        UIImage* image = [UIImage imageNamed: @"discardedCard.png" ];
+        UIImage* image = [UIImage imageNamed: isIpad? @"discardedCardBig.png" : @"discardedCard.png" ];
         UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
         [self.cardViews[3] addSubview:uiv];
     }
@@ -300,7 +300,7 @@
     }
     else{
         [[self discard4] setBackgroundColor:  [UIColor orangeColor]];
-        UIImage* image = [UIImage imageNamed: @"discardedCard.png" ];
+        UIImage* image = [UIImage imageNamed: isIpad? @"discardedCardBig.png" : @"discardedCard.png" ];
         UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
         [self.cardViews[4] addSubview:uiv];
     }
@@ -324,7 +324,7 @@
     NSDictionary* config = [NSDictionary dictionaryWithContentsOfFile:path];
     
     for (int j=0; j<[config[@"cardNames"] count]; j++) {
-        UIImage* image = [UIImage imageNamed: [NSString stringWithFormat: @"%@.png", config[@"cardFileNames"][j]]];
+        UIImage* image = [UIImage imageNamed: [NSString stringWithFormat: @"%@%@.png", config[@"cardFileNames"][j], isIpad? @"Big" : @""]];
         if ([forCard.name isEqualToString:config[@"cardNames"][j]] && image != nil) {
             UIImageView* uiv = [[UIImageView alloc] initWithImage:image];
             [self.cardViews[atIndex] addSubview:uiv];
