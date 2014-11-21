@@ -270,7 +270,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cvT-T5-bJZ">
-                                <rect key="frame" x="42" y="632" width="164" height="266"/>
+                                <rect key="frame" x="72" y="692" width="164" height="266"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Card" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dmF-Ez-war">
                                         <rect key="frame" x="0.0" y="0.0" width="82" height="29"/>
@@ -327,7 +327,7 @@
                                 <rect key="frame" x="421" y="556" width="23" height="30"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OM3-f1-e1n">
-                                <rect key="frame" x="172" y="632" width="164" height="266"/>
+                                <rect key="frame" x="182" y="640" width="164" height="266"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Card" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4QN-RO-e8c">
                                         <rect key="frame" x="0.0" y="0.0" width="82" height="29"/>
@@ -363,7 +363,7 @@
                                 <color key="backgroundColor" red="0.96518269180000005" green="1" blue="0.94413749550000003" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YA9-od-UYZ">
-                                <rect key="frame" x="302" y="632" width="164" height="266"/>
+                                <rect key="frame" x="302" y="620" width="164" height="266"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Card" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EbH-IF-vQ8">
                                         <rect key="frame" x="0.0" y="0.0" width="82" height="29"/>
@@ -396,7 +396,7 @@
                                 <color key="backgroundColor" red="0.80261580190000004" green="0.77120264959999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WXu-hb-U0z">
-                                <rect key="frame" x="432" y="632" width="164" height="266"/>
+                                <rect key="frame" x="422" y="640" width="164" height="266"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Card" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aR2-Au-DoD">
                                         <rect key="frame" x="0.0" y="0.0" width="82" height="29"/>
@@ -432,7 +432,7 @@
                                 <color key="backgroundColor" red="0.75477455230000001" green="0.94633381819999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rcK-ap-Ho7">
-                                <rect key="frame" x="562" y="632" width="164" height="266"/>
+                                <rect key="frame" x="532" y="692" width="164" height="266"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Card" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="88C-if-e2A">
                                         <rect key="frame" x="0.0" y="0.0" width="82" height="29"/>

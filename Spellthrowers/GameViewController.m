@@ -85,6 +85,15 @@
     self.cardValues = @[self.cardValue0, self.cardValue1, self.cardValue2, self.cardValue3, self.cardValue4];
     self.playerLives = @[self.player1Life, self.player2Life, self.player3Life, self.player4Life];
     self.faceDownActivateds = @[self.faceDownActivated, self.faceDownActivated2, self.faceDownActivated3, self.faceDownActivated4];
+    
+    for (int i=0; i < self.cardViews.count; i++){
+        CGFloat degrees = 0 + 15 * (2 - i);
+        CGFloat radians = degrees / 57.2958;
+        UIView *cardView = self.cardViews[i];
+        cardView.transform = CGAffineTransformMakeRotation(-1 * radians);
+    }
+    
+    
     for (UIImageView* faceDown in [self faceDownActivateds]) {
         faceDown.hidden = YES;
     }
