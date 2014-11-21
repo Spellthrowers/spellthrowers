@@ -86,13 +86,14 @@
     self.playerLives = @[self.player1Life, self.player2Life, self.player3Life, self.player4Life];
     self.faceDownActivateds = @[self.faceDownActivated, self.faceDownActivated2, self.faceDownActivated3, self.faceDownActivated4];
     
-    for (int i=0; i < self.cardViews.count; i++){
-        CGFloat degrees = 0 + 15 * (2 - i);
-        CGFloat radians = degrees / 57.2958;
-        UIView *cardView = self.cardViews[i];
-        cardView.transform = CGAffineTransformMakeRotation(-1 * radians);
+    if (isIpad) {
+        for (int i=0; i < self.cardViews.count; i++){
+            CGFloat degrees = 0 + 15 * (2 - i);
+            CGFloat radians = degrees / 57.2958;
+            UIView *cardView = self.cardViews[i];
+            cardView.transform = CGAffineTransformMakeRotation(-1 * radians);
+        }
     }
-    
     
     for (UIImageView* faceDown in [self faceDownActivateds]) {
         faceDown.hidden = YES;
@@ -140,7 +141,8 @@
             [[self faceDownActivateds][i] setHidden: NO];
         }
         //set life for each player
-        [[self playerLives][i] setText: [NSString stringWithFormat: @"%@: %d", [self.engine.currentPlayers[(self.engine.indexOfActivePlayer+i)%[self.engine.currentPlayers count]] nickName], [self.engine.currentPlayers[(self.engine.indexOfActivePlayer+i)%[self.engine.currentPlayers count]] life]]];
+        Player *player = self.engine.currentPlayers[(self.engine.indexOfActivePlayer+i)%[self.engine.currentPlayers count]];
+        [[self playerLives][i] setText: [NSString stringWithFormat: @"%@: %d", isIpad? [player name] : [player nickName], [player life]]];
         //set life to not be hidden
         [(UIImageView*)self.playerLives[i] setHidden:NO];
     }
