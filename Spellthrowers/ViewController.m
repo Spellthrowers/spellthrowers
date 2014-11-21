@@ -27,7 +27,8 @@
               && [[segue destinationViewController] class] == [GameViewController class]){
         [[segue destinationViewController] setNumPlayers: [[[sender currentTitle] substringToIndex: 1] intValue]];
     }
-    else if ([[segue destinationViewController] class] == [GameTabBarViewController class]) {
+    else if ([[segue destinationViewController] class] == [GameTabBarViewController class]
+             || [[segue destinationViewController] class] == [HelpViewController class]) {
         [[segue destinationViewController] setIsMainMenu:YES];
     }
 }

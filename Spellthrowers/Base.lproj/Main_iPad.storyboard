@@ -870,7 +870,7 @@ Cg
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="r6j-5H-LJu" kind="modal" id="4Hu-9s-myn"/>
+                                            <segue destination="r6j-5H-LJu" kind="modal" modalTransitionStyle="coverVertical" id="4Hu-9s-myn"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1070,9 +1070,9 @@ Cg
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="M0g-BX-ccp"/>
         <segue reference="qxs-qb-Ymr"/>
-        <segue reference="iav-jC-4sW"/>
-        <segue reference="335-cR-x5V"/>
+        <segue reference="4Hu-9s-myn"/>
+        <segue reference="xtH-0g-WeU"/>
+        <segue reference="Cb9-uf-PYS"/>
     </inferredMetricsTieBreakers>
 </document>
