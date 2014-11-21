@@ -26,6 +26,16 @@
 @property (weak, nonatomic) IBOutlet UITextView *text8;
 @property (weak, nonatomic) IBOutlet UILabel *text9;
 
+@property (weak, nonatomic) IBOutlet UILabel *specialSpellCardsBold;
+@property (weak, nonatomic) IBOutlet UITextView *specialSpellCards;
+@property (weak, nonatomic) IBOutlet UILabel *healCardsBold;
+@property (weak, nonatomic) IBOutlet UITextView *healCards;
+@property (weak, nonatomic) IBOutlet UILabel *zapCardsBold;
+@property (weak, nonatomic) IBOutlet UITextView *zapCards;
+@property (weak, nonatomic) IBOutlet UITextView *scrumCards;
+@property (weak, nonatomic) IBOutlet UIButton *backToMainMenu;
+
+
 @property (weak, nonatomic) IBOutlet UILabel *header1;
 @property (weak, nonatomic) IBOutlet UILabel *header2;
 
@@ -64,9 +74,23 @@
             self.header1.font = headerFont;
             self.header2.font = headerFont;
             
+            
             //special formatting
             self.weaponText.text = [((NSString*)self.weaponText.text) substringFromIndex:8];
             self.text6.text = [((NSString*)self.text6.text) substringFromIndex:1];
+        }
+        if(self.specialSpellCards){
+            UIFont *textFont = [self.specialSpellCards.font fontWithSize:16];
+            UIFont *boldFont = [self.specialSpellCardsBold.font fontWithSize:15];
+            
+            
+            self.specialSpellCardsBold.font = boldFont;
+            self.specialSpellCards.font = textFont;
+            self.healCardsBold.font = boldFont;
+            self.healCards.font = textFont;
+            self.zapCardsBold.font = boldFont;
+            self.zapCards.font = textFont;
+            self.scrumCards.font = boldFont;
         }
     }
     
