@@ -931,7 +931,7 @@ Cg
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4G-5o-JaE">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4G-5o-JaE">
                                 <rect key="frame" x="289" y="598" width="214" height="95.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
@@ -1010,6 +1010,7 @@ Cg
                         <constraints>
                             <constraint firstItem="rM7-fT-Axv" firstAttribute="top" secondItem="o4G-5o-JaE" secondAttribute="bottom" constant="16" id="2uX-zZ-mB6"/>
                             <constraint firstItem="gfk-sA-sl9" firstAttribute="width" secondItem="u8b-U6-ie4" secondAttribute="width" id="3vd-iE-e9w"/>
+                            <constraint firstAttribute="centerX" secondItem="o4G-5o-JaE" secondAttribute="centerX" id="51c-Xv-qqf"/>
                             <constraint firstItem="gfk-sA-sl9" firstAttribute="width" secondItem="rM7-fT-Axv" secondAttribute="width" id="7u7-vj-5C6"/>
                             <constraint firstItem="u8b-U6-ie4" firstAttribute="top" secondItem="rM7-fT-Axv" secondAttribute="bottom" constant="8" id="HK1-Nb-W2d"/>
                             <constraint firstItem="gfk-sA-sl9" firstAttribute="width" secondItem="ahQ-iw-eap" secondAttribute="width" id="JO6-N3-ZiL"/>
@@ -1070,9 +1071,9 @@ Cg
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="M0g-BX-ccp"/>
         <segue reference="qxs-qb-Ymr"/>
-        <segue reference="4Hu-9s-myn"/>
+        <segue reference="iav-jC-4sW"/>
         <segue reference="xtH-0g-WeU"/>
-        <segue reference="Cb9-uf-PYS"/>
     </inferredMetricsTieBreakers>
 </document>
