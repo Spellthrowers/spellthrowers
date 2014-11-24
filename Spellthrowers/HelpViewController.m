@@ -27,11 +27,14 @@
 @property (weak, nonatomic) IBOutlet UILabel *text9;
 
 @property (weak, nonatomic) IBOutlet UILabel *specialSpellCardsBold;
-@property (weak, nonatomic) IBOutlet UITextView *specialSpellCards;
+@property (weak, nonatomic) IBOutlet UILabel *specialSpellCards2;
+@property (weak, nonatomic) IBOutlet UILabel *specialSpellCards;
 @property (weak, nonatomic) IBOutlet UILabel *healCardsBold;
-@property (weak, nonatomic) IBOutlet UITextView *healCards;
+@property (weak, nonatomic) IBOutlet UILabel *healCards;
+@property (weak, nonatomic) IBOutlet UILabel *healCards2;
 @property (weak, nonatomic) IBOutlet UILabel *zapCardsBold;
-@property (weak, nonatomic) IBOutlet UITextView *zapCards;
+@property (weak, nonatomic) IBOutlet UILabel *zapCards;
+@property (weak, nonatomic) IBOutlet UILabel *zapCards2;
 @property (weak, nonatomic) IBOutlet UITextView *scrumCards;
 @property (weak, nonatomic) IBOutlet UIButton *backToMainMenu;
 
@@ -86,10 +89,13 @@
             
             self.specialSpellCardsBold.font = boldFont;
             self.specialSpellCards.font = textFont;
+            self.specialSpellCards2.font = textFont;
             self.healCardsBold.font = boldFont;
             self.healCards.font = textFont;
+            self.healCards2.font = textFont;
             self.zapCardsBold.font = boldFont;
             self.zapCards.font = textFont;
+            self.zapCards2.font = textFont;
             self.scrumCards.font = boldFont;
         }
     }
