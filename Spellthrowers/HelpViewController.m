@@ -39,6 +39,19 @@
 @property (weak, nonatomic) IBOutlet UIButton *backToMainMenu;
 
 
+@property (weak, nonatomic) IBOutlet UILabel *facedownCardsBold;
+@property (weak, nonatomic) IBOutlet UILabel *facedownCards;
+@property (weak, nonatomic) IBOutlet UILabel *facedownCards2;
+@property (weak, nonatomic) IBOutlet UILabel *facedownCards3;
+@property (weak, nonatomic) IBOutlet UILabel *facedownCards4;
+@property (weak, nonatomic) IBOutlet UILabel *shieldCardsBold;
+@property (weak, nonatomic) IBOutlet UILabel *shieldCards;
+@property (weak, nonatomic) IBOutlet UILabel *shieldCards2;
+@property (weak, nonatomic) IBOutlet UILabel *EMPCardsBold;
+@property (weak, nonatomic) IBOutlet UILabel *EMPCards;
+@property (weak, nonatomic) IBOutlet UILabel *EMPCards2;
+
+
 @property (weak, nonatomic) IBOutlet UILabel *header1;
 @property (weak, nonatomic) IBOutlet UILabel *header2;
 
@@ -98,6 +111,24 @@
             self.zapCards2.font = textFont;
             self.scrumCards.font = boldFont;
         }
+        if(self.shieldCards){
+            UIFont *textFont = [self.shieldCards.font fontWithSize:16];
+            UIFont *boldFont = [self.shieldCardsBold.font fontWithSize:15];
+            
+            
+            self.facedownCardsBold.font = boldFont;
+            self.facedownCards.font = textFont;
+            self.facedownCards2.font = textFont;
+            self.facedownCards3.font = textFont;
+            self.facedownCards4.font = textFont;
+            self.shieldCardsBold.font = boldFont;
+            self.shieldCards.font = textFont;
+            self.shieldCards2.font = textFont;
+            self.EMPCardsBold.font = boldFont;
+            self.EMPCards.font = textFont;
+            self.EMPCards2.font = textFont;
+        }
+
     }
     
     [super viewDidLoad];
