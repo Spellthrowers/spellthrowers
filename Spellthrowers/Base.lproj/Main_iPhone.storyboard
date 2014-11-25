@@ -1318,7 +1318,7 @@ Cg
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Heal Cards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4t-Gb-mZv">
-                                <rect key="frame" x="16" y="135" width="105.5" height="21"/>
+                                <rect key="frame" x="16" y="135" width="105.5" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="115" id="8wo-Ww-qnK"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="21" id="XG0-rN-tgp"/>
@@ -1343,7 +1343,7 @@ Cg
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="251" image="zapCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="aKM-cy-6Z2">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" image="zapCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="aKM-cy-6Z2">
                                 <rect key="frame" x="16" y="225" width="41" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="41" id="7xm-Gc-zkY"/>
@@ -1412,8 +1412,8 @@ Cg
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="heal you." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eV-fb-1kk">
-                                <rect key="frame" x="128" y="135" width="81" height="23.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="heal you." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eV-fb-1kk">
+                                <rect key="frame" x="128" y="135" width="81" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="87" id="jMq-5T-sqS"/>
                                 </constraints>
@@ -1421,10 +1421,11 @@ Cg
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="These cards do not end your turn." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exn-5Y-Y6J">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="These cards do not end your turn." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exn-5Y-Y6J">
                                 <rect key="frame" x="16" y="155" width="214.5" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="53" id="UYm-fs-AbM"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="214" id="hEq-SR-X2S"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1467,6 +1468,7 @@ Cg
                             <constraint firstItem="PN1-Pt-c64" firstAttribute="leading" secondItem="ahD-Yx-hgF" secondAttribute="trailing" constant="7" id="DN3-hM-RKE"/>
                             <constraint firstItem="LKF-3p-b06" firstAttribute="top" relation="lessThanOrEqual" secondItem="em0-SC-w4I" secondAttribute="bottom" constant="47" id="EA4-EQ-2XN"/>
                             <constraint firstItem="ahD-Yx-hgF" firstAttribute="leading" secondItem="g4t-Gb-mZv" secondAttribute="leading" id="F4H-IC-rmK"/>
+                            <constraint firstItem="exn-5Y-Y6J" firstAttribute="top" relation="lessThanOrEqual" secondItem="g4t-Gb-mZv" secondAttribute="bottom" constant="2" id="Fzw-Nk-Fw4"/>
                             <constraint firstItem="LXu-uK-qjZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="RLr-25-dNZ" secondAttribute="bottom" constant="65" id="Gbf-Hf-ypa"/>
                             <constraint firstItem="mlS-qd-0hb" firstAttribute="leading" secondItem="aKM-cy-6Z2" secondAttribute="trailing" constant="11" id="Ho6-if-hNB"/>
                             <constraint firstItem="LXu-uK-qjZ" firstAttribute="top" relation="lessThanOrEqual" secondItem="aKM-cy-6Z2" secondAttribute="bottom" constant="283" id="I0S-Mg-Pm2"/>
@@ -1479,7 +1481,6 @@ Cg
                             <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="em0-SC-w4I" secondAttribute="bottom" constant="220" id="NZC-eR-YBk"/>
                             <constraint firstItem="PN1-Pt-c64" firstAttribute="baseline" secondItem="ahD-Yx-hgF" secondAttribute="baseline" id="Od9-vG-wrm"/>
                             <constraint firstItem="Xgz-4Z-76P" firstAttribute="top" relation="lessThanOrEqual" secondItem="ahD-Yx-hgF" secondAttribute="bottom" constant="2" id="QTh-Fd-6Ep"/>
-                            <constraint firstItem="exn-5Y-Y6J" firstAttribute="top" secondItem="g4t-Gb-mZv" secondAttribute="bottom" constant="-1" id="S3P-Z8-uH9"/>
                             <constraint firstItem="g4t-Gb-mZv" firstAttribute="top" secondItem="0eV-fb-1kk" secondAttribute="top" id="SiV-n0-jO1"/>
                             <constraint firstItem="aKM-cy-6Z2" firstAttribute="top" relation="greaterThanOrEqual" secondItem="exn-5Y-Y6J" secondAttribute="bottom" constant="14" id="TKg-B5-Qah"/>
                             <constraint firstItem="lJf-zF-2XI" firstAttribute="top" relation="lessThanOrEqual" secondItem="hvr-tD-Iud" secondAttribute="bottom" constant="93" id="VEw-rd-ENb"/>
@@ -1499,6 +1500,7 @@ Cg
                             <constraint firstItem="RLr-25-dNZ" firstAttribute="leading" secondItem="mlS-qd-0hb" secondAttribute="leading" id="hgZ-ah-qM6"/>
                             <constraint firstItem="lJf-zF-2XI" firstAttribute="bottom" secondItem="em0-SC-w4I" secondAttribute="bottom" id="hmm-H1-ldg"/>
                             <constraint firstItem="g4t-Gb-mZv" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Xgz-4Z-76P" secondAttribute="bottom" constant="12" id="hqY-Dv-sH7"/>
+                            <constraint firstItem="exn-5Y-Y6J" firstAttribute="top" secondItem="0eV-fb-1kk" secondAttribute="bottom" constant="2" id="jxg-FI-CLk"/>
                             <constraint firstItem="Xgz-4Z-76P" firstAttribute="leading" secondItem="ahD-Yx-hgF" secondAttribute="leading" id="m1g-ce-fXj"/>
                             <constraint firstItem="Zz6-K4-noR" firstAttribute="top" relation="lessThanOrEqual" secondItem="exn-5Y-Y6J" secondAttribute="bottom" constant="23" id="m8P-3v-Drq"/>
                             <constraint firstItem="PN1-Pt-c64" firstAttribute="leading" relation="lessThanOrEqual" secondItem="xhb-aq-64s" secondAttribute="leadingMargin" constant="192" id="o4S-6t-ipx"/>
@@ -1509,6 +1511,7 @@ Cg
                             <constraint firstItem="06R-1h-9pF" firstAttribute="leading" secondItem="Zz6-K4-noR" secondAttribute="trailing" constant="9" id="qIs-cw-stv"/>
                             <constraint firstItem="4d9-y1-6Gl" firstAttribute="top" secondItem="rNY-oe-oZi" secondAttribute="bottom" constant="8" id="rC5-JZ-oyP"/>
                             <constraint firstItem="g4t-Gb-mZv" firstAttribute="top" secondItem="xhb-aq-64s" secondAttribute="top" constant="135" id="rWR-R7-5RG"/>
+                            <constraint firstItem="Xgz-4Z-76P" firstAttribute="top" secondItem="ahD-Yx-hgF" secondAttribute="bottom" constant="2" id="tRx-xQ-qkB"/>
                             <constraint firstItem="g4t-Gb-mZv" firstAttribute="top" secondItem="hvr-tD-Iud" secondAttribute="top" id="uFH-Gl-sNv"/>
                             <constraint firstItem="hvr-tD-Iud" firstAttribute="leading" secondItem="lJf-zF-2XI" secondAttribute="leading" id="uNb-4F-9s0"/>
                             <constraint firstItem="Xgz-4Z-76P" firstAttribute="trailing" secondItem="Zz6-K4-noR" secondAttribute="trailing" priority="250" id="vpu-03-xW2"/>
@@ -1516,7 +1519,6 @@ Cg
                             <constraint firstItem="0eV-fb-1kk" firstAttribute="leading" secondItem="g4t-Gb-mZv" secondAttribute="trailing" constant="7" id="xZo-BN-Hk8"/>
                             <constraint firstItem="ahD-Yx-hgF" firstAttribute="centerX" secondItem="Zz6-K4-noR" secondAttribute="centerX" id="y2F-uT-SDs"/>
                             <constraint firstItem="Zz6-K4-noR" firstAttribute="bottom" secondItem="06R-1h-9pF" secondAttribute="bottom" id="yp4-KD-GpM"/>
-                            <constraint firstItem="RLr-25-dNZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="LKF-3p-b06" secondAttribute="bottom" constant="28" id="zBW-LY-f8M"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Special Cards" image="scrumMini.png" id="vb1-fb-hXT"/>
