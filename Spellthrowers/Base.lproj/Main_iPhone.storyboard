@@ -1066,19 +1066,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="hasFacedown.png" translatesAutoresizingMaskIntoConstraints="NO" id="EcI-be-bDL">
-                                <rect key="frame" x="16" y="191" width="32" height="16"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="32" id="acr-3E-9RJ"/>
-                                    <constraint firstAttribute="height" constant="16" id="ird-lD-oDQ"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sR6-GT-fvu">
-                                <rect key="frame" x="16" y="28" width="288" height="29"/>
+                                <rect key="frame" x="16" y="28" width="288" height="27"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="288" id="E2V-Wr-7c0"/>
-                                    <constraint firstAttribute="height" constant="29" id="GJU-4P-1ZR"/>
+                                    <constraint firstAttribute="height" constant="27" id="GJU-4P-1ZR"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="How to Play">
@@ -1091,6 +1084,13 @@
                                 </attributedString>
                                 <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="EMPCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="ecM-pF-okl">
+                                <rect key="frame" x="263" y="344" width="41" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="9J7-XC-Qeo"/>
+                                    <constraint firstAttribute="width" constant="41" id="QCy-87-bAm"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" ambiguous="YES" misplaced="YES" text="Spell Shield" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qjb-AS-hVr">
                                 <rect key="frame" x="64" y="258" width="113" height="24"/>
                                 <constraints>
@@ -1117,7 +1117,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" ambiguous="YES" misplaced="YES" text="damage if a spell is played." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6E-7C-vUj">
-                                <rect key="frame" x="64" y="278.5" width="243" height="23.5"/>
+                                <rect key="frame" x="64" y="278" width="243" height="23.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="24" id="SpC-wi-Ism"/>
                                     <constraint firstAttribute="width" constant="243" id="bnu-t9-nHe"/>
@@ -1136,56 +1136,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="spellShieldCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="7WJ-to-wjh">
-                                <rect key="frame" x="16" y="249" width="41" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="hqs-Tc-vRf"/>
-                                    <constraint firstAttribute="width" constant="41" id="qdm-R0-NJn"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" ambiguous="YES" text="Facedown Cards" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCj-eT-NIL">
-                                <rect key="frame" x="16" y="69" width="161.5" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="24" id="1CV-1C-WHl"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="162" id="NOy-hG-b1v"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="are triggered" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Re1-ua-4G2">
-                                <rect key="frame" x="182" y="69" width="123" height="23.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="123" id="1Ka-UD-Goe"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="24" id="XGT-Lb-FAi"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" ambiguous="YES" misplaced="YES" text="when you are hit by a weapon or spell. If you have a facedown card, it is replaced upon playing a new one." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKm-Hf-FyL">
-                                <rect key="frame" x="16" y="89" width="288" height="96"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="96" id="FQR-Qf-n4J"/>
-                                    <constraint firstAttribute="width" constant="288" id="NhN-aU-ggm"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" ambiguous="YES" misplaced="YES" text="      indicates a player has a facedown card. " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QtK-kC-X1J">
-                                <rect key="frame" x="16" y="179.5" width="288" height="53"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="EMPCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="ecM-pF-okl">
-                                <rect key="frame" x="263" y="344" width="41" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="9J7-XC-Qeo"/>
-                                    <constraint firstAttribute="width" constant="41" id="QCy-87-bAm"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" ambiguous="YES" misplaced="YES" text="damage and removes all opponents' weapon cards. Does 2 damage for each weapon removed." lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BqP-mM-iIq">
                                 <rect key="frame" x="16" y="347" width="244" height="97"/>
                                 <constraints>
@@ -1196,6 +1146,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="spellShieldCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="7WJ-to-wjh">
+                                <rect key="frame" x="16" y="249" width="41" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="hqs-Tc-vRf"/>
+                                    <constraint firstAttribute="width" constant="41" id="qdm-R0-NJn"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="EMP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CuK-i2-o9M">
                                 <rect key="frame" x="16" y="327" width="48" height="21"/>
                                 <constraints>
@@ -1212,6 +1169,53 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" ambiguous="YES" misplaced="YES" text="Facedown Cards" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCj-eT-NIL">
+                                <rect key="frame" x="16" y="69" width="161.5" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="24" id="1CV-1C-WHl"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="162" id="NOy-hG-b1v"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="are triggered" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Re1-ua-4G2">
+                                <rect key="frame" x="182" y="69" width="123" height="23.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="123" id="1Ka-UD-Goe"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="24" id="XGT-Lb-FAi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" ambiguous="YES" misplaced="YES" text="when you are hit by a weapon or spell. If you have a facedown card, it is replaced upon playing a new one." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKm-Hf-FyL">
+                                <rect key="frame" x="16" y="89" width="288" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="NhN-aU-ggm"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="95" id="jN6-7V-Cue"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" ambiguous="YES" misplaced="YES" text="      indicates a player has a facedown card. " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QtK-kC-X1J">
+                                <rect key="frame" x="16" y="187" width="288" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="52m-1V-R3Y"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="47" id="wNO-DF-HOp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="hasFacedown.png" translatesAutoresizingMaskIntoConstraints="NO" id="EcI-be-bDL">
+                                <rect key="frame" x="16" y="187" width="32" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="acr-3E-9RJ"/>
+                                    <constraint firstAttribute="height" constant="16" id="ird-lD-oDQ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.1998242029" green="0.56461037199999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -1230,8 +1234,8 @@
                             <constraint firstItem="kDr-8P-3qk" firstAttribute="baseline" secondItem="CuK-i2-o9M" secondAttribute="firstBaseline" id="Ld8-VH-AeJ"/>
                             <constraint firstItem="kDr-8P-3qk" firstAttribute="trailing" secondItem="nug-MS-oxF" secondAttribute="trailing" id="M6W-6T-Qvh"/>
                             <constraint firstItem="CuK-i2-o9M" firstAttribute="top" secondItem="kDr-8P-3qk" secondAttribute="top" id="PDM-rS-faJ"/>
-                            <constraint firstItem="hKm-Hf-FyL" firstAttribute="top" secondItem="pCj-eT-NIL" secondAttribute="bottom" constant="-4" id="RD8-AU-1gV"/>
-                            <constraint firstItem="QtK-kC-X1J" firstAttribute="top" secondItem="hKm-Hf-FyL" secondAttribute="bottom" constant="-5" id="S74-5I-CMx"/>
+                            <constraint firstItem="hKm-Hf-FyL" firstAttribute="top" secondItem="pCj-eT-NIL" secondAttribute="bottom" id="RD8-AU-1gV"/>
+                            <constraint firstItem="QtK-kC-X1J" firstAttribute="top" secondItem="hKm-Hf-FyL" secondAttribute="bottom" id="S74-5I-CMx"/>
                             <constraint firstItem="kDr-8P-3qk" firstAttribute="top" relation="lessThanOrEqual" secondItem="Qjb-AS-hVr" secondAttribute="bottom" constant="45" id="THK-Ti-8Up"/>
                             <constraint firstItem="CuK-i2-o9M" firstAttribute="baseline" secondItem="kDr-8P-3qk" secondAttribute="baseline" constant="-3" id="TcN-S3-Jg4"/>
                             <constraint firstItem="7WJ-to-wjh" firstAttribute="leading" secondItem="YJy-cI-kHF" secondAttribute="leadingMargin" id="TmD-vK-WBn"/>
@@ -1249,17 +1253,16 @@
                             <constraint firstItem="Re1-ua-4G2" firstAttribute="top" secondItem="pCj-eT-NIL" secondAttribute="top" id="gpp-rC-GtX"/>
                             <constraint firstItem="nug-MS-oxF" firstAttribute="baseline" secondItem="Qjb-AS-hVr" secondAttribute="firstBaseline" id="k1E-7U-aRj"/>
                             <constraint firstItem="hKm-Hf-FyL" firstAttribute="leading" secondItem="pCj-eT-NIL" secondAttribute="leading" id="lja-hV-bs5"/>
+                            <constraint firstItem="CuK-i2-o9M" firstAttribute="top" relation="greaterThanOrEqual" secondItem="7WJ-to-wjh" secondAttribute="bottom" constant="15" id="p5Z-zF-oyK"/>
                             <constraint firstItem="sgy-bE-bK4" firstAttribute="top" secondItem="BqP-mM-iIq" secondAttribute="bottom" constant="25" id="pKv-5t-I4D"/>
                             <constraint firstItem="hKm-Hf-FyL" firstAttribute="top" relation="lessThanOrEqual" secondItem="sR6-GT-fvu" secondAttribute="bottom" constant="32" id="rB8-KP-haQ"/>
                             <constraint firstItem="Re1-ua-4G2" firstAttribute="bottom" secondItem="pCj-eT-NIL" secondAttribute="bottom" id="ryg-6x-uVY"/>
-                            <constraint firstItem="7WJ-to-wjh" firstAttribute="top" relation="lessThanOrEqual" secondItem="EcI-be-bDL" secondAttribute="bottom" constant="42" id="t5W-ni-ZUk"/>
                             <constraint firstItem="EcI-be-bDL" firstAttribute="top" secondItem="hKm-Hf-FyL" secondAttribute="bottom" constant="6" id="tBk-Bu-gek"/>
                             <constraint firstItem="BqP-mM-iIq" firstAttribute="top" relation="lessThanOrEqual" secondItem="7WJ-to-wjh" secondAttribute="bottom" constant="38" id="vKE-Ym-TfA"/>
                             <constraint firstItem="hKm-Hf-FyL" firstAttribute="trailing" secondItem="sR6-GT-fvu" secondAttribute="trailing" id="vwU-Wh-z6S"/>
                             <constraint firstItem="sR6-GT-fvu" firstAttribute="leading" secondItem="pCj-eT-NIL" secondAttribute="leading" id="wLS-mI-ZRh"/>
                             <constraint firstItem="ecM-pF-okl" firstAttribute="top" relation="lessThanOrEqual" secondItem="B6E-7C-vUj" secondAttribute="bottom" constant="42" id="ycE-1Z-8LU"/>
                             <constraint firstItem="pCj-eT-NIL" firstAttribute="centerY" secondItem="Re1-ua-4G2" secondAttribute="centerY" id="yhB-18-9L1"/>
-                            <constraint firstItem="QtK-kC-X1J" firstAttribute="top" relation="lessThanOrEqual" secondItem="Re1-ua-4G2" secondAttribute="bottom" constant="87" id="z5D-TQ-zED"/>
                             <constraint firstItem="sgy-bE-bK4" firstAttribute="leading" secondItem="YJy-cI-kHF" secondAttribute="leadingMargin" constant="52" id="zQ8-6S-nAR"/>
                             <constraint firstItem="Qjb-AS-hVr" firstAttribute="top" relation="lessThanOrEqual" secondItem="QtK-kC-X1J" secondAttribute="bottom" constant="26" id="zf8-cq-XJl"/>
                         </constraints>
@@ -1815,8 +1818,8 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="Vqs-rg-jIN"/>
-        <segue reference="rE4-7a-bw7"/>
-        <segue reference="2TN-sa-4hd"/>
+        <segue reference="59v-Qr-Qev"/>
         <segue reference="tjg-hy-4SB"/>
+        <segue reference="2TN-sa-4hd"/>
     </inferredMetricsTieBreakers>
 </document>
