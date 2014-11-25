@@ -127,6 +127,12 @@
             self.EMPCardsBold.font = boldFont;
             self.EMPCards.font = textFont;
             self.EMPCards2.font = textFont;
+            
+            
+            //special formatting
+            self.facedownCards2.text = [((NSString*)self.facedownCards2.text) substringFromIndex:2];
+            self.shieldCards.text = [((NSString*)self.shieldCards.text) substringFromIndex:1];
+            
         }
 
     }
