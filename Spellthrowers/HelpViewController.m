@@ -73,6 +73,7 @@
     
     //fix screen for 4S users
     if (SCREEN_HEIGHT < 481) {
+        //screen 1!
         if (self.weaponText) {
             UIFont *textFont = [self.weaponText.font fontWithSize:16];
             UIFont *boldFont = [self.text1.font fontWithSize:15];
@@ -95,6 +96,7 @@
             self.weaponText.text = [((NSString*)self.weaponText.text) substringFromIndex:8];
             self.text6.text = [((NSString*)self.text6.text) substringFromIndex:1];
         }
+        //screen 3!
         if(self.specialSpellCards){
             UIFont *textFont = [self.specialSpellCards.font fontWithSize:16];
             UIFont *boldFont = [self.specialSpellCardsBold.font fontWithSize:15];
@@ -110,7 +112,14 @@
             self.zapCards.font = textFont;
             self.zapCards2.font = textFont;
             self.scrumCards.font = boldFont;
+            
+            //special formatting
+            self.specialSpellCards.text = [((NSString*)self.specialSpellCards.text) substringFromIndex:2];
+            self.healCards.text = [((NSString*)self.healCards.text) substringFromIndex:1];
+            self.zapCards.text = [((NSString*)self.zapCards.text) substringFromIndex:1];
+            
         }
+        //screen 2!
         if(self.shieldCards){
             UIFont *textFont = [self.shieldCards.font fontWithSize:16];
             UIFont *boldFont = [self.shieldCardsBold.font fontWithSize:15];
