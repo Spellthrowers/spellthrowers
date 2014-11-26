@@ -64,6 +64,9 @@
 		2BFF20C019C4F25F00A4A29D /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFF20BF19C4F25F00A4A29D /* GameViewController.m */; };
 		2BFF20C319C5EF2500A4A29D /* TransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFF20C219C5EF2500A4A29D /* TransitionViewController.m */; };
 		C254E8A91A15439D00861C79 /* facedownCard_transition.png in Resources */ = {isa = PBXBuildFile; fileRef = C254E8A81A15439D00861C79 /* facedownCard_transition.png */; };
+		C2686D3A1A23A938005EE3E5 /* hurricaneCardBig.png in Resources */ = {isa = PBXBuildFile; fileRef = C2686D371A23A938005EE3E5 /* hurricaneCardBig.png */; };
+		C2686D3B1A23A938005EE3E5 /* waterfallCardBig.png in Resources */ = {isa = PBXBuildFile; fileRef = C2686D381A23A938005EE3E5 /* waterfallCardBig.png */; };
+		C2686D3C1A23A938005EE3E5 /* zapCardBig.png in Resources */ = {isa = PBXBuildFile; fileRef = C2686D391A23A938005EE3E5 /* zapCardBig.png */; };
 		C2830AD41A1C070700B12839 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C2830AD31A1C070700B12839 /* libsqlite3.dylib */; };
 		C2830AE51A1C534A00B12839 /* scores.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2830AE41A1C534A00B12839 /* scores.plist */; };
 		C2A541751A0179D500C065A8 /* zapCard.png in Resources */ = {isa = PBXBuildFile; fileRef = C2A541741A0179D500C065A8 /* zapCard.png */; };
@@ -165,6 +168,9 @@
 		2BFF20C119C5EF2500A4A29D /* TransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionViewController.h; sourceTree = "<group>"; };
 		2BFF20C219C5EF2500A4A29D /* TransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionViewController.m; sourceTree = "<group>"; };
 		C254E8A81A15439D00861C79 /* facedownCard_transition.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facedownCard_transition.png; sourceTree = "<group>"; };
+		C2686D371A23A938005EE3E5 /* hurricaneCardBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hurricaneCardBig.png; sourceTree = "<group>"; };
+		C2686D381A23A938005EE3E5 /* waterfallCardBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waterfallCardBig.png; sourceTree = "<group>"; };
+		C2686D391A23A938005EE3E5 /* zapCardBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zapCardBig.png; sourceTree = "<group>"; };
 		C2830AD31A1C070700B12839 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		C2830AE41A1C534A00B12839 /* scores.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = scores.plist; sourceTree = "<group>"; };
 		C2A541741A0179D500C065A8 /* zapCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zapCard.png; sourceTree = "<group>"; };
@@ -315,6 +321,9 @@
 				2BB9D27D1A1EB9B9009BEA7F /* spellShieldCardBig.png */,
 				2B4ABFBE19DD173C006331D6 /* icon.png */,
 				2BF1955B19F6FFF50000353E /* helpIcon.png */,
+				C2686D371A23A938005EE3E5 /* hurricaneCardBig.png */,
+				C2686D381A23A938005EE3E5 /* waterfallCardBig.png */,
+				C2686D391A23A938005EE3E5 /* zapCardBig.png */,
 				2BF1955D19F710E30000353E /* hasFacedown.png */,
 				2B06F15D1A145E32009849E5 /* facedownCard.png */,
 				C2A541781A0180B500C065A8 /* healCard.png */,
@@ -484,6 +493,7 @@
 				2BCB726519F0C9C600BCC89C /* healCard.m4a in Resources */,
 				2BB9D27F1A1EB9B9009BEA7F /* waterfallCardBig.png in Resources */,
 				2BE0E18419BB9E9B00CC89E9 /* Main_iPad.storyboard in Resources */,
+				C2686D3B1A23A938005EE3E5 /* waterfallCardBig.png in Resources */,
 				2BB9D2841A1EB9B9009BEA7F /* healCardBig.png in Resources */,
 				2BE3BCD01A02A12B00F9AF15 /* scrumCard.png in Resources */,
 				C2A541751A0179D500C065A8 /* zapCard.png in Resources */,
@@ -512,12 +522,14 @@
 				2BCB725019F0B40700BCC89C /* EMPCard.png in Resources */,
 				C2CAF9481A01BDBD00237E79 /* hurricaneCard.png in Resources */,
 				2BE3BCC71A02876100F9AF15 /* EMPMini.png in Resources */,
+				C2686D3A1A23A938005EE3E5 /* hurricaneCardBig.png in Resources */,
 				C2830AE51A1C534A00B12839 /* scores.plist in Resources */,
 				2B4ABFC119DD17FD006331D6 /* fireball.png in Resources */,
 				2BCB726319F0C55F00BCC89C /* facedownCard.m4a in Resources */,
 				2B4ABFC319DD1DF7006331D6 /* fireballCard.png in Resources */,
 				2BCB726019F0C09900BCC89C /* fireballCard.m4a in Resources */,
 				2BC9563219DDEA540046B39E /* spellShieldCard.png in Resources */,
+				C2686D3C1A23A938005EE3E5 /* zapCardBig.png in Resources */,
 				C2FE73211A10328F00BAC89B /* scrumCard_transition.png in Resources */,
 				C2FE731F1A10328F00BAC89B /* hurricaneCard_transition.png in Resources */,
 				2BE0E17819BB9E9B00CC89E9 /* InfoPlist.strings in Resources */,

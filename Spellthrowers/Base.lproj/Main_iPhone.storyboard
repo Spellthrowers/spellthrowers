@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -1064,218 +1066,220 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d9m-8d-0RI">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spellShieldCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="7WJ-to-wjh">
-                                        <rect key="frame" x="14" y="265" width="41" height="60"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="1Qt-MM-rrf"/>
-                                            <constraint firstAttribute="width" constant="41" id="HYQ-x6-Mk6"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hasFacedown.png" translatesAutoresizingMaskIntoConstraints="NO" id="EcI-be-bDL">
-                                        <rect key="frame" x="12" y="202" width="32" height="16"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="16" id="WIz-kj-xJj"/>
-                                            <constraint firstAttribute="width" constant="32" id="iQ8-ec-s8F"/>
-                                        </constraints>
-                                    </imageView>
-                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k65-FH-6hB">
-                                        <rect key="frame" x="63" y="262" width="257" height="64.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="257" id="aNn-q3-MC6"/>
-                                        </constraints>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Spell Shield">
-                                                <attributes>
-                                                    <font key="NSFont" size="20" name="HelveticaNeue-Bold"/>
-                                                    <font key="NSOriginalFont" size="20" name="HelveticaNeue-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content=" reflects spell damage if a spell is played.">
-                                                <attributes>
-                                                    <font key="NSFont" size="20" name="HelveticaNeue"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="244" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sR6-GT-fvu">
-                                        <rect key="frame" x="16" y="28" width="288" height="27"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="27" id="2M9-u2-Llt"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="Hh6-Xy-1eG"/>
-                                        </constraints>
-                                        <attributedString key="attributedText">
-                                            <fragment content="How to Play">
-                                                <attributes>
-                                                    <color key="NSColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="22" name="HelveticaNeue-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EMPCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="ecM-pF-okl">
-                                        <rect key="frame" x="263" y="371.5" width="41" height="60"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="1P3-NA-IjG"/>
-                                            <constraint firstAttribute="width" constant="41" id="meP-zk-2QZ"/>
-                                        </constraints>
-                                    </imageView>
-                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oTR-2J-7Ng">
-                                        <rect key="frame" x="14" y="333" width="252" height="137"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="252" id="S5M-hd-zc1"/>
-                                            <constraint firstAttribute="height" constant="137" id="uFb-ZW-9oo"/>
-                                        </constraints>
-                                        <attributedString key="attributedText">
-                                            <fragment content="EMP">
-                                                <attributes>
-                                                    <font key="NSFont" size="20" name="HelveticaNeue-Bold"/>
-                                                    <font key="NSOriginalFont" size="20" name="HelveticaNeue-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content=" ">
-                                                <attributes>
-                                                    <font key="NSFont" size="20" name="HelveticaNeue"/>
-                                                    <font key="NSOriginalFont" size="16" name="HelveticaNeue-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="nullifies ">
-                                                <attributes>
-                                                    <font key="NSFont" size="20" name="HelveticaNeue"/>
-                                                    <font key="NSOriginalFont" size="16" name="HelveticaNeue"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="weapon damage and removes all opponents' weapon cards. Does 2 damage for each weapon removed.">
-                                                <attributes>
-                                                    <font key="NSFont" size="20" name="HelveticaNeue"/>
-                                                    <font key="NSOriginalFont" size="11" name="HelveticaNeue"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WcX-Eb-eyZ">
-                                        <rect key="frame" x="12" y="68" width="296" height="203"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Facedown Cards">
-                                                <attributes>
-                                                    <font key="NSFont" size="20" name="HelveticaNeue-Bold"/>
-                                                    <font key="NSOriginalFont" size="20" name="HelveticaNeue-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content=" are triggered when you are hit by a weapon or spell. If you have a facedown card, it is replaced upon playing a new one.    ">
-                                                <attributes>
-                                                    <font key="NSFont" size="20" name="HelveticaNeue"/>
-                                                    <font key="NSOriginalFont" size="11" name="HelveticaNeue"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content=" ">
-                                                <attributes>
-                                                    <font key="NSFont" size="11" name="HelveticaNeue"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content=" indicates a player has a facedown card.">
-                                                <attributes>
-                                                    <font key="NSFont" size="20" name="HelveticaNeue"/>
-                                                    <font key="NSOriginalFont" size="11" name="HelveticaNeue"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                                <attributes>
-                                                    <font key="NSFont" size="16" name="HelveticaNeue"/>
-                                                    <font key="NSOriginalFont" size="16" name="HelveticaNeue"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgy-bE-bK4">
-                                        <rect key="frame" x="68" y="472" width="184" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="Xip-5Y-eCu"/>
-                                            <constraint firstAttribute="width" constant="184" id="vlQ-YY-cfB"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="Back to Game" backgroundImage="background.png">
-                                            <color key="titleColor" red="1" green="0.94657157869999997" blue="0.44970602380000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="SEj-FN-gUh" kind="modal" id="59v-Qr-Qev"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sR6-GT-fvu">
+                                <rect key="frame" x="16" y="28" width="288" height="27"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="oTR-2J-7Ng" firstAttribute="top" secondItem="k65-FH-6hB" secondAttribute="bottom" constant="6.5" id="8YH-dz-xde"/>
-                                    <constraint firstItem="WcX-Eb-eyZ" firstAttribute="top" secondItem="sR6-GT-fvu" secondAttribute="bottom" constant="13" id="A6h-jR-h8d"/>
-                                    <constraint firstItem="sR6-GT-fvu" firstAttribute="top" secondItem="d9m-8d-0RI" secondAttribute="top" constant="28" id="A6y-Va-GhY"/>
-                                    <constraint firstItem="ecM-pF-okl" firstAttribute="centerY" secondItem="oTR-2J-7Ng" secondAttribute="centerY" id="Ahs-vJ-2VC"/>
-                                    <constraint firstAttribute="centerX" secondItem="sgy-bE-bK4" secondAttribute="centerX" id="CYL-MJ-alS"/>
-                                    <constraint firstItem="k65-FH-6hB" firstAttribute="leading" secondItem="7WJ-to-wjh" secondAttribute="trailing" constant="8" id="CdC-ZV-U1p"/>
-                                    <constraint firstItem="oTR-2J-7Ng" firstAttribute="leading" secondItem="d9m-8d-0RI" secondAttribute="leading" constant="14" id="JCM-iu-EON"/>
-                                    <constraint firstItem="EcI-be-bDL" firstAttribute="leading" secondItem="WcX-Eb-eyZ" secondAttribute="leading" id="O0t-Lv-Bey"/>
-                                    <constraint firstAttribute="centerX" secondItem="WcX-Eb-eyZ" secondAttribute="centerX" id="Q5W-EQ-2jf"/>
-                                    <constraint firstAttribute="trailing" secondItem="ecM-pF-okl" secondAttribute="trailing" constant="16" id="TNU-bO-eN1"/>
-                                    <constraint firstItem="k65-FH-6hB" firstAttribute="centerY" secondItem="7WJ-to-wjh" secondAttribute="centerY" id="bZq-1e-RtD"/>
-                                    <constraint firstItem="sgy-bE-bK4" firstAttribute="top" secondItem="k65-FH-6hB" secondAttribute="bottom" constant="145" id="eut-zL-WjK"/>
-                                    <constraint firstItem="EcI-be-bDL" firstAttribute="top" secondItem="sR6-GT-fvu" secondAttribute="bottom" constant="147" id="hXN-dy-zSa"/>
-                                    <constraint firstAttribute="trailing" secondItem="sR6-GT-fvu" secondAttribute="trailing" constant="16" id="o3Y-pj-KAk"/>
-                                    <constraint firstItem="7WJ-to-wjh" firstAttribute="top" secondItem="EcI-be-bDL" secondAttribute="bottom" constant="47" id="ok3-bi-snQ"/>
-                                    <constraint firstItem="sR6-GT-fvu" firstAttribute="leading" secondItem="d9m-8d-0RI" secondAttribute="leading" constant="16" id="opb-vP-6tp"/>
-                                    <constraint firstItem="WcX-Eb-eyZ" firstAttribute="leading" secondItem="d9m-8d-0RI" secondAttribute="leading" constant="12" id="rEw-vV-AWb"/>
-                                    <constraint firstAttribute="bottom" secondItem="sgy-bE-bK4" secondAttribute="bottom" constant="14" id="uZE-jb-g9C"/>
-                                    <constraint firstItem="7WJ-to-wjh" firstAttribute="leading" secondItem="d9m-8d-0RI" secondAttribute="leading" constant="14" id="vX2-yf-bju"/>
-                                    <constraint firstItem="k65-FH-6hB" firstAttribute="top" secondItem="sR6-GT-fvu" secondAttribute="bottom" constant="207" id="yTE-3p-9pE"/>
+                                    <constraint firstAttribute="width" constant="288" id="E2V-Wr-7c0"/>
+                                    <constraint firstAttribute="height" constant="27" id="GJU-4P-1ZR"/>
                                 </constraints>
-                            </scrollView>
+                                <attributedString key="attributedText">
+                                    <fragment content="How to Play">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="22" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="EMPCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="ecM-pF-okl">
+                                <rect key="frame" x="263" y="344" width="41" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="9J7-XC-Qeo"/>
+                                    <constraint firstAttribute="width" constant="41" id="QCy-87-bAm"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" ambiguous="YES" misplaced="YES" text="Spell Shield" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qjb-AS-hVr">
+                                <rect key="frame" x="64" y="258" width="113" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="24" id="4CL-ph-Ojd"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="113" id="h0X-A5-cIT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgy-bE-bK4">
+                                <rect key="frame" x="68" y="473" width="184" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="184" id="9Xg-pe-Xd2"/>
+                                    <constraint firstAttribute="height" constant="30" id="JzB-QC-zN9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Back to Game" backgroundImage="background.png">
+                                    <color key="titleColor" red="1" green="0.94657157869999997" blue="0.44970602380000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="SEj-FN-gUh" kind="modal" id="59v-Qr-Qev"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" ambiguous="YES" misplaced="YES" text="damage if a spell is played." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6E-7C-vUj">
+                                <rect key="frame" x="64" y="278" width="243" height="23.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="24" id="SpC-wi-Ism"/>
+                                    <constraint firstAttribute="width" constant="243" id="bnu-t9-nHe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="                     reflects spell " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nug-MS-oxF">
+                                <rect key="frame" x="65" y="258" width="239" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="24" id="naF-UD-J0L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" ambiguous="YES" misplaced="YES" text="damage and removes all opponents' weapon cards. Does 2 damage for each weapon removed." lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BqP-mM-iIq">
+                                <rect key="frame" x="16" y="347" width="244" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="97" id="6d9-y1-DaC"/>
+                                    <constraint firstAttribute="width" constant="244" id="vdA-Na-csQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="spellShieldCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="7WJ-to-wjh">
+                                <rect key="frame" x="16" y="249" width="41" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="hqs-Tc-vRf"/>
+                                    <constraint firstAttribute="width" constant="41" id="qdm-R0-NJn"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="EMP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CuK-i2-o9M">
+                                <rect key="frame" x="16" y="327" width="48" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="48" id="056-LK-8oh"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="24" id="geQ-g5-hcD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="         nullifies weapon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDr-8P-3qk">
+                                <rect key="frame" x="16" y="324" width="288" height="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" ambiguous="YES" misplaced="YES" text="Facedown Cards" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCj-eT-NIL">
+                                <rect key="frame" x="16" y="69" width="161.5" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="24" id="1CV-1C-WHl"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="162" id="NOy-hG-b1v"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="                              are triggered" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Re1-ua-4G2">
+                                <rect key="frame" x="16" y="69" width="289" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="24" id="XGT-Lb-FAi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" ambiguous="YES" misplaced="YES" text="when you are hit by a weapon or spell. If you have a facedown card, it is replaced upon playing a new one." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKm-Hf-FyL">
+                                <rect key="frame" x="16" y="89" width="288" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="NhN-aU-ggm"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="95" id="jN6-7V-Cue"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" ambiguous="YES" misplaced="YES" text="      indicates a player has a facedown card. " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QtK-kC-X1J">
+                                <rect key="frame" x="16" y="187" width="288" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="j0E-K9-TTs"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="47" id="wNO-DF-HOp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="hasFacedown.png" translatesAutoresizingMaskIntoConstraints="NO" id="EcI-be-bDL">
+                                <rect key="frame" x="16" y="187" width="32" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="acr-3E-9RJ"/>
+                                    <constraint firstAttribute="height" constant="16" id="ird-lD-oDQ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.1998242029" green="0.56461037199999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="d9m-8d-0RI" firstAttribute="top" secondItem="YJy-cI-kHF" secondAttribute="top" id="1UF-dr-EYg"/>
-                            <constraint firstAttribute="trailing" secondItem="d9m-8d-0RI" secondAttribute="trailing" id="D2C-as-fX8"/>
-                            <constraint firstItem="d9m-8d-0RI" firstAttribute="leading" secondItem="YJy-cI-kHF" secondAttribute="leading" id="DlS-e8-hj6"/>
-                            <constraint firstItem="SCW-LS-ta3" firstAttribute="top" secondItem="d9m-8d-0RI" secondAttribute="bottom" id="rjY-kw-VFl"/>
+                            <constraint firstItem="nug-MS-oxF" firstAttribute="baseline" secondItem="Qjb-AS-hVr" secondAttribute="baseline" id="6EY-Qr-CHc"/>
+                            <constraint firstItem="Qjb-AS-hVr" firstAttribute="leading" secondItem="7WJ-to-wjh" secondAttribute="trailing" constant="7" id="7Iq-b8-thV"/>
+                            <constraint firstItem="kDr-8P-3qk" firstAttribute="top" relation="lessThanOrEqual" secondItem="B6E-7C-vUj" secondAttribute="bottom" constant="25" id="BGp-bj-U10"/>
+                            <constraint firstItem="B6E-7C-vUj" firstAttribute="top" relation="lessThanOrEqual" secondItem="QtK-kC-X1J" secondAttribute="bottom" constant="46" id="BmX-X6-tla"/>
+                            <constraint firstItem="QtK-kC-X1J" firstAttribute="leading" secondItem="EcI-be-bDL" secondAttribute="leading" id="CAA-x8-QzW"/>
+                            <constraint firstItem="BqP-mM-iIq" firstAttribute="top" secondItem="kDr-8P-3qk" secondAttribute="bottom" constant="-1" id="IpI-EQ-T5M"/>
+                            <constraint firstItem="CuK-i2-o9M" firstAttribute="leading" secondItem="BqP-mM-iIq" secondAttribute="leading" id="J65-iK-Eli"/>
+                            <constraint firstItem="pCj-eT-NIL" firstAttribute="top" relation="lessThanOrEqual" secondItem="sR6-GT-fvu" secondAttribute="bottom" constant="14" id="Jix-fB-SMh"/>
+                            <constraint firstItem="nug-MS-oxF" firstAttribute="trailing" secondItem="YJy-cI-kHF" secondAttribute="trailingMargin" id="KC2-4K-YQW"/>
+                            <constraint firstItem="sR6-GT-fvu" firstAttribute="top" secondItem="fZI-Di-VL4" secondAttribute="bottom" constant="8" symbolic="YES" id="KOu-Ye-yCi"/>
+                            <constraint firstItem="kDr-8P-3qk" firstAttribute="baseline" secondItem="CuK-i2-o9M" secondAttribute="firstBaseline" id="Ld8-VH-AeJ"/>
+                            <constraint firstItem="CuK-i2-o9M" firstAttribute="top" secondItem="kDr-8P-3qk" secondAttribute="top" id="PDM-rS-faJ"/>
+                            <constraint firstItem="hKm-Hf-FyL" firstAttribute="top" secondItem="pCj-eT-NIL" secondAttribute="bottom" id="RD8-AU-1gV"/>
+                            <constraint firstItem="QtK-kC-X1J" firstAttribute="top" secondItem="hKm-Hf-FyL" secondAttribute="bottom" id="S74-5I-CMx"/>
+                            <constraint firstItem="kDr-8P-3qk" firstAttribute="top" relation="lessThanOrEqual" secondItem="Qjb-AS-hVr" secondAttribute="bottom" constant="45" id="THK-Ti-8Up"/>
+                            <constraint firstItem="CuK-i2-o9M" firstAttribute="baseline" secondItem="kDr-8P-3qk" secondAttribute="baseline" id="TcN-S3-Jg4"/>
+                            <constraint firstItem="7WJ-to-wjh" firstAttribute="leading" secondItem="YJy-cI-kHF" secondAttribute="leadingMargin" id="TmD-vK-WBn"/>
+                            <constraint firstItem="hKm-Hf-FyL" firstAttribute="leading" secondItem="EcI-be-bDL" secondAttribute="leading" id="WMB-AN-9Yd"/>
+                            <constraint firstItem="7WJ-to-wjh" firstAttribute="leading" secondItem="CuK-i2-o9M" secondAttribute="leading" id="Wpk-fx-IwN"/>
+                            <constraint firstItem="CuK-i2-o9M" firstAttribute="leading" secondItem="kDr-8P-3qk" secondAttribute="leading" id="Xdv-zt-ycG"/>
+                            <constraint firstItem="7WJ-to-wjh" firstAttribute="top" relation="lessThanOrEqual" secondItem="QtK-kC-X1J" secondAttribute="bottom" constant="17" id="YNl-8n-bse"/>
+                            <constraint firstItem="Qjb-AS-hVr" firstAttribute="leading" secondItem="nug-MS-oxF" secondAttribute="leading" id="aeR-6q-75O"/>
+                            <constraint firstItem="B6E-7C-vUj" firstAttribute="top" secondItem="Qjb-AS-hVr" secondAttribute="bottom" constant="-3.5" id="aol-qk-vTe"/>
+                            <constraint firstItem="Qjb-AS-hVr" firstAttribute="leading" secondItem="B6E-7C-vUj" secondAttribute="leading" id="ebD-ZU-LE6"/>
+                            <constraint firstItem="EcI-be-bDL" firstAttribute="leading" secondItem="7WJ-to-wjh" secondAttribute="leading" id="eiv-hS-LQf"/>
+                            <constraint firstItem="Qjb-AS-hVr" firstAttribute="top" secondItem="nug-MS-oxF" secondAttribute="top" id="fgI-aO-iAW"/>
+                            <constraint firstItem="CuK-i2-o9M" firstAttribute="top" relation="lessThanOrEqual" secondItem="7WJ-to-wjh" secondAttribute="bottom" constant="18" id="glR-mN-7sc"/>
+                            <constraint firstItem="Re1-ua-4G2" firstAttribute="top" secondItem="pCj-eT-NIL" secondAttribute="top" id="gpp-rC-GtX"/>
+                            <constraint firstItem="nug-MS-oxF" firstAttribute="baseline" secondItem="Qjb-AS-hVr" secondAttribute="firstBaseline" id="k1E-7U-aRj"/>
+                            <constraint firstItem="hKm-Hf-FyL" firstAttribute="leading" secondItem="pCj-eT-NIL" secondAttribute="leading" id="lja-hV-bs5"/>
+                            <constraint firstItem="Qjb-AS-hVr" firstAttribute="leading" secondItem="nug-MS-oxF" secondAttribute="leading" id="p0I-rY-PSy"/>
+                            <constraint firstItem="CuK-i2-o9M" firstAttribute="top" relation="greaterThanOrEqual" secondItem="7WJ-to-wjh" secondAttribute="bottom" constant="15" id="p5Z-zF-oyK"/>
+                            <constraint firstItem="sgy-bE-bK4" firstAttribute="top" secondItem="BqP-mM-iIq" secondAttribute="bottom" constant="25" id="pKv-5t-I4D"/>
+                            <constraint firstItem="hKm-Hf-FyL" firstAttribute="top" relation="lessThanOrEqual" secondItem="sR6-GT-fvu" secondAttribute="bottom" constant="34" id="rB8-KP-haQ"/>
+                            <constraint firstItem="Re1-ua-4G2" firstAttribute="bottom" secondItem="pCj-eT-NIL" secondAttribute="bottom" id="ryg-6x-uVY"/>
+                            <constraint firstItem="EcI-be-bDL" firstAttribute="top" secondItem="hKm-Hf-FyL" secondAttribute="bottom" constant="6" id="tBk-Bu-gek"/>
+                            <constraint firstItem="BqP-mM-iIq" firstAttribute="top" relation="lessThanOrEqual" secondItem="7WJ-to-wjh" secondAttribute="bottom" constant="38" id="vKE-Ym-TfA"/>
+                            <constraint firstItem="sR6-GT-fvu" firstAttribute="leading" secondItem="pCj-eT-NIL" secondAttribute="leading" id="wLS-mI-ZRh"/>
+                            <constraint firstItem="ecM-pF-okl" firstAttribute="top" relation="lessThanOrEqual" secondItem="B6E-7C-vUj" secondAttribute="bottom" constant="42" id="ycE-1Z-8LU"/>
+                            <constraint firstItem="pCj-eT-NIL" firstAttribute="centerY" secondItem="Re1-ua-4G2" secondAttribute="centerY" id="yhB-18-9L1"/>
+                            <constraint firstItem="sgy-bE-bK4" firstAttribute="leading" secondItem="YJy-cI-kHF" secondAttribute="leadingMargin" constant="52" id="zQ8-6S-nAR"/>
+                            <constraint firstItem="Qjb-AS-hVr" firstAttribute="top" relation="lessThanOrEqual" secondItem="QtK-kC-X1J" secondAttribute="bottom" constant="26" id="zf8-cq-XJl"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Facedown Cards" image="EMPMini.png" id="I67-PO-Cyp"/>
                     <navigationItem key="navigationItem" id="2qH-Oi-Brg"/>
                     <connections>
+                        <outlet property="EMPCards" destination="kDr-8P-3qk" id="8CW-oK-uyx"/>
+                        <outlet property="EMPCards2" destination="BqP-mM-iIq" id="4gC-H1-1ub"/>
+                        <outlet property="EMPCardsBold" destination="CuK-i2-o9M" id="Sma-lf-PAH"/>
                         <outlet property="backToGame2" destination="sgy-bE-bK4" id="QFF-MZ-OEq"/>
+                        <outlet property="facedownCards2" destination="Re1-ua-4G2" id="yuC-Uj-6Rn"/>
+                        <outlet property="facedownCards3" destination="hKm-Hf-FyL" id="Qto-no-9Ql"/>
+                        <outlet property="facedownCards4" destination="QtK-kC-X1J" id="dBV-Bk-CM0"/>
+                        <outlet property="facedownCardsBold" destination="pCj-eT-NIL" id="iGS-FO-Ls8"/>
+                        <outlet property="shieldCards" destination="nug-MS-oxF" id="hSc-U8-2A8"/>
+                        <outlet property="shieldCards2" destination="B6E-7C-vUj" id="Tq4-SV-eLe"/>
+                        <outlet property="shieldCardsBold" destination="Qjb-AS-hVr" id="ayA-zk-wS2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WHY-ea-H7Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1414" y="-756"/>
+            <point key="canvasLocation" x="1429" y="-756"/>
         </scene>
         <!--Help3-->
         <scene sceneID="4RR-Wf-Iyx">
@@ -1289,11 +1293,12 @@ Cg
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="244" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4d9-y1-6Gl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="244" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="288" translatesAutoresizingMaskIntoConstraints="NO" id="4d9-y1-6Gl">
                                 <rect key="frame" x="16" y="28" width="288" height="27"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="27" id="krA-Tl-JuS"/>
+                                    <constraint firstAttribute="height" constant="27" id="Y5T-zI-hFj"/>
+                                    <constraint firstAttribute="width" constant="288" id="c1P-jf-1Pd"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="How to Play">
@@ -1306,119 +1311,32 @@ Cg
                                 </attributedString>
                                 <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mjs-p8-k3c">
-                                <rect key="frame" x="15" y="64" width="288" height="68"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="288" id="HvK-Rb-TIf"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="68" id="i09-B5-zlD"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="             ">
-                                        <attributes>
-                                            <font key="NSFont" size="20" name="HelveticaNeue-Bold"/>
-                                            <font key="NSOriginalFont" size="20" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="                     ">
-                                        <attributes>
-                                            <font key="NSFont" size="20" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="have special effects.">
-                                        <attributes>
-                                            <font key="NSFont" size="20" name="HelveticaNeue"/>
-                                            <font key="NSOriginalFont" size="14" name="Helvetica"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Special Spell Cards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahD-Yx-hgF">
-                                <rect key="frame" x="16" y="74" width="193" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="2G9-oG-OMB"/>
-                                    <constraint firstAttribute="width" constant="193" id="iQO-gk-wa6"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Special Spell Cards" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="185" translatesAutoresizingMaskIntoConstraints="NO" id="ahD-Yx-hgF">
+                                <rect key="frame" x="16" y="74" width="185" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="310-Yv-lDp">
-                                <rect key="frame" x="15" y="126" width="226" height="91"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="                   ">
-                                        <attributes>
-                                            <font key="NSFont" size="20" name="HelveticaNeue-Bold"/>
-                                            <font key="NSOriginalFont" size="20" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=" heal you. These cards do not end your turn.">
-                                        <attributes>
-                                            <font key="NSFont" size="20" name="HelveticaNeue"/>
-                                            <font key="NSOriginalFont" size="16" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Heal Cards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4t-Gb-mZv">
-                                <rect key="frame" x="16" y="135" width="115" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="healCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="hvr-tD-Iud">
-                                <rect key="frame" x="263" y="141" width="41" height="60"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="251" image="healCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="hvr-tD-Iud">
+                                <rect key="frame" x="263" y="135" width="41" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="41" id="MVR-lJ-Tma"/>
+                                    <constraint firstAttribute="height" constant="60" id="hAC-CJ-dhe"/>
+                                </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SWf-15-PRM">
-                                <rect key="frame" x="63" y="216" width="239" height="67"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="                ">
-                                        <attributes>
-                                            <font key="NSFont" size="20" name="HelveticaNeue-Bold"/>
-                                            <font key="NSOriginalFont" size="20" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=" destroys enemy facedown cards">
-                                        <attributes>
-                                            <font key="NSFont" size="20" name="HelveticaNeue"/>
-                                            <font key="NSOriginalFont" size="16" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=".    ">
-                                        <attributes>
-                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
-                                            <font key="NSOriginalFont" size="16" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Zap Card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zz6-K4-noR">
-                                <rect key="frame" x="64" y="225" width="96" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="zapCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="aKM-cy-6Z2">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" ambiguous="YES" image="zapCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="aKM-cy-6Z2">
                                 <rect key="frame" x="16" y="225" width="41" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="41" id="VNY-LL-D7j"/>
+                                    <constraint firstAttribute="height" constant="60" id="h9g-gn-pyf"/>
+                                </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="em0-SC-w4I">
-                                <rect key="frame" x="88" y="307" width="143" height="41"/>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" ambiguous="YES" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="em0-SC-w4I">
+                                <rect key="frame" x="85" y="308" width="145.5" height="40.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="146" id="HB0-1S-C5w"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="41" id="IrE-aG-tt8"/>
+                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Coming soon!">
                                         <attributes>
@@ -1430,11 +1348,12 @@ Cg
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="scrumCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="lJf-zF-2XI">
-                                <rect key="frame" x="263" y="298" width="41" height="60"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLr-25-dNZ">
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLr-25-dNZ">
                                 <rect key="frame" x="68" y="473" width="184" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="184" id="OOy-19-zCy"/>
+                                    <constraint firstAttribute="height" constant="30" id="juZ-QU-O5Y"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Back to Game" backgroundImage="background.png">
                                     <color key="titleColor" red="1" green="0.94657157869999997" blue="0.44970602380000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -1444,8 +1363,12 @@ Cg
                                     <segue destination="SEj-FN-gUh" kind="modal" id="rE4-7a-bw7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LKF-3p-b06">
-                                <rect key="frame" x="68" y="395" width="184" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LKF-3p-b06">
+                                <rect key="frame" x="68" y="394" width="184" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4d7-OH-DIk"/>
+                                    <constraint firstAttribute="width" constant="184" id="WzJ-kb-uOA"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Back to Main Menu" backgroundImage="background.png">
                                     <color key="titleColor" red="1" green="0.94657157869999997" blue="0.44970602380000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -1455,28 +1378,155 @@ Cg
                                     <segue destination="vXZ-lx-hvc" kind="modal" id="2TN-sa-4hd"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" misplaced="YES" text="special effects." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xgz-4Z-76P">
+                                <rect key="frame" x="16" y="94" width="135" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="W0Q-G1-yvn"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="135" id="aEz-OQ-wRC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="                                  have" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="43" translatesAutoresizingMaskIntoConstraints="NO" id="PN1-Pt-c64">
+                                <rect key="frame" x="16" y="74" width="232" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="JNx-qp-zRN"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="235" id="WBL-di-9SZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="                    heal you." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eV-fb-1kk">
+                                <rect key="frame" x="16" y="132" width="193" height="23"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" misplaced="YES" text="Heal Cards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4t-Gb-mZv">
+                                <rect key="frame" x="16" y="132" width="106" height="23"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="These cards do not end your turn." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exn-5Y-Y6J">
+                                <rect key="frame" x="16" y="155" width="215" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="215" id="6gn-bk-Rhu"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="47" id="Wlx-De-w7I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" ambiguous="YES" text="                 destroys" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06R-1h-9pF">
+                                <rect key="frame" x="64" y="225" width="184" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="21" id="Ou6-pU-29T"/>
+                                    <constraint firstAttribute="width" constant="184" id="pH4-ID-BWI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Zap Card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zz6-K4-noR">
+                                <rect key="frame" x="64" y="225" width="96" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="21" id="XUt-5r-RaM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" ambiguous="YES" text="enemy facedown cards." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlS-qd-0hb">
+                                <rect key="frame" x="64" y="246" width="188" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="188" id="S08-wz-uzY"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="47" id="clY-uS-dpk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="251" ambiguous="YES" image="scrumCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="lJf-zF-2XI">
+                                <rect key="frame" x="263" y="299" width="41" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="01l-H4-YJj"/>
+                                    <constraint firstAttribute="width" constant="41" id="jM9-DE-lek"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.1998242029" green="0.56461037199999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="mjs-p8-k3c" firstAttribute="top" secondItem="4d9-y1-6Gl" secondAttribute="bottom" constant="9" id="HUD-gY-5N5"/>
-                            <constraint firstItem="mjs-p8-k3c" firstAttribute="leading" secondItem="xhb-aq-64s" secondAttribute="leading" constant="16" id="IaZ-P5-8WH"/>
-                            <constraint firstItem="ahD-Yx-hgF" firstAttribute="top" secondItem="4d9-y1-6Gl" secondAttribute="bottom" constant="19" id="ZWW-TA-stS"/>
-                            <constraint firstItem="mjs-p8-k3c" firstAttribute="leading" secondItem="ahD-Yx-hgF" secondAttribute="leading" id="c7A-Qc-I8D"/>
-                            <constraint firstItem="4d9-y1-6Gl" firstAttribute="top" secondItem="rNY-oe-oZi" secondAttribute="bottom" constant="8" id="rC5-JZ-oyP"/>
-                            <constraint firstItem="ahD-Yx-hgF" firstAttribute="top" relation="lessThanOrEqual" secondItem="4d9-y1-6Gl" secondAttribute="bottom" constant="19" id="sFJ-pb-uGg"/>
+                            <constraint firstItem="g4t-Gb-mZv" firstAttribute="centerY" secondItem="0eV-fb-1kk" secondAttribute="centerY" id="5Gw-nt-06a"/>
+                            <constraint firstItem="4d9-y1-6Gl" firstAttribute="trailing" secondItem="hvr-tD-Iud" secondAttribute="trailing" id="6al-jb-TAa"/>
+                            <constraint firstItem="4d9-y1-6Gl" firstAttribute="leading" secondItem="0eV-fb-1kk" secondAttribute="leading" id="A1y-Mo-tQN"/>
+                            <constraint firstItem="0eV-fb-1kk" firstAttribute="top" relation="lessThanOrEqual" secondItem="Xgz-4Z-76P" secondAttribute="bottom" constant="11" id="BBi-kU-PFN"/>
+                            <constraint firstItem="ahD-Yx-hgF" firstAttribute="top" relation="lessThanOrEqual" secondItem="4d9-y1-6Gl" secondAttribute="bottom" constant="19" id="BPW-cR-Kvf"/>
+                            <constraint firstItem="4d9-y1-6Gl" firstAttribute="leading" secondItem="aKM-cy-6Z2" secondAttribute="leading" id="EPV-5E-ToQ"/>
+                            <constraint firstItem="06R-1h-9pF" firstAttribute="top" relation="lessThanOrEqual" secondItem="exn-5Y-Y6J" secondAttribute="bottom" constant="23" id="EaQ-0S-4QI"/>
+                            <constraint firstItem="g4t-Gb-mZv" firstAttribute="leading" secondItem="0eV-fb-1kk" secondAttribute="leading" id="Fss-3S-ApM"/>
+                            <constraint firstItem="hvr-tD-Iud" firstAttribute="top" secondItem="4d9-y1-6Gl" secondAttribute="bottom" constant="80" id="GFK-tK-D1Y"/>
+                            <constraint firstItem="mlS-qd-0hb" firstAttribute="top" secondItem="Zz6-K4-noR" secondAttribute="bottom" id="Geg-pT-Ttt"/>
+                            <constraint firstItem="lJf-zF-2XI" firstAttribute="leading" secondItem="hvr-tD-Iud" secondAttribute="leading" id="IKA-aT-5Cm"/>
+                            <constraint firstItem="06R-1h-9pF" firstAttribute="leading" secondItem="Zz6-K4-noR" secondAttribute="leading" id="LMp-UM-OBf"/>
+                            <constraint firstItem="Zz6-K4-noR" firstAttribute="leading" relation="lessThanOrEqual" secondItem="xhb-aq-64s" secondAttribute="leadingMargin" constant="48" id="M6D-PA-EQX"/>
+                            <constraint firstItem="PN1-Pt-c64" firstAttribute="top" secondItem="ahD-Yx-hgF" secondAttribute="top" id="MAG-eF-Zsn"/>
+                            <constraint firstItem="4d9-y1-6Gl" firstAttribute="leading" secondItem="Xgz-4Z-76P" secondAttribute="leading" id="MnA-WS-VQ8"/>
+                            <constraint firstItem="lJf-zF-2XI" firstAttribute="centerY" secondItem="em0-SC-w4I" secondAttribute="centerY" id="Ntp-c7-gaF"/>
+                            <constraint firstItem="aKM-cy-6Z2" firstAttribute="top" secondItem="06R-1h-9pF" secondAttribute="top" id="OLe-CS-3hM"/>
+                            <constraint firstItem="Xgz-4Z-76P" firstAttribute="top" relation="lessThanOrEqual" secondItem="xhb-aq-64s" secondAttribute="top" constant="97" id="OMc-nI-HQo"/>
+                            <constraint firstItem="lJf-zF-2XI" firstAttribute="top" relation="lessThanOrEqual" secondItem="hvr-tD-Iud" secondAttribute="bottom" constant="104" id="OaG-aM-Nl4"/>
+                            <constraint firstItem="4d9-y1-6Gl" firstAttribute="leading" secondItem="ahD-Yx-hgF" secondAttribute="leading" id="P5s-NY-ESF"/>
+                            <constraint firstItem="PN1-Pt-c64" firstAttribute="top" relation="lessThanOrEqual" secondItem="4d9-y1-6Gl" secondAttribute="bottom" constant="19" id="PG3-ll-hTj"/>
+                            <constraint firstItem="4d9-y1-6Gl" firstAttribute="leading" secondItem="exn-5Y-Y6J" secondAttribute="leading" id="QaF-5X-ycb"/>
+                            <constraint firstItem="mlS-qd-0hb" firstAttribute="leading" secondItem="Zz6-K4-noR" secondAttribute="leading" id="RVe-IV-fSt"/>
+                            <constraint firstItem="ahD-Yx-hgF" firstAttribute="leading" secondItem="PN1-Pt-c64" secondAttribute="leading" id="RnV-e2-RgK"/>
+                            <constraint firstItem="4d9-y1-6Gl" firstAttribute="centerX" secondItem="LKF-3p-b06" secondAttribute="centerX" id="UL3-G4-Wb0"/>
+                            <constraint firstItem="4d9-y1-6Gl" firstAttribute="leading" secondItem="PN1-Pt-c64" secondAttribute="leading" id="UuV-XZ-9S3"/>
+                            <constraint firstItem="Xgz-4Z-76P" firstAttribute="top" secondItem="PN1-Pt-c64" secondAttribute="bottom" constant="-1" id="Vji-ZU-FFr"/>
+                            <constraint firstItem="4d9-y1-6Gl" firstAttribute="top" secondItem="rNY-oe-oZi" secondAttribute="bottom" constant="8" symbolic="YES" id="Vtm-oW-K6I"/>
+                            <constraint firstItem="4d9-y1-6Gl" firstAttribute="trailing" secondItem="lJf-zF-2XI" secondAttribute="trailing" id="Vve-RG-HFQ"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="PN1-Pt-c64" secondAttribute="trailing" constant="53" id="Vza-ln-l4B"/>
+                            <constraint firstItem="lJf-zF-2XI" firstAttribute="leading" relation="lessThanOrEqual" secondItem="em0-SC-w4I" secondAttribute="trailing" constant="32.5" id="XtV-PN-Ld1"/>
+                            <constraint firstItem="4d9-y1-6Gl" firstAttribute="leading" secondItem="xhb-aq-64s" secondAttribute="leadingMargin" id="Y4O-hx-iUD"/>
+                            <constraint firstItem="mlS-qd-0hb" firstAttribute="leading" secondItem="xhb-aq-64s" secondAttribute="leadingMargin" constant="48" id="YV4-k6-ztk"/>
+                            <constraint firstItem="LKF-3p-b06" firstAttribute="top" relation="lessThanOrEqual" secondItem="em0-SC-w4I" secondAttribute="bottom" constant="46" id="aaZ-Ys-G4o"/>
+                            <constraint firstItem="em0-SC-w4I" firstAttribute="top" relation="lessThanOrEqual" secondItem="mlS-qd-0hb" secondAttribute="bottom" constant="15" id="b64-W5-7kv"/>
+                            <constraint firstItem="RLr-25-dNZ" firstAttribute="top" relation="lessThanOrEqual" secondItem="LKF-3p-b06" secondAttribute="bottom" constant="8" symbolic="YES" id="eNl-hK-VzC"/>
+                            <constraint firstItem="exn-5Y-Y6J" firstAttribute="top" relation="lessThanOrEqual" secondItem="xhb-aq-64s" secondAttribute="top" constant="155" id="ejx-sH-cCr"/>
+                            <constraint firstItem="aKM-cy-6Z2" firstAttribute="top" secondItem="Zz6-K4-noR" secondAttribute="top" id="fGl-1n-OFZ"/>
+                            <constraint firstItem="exn-5Y-Y6J" firstAttribute="top" secondItem="g4t-Gb-mZv" secondAttribute="bottom" id="fN8-Ca-Ioy"/>
+                            <constraint firstItem="aKM-cy-6Z2" firstAttribute="top" relation="lessThanOrEqual" secondItem="exn-5Y-Y6J" secondAttribute="bottom" constant="23" id="fji-hu-7Zb"/>
+                            <constraint firstItem="g4t-Gb-mZv" firstAttribute="bottom" secondItem="0eV-fb-1kk" secondAttribute="bottom" id="g2d-9n-ud7"/>
+                            <constraint firstItem="06R-1h-9pF" firstAttribute="bottom" secondItem="Zz6-K4-noR" secondAttribute="bottom" id="gNm-On-Tn2"/>
+                            <constraint firstItem="exn-5Y-Y6J" firstAttribute="trailing" secondItem="em0-SC-w4I" secondAttribute="trailing" id="iT6-Eq-PdT"/>
+                            <constraint firstItem="4d9-y1-6Gl" firstAttribute="trailing" secondItem="xhb-aq-64s" secondAttribute="trailingMargin" id="isK-vl-jM9"/>
+                            <constraint firstItem="4d9-y1-6Gl" firstAttribute="leading" secondItem="g4t-Gb-mZv" secondAttribute="leading" id="jvh-vA-5fK"/>
+                            <constraint firstItem="g4t-Gb-mZv" firstAttribute="top" secondItem="0eV-fb-1kk" secondAttribute="top" id="pNH-vc-Vak"/>
+                            <constraint firstItem="PN1-Pt-c64" firstAttribute="baseline" secondItem="ahD-Yx-hgF" secondAttribute="baseline" id="pbr-cv-G4L"/>
+                            <constraint firstItem="4d9-y1-6Gl" firstAttribute="centerX" secondItem="RLr-25-dNZ" secondAttribute="centerX" id="rlh-K8-1tj"/>
+                            <constraint firstItem="06R-1h-9pF" firstAttribute="top" secondItem="Zz6-K4-noR" secondAttribute="top" id="uGx-un-EeR"/>
+                            <constraint firstItem="06R-1h-9pF" firstAttribute="leading" relation="lessThanOrEqual" secondItem="xhb-aq-64s" secondAttribute="leadingMargin" constant="48" id="uWz-Ji-dHd"/>
+                            <constraint firstItem="06R-1h-9pF" firstAttribute="centerY" secondItem="Zz6-K4-noR" secondAttribute="centerY" id="w1d-6c-vBl"/>
+                            <constraint firstItem="hvr-tD-Iud" firstAttribute="top" secondItem="g4t-Gb-mZv" secondAttribute="top" id="ybr-hi-jlY"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Special Cards" image="scrumMini.png" id="vb1-fb-hXT"/>
                     <navigationItem key="navigationItem" id="a9h-Sw-gIx"/>
                     <connections>
                         <outlet property="backToGame3" destination="RLr-25-dNZ" id="OLG-7X-7Ij"/>
-                        <outlet property="healCards" destination="310-Yv-lDp" id="CJS-0v-hCc"/>
-                        <outlet property="healCardsBold" destination="g4t-Gb-mZv" id="emm-Pg-vfl"/>
-                        <outlet property="scrumCards" destination="em0-SC-w4I" id="f6O-lh-7UB"/>
-                        <outlet property="specialSpellCards" destination="mjs-p8-k3c" id="tqZ-D2-bVM"/>
-                        <outlet property="specialSpellCardsBold" destination="ahD-Yx-hgF" id="MnR-Ya-GCf"/>
-                        <outlet property="zapCards" destination="SWf-15-PRM" id="uw4-TP-1C1"/>
-                        <outlet property="zapCardsBold" destination="Zz6-K4-noR" id="D7F-3P-TbC"/>
+                        <outlet property="healCards" destination="0eV-fb-1kk" id="2lL-Wo-PEh"/>
+                        <outlet property="healCards2" destination="exn-5Y-Y6J" id="wO4-KU-6tr"/>
+                        <outlet property="healCardsBold" destination="g4t-Gb-mZv" id="4XU-JX-akK"/>
+                        <outlet property="scrumCards" destination="em0-SC-w4I" id="Q8I-fa-HQ0"/>
+                        <outlet property="specialSpellCards" destination="PN1-Pt-c64" id="x7s-Qh-e7g"/>
+                        <outlet property="specialSpellCards2" destination="Xgz-4Z-76P" id="lLy-dT-a55"/>
+                        <outlet property="specialSpellCardsBold" destination="ahD-Yx-hgF" id="Qpp-Uz-kPY"/>
+                        <outlet property="zapCards" destination="06R-1h-9pF" id="GkE-6c-hT1"/>
+                        <outlet property="zapCards2" destination="mlS-qd-0hb" id="jql-Zc-0jp"/>
+                        <outlet property="zapCardsBold" destination="Zz6-K4-noR" id="XkX-yQ-RRt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xWu-8k-gvM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1760,8 +1810,8 @@ Cg
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="rE4-7a-bw7"/>
         <segue reference="Vqs-rg-jIN"/>
+        <segue reference="rE4-7a-bw7"/>
         <segue reference="2TN-sa-4hd"/>
         <segue reference="tjg-hy-4SB"/>
     </inferredMetricsTieBreakers>

@@ -27,13 +27,29 @@
 @property (weak, nonatomic) IBOutlet UILabel *text9;
 
 @property (weak, nonatomic) IBOutlet UILabel *specialSpellCardsBold;
-@property (weak, nonatomic) IBOutlet UITextView *specialSpellCards;
+@property (weak, nonatomic) IBOutlet UILabel *specialSpellCards2;
+@property (weak, nonatomic) IBOutlet UILabel *specialSpellCards;
 @property (weak, nonatomic) IBOutlet UILabel *healCardsBold;
-@property (weak, nonatomic) IBOutlet UITextView *healCards;
+@property (weak, nonatomic) IBOutlet UILabel *healCards;
+@property (weak, nonatomic) IBOutlet UILabel *healCards2;
 @property (weak, nonatomic) IBOutlet UILabel *zapCardsBold;
-@property (weak, nonatomic) IBOutlet UITextView *zapCards;
+@property (weak, nonatomic) IBOutlet UILabel *zapCards;
+@property (weak, nonatomic) IBOutlet UILabel *zapCards2;
 @property (weak, nonatomic) IBOutlet UITextView *scrumCards;
 @property (weak, nonatomic) IBOutlet UIButton *backToMainMenu;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *facedownCardsBold;
+@property (weak, nonatomic) IBOutlet UILabel *facedownCards;
+@property (weak, nonatomic) IBOutlet UILabel *facedownCards2;
+@property (weak, nonatomic) IBOutlet UILabel *facedownCards3;
+@property (weak, nonatomic) IBOutlet UILabel *facedownCards4;
+@property (weak, nonatomic) IBOutlet UILabel *shieldCardsBold;
+@property (weak, nonatomic) IBOutlet UILabel *shieldCards;
+@property (weak, nonatomic) IBOutlet UILabel *shieldCards2;
+@property (weak, nonatomic) IBOutlet UILabel *EMPCardsBold;
+@property (weak, nonatomic) IBOutlet UILabel *EMPCards;
+@property (weak, nonatomic) IBOutlet UILabel *EMPCards2;
 
 
 @property (weak, nonatomic) IBOutlet UILabel *header1;
@@ -57,6 +73,7 @@
     
     //fix screen for 4S users
     if (SCREEN_HEIGHT < 481) {
+        //screen 1!
         if (self.weaponText) {
             UIFont *textFont = [self.weaponText.font fontWithSize:16];
             UIFont *boldFont = [self.text1.font fontWithSize:15];
@@ -79,6 +96,7 @@
             self.weaponText.text = [((NSString*)self.weaponText.text) substringFromIndex:8];
             self.text6.text = [((NSString*)self.text6.text) substringFromIndex:1];
         }
+        //screen 3!
         if(self.specialSpellCards){
             UIFont *textFont = [self.specialSpellCards.font fontWithSize:16];
             UIFont *boldFont = [self.specialSpellCardsBold.font fontWithSize:15];
@@ -86,12 +104,46 @@
             
             self.specialSpellCardsBold.font = boldFont;
             self.specialSpellCards.font = textFont;
+            self.specialSpellCards2.font = textFont;
             self.healCardsBold.font = boldFont;
             self.healCards.font = textFont;
+            self.healCards2.font = textFont;
             self.zapCardsBold.font = boldFont;
             self.zapCards.font = textFont;
+            self.zapCards2.font = textFont;
             self.scrumCards.font = boldFont;
+            
+            //special formatting
+            self.specialSpellCards.text = [((NSString*)self.specialSpellCards.text) substringFromIndex:2];
+            self.healCards.text = [((NSString*)self.healCards.text) substringFromIndex:1];
+            self.zapCards.text = [((NSString*)self.zapCards.text) substringFromIndex:1];
+            
         }
+        //screen 2!
+        if(self.shieldCards){
+            UIFont *textFont = [self.shieldCards.font fontWithSize:16];
+            UIFont *boldFont = [self.shieldCardsBold.font fontWithSize:15];
+            
+            
+            self.facedownCardsBold.font = boldFont;
+            self.facedownCards.font = textFont;
+            self.facedownCards2.font = textFont;
+            self.facedownCards3.font = textFont;
+            self.facedownCards4.font = textFont;
+            self.shieldCardsBold.font = boldFont;
+            self.shieldCards.font = textFont;
+            self.shieldCards2.font = textFont;
+            self.EMPCardsBold.font = boldFont;
+            self.EMPCards.font = textFont;
+            self.EMPCards2.font = textFont;
+            
+            
+            //special formatting
+            self.facedownCards2.text = [((NSString*)self.facedownCards2.text) substringFromIndex:2];
+            self.shieldCards.text = [((NSString*)self.shieldCards.text) substringFromIndex:1];
+            
+        }
+
     }
     
     [super viewDidLoad];
