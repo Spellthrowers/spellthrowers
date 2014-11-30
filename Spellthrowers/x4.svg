@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="x4.svg"
+   inkscape:export-filename="/Users/Wesley/Documents/gitHub/spellthrowers/Spellthrowers/x3.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient3759">
+      <stop
+         style="stop-color:#eaffd4;stop-opacity:1;"
+         offset="0"
+         id="stop3761" />
+      <stop
+         style="stop-color:#00ff00;stop-opacity:1;"
+         offset="1"
+         id="stop3763" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3759"
+       id="radialGradient3767"
+       cx="345.47217"
+       cy="503.34427"
+       fx="345.47217"
+       fy="503.34427"
+       r="176.26656"
+       gradientTransform="matrix(1.3953995,-0.01884164,0.02096866,1.5529253,-147.15398,-271.80255)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="47.943944"
+     inkscape:cy="529.58555"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1387"
+     inkscape:window-height="855"
+     inkscape:window-x="26"
+     inkscape:window-y="29"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:url(#radialGradient3767);stroke:#000000;stroke-width:6;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 284.86302,434.14883 37.37565,-69.70053 32.32488,72.73098 90.91373,-60.60915 -8.08122,75.76144 73.74113,-7.07107 -54.54824,39.39595 64.64977,46.46702 -62.62946,7.07107 2.02031,76.77159 -41.41626,-48.48732 -33.33503,70.71068 -26.26397,-56.56854 -54.54824,61.6193 -1.01015,-58.58885 -66.67007,27.27412 14.14214,-43.43656 -64.64976,3.03046 40.4061,-46.46702 -57.5787,-26.26396 56.56854,-25.25382 5.05077,-81.82235 z"
+       id="path2985"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/Users/Wesley/Documents/gitHub/spellthrowers/Spellthrowers/x4.png"
+       inkscape:export-xdpi="180"
+       inkscape:export-ydpi="180" />
+    <text
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="270.72086"
+       y="559.40771"
+       id="text2987"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan2989"
+         x="270.72086"
+         y="559.40771"
+         style="font-size:200px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'.Savoye LET CC.';-inkscape-font-specification:'.Savoye LET CC.'">x4</tspan></text>
+  </g>
+</svg>
