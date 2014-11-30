@@ -801,7 +801,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="omx-el-fZ0">
-                                        <rect key="frame" x="420" y="296" width="307" height="191"/>
+                                        <rect key="frame" x="420" y="296" width="307" height="206"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Facedown Cards">
                                                 <attributes>
@@ -821,8 +821,16 @@
                                                     </paragraphStyle>
                                                 </attributes>
                                             </fragment>
+                                            <fragment content="(red) a">
+                                                <attributes>
+                                                    <font key="NSFont" size="20" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
                                             <fragment>
-                                                <string key="content">are triggered when you are hit by a weapon or spell. If you have a facedown card, it is replaced upon playing a new one.      indicates </string>
+                                                <string key="content">re triggered when you are hit by a weapon or spell. If you have a facedown card, it is replaced upon playing a new one.      indicates </string>
                                                 <attributes>
                                                     <font key="NSFont" size="20" name="HelveticaNeue"/>
                                                     <font key="NSOriginalFont" size="20" name="HelveticaNeue"/>
@@ -1077,8 +1085,8 @@ Cg
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="qxs-qb-Ymr"/>
-        <segue reference="iav-jC-4sW"/>
-        <segue reference="M0g-BX-ccp"/>
+        <segue reference="4Hu-9s-myn"/>
         <segue reference="xtH-0g-WeU"/>
+        <segue reference="Cb9-uf-PYS"/>
     </inferredMetricsTieBreakers>
 </document>
