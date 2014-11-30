@@ -28,6 +28,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *transition_multiplier;
 @property (weak, nonatomic) IBOutlet UILabel *transition_multiplier2;
 
+@property (weak, nonatomic) IBOutlet UIImageView *x2;
+
 @end
 
 @implementation TransitionViewController
@@ -46,6 +48,7 @@
     NSDictionary* config = [NSDictionary dictionaryWithContentsOfFile:path];
     
     [self returnHome].hidden = YES;
+    self.x2.hidden = YES;
 
     if (self.engine.discardedAndDrew) {
         
@@ -351,18 +354,25 @@
         }
     }
     else if([cardPlayed.cardType isEqualToString:@"Weapon"]){
+        //get weapons played
+        int count = 0;
+        for (Card* card in self.engine.activePlayer.hand) {
+            if([card.cardType isEqualToString:@"Weapon"]){
+                count++;
+            }
+        }
+        
+        //set multiplier image
+        if (count >= 2 && count <= 5) {
+            self.x2.hidden = NO;
+            self.x2.image = [UIImage imageNamed: [NSString stringWithFormat:@"x%d.png", count]];
+        }
+        
         //Handle EMP trigger, shield not triggered by weapon
         if([nextPlayer hasFaceDown] && [nextPlayer.faceDownCard.cardType isEqualToString:@"EMP"]){
-            //show weapons played
-            int count = 0;
-            for (Card* card in self.engine.activePlayer.hand) {
-                if([card.cardType isEqualToString:@"Weapon"]){
-                    count++;
-                }
-            }
             
             //set attacking player
-            [[self transition_attackingPlayer] setText: [NSString stringWithFormat: @"%@ plays %d", self.engine.activePlayer.name, count]];
+            [[self transition_attackingPlayer] setText: [NSString stringWithFormat: @"%@ plays", self.engine.activePlayer.name]];
             //set defending player
             [[self transition_defendingPlayer] setText: [NSString stringWithFormat: @"against %@", nextPlayer.name]];
             
@@ -397,15 +407,9 @@
         }
         //Handle Weapon multiplier
         else{
-            int count = 0;
-            for (Card* card in self.engine.activePlayer.hand) {
-                if([card.cardType isEqualToString:@"Weapon"]){
-                    count++;
-                }
-            }
             
             //set attacking player
-            [[self transition_attackingPlayer] setText: [NSString stringWithFormat: @"%@ plays %d", self.engine.activePlayer.name, count]];
+            [[self transition_attackingPlayer] setText: [NSString stringWithFormat: @"%@ plays", self.engine.activePlayer.name]];
             
             //set defending player
             [[self transition_defendingPlayer] setText: [NSString stringWithFormat: @"against %@", nextPlayer.name]];
@@ -451,8 +455,14 @@
             }
         }
         
+        //set multiplier image
+        if (count >= 2 && count <= 5) {
+            self.x2.hidden = NO;
+            self.x2.image = [UIImage imageNamed: [NSString stringWithFormat:@"x%d.png", count]];
+        }
+        
         //set attacking player
-        [[self transition_attackingPlayer] setText: [NSString stringWithFormat: @"%@ plays %d", self.engine.activePlayer.name, count]];
+        [[self transition_attackingPlayer] setText: [NSString stringWithFormat: @"%@ plays", self.engine.activePlayer.name]];
         
         [self transition_defendingPlayer].hidden = YES;
         UIImage* image;
@@ -620,7 +630,6 @@
     if (self.engine.winner == NULL) {
         [[segue destinationViewController] setEngine:self.engine];
     }
-    [segue destinationViewController];
     AudioServicesDisposeSystemSoundID(sound);
 }
 

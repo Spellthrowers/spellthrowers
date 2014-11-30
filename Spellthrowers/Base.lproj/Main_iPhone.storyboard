@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -1708,6 +1708,9 @@
                                     <segue destination="SEj-FN-gUh" kind="modal" id="Tbl-ES-a5F"/>
                                 </connections>
                             </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="x2.png" translatesAutoresizingMaskIntoConstraints="NO" id="hiW-Nq-SSd">
+                                <rect key="frame" x="155" y="115" width="46" height="43"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.53456668125490081" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -1779,6 +1782,7 @@
                         <outlet property="transition_currentCard2" destination="HAj-Dl-5oU" id="W2V-43-8P1"/>
                         <outlet property="transition_defendingPlayer" destination="QZR-XY-wha" id="1q2-IK-rCi"/>
                         <outlet property="transition_defendingPlayer2" destination="nTP-hP-tKq" id="ok9-XO-yn1"/>
+                        <outlet property="x2" destination="hiW-Nq-SSd" id="ZZ4-St-k4U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fTV-Zi-VV2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1802,6 +1806,7 @@
         <image name="scrumMini.png" width="20" height="30"/>
         <image name="spellShieldCard.png" width="83" height="134"/>
         <image name="waterfallCard.png" width="82" height="133"/>
+        <image name="x2.png" width="354" height="280"/>
         <image name="zapCard.png" width="82" height="133"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -1810,9 +1815,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Vqs-rg-jIN"/>
-        <segue reference="rE4-7a-bw7"/>
-        <segue reference="2TN-sa-4hd"/>
         <segue reference="tjg-hy-4SB"/>
+        <segue reference="Tbl-ES-a5F"/>
+        <segue reference="Vqs-rg-jIN"/>
+        <segue reference="DED-7D-nDF"/>
     </inferredMetricsTieBreakers>
 </document>

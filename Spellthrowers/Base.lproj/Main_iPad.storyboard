@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="0Kt-ui-3tc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="0Kt-ui-3tc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -1005,6 +1005,9 @@ Cg
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="x2.png" translatesAutoresizingMaskIntoConstraints="NO" id="x1f-GN-oeT">
+                                <rect key="frame" x="373" y="241" width="72" height="57"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.53456668129999996" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -1042,6 +1045,7 @@ Cg
                         <outlet property="transition_currentCard2" destination="u3A-Nh-Ky0" id="1L4-RA-5Hb"/>
                         <outlet property="transition_defendingPlayer" destination="6Fk-cE-AvB" id="1KQ-Vj-pXW"/>
                         <outlet property="transition_defendingPlayer2" destination="IK6-1v-wO4" id="gIb-X8-LN7"/>
+                        <outlet property="x2" destination="x1f-GN-oeT" id="9jW-a9-x6F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W7i-rh-DP1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1063,6 +1067,7 @@ Cg
         <image name="scrumCard.png" width="82" height="133"/>
         <image name="spellShieldCard.png" width="83" height="134"/>
         <image name="waterfallCard.png" width="82" height="133"/>
+        <image name="x2.png" width="734" height="585"/>
         <image name="zapCard.png" width="82" height="133"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -1071,9 +1076,9 @@ Cg
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="M0g-BX-ccp"/>
         <segue reference="qxs-qb-Ymr"/>
         <segue reference="iav-jC-4sW"/>
+        <segue reference="M0g-BX-ccp"/>
         <segue reference="xtH-0g-WeU"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface ViewController : UIViewController{
     NSUserDefaults *defaults;
+    SystemSoundID sound;
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *winsLabel;

@@ -31,16 +31,16 @@
     #ifdef DEBUG
         int random = arc4random_uniform(3);
         if (random == 1) {
-            cardIndex = 1; //heal
-        }
-        else if (random == 2){
             cardIndex = 3; //weapon
         }
-        else if (random == 3){
+        else if (random == 2){
             cardIndex = 1; //heal
         }
+        else if (random == 3){
+            cardIndex = 3; //weapon
+        }
         else{
-            cardIndex = 2; //EMP
+            cardIndex = 1; //heal
         }
     #else
         cardIndex = arc4random_uniform((int)numCardTypes);
@@ -55,7 +55,7 @@
     int value2 = [value intValue];
     [newCard setValue: value2];
     //set if card is Face Down Type
-    [newCard setIsFaceDownType: (BOOL)config[@"isFaceDownType"][cardIndex]];
+    [newCard setIsFaceDownType: (BOOL)[config[@"isFaceDownType"][cardIndex]boolValue]];
     return newCard;
 }
 
