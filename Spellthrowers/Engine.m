@@ -23,7 +23,11 @@
     //initialize all the players and objects needed
     Deck *deck = [Deck newDeck];
     for (int i = 0; i<[self initNumPlayers]; i++) {
-        Player *newPlayer = [Player newPlayer:deck:[NSString stringWithFormat: @"Player %i", i+1 ]:[NSString stringWithFormat: @"P%i", i+1 ]];
+        Player *newPlayer = [Player newPlayer
+                             :deck
+                             :[NSString stringWithFormat: @"Player %i", i+1 ]
+                             :[NSString stringWithFormat: @"P%i", i+1 ]
+                             :self.initNumPlayers < 3? 20 : 15];
         [self addPlayer:newPlayer];
     }
     

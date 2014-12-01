@@ -10,11 +10,11 @@
 
 @implementation Player
 
-+(instancetype)newPlayer: (Deck*) deck :(NSString*) name : (NSString*) nickName{
++(instancetype)newPlayer: (Deck*) deck :(NSString*) name : (NSString*) nickName : (int) life{
     Player *newPlayer = [[Player alloc] init];
     [newPlayer setDeck:deck];
     newPlayer.playerHand = NSMutableArray.array;
-    [newPlayer setLife: 20];
+    [newPlayer setLife: life];
     [newPlayer fillHand: deck];
     [newPlayer setName:name];
     [newPlayer setNickName:nickName];

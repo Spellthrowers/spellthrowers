@@ -23,7 +23,7 @@
 @property (nonatomic) BOOL isAi;
 @property (nonatomic) BOOL hasPlayedMultipleWeapons;
 
-+(instancetype)newPlayer: (Deck*) deck :(NSString*) name :(NSString*) nickName;
++(instancetype)newPlayer: (Deck*) deck :(NSString*) name :(NSString*) nickName : (int) life;
 
 -(void)fillHand: (Deck*) deck;
 -(NSMutableArray*)hand;
