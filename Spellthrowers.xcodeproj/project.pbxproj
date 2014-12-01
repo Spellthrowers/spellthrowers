@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2B06F15E1A145E32009849E5 /* facedownCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B06F15D1A145E32009849E5 /* facedownCard.png */; };
+		2B0D78601A2BBF7D0026889B /* SpellthrowersTheme.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2B0D785F1A2BBF7D0026889B /* SpellthrowersTheme.m4a */; };
+		2B0D78621A2BC8DE0026889B /* x2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B0D78611A2BC8DE0026889B /* x2.png */; };
+		2B0D78641A2BC8EC0026889B /* x3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B0D78631A2BC8EC0026889B /* x3.png */; };
+		2B0D78661A2BC8F30026889B /* x4.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B0D78651A2BC8F30026889B /* x4.png */; };
+		2B0D78681A2BC8FC0026889B /* x5.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B0D78671A2BC8FC0026889B /* x5.png */; };
 		2B43279F19BFBE8D009601C8 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B43279E19BFBE8D009601C8 /* Player.m */; };
 		2B4327A219BFBE9F009601C8 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4327A119BFBE9F009601C8 /* Card.m */; };
 		2B4327A519BFBEAE009601C8 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4327A419BFBEAE009601C8 /* Deck.m */; };
@@ -99,6 +104,11 @@
 
 /* Begin PBXFileReference section */
 		2B06F15D1A145E32009849E5 /* facedownCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facedownCard.png; sourceTree = "<group>"; };
+		2B0D785F1A2BBF7D0026889B /* SpellthrowersTheme.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = SpellthrowersTheme.m4a; sourceTree = "<group>"; };
+		2B0D78611A2BC8DE0026889B /* x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x2.png; sourceTree = "<group>"; };
+		2B0D78631A2BC8EC0026889B /* x3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x3.png; sourceTree = "<group>"; };
+		2B0D78651A2BC8F30026889B /* x4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x4.png; sourceTree = "<group>"; };
+		2B0D78671A2BC8FC0026889B /* x5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x5.png; sourceTree = "<group>"; };
 		2B43279D19BFBE8D009601C8 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		2B43279E19BFBE8D009601C8 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		2B4327A019BFBE9F009601C8 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
@@ -272,6 +282,7 @@
 		2BE0E17419BB9E9B00CC89E9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2B0D785F1A2BBF7D0026889B /* SpellthrowersTheme.m4a */,
 				2BCB726819F0D11A00BCC89C /* weaponCard.m4a */,
 				2BCB726C19F0D2AF00BCC89C /* waterfallCard.m4a */,
 				2BCB726A19F0D29A00BCC89C /* hurricaneCard.m4a */,
@@ -310,6 +321,10 @@
 		C2830AE61A1C535600B12839 /* Image Assets */ = {
 			isa = PBXGroup;
 			children = (
+				2B0D78611A2BC8DE0026889B /* x2.png */,
+				2B0D78631A2BC8EC0026889B /* x3.png */,
+				2B0D78651A2BC8F30026889B /* x4.png */,
+				2B0D78671A2BC8FC0026889B /* x5.png */,
 				2BB9D2751A1EB9B9009BEA7F /* hurricaneCardBig.png */,
 				2BB9D2761A1EB9B9009BEA7F /* waterfallCardBig.png */,
 				2BB9D2771A1EB9B9009BEA7F /* zapCardBig.png */,
@@ -483,9 +498,11 @@
 			files = (
 				C2FE730F1A10300700BAC89B /* waterfallCard.png in Resources */,
 				C2EC74FF1A06AE460045C8B5 /* background.png in Resources */,
+				2B0D78601A2BBF7D0026889B /* SpellthrowersTheme.m4a in Resources */,
 				C2A541791A0180B500C065A8 /* healCard.png in Resources */,
 				2BB9D2861A1EB9B9009BEA7F /* spellShieldCardBig.png in Resources */,
 				C2FE73171A1031FE00BAC89B /* healCard_transition.png in Resources */,
+				2B0D78681A2BC8FC0026889B /* x5.png in Resources */,
 				C2FE731E1A10328F00BAC89B /* fireballCard_transition.png in Resources */,
 				2BCB726719F0CC5C00BCC89C /* zapCard.m4a in Resources */,
 				C2FE73201A10328F00BAC89B /* laserPistolCard_transition.png in Resources */,
@@ -507,6 +524,7 @@
 				2BB9D2801A1EB9B9009BEA7F /* zapCardBig.png in Resources */,
 				C2FE73111A1030A900BAC89B /* waterfallCard_transition.png in Resources */,
 				2BB9D2851A1EB9B9009BEA7F /* laserPistolCardBig.png in Resources */,
+				2B0D78621A2BC8DE0026889B /* x2.png in Resources */,
 				2B4ABFBF19DD173C006331D6 /* icon.png in Resources */,
 				2BE0E18119BB9E9B00CC89E9 /* Main_iPhone.storyboard in Resources */,
 				2BE3BCC51A02860D00F9AF15 /* fireballMini.png in Resources */,
@@ -524,11 +542,13 @@
 				2BE3BCC71A02876100F9AF15 /* EMPMini.png in Resources */,
 				C2686D3A1A23A938005EE3E5 /* hurricaneCardBig.png in Resources */,
 				C2830AE51A1C534A00B12839 /* scores.plist in Resources */,
+				2B0D78661A2BC8F30026889B /* x4.png in Resources */,
 				2B4ABFC119DD17FD006331D6 /* fireball.png in Resources */,
 				2BCB726319F0C55F00BCC89C /* facedownCard.m4a in Resources */,
 				2B4ABFC319DD1DF7006331D6 /* fireballCard.png in Resources */,
 				2BCB726019F0C09900BCC89C /* fireballCard.m4a in Resources */,
 				2BC9563219DDEA540046B39E /* spellShieldCard.png in Resources */,
+				2B0D78641A2BC8EC0026889B /* x3.png in Resources */,
 				C2686D3C1A23A938005EE3E5 /* zapCardBig.png in Resources */,
 				C2FE73211A10328F00BAC89B /* scrumCard_transition.png in Resources */,
 				C2FE731F1A10328F00BAC89B /* hurricaneCard_transition.png in Resources */,

@@ -109,25 +109,9 @@
             [self.engine setIsAiGame:YES];
             [self.engine.players[[self.engine.players count]-1] setIsAi:YES];
             [self.engine.players[[self.engine.players count]-1] setNickName:@"AI"];
-            int random = arc4random_uniform(5);
-            if (random == 0) {
-                [self.engine.players[[self.engine.players count]-1] setName: @"Wesley Bot"];
-            }
-            else if (random == 1){
-                [self.engine.players[[self.engine.players count]-1] setName: @"Michelle Bot"];
-            }
-            else if (random == 2){
-                [self.engine.players[[self.engine.players count]-1] setName: @"Andrea Bot"];
-            }
-            else if (random == 3){
-                [self.engine.players[[self.engine.players count]-1] setName: @"Ray Bot"];
-            }
-            else if (random == 4){
-                [self.engine.players[[self.engine.players count]-1] setName: @"Warner Bot"];
-            }
-            else {
-                [self.engine.players[[self.engine.players count]-1] setName: @"Alex Bot"];
-            }
+            NSArray* aiNames = @[@"Wesley AI", @"Michelle AI", @"Andrea AI", @"Ray AI", @"Warner AI", @"Alex AI", @"Ken AI", @"Stacy AI", @"Karen AI", @"Stephen AI", @"Toby AI", @"Deagan AI", @"Tina AI"];
+            int random = arc4random_uniform((int)aiNames.count);
+            [self.engine.players[[self.engine.players count]-1] setName: aiNames[random]];
         }
     }
     //set UI elements for each player

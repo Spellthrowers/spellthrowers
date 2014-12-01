@@ -31,11 +31,18 @@
              || [[segue destinationViewController] class] == [HelpViewController class]) {
         [[segue destinationViewController] setIsMainMenu:YES];
     }
+    AudioServicesDisposeSystemSoundID(sound);
 }
 
 - (void)viewDidLoad
 {
-    
+    //Play theme
+    NSString* URLPath = [[NSBundle mainBundle] pathForResource:@"SpellthrowersTheme" ofType:@"m4a"];
+    if(URLPath != nil){
+        NSURL *soundURL = [NSURL fileURLWithPath: URLPath];
+        AudioServicesCreateSystemSoundID((__bridge CFURLRef) soundURL , &sound);
+        AudioServicesPlaySystemSound(sound);
+    }
     
     //WINS
     defaults = [NSUserDefaults standardUserDefaults];
