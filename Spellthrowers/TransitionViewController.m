@@ -427,7 +427,7 @@
             [self.transition_currentCard addSubview:uiv];
             
             //show if shield removed
-            if([nextPlayer.faceDownCard.cardType isEqualToString:@"Shield"]){
+            if([nextPlayer hasFaceDown] && [nextPlayer.faceDownCard.cardType isEqualToString:@"Shield"]){
                 
                 //show triggered shield
                 UIImage* image;
