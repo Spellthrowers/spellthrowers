@@ -13,6 +13,17 @@
 		<string>waterfallCard</string>
 		<string>hurricaneCard</string>
 	</array>
+	<key>femcardSounds</key>
+	<array>
+		<string>femfacedownCard</string>
+		<string>femhealCard</string>
+		<string>femfacedownCard</string>
+		<string>femweaponCard</string>
+		<string>femzapCard</string>
+		<string>femfireballCard</string>
+		<string>femwaterfallCard</string>
+		<string>femhurricaneCard</string>
+	</array>
 	<key>isFaceDownType</key>
 	<array>
 		<true/>

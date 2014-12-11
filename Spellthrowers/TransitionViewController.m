@@ -87,7 +87,8 @@
     if(!self.engine.discardedAndDrew){
         for (int j=0; j<[config[@"cardNames"] count]; j++) {
             if ([[self.engine.activePlayer.hand[self.engine.indexOfTouchedCard] name] isEqualToString:config[@"cardNames"][j]]) {
-                NSString* URLPath = [[NSBundle mainBundle] pathForResource:config[@"cardSounds"][j] ofType:@"m4a"];
+                //the voice pack is a prefix to the normal sound. Default: ""
+                NSString* URLPath = [[NSBundle mainBundle] pathForResource:config[[NSString stringWithFormat:@"%@cardSounds", self.engine.voicePack]][j] ofType:@"m4a"];
                 if(URLPath != nil){
                     NSURL *soundURL = [NSURL fileURLWithPath: URLPath];
                     AudioServicesCreateSystemSoundID((__bridge CFURLRef) soundURL , &sound);

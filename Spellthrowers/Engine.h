@@ -22,6 +22,7 @@
 @property (nonatomic) BOOL discardedAndDrew;
 @property (nonatomic) int numCardsDiscarded;
 @property (nonatomic) int initNumPlayers;
+@property NSString* voicePack;
 
 +(instancetype)newEngine:(int) numPlayers;
 -(void)initEverything;

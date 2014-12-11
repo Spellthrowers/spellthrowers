@@ -16,6 +16,7 @@
     newEngine.players = [NSMutableArray arrayWithObjects: nil];
     newEngine.currentPlayers = [NSMutableArray arrayWithObjects: nil];
     newEngine.initNumPlayers = numPlayers;
+    newEngine.voicePack = @"fem";
     return newEngine;
 }
 
